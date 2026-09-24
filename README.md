@@ -1,6 +1,36 @@
 # alfabeto.digital
 ## Conspiratorios populares de las soberanías
+## Índice
+
+- Conspiratorios populares de las soberanías
+- [I. Memorias colectivas](#i-memorias-colectivas)
+  - [La observación](#la-observación)
+  - [La conjetura](#la-conjetura)
+  - [La pregunta](#la-pregunta)
+  - [El `contexto`](#el-contexto)
+- [II. Interfaces](#ii-interfaces)
+  - [La infraestructura](#la-infraestructura)
+  - [El dispositivo](#el-dispositivo)
+  - [La `midu`](#la-midu)
+    - [Mínima Interfaz Digital Viable (MIDV)](#mínima-interfaz-digital-viable-midv)
+  - [Las subjetividades](#las-subjetividades)
+  - [Las capas de la memoria](#las-capas-de-la-memoria)
+    - [Comunicaciones](#comunicaciones)
+    - [Observabilidad](#observabilidad)
+    - [Procesamiento](#procesamiento)
+    - [Descubribilidad](#descubribilidad)
+    - [Reproducibilidad](#reproducibilidad)
+    - [Resiliencia](#resiliencia)
+  - [La gobernanza](#la-gobernanza)
+  - [Los cuidados](#los-cuidados)
+  - [La replicación](#la-replicación)
+  - [El lenguaje común](#el-lenguaje-común)
+    - [La cartografía de lo esencial](#la-cartografía-de-lo-esencial)
+  - [Las referencias](#las-referencias)
+- [III. Conspiratorios populares de las soberanías](#iii-conspiratorios-populares-de-las-soberanías)
+
 ---
+
 ## I. Memorias colectivas
 ### La observación
 
