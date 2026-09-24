@@ -39,6 +39,7 @@ base_de_conocimientos/graphify/*
 
 # Knowledge base - content in development
 base_de_conocimientos/init/
+!base_de_conocimientos/init/referencias.md
 base_de_conocimientos/midv/
 base_de_conocimientos/subjetividades/
 base_de_conocimientos/alfabeto.digital.md
