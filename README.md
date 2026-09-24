@@ -245,20 +245,20 @@ Una guía de `replicación` que está dividida en pasos conceptuales y práctico
 
 El mismo símbolo produce significados distintos en contextos distintos, las infraestructuras que queremos estarán construidas desde una posición que produce efectos situados. Sabemos que ninguna tecnología es neutral; siempre tiene inscrita la subjetividad de quienes la construyen y la usan.
 
-El lenguaje es común sólo para quienes lo comparten, este es un recuento conceptual, una semilla disponible en la [`base de conocimientos`](https://github.com/alfabeto-digital/conspiratorios_populares_de_las_soberanias/tree/main/base_de_conocimientos/alfabeto.digital.md) dentro del `repositorio` de la `midu`.
+El lenguaje es común sólo para quienes lo comparten, este es un recuento conceptual, una semilla disponible en la [`base de conocimientos`](base_de_conocimientos/alfabeto.digital.md) dentro del `repositorio` de la `midu`.
 
 #### La cartografía de lo esencial
 
-La IA nos permite encontrar relaciones semánticas entre todos los conceptos y textos que componen la base de conocimientos y el código en si mismo, también produce una [visualización interactiva](https://github.com/alfabeto-digital/conspiratorios_populares_de_las_soberanias/tree/main/base_de_conocimientos/graphify/graph.html) automatizada que puede servir para explorar de dos maneras los conceptos:
+La IA nos permite encontrar relaciones semánticas entre todos los conceptos y textos que componen la base de conocimientos y el código en si mismo, también produce una [visualización interactiva](base_de_conocimientos/graphify/graph.html) automatizada que puede servir para explorar de dos maneras los conceptos:
 
 - El pensamiento espacial puede ayudarnos a ubicar conceptos y entender mejor las conexiones entre ellos.
-- La visualización es producida por el plugin `graphify` de `Claude Code`. Si otra persona quisiera modificar el código de la `midu`, el texto de este [archivo]([visualización interactiva](https://github.com/alfabeto-digital/conspiratorios_populares_de_las_soberanias/tree/main/base_de_conocimientos/graphify/graph.json)) es todo el `contexto` necesario para que cualquier LLM entienda el `repositorio` en su conjunto. Es un mapa de relaciones que una máquina puede navegar.
+- La visualización es producida por el plugin `graphify` de `Claude Code`. Si otra persona quisiera modificar el código de la `midu`, el texto de este [archivo](base_de_conocimientos/graphify/graph.json) es todo el `contexto` necesario para que cualquier LLM entienda el `repositorio` en su conjunto. Es un mapa de relaciones que una máquina puede navegar.
  
 ### Las referencias
 
 Una lista de las personas que han trabajado en el desarrollo de todas las subjetividades que buscamos introducir en el dessarrollo de la `midu`:
 
-- [Referencias](base_de_conocimientos\init\referencias.md)
+- [Referencias](base_de_conocimientos/init/referencias.md)
 
 ## III. Conspiratorios populares de las soberanías
 
