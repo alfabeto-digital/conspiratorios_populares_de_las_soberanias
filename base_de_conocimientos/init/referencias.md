@@ -1,0 +1,45 @@
+- Escobar, A. Sentipensar con la tierra: Nuevas lecturas sobre desarrollo, territorio y diferencia. Ediciones Unaula; 2014. p. 139.
+- Martín Barbero, J. Transdisciplinariedad: Notas para un mapa de sus encrucijadas cognitivas y sus conflictos culturales. 2005.
+- Lederach, J. P. La imaginación moral. Editorial Norma; 2008.
+- Adichie, C. N. We should all be feminists. TED Talks; 2013.
+- Bender, E. M., Gebru, T., McMillan-Major, A., Shmitchell, S. On the Dangers of Stochastic Parrots: Can Language Models Be Too Big? Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency (FAccT '21); 2021. https://dl.acm.org/doi/10.1145/3442188.3445922
+- La Fontaine, G. (2024). Sobre loros estocásticos. Una mirada a los modelos grandes de lenguaje. Lógoi. Revista de Filosofía, (45), 75–87.
+- Hookway, B. Interface. The MIT Press; 2014. https://direct.mit.edu/books/book/3047/Interface
+- Laurel, B. (Ed.). The art of human-computer interface design. Addison-Wesley; 1990.
+- Foucault, M.: concepto de dispositif (dispositivo).
+- Deleuze, G.: "máquina de hacer ver y de hacer hablar".
+- Carneiro, S. Dispositivo de racialidade: a construção do outro como não ser como fundamento do ser. Rio de Janeiro: Zahar; 2023 (tesis doctoral, Universidade de São Paulo, 2005). https://repositorio.usp.br/item/001465832
+- Rivera Cusicanqui, S. Un mundo ch'ixi es posible: ensayos desde un presente en crisis. Buenos Aires: Tinta Limón; 2018.
+- Paredes, J. Hilando fino desde el feminismo comunitario. 2008.
+- Gonzalez, L. A categoria político-cultural de amefricanidade. Tempo Brasileiro, 92/93, pp. 69–82; enero-junio 1988.
+- Espinosa Miñoso, Y., Gómez Correal, D., Ochoa Muñoz, K. (eds.). Tejiendo de otro modo: feminismo, epistemología y apuestas descoloniales en Abya Yala. Popayán: Editorial Universidad del Cauca; 2014.
+- Curiel, O. Feminismos decoloniales y transformación social (diálogo con Diego Falconí Trávez). Traficantes de Sueños.
+- Lozano Lerma, B. R. El feminismo no puede ser uno porque las mujeres somos diversas: aportes a un feminismo negro decolonial desde la experiencia de las mujeres negras del Pacífico colombiano. https://repositorio.unal.edu.co/handle/unal/53747
+- Carroll, S. R., Garba, I., Figueroa-Rodríguez, O. L., et al. The CARE Principles for Indigenous Data Governance. Data Science Journal, 19, artículo 43; 2020. https://doi.org/10.5334/dsj-2020-043
+- Te Mana Raraunga — Māori Data Sovereignty Network. https://www.temanararaunga.maori.nz/
+- Tuhiwai Smith, L. Decolonizing Methodologies: Research and Indigenous Peoples. 1999.
+- Birhane, A. Algorithmic Colonization of Africa. SCRIPTed, 17(2), 389–409; 2020. https://script-ed.org/article/algorithmic-colonization-of-africa/
+- Peña, P., Varon, J. Consent to Our Data Bodies: Lessons from Feminist Theories to Enforce Data Protection. Coding Rights, con apoyo de Privacy International; 2019. https://codingrights.org/docs/ConsentToOurDataBodies.pdf
+- Association for Progressive Communications (APC). Feminist Principles of the Internet; 2014. https://www.apc.org/en/pubs/feminist-principles-internet
+- Sulá Batsú (Costa Rica). Cooperativa fundada en 2005; Kemly Camacho, coordinadora general.
+- Cabnal, L. Recuperación y defensa del territorio cuerpo-tierra (concepto de cuerpo-territorio, 2010).
+- Telecomunicaciones Indígenas Comunitarias A.C. (TIC A.C.). https://www.tic-ac.org/historia/
+- Almendra, V. Entre la emancipación y la captura: memorias y caminos desde la lucha Nasa en Colombia; 2017.
+- Gutiérrez Aguilar, R. Horizontes comunitario-populares: producción de lo común más allá de las políticas estado-céntricas. Madrid: Traficantes de Sueños; 2017. https://traficantes.net/sites/default/files/pdfs/Horizontes%20comunitario-populares_Traficantes%20de%20Sue%C3%B1os.pdf
+- Aguilar Gil, Y. E. Ää: manifiestos sobre la diversidad lingüística. Almadía; 2020.
+- Kilomba, G. Plantation Memories: Episodes of Everyday Racism; 2008.
+- Universidad de Buenos Aires, Departamento de Computación. Las mujeres de Clementina. https://www.dc.uba.ar/las-mujeres-de-clementina/
+- Auto de fe de Maní (12 de julio de 1562). https://es.wikipedia.org/wiki/Auto_de_fe_de_Man%C3%AD
+- Mortimer-Sandilands, C., Erickson, B. (eds.). Queer Ecologies: Sex, Nature, Politics, Desire. Indiana University Press; 2010. https://iupress.org/9780253222039/queer-ecologies/
+- Baptiste, B. "Ecología queer, el ecosistema está lleno de cosas chuecas" (entrevista). El Tiempo, La Sal en la Herida; 17 de noviembre de 2022. https://blogs.eltiempo.com/la-sal-en-la-herida/2022/11/17/ecologia-queer-el-ecosistema-esta-lleno-de-cosas-chuecas-entrevista-con-brigitte-baptiste/
+- Haraway, D. Staying with the Trouble: Making Kin in the Chthulucene. Duke University Press; 2016. https://www.dukeupress.edu/staying-with-the-trouble
+- Revista Géneros, Feminismos y Diversidades (Universidad Nacional, Costa Rica). "Ecos y desajustes: una ecología cuir desde las temporalidades disidentes y la escritura insurgente" (autoría por confirmar). https://www.revistas.una.ac.cr/index.php/revgefedi/article/view/21576
+- Archivo de la Memoria Trans Argentina. https://archivotrans.ar/index.php/acerca
+- Muholi, Z. Faces and Phases (serie desde 2006). https://www.britannica.com/biography/Zanele-Muholi
+- NPR. "Facebook Apologizes For Name Policy That Affected LGBT Community". 1 de octubre de 2014. https://www.npr.org/sections/alltechconsidered/2014/10/01/353053455/facebook-apologizes-for-name-policy-that-affected-lgbt-community
+- The Conversation. "Why Tumblr's ban on adult content is bad for LGBTQ youth". 2018. https://theconversation.com/why-tumblrs-ban-on-adult-content-is-bad-for-lgbtq-youth-108215
+- Encyclopaedia Britannica. Ball culture. https://www.britannica.com/topic/ball-culture
+- TransHackFeminist (THF!) Convergence Report. Calafou; 2014. https://archive.calafou.org/en/content/transhackfeminist-thf-convergence-report.html
+- Lemmer-Webber, C., et al. ActivityPub. W3C Recommendation; 2018. https://www.w3.org/community/socialcg/2018/03/20/activitypub-reaches-w3c-recommendation-status-everybody-party/
+- TechPolicy.Press. "The Whiteness of Mastodon". https://www.techpolicy.press/the-whiteness-of-mastodon
+- Logic. "Blackness in the Fediverse: A Conversation with Marcia X". https://logicmag.io/policy/blackness-in-the-fediverse-a-conversation-with-marcia-x/
