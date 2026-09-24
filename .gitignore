@@ -10,7 +10,7 @@ nixos/config.nix
 nixos/config-vps.nix
 
 # Archived draft configs — contain identifying data
-nixos/00-hallucinations/
+00-hallucinations
 
 # Secrets and sops config — filled or encrypted files must NEVER be committed.
 # Only *.template files (with empty values) are committed.
@@ -31,3 +31,17 @@ nixos/result-*
 
 # Claude Code settings
 .claude
+
+# Graphify — knowledge graph outputs (keep only the rendered artifacts)
+base_de_conocimientos/graphify/*
+!base_de_conocimientos/graphify/graph.html
+!base_de_conocimientos/graphify/graph.json
+
+# Knowledge base - content in development
+base_de_conocimientos/init/
+base_de_conocimientos/midv/
+base_de_conocimientos/subjetividades/
+base_de_conocimientos/alfabeto.digital.md
+
+# Website - content in development
+website

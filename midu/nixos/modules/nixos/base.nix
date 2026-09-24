@@ -145,6 +145,7 @@
 
     programs.bash.shellAliases = {
       ll            = "ls -la";
+      update-nixos  = "nix flake update";
       rebuild-nixos = "nixos-rebuild build  --flake /etc/nixos#$(hostname) --impure";
       switch-nixos  = "nixos-rebuild switch --flake /etc/nixos#$(hostname) --impure";
       history       = "history | tac | fzf";
