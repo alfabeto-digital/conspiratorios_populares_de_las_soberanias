@@ -38,11 +38,15 @@ base_de_conocimientos/graphify/*
 !base_de_conocimientos/graphify/graph.json
 
 # Knowledge base - content in development
-base_de_conocimientos/init/*
-!base_de_conocimientos/init/referencias.md
-base_de_conocimientos/midv/
+base_de_conocimientos/lenguaje_común/
+
+base_de_conocimientos/midu/arquitectura/
+
 base_de_conocimientos/subjetividades/
 base_de_conocimientos/alfabeto.digital.md
 
 # Website - content in development
 website
+
+# Notas de desarrollo — tareas pendientes locales
+base_de_conocimientos/notas_de_desarrollo.md

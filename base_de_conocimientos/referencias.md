@@ -1,3 +1,7 @@
+﻿# Referencias
+
+← [Inicio](../README.md#las-referencias)
+
 - Escobar, A. Sentipensar con la tierra: Nuevas lecturas sobre desarrollo, territorio y diferencia. Ediciones Unaula; 2014. p. 139.
 - Martín Barbero, J. Transdisciplinariedad: Notas para un mapa de sus encrucijadas cognitivas y sus conflictos culturales. 2005.
 - Lederach, J. P. La imaginación moral. Editorial Norma; 2008.
@@ -6,9 +10,9 @@
 - La Fontaine, G. (2024). Sobre loros estocásticos. Una mirada a los modelos grandes de lenguaje. Lógoi. Revista de Filosofía, (45), 75–87.
 - Hookway, B. Interface. The MIT Press; 2014. https://direct.mit.edu/books/book/3047/Interface
 - Laurel, B. (Ed.). The art of human-computer interface design. Addison-Wesley; 1990.
-- Foucault, M.: concepto de dispositif (dispositivo).
+- Foucault, M.: concepto de dispositif (`dispositivo`).
 - Deleuze, G.: "máquina de hacer ver y de hacer hablar".
-- Carneiro, S. Dispositivo de racialidade: a construção do outro como não ser como fundamento do ser. Rio de Janeiro: Zahar; 2023 (tesis doctoral, Universidade de São Paulo, 2005). https://repositorio.usp.br/item/001465832
+- Carneiro, S. `dispositivo` de racialidade: a construção do outro como não ser como fundamento do ser. Rio de Janeiro: Zahar; 2023 (tesis doctoral, Universidade de São Paulo, 2005). https://repositorio.usp.br/item/001465832
 - Rivera Cusicanqui, S. Un mundo ch'ixi es posible: ensayos desde un presente en crisis. Buenos Aires: Tinta Limón; 2018.
 - Paredes, J. Hilando fino desde el feminismo comunitario. 2008.
 - Gonzalez, L. A categoria político-cultural de amefricanidade. Tempo Brasileiro, 92/93, pp. 69–82; enero-junio 1988.
@@ -16,7 +20,7 @@
 - Curiel, O. Feminismos decoloniales y transformación social (diálogo con Diego Falconí Trávez). Traficantes de Sueños.
 - Lozano Lerma, B. R. El feminismo no puede ser uno porque las mujeres somos diversas: aportes a un feminismo negro decolonial desde la experiencia de las mujeres negras del Pacífico colombiano. https://repositorio.unal.edu.co/handle/unal/53747
 - Carroll, S. R., Garba, I., Figueroa-Rodríguez, O. L., et al. The CARE Principles for Indigenous Data Governance. Data Science Journal, 19, artículo 43; 2020. https://doi.org/10.5334/dsj-2020-043
-- Te Mana Raraunga — Māori Data Sovereignty Network. https://www.temanararaunga.maori.nz/
+- Te Mana Raraunga, Māori Data Sovereignty Network. https://www.temanararaunga.maori.nz/
 - Tuhiwai Smith, L. Decolonizing Methodologies: Research and Indigenous Peoples. 1999.
 - Birhane, A. Algorithmic Colonization of Africa. SCRIPTed, 17(2), 389–409; 2020. https://script-ed.org/article/algorithmic-colonization-of-africa/
 - Peña, P., Varon, J. Consent to Our Data Bodies: Lessons from Feminist Theories to Enforce Data Protection. Coding Rights, con apoyo de Privacy International; 2019. https://codingrights.org/docs/ConsentToOurDataBodies.pdf
@@ -24,7 +28,7 @@
 - Sulá Batsú (Costa Rica). Cooperativa fundada en 2005; Kemly Camacho, coordinadora general.
 - Cabnal, L. Recuperación y defensa del territorio cuerpo-tierra (concepto de cuerpo-territorio, 2010).
 - Telecomunicaciones Indígenas Comunitarias A.C. (TIC A.C.). https://www.tic-ac.org/historia/
-- Almendra, V. Entre la emancipación y la captura: memorias y caminos desde la lucha Nasa en Colombia; 2017.
+- Almendra, V. Entre la emancipación y la captura: `memorias` y caminos desde la lucha Nasa en Colombia; 2017.
 - Gutiérrez Aguilar, R. Horizontes comunitario-populares: producción de lo común más allá de las políticas estado-céntricas. Madrid: Traficantes de Sueños; 2017. https://traficantes.net/sites/default/files/pdfs/Horizontes%20comunitario-populares_Traficantes%20de%20Sue%C3%B1os.pdf
 - Aguilar Gil, Y. E. Ää: manifiestos sobre la diversidad lingüística. Almadía; 2020.
 - Kilomba, G. Plantation Memories: Episodes of Everyday Racism; 2008.

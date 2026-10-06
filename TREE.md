@@ -107,9 +107,9 @@ find . \
 │       └── transdisciplinariedad.md
 └── midu/
     ├── conectarse_a_internet/
-    │   ├── ruta_A-cloudflare/
-    │   ├── ruta_B-vps+nixos/
-    │   └── ruta_C-vps+podman/
+    │   ├── ruta_A-vps+nixos/
+    │   ├── ruta_B-vps+podman/
+    │   └── ruta_C-cloudflare/
     │       ├── .gitignore
     │       ├── config/
     │       │   ├── dynamic/
