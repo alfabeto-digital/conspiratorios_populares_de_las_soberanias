@@ -25,6 +25,7 @@ La diferencia entre los servicios que componen esta `interfaz` y sus equivalente
 | [Pangolin](pangolin.md) | El stack del VPS: Pangolin, Gerbil y Traefik |
 | [Virtualización](virtualización.md) | Docker y Podman: cómo se despliegan los servicios en contenedores |
 | [Terminal](terminal.md) | Herramientas de terminal para administrar el `computador` |
+| [Publicación](publicación.md) | Hugo genera el sitio web de la base de conocimientos a partir de los archivos Markdown |
 
 ## Por qué este conjunto específico es una `midu`
 

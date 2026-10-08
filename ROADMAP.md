@@ -17,6 +17,8 @@
 - [x] AdGuard Home — DNS con bloqueo de rastreadores
 - [x] Authelia — SSO + 2FA (TOTP)
 - [x] Caddy — reverse proxy con HTTPS automático
+- [ ] Hugo — base de conocimientos como sitio web navegable (`info.alfabeto.digital`)
+- [ ] Hugo — migración del sitio principal (`alfabeto.digital`) desde HTML artesanal
 
 ## Observabilidad
 

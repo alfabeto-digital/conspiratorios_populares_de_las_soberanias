@@ -214,6 +214,8 @@ La capa más inmediata: el `intercambio` de mensajes, documentos y notificacione
 
 > Servicios implementados: Stalwart (correo), Dendrite (mensajería Matrix), ntfy (notificaciones push), Vaultwarden (gestión de contraseñas), Syncthing (sincronización de archivos), AdGuard Home (DNS), Authelia (autenticación), Caddy (red y acceso).
 
+> En el horizonte: Hugo — sitio web navegable de la base de conocimientos (`info.alfabeto.digital`) y migración del sitio principal (`alfabeto.digital`).
+
 #### Observabilidad
 
 La capacidad de saber qué ocurre en todo momento dentro del sistema; la capacidad de `reflexionar` sobre la información que se obtiene del mundo. Sin observabilidad, la memoria es opaca: existe, pero no puede examinarse.

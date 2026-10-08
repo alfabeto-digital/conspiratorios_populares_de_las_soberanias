@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Coming Soon</title>
+  <meta name="description" content="Estamos preparando algo nuevo.">
+
+  <link rel="stylesheet" href="/css/style.css">
+
+  <style>
+    .coming-soon {
+      min-height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 24px;
+      box-sizing: border-box;
+    }
+
+    .coming-soon__inner {
+      max-width: 720px;
+    }
+
+    .coming-soon__symbol {
+      font-family: 'GohuFont';
+      font-size: 4rem;
+      line-height: 1;
+      color: #333;
+      margin-bottom: 24px;
+    }
+
+    .coming-soon__eyebrow {
+      font-family: 'GohuFont';
+      font-size: 0.9rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin: 0 0 16px;
+      color: #666;
+    }
+
+    .coming-soon h1 {
+      font-family: 'ShureTechMono';
+      font-size: clamp(2.5rem, 7vw, 5rem);
+      line-height: 1;
+      font-weight: normal;
+      margin: 0 0 28px;
+      color: #222;
+    }
+
+    .coming-soon__description {
+      font-family: 'Monofur';
+      font-size: 1.15rem;
+      line-height: 1.7;
+      max-width: 580px;
+      margin: 0 auto 36px;
+      color: #555;
+    }
+
+    .coming-soon__terminal {
+      font-family: 'GohuFont';
+      font-size: 0.95rem;
+      color: #333;
+      margin-bottom: 32px;
+    }
+
+    .coming-soon__terminal::before {
+      content: '> ';
+      color: #888;
+    }
+
+    .coming-soon__button {
+      display: inline-block;
+      font-family: 'ShureTechMono';
+      text-decoration: none;
+      color: #333;
+      border: 1px solid rgba(0, 0, 0, 0.3);
+      border-radius: 8px;
+      padding: 12px 22px;
+      transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .coming-soon__button:hover {
+      background: #333;
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    .coming-soon__footer {
+      font-family: 'GohuFont';
+      font-size: 0.75rem;
+      color: #888;
+      margin-top: 60px;
+    }
+
+    @media (max-width: 600px) {
+      .coming-soon {
+        padding: 30px 18px;
+      }
+
+      .coming-soon__symbol {
+        font-size: 3rem;
+      }
+
+      .coming-soon__description {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="dynamic-content">
+    <section class="coming-soon no-overflow">
+      <div class="coming-soon__inner">
+        <div class="coming-soon__symbol">
+          ░▒▓█
+        </div>
+        <p class="coming-soon__eyebrow">
+          Base de conocimientos
+        </p>
+        <h1>
+          Próximamente
+        </h1>
+        <p class="coming-soon__description">
+          Estamos construyendo nuestra base de conocimientos.
+          Documentación, guías y recursos estarán disponibles muy pronto.
+        </p>
+        <p class="coming-soon__terminal">
+          system.status = "building..."
+        </p>
+        <a href="/" class="coming-soon__button">
+          ← Volver al inicio
+        </a>
+        <a href="https://github.com/alfabeto-digital/conspiratorios_populares_de_las_soberanias" target="_blank" rel="noopener noreferrer" class="coming-soon__button">
+          &#xf489; GitHub
+        </a>
+        <p class="coming-soon__footer">
+          &copy; 2026 · Knowledge Base
+        </p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
