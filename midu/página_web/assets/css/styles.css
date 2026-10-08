@@ -49,7 +49,7 @@ body {
   z-index: 1;
 }
 
-.dynamic-content:has(.no-overflow) {
+.dynamic-content.clip {
   overflow: hidden;
 }
 

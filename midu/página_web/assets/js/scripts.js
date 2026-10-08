@@ -15,7 +15,12 @@ function loadHTML(containerId, filePath, callback) {
 
 // Update HTML
 function updateContent(page) {
+  const container = document.getElementById('dynamic-content');
+  container.classList.remove('clip');
   loadHTML('dynamic-content', page, () => {
+    if (container.querySelector('.no-overflow')) {
+      container.classList.add('clip');
+    }
     const icons = document.querySelectorAll('.navbar .icon-box');
     icons.forEach(icon => {
       icon.classList.remove('selected');
@@ -45,11 +50,8 @@ function initMenu() {
   menu.onclick = (e) => {
     const icon = e.target.closest('.icon-box');
     if (icon) {
-      const page = icon.dataset.page;
-      if (page.startsWith('http')) {
-        window.open(page, '_blank', 'noopener noreferrer');
-      } else {
-        updateContent(page);
+      if (icon.dataset.page) {
+        updateContent(icon.dataset.page);
       }
       menu.classList.remove('active');
       document.getElementById('floating-menu').style.display = 'flex';
