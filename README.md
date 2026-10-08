@@ -297,7 +297,7 @@ El lenguaje es común sólo para quienes lo comparten, este es un recuento conce
 
 #### La cartografía de lo esencial
 
-La IA nos permite encontrar relaciones semánticas entre todos los conceptos y textos que componen la base de conocimientos y el código en si mismo, también produce una [visualización interactiva](base_de_conocimientos/graphify/graph.html) automatizada que puede servir para explorar de dos maneras los conceptos:
+La IA nos permite encontrar relaciones semánticas entre todos los conceptos y textos que componen la base de conocimientos y el código en si mismo, también produce una [visualización interactiva](https://alfabeto.digital/assets/graph.html) automatizada que puede servir para explorar de dos maneras los conceptos:
 
 - El pensamiento espacial puede ayudarnos a ubicar conceptos y entender mejor las conexiones entre ellos.
 - La visualización es producida por el plugin `graphify` de `Claude Code`. Si otra persona quisiera modificar el código de la `midu`, el texto de este [archivo](base_de_conocimientos/graphify/graph.json) es todo el `contexto` necesario para que cualquier LLM entienda el `repositorio` en su conjunto. Es un mapa de relaciones que una máquina puede navegar.
