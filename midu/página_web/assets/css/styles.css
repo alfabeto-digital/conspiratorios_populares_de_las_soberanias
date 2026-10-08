@@ -49,6 +49,15 @@ body {
   z-index: 1;
 }
 
+.dynamic-content .dynamic-content {
+  height: auto;
+  box-shadow: none;
+  backdrop-filter: none;
+  background: none;
+  border-radius: 0;
+  margin: 0;
+}
+
 .dynamic-content:hover {
   box-shadow:
     inset 8px 8px 15px rgba(0,0,0,0.2),
