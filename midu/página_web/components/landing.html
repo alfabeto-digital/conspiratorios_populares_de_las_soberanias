@@ -1,262 +1,479 @@
-<link rel="stylesheet" href="../assets/css/landing.css">
-<div class="main-view">
-  <!-- First row -->
-  <div class="holaMundo">
-    <div class="article">
-        <section class="content" style="padding: 5px; font-size: medium;">
-            <h1>Hola mundo!</h1>  
-            <p>Es común leer personas discutiendo los efectos que tuvo la extensión de la imprenta por todo el mundo <a href="#ref1"><sup>[1]</sup></a>, 
-                el material impreso y el intercambio de ideas sin precedentes que llevó a la humanidad del medioevo al renacimiento. Un cambio de época que
-                pudo haber iniciado nuevamente gracias al desarrollo de los grandes modelos de lenguaje (LLM), la base de las aspiraciones hacia una 
-                <b style="color: #ff4081">Inteligencia Artificial General</b>, y cuyos efectos todavía nos resultan imposibles de advertir. Esta tecnología tiene el 
-                potencial de cambiar radicalmente la forma en la que nos relacionamos con la información, ya estamos viendo cómo podemos acceder a traducciones, no 
-                solo entre idiomas, sino entre niveles de abstracción, entre formas y modelos que usamos para entender y describir el mundo. Se abrió la puerta del acceso 
-                libre a una base de datos humana, una colección de experiencias, memorias y reflexiones; una de <b style="color: #ff4081">conocimientos comunes</b> 
-                y abiertos.</p>
-      
-            <blockquote>
-                <p>"Yo imagino <b style="color: #0b6cda">un mundo en el que quepan muchos mundos</b>"</p>
-                <footer>— Arturo Escobar <cite>usa esta frase Zapatista para ilustrar el concepto de <b style="color: #ff4081">pluriverso.</b></cite></footer>
-            </blockquote>
-      
-            <p>En sus propuestas de alternativas al desarrollo retoma las visiones marginalizadas de mujeres, indígenas, campesinos y afrodescendientes que entienden a 
-                cada individuo en su relación con los otros, una característica relacional que nos mantiene interconectados entre humanos y no humanos, superando la división 
-                entre cultura y naturaleza. Sugiere la necesidad de un sistema que responda a la diversidad epistémica de la experiencia humana y resalta la importancia de 
-                construir desde abajo y desde las periferias, una alternativa al modelo hegemónico occidental, blanco y masculino. Escobar esboza un proyecto al que llama: 
-                <b style="color: #0b6cda">"Transiciones: un espacio para la investigación y diseños hacia el pluriverso" </b><a href="#ref2"><sup>[2]</sup></a>, en el que 
-                introduce la pregunta sobre las comunicaciones que serían necesarias para una transición, qué conjunto de prácticas y tecnologías necesitamos en un mundo en 
-                el que, efectivamente, quepan todos los mundos.</p>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    .landing-article {
+      height: 100%;
+      overflow-y: auto;
+      padding: 32px 28px;
+      box-sizing: border-box;
+      font-family: 'Monofur', monospace;
+      font-size: 1rem;
+      line-height: 1.75;
+      color: #333;
+    }
 
-            <p>Surge entonces la necesidad de desbordar las disciplinas hacia un tipo de conocimiento que comprenda la multidimensionalidad de nuestros desafíos sociales y 
-                use un enfoque al que Jesús Barbero llama transdisciplinariedad, para pensar en los problemas del <b style="color: #ff4081">mundo</b>. Él menciona que:</p>
-      
-            <blockquote>
-                <p>"Las claves entonces de las nuevas figuras de razón se hallan en la <b style="color: #ff4081">interfaz y el hipertexto</b>, en 
-                    cuanto dispositivos de articulación de múltiples tipos de lenguajes, saberes y escrituras, que hacen parte de un nuevo <b style="color: #ff4081">ecosistema 
-                    comunicativo</b> entrelazador de medios audiovisuales, telecomunicaciones y computador, y desestabilizador de las instituciones tradicionales del saber"</p>
-                <footer>— Jesús Barbero <a href="#ref3"><sup>[3]</sup></a></footer>
-          </blockquote>
-      
-            <p>Las reflexiones de estos autores me llevan al concepto central de la apuesta de <b style="color: #0b6cda">alfabeto.digital</b>:
-                <b style="color: #ff4081">la interfaz</b>. Plataformas, corporaciones y gobiernos actúan como grandes represas que interrumpen o desvían los cauces naturales 
-                de los ríos de la información. Para lograrlo han desarrollado sistemas operativos, programas, procesos de almacenamiento, transformación, análisis y visualización 
-                de datos, aplicaciones, modelos predictivos y algoritmos automatizados; en otras palabras, sus herramientas son la interfaz con la que logran controlar nuestra 
-                <b style="color: #ff4081">experiencia de usuario </b><a id="footnote-1-ref" href="#footnote-1"><sub>1</sub></a>, estas garantizan un determinado flujo de datos, 
-                signos y símbolos, y dificultan la superación de las condiciones de desigualdad o la construcción de nuevos significados y formas de relacionamiento. La idea de la 
-                soberanía digital y tecnológica cobra relevancia y me surgen las preguntas:</p>
+    .landing-article__inner {
+      max-width: 760px;
+      margin: 0 auto;
+    }
 
-            <ol>
-                <li>¿Qué se necesita para desencadenar un proceso de <b style="color: #ff4081">transformación y alfabetización digital popular</b>?</li>
-                <li>¿Cómo se diseña un sistema que nos habilite para ser <b style="color: #ff4081">soberanos</b> y nos permita <b style="color: #ff4081">confiar</b> en la 
-                    información que usamos para tomar decisiones, para leer el mundo, para vivir?</li>
-            </ol>
+    .landing-article h1 {
+      font-family: 'ShureTechMono', monospace;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: normal;
+      line-height: 1.1;
+      margin: 0 0 8px;
+      color: #222;
+    }
 
-            <p>El agua es esencial para todas las formas de vida en la Tierra, cada especie ha desarrollado una relación única con ella, habilita el funcionamiento de su biología
-                celular. El mensaje de la vida está codificado en su ciclo y llega a todas partes para influir en las decisiones de cada individuo, determina el clima y las 
-                migraciones. La información en nuestro <b style="color: #ff4081">sistema social</b> cumple un rol similar, nos permite adaptarnos a las condiciones del ambiente, 
-                coordinarnos con otros individuos y emplear los recursos disponibles para realizar actividades cada vez más complejas. Es irónico, en cierto sentido, que incluso 
-                los sistemas de Inteligencia Artificial hayan desarrollado una relación en la que dependen de enormes cantidades de agua para su existencia. La información existe 
-                representada en <b style="color: #0b6cda">prácticas, costumbres, saberes, imágenes, sonidos y textos</b>, y aunque no podemos ver exactamente cómo, podemos intuir 
-                que se mueve de acuerdo con algún tipo de ritmo y que hay un ciclo del cuál todos hacemos parte.</p>
-            
-            <p>Contaminar el agua o contaminar la información tiene consecuencias similares, y hemos ido entendiendo progresivamente de la importancia estratégica que esta última 
-                tiene para la conservación de los medios que hacen posible nuestra existencia; nos están dando de beber agua contaminada, el agua potable es cara y escasa, y muchos 
-                recurren al agua salada del mar para no morir de sed.</p>
+    .landing-article .tagline {
+      font-family: 'GohuFont', monospace;
+      font-size: 0.9rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #666;
+      margin: 0 0 52px;
+    }
 
-            <p>Este parece no ser un problema únicamente de <b style="color: #ff4081">Plataformas</b>, los <b style="color: #ff4081">gobiernos</b> no nos ofrecen registros precisos 
-                que nos faciliten la vida, en cambio, todos los días nos enfrentamos a unas burocracias que parecen absurdas y dificultan -cuando no impiden- el acceso efectivo a los 
-                servicios del <b style="color: #ff4081">Estado</b>. La <b style="color: #ff4081">prensa</b> no nos facilita ponernos de acuerdo puesto que no tiene la capacidad de 
-                ser imparcial, aún si fueran transparentes respecto de sus intereses y financiación, en el mejor de los casos tendríamos claros los sesgos con los que nos informan; sin 
-                embargo, la necesidad de sobrevivir en el mercado de la atención resultó en el cambio a modelos de suscripción en los que se paga por información de calidad (que no libre 
-                de prejuicios), exactamente la misma dificultad que nos encontramos en la <b style="color: #ff4081">academia</b> cuando queremos consultar un artículo o una revista 
-                indexada. No somos dueños de la música que escuchamos ni de las películas que vemos y, acceder al historial o a los datos que podrían <b style="color: #0b6cda">agregar 
-                valor y dar contexto</b> a nuestros pensamientos es una tarea para un ingeniero, no para un usuario.</p>
+    .landing-article h2 {
+      font-family: 'ShureTechMono', monospace;
+      font-size: 1.4rem;
+      font-weight: normal;
+      margin: 56px 0 24px;
+      color: #222;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      padding-bottom: 8px;
+    }
 
-            <p><b style="color: #ff4081">La interfaz</b> puede ser entendida como el <b style="color: #0b6cda">conjunto de herramientas</b> que determinan nuestra experiencia en 
-                el mundo digital; sin embargo, es posible también afirmar que, en este momento histórico del desarrollo de nuestra especie, casi toda experiencia sensible está intervenida 
-                de alguna manera por el vínculo que tenemos con la tecnología. Las relaciones económicas que nos permiten satisfacer <b style="color: #ff4081">necesidades</b> básicas, 
-                nuestros <b style="color: #ff4081">deseos</b> e incluso nuestras <b style="color: #ff4081">emociones</b> están constantemente amenazadas por las dinámicas de un mercado, 
-                que no buscan ofrecernos una vida digna o encontrar un equilibrio, sino sacar el mayor provecho de nuestro tiempo y de los recursos del planeta, en beneficio de la acumulación 
-                de riqueza en pocas manos.</p>
+    .landing-article h3 {
+      font-family: 'ShureTechMono', monospace;
+      font-size: 1.1rem;
+      font-weight: normal;
+      margin: 40px 0 16px;
+      color: #333;
+    }
 
-            <p>Hace unos años descubrí la <b style="color: #ff4081">imaginación moral </b><a href="#ref4"><sup>[4]</sup></a>, la posibilidad de llegar a acuerdos para transformar conflictos 
-                y coexistir en futuros que imaginamos posibles. Yo creo que ha llegado la hora en la que todos debemos <b style="color: #0b6cda">hacernos responsables</b> y para ello necesitamos 
-                construir una interfaz diferente, una que reconozca el interés común en regular las condiciones de nuestra vida, una en la que podamos <b style="color: #0b6cda">confiar</b>, en 
-                la que podamos <b style="color: #0b6cda">optar libremente</b> por el intercambio, la cooperación o la competencia con otros individuos.</p>
+    .landing-article h4 {
+      font-family: 'GohuFont', monospace;
+      font-size: 0.9rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: normal;
+      margin: 32px 0 12px;
+      color: #555;
+    }
 
-            <p>La <b style="color: #ff4081">apropiación y el desarrollo de habilidades digitales</b> surgen como saberes de carácter &lt;<b style="color: #0b6cda">no utópico, sino atópico</b>, 
-                cuyo lugar es el <b style="color: #ff4081">"sin lugar"</b>&gt; </b><a href="#ref3"><sup>[3]</sup></a>, y como no podemos todavía ubicarlos en ningún lado, no podemos saber aún a 
-                qué futuro representan; lo que sí sabemos es que es urgente. Esta es una invitación abierta a que trabajemos juntos en la <b style="color: #ff4081">deconstrucción y reconstrucción</b> 
-                de nuestras relaciones sociales, a que tomemos la palabra de Chimamanda cuando señala que:
-            
-            <blockquote>
-                <p><b style="color: #0b6cda">"La cultura no hace a la gente. La gente hace la cultura".</b></p>
-                <footer>— Chimamanda Ngozi <a href="#ref5"><sup>[5]</sup></a></footer>
-            </blockquote>  
-          
-            <section class="references">
-                <h2>Referencias</h2>
-                <ol>
-                    <li id="ref1">Rummel E, Wilson M, Kooistra M. Printing and the book. In: <em>Renaissance and Reformation</em>. Oxford University Press; 2010. Available from: 
-                        <a href="http://dx.doi.org/10.1093/obo/9780195399301-0004"; target="_blank">http://dx.doi.org/10.1093/obo/9780195399301-0004</a></li>
-                    <li id="ref2">Escobar A. <em>Sentipensar con la tierra: Nuevas lecturas sobre desarrollo, territorio y diferencia.</em> Ediciones Unaula; 2014. p. 139.</li>
-                    <li id="ref3">Martín Barbero J. <em>Transdisciplinariedad: Notas para un mapa de sus encrucijadas cognitivas y sus conflictos culturales</em> [Internet]. 2005 
-                        [cited 2025 Mar 9]. Available from:<a href="../assets/library/transdisciplinariedad-martin-barbero.pdf"; target="_blank">
-                        https://www.debatecultural.net.ve/Observatorio/JesusMartinBarbero2.htm</a></li>
-                    <li id="ref4">Lederach JP. <em>La imaginación moral</em>. Editorial Norma; 2008.</li>
-                    <li id="ref5">Adichie CN. <em>We should all be feminists</em> [Internet]. In: TED Talks [Video]. 2017 [cited 2025 Mar 9]. Available from:
-                        <a href="https://www.ted.com/talks/chimamanda_ngozi_adichie_we_should_all_be_feminists"; target="_blank">
-                        https://www.ted.com/talks/chimamanda_ngozi_adichie_we_should_all_be_feminists</a></li>
-                </ol>
-                <hr width="100%" size="1" color="black">
-                <ol>
-                    <li id="footnote-1">
-                        <p>Entendiendo la experiencia de usuario como una colección de interacciones que suceden entre una persona y un entorno 
-                            o dispositivo; el tiempo, las posibilidades de uso y las entradas o salidas del sistema.
-                            <a href="#footnote-1-ref">&#8617;</a></p>
-                    </li>
-                </ol>
-            </section>
-        </section>
+    .landing-article p {
+      margin: 0 0 20px;
+    }
+
+    code.term {
+      font-family: 'GohuFont', monospace;
+      font-size: 0.88em;
+      background: rgba(0, 0, 0, 0.06);
+      padding: 1px 5px;
+      border-radius: 3px;
+      color: #444;
+    }
+
+    .landing-article blockquote {
+      margin: 24px 0;
+      padding: 16px 20px;
+      border-left: 3px solid rgba(0, 0, 0, 0.15);
+      background: rgba(255, 255, 255, 0.5);
+      border-radius: 0 8px 8px 0;
+    }
+
+    .landing-article blockquote p {
+      margin: 0 0 8px;
+    }
+
+    .landing-article blockquote p:last-child {
+      margin: 0;
+    }
+
+    .landing-article blockquote footer {
+      font-family: 'GohuFont', monospace;
+      font-size: 0.85rem;
+      color: #666;
+      margin-top: 12px;
+    }
+
+    .callout {
+      margin: 28px 0;
+      padding: 20px 24px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.6);
+      border: 1px solid rgba(0, 0, 0, 0.12);
+    }
+
+    .callout__label {
+      display: block;
+      font-family: 'GohuFont', monospace;
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #888;
+      margin-bottom: 12px;
+    }
+
+    .callout p {
+      margin: 0 0 12px;
+    }
+
+    .callout p:last-child {
+      margin: 0;
+    }
+
+    .callout ul, .callout ol {
+      margin: 8px 0;
+      padding-left: 24px;
+    }
+
+    .callout li {
+      margin-bottom: 8px;
+    }
+
+    .landing-article ul, .landing-article ol {
+      padding-left: 24px;
+      margin: 0 0 20px;
+    }
+
+    .landing-article li {
+      margin-bottom: 10px;
+    }
+
+    .landing-article a {
+      color: #333;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .landing-article a:hover {
+      color: #000;
+    }
+
+    .section-ref {
+      font-family: 'GohuFont', monospace;
+      font-size: 0.85rem;
+      color: #777;
+    }
+
+    .section-divider {
+      margin: 56px 0;
+      border: none;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    @media (max-width: 600px) {
+      .landing-article {
+        padding: 20px 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <article class="landing-article">
+    <div class="landing-article__inner">
+
+      <header>
+        <h1>alfabeto.digital</h1>
+        <p class="tagline">Conspiratorios populares de las soberanías</p>
+      </header>
+
+      <h2>I. Memorias colectivas</h2>
+
+      <h3>La observación</h3>
+
+      <p>La conservación de las <code class="term">memorias colectivas</code> de la humanidad ha dependido siempre de las <code class="term">infraestructuras</code> disponibles para su almacenamiento y replicación. Cada transformación tecnológica modificó no solo la capacidad de registro, sino las <strong>relaciones de poder</strong> que determinan <strong>qué se conserva y quién decide</strong>.</p>
+
+      <blockquote>
+        <p><strong>El <code class="term">desarrollo</code> histórico y las formas de las <code class="term">memorias colectivas</code>:</strong></p>
+        <ul>
+          <li><strong>Memorias sin imprenta</strong>: los <code class="term">quipus</code> andinos, las <em>tradiciones orales</em> como las de los <code class="term">griots</code> de <em>África occidental</em> y los <code class="term">códices</code> <em>mesoamericanos</em>. Cada uno fue una infraestructura de la memoria, con sus propios criterios sobre quién guarda, cómo y para quién. Buena parte fue destruida durante la conquista: en el auto de fe de Maní (<em>Yucatán</em>, <em>12 de julio de 1562</em>), fray <em>Diego de Landa</em> ordenó quemar más de 27 códices <em>mayas</em> junto con miles de objetos rituales. Solo sobrevivieron tres libros jeroglíficos mayas prehispánicos y fragmentos de un cuarto.</li>
+          <li><strong>Manuscritos</strong>: copistas, monasterios, palacios. La memoria vive donde vive el poder.</li>
+          <li><strong>Imprenta (<em>siglo XV</em>)</strong>: tipos móviles en <em>China</em>, <em>Corea</em> y <em>Alemania</em>. Catalizador del Renacimiento, la Ilustración, los proyectos coloniales y los estados-nación. Más personas pueden participar del registro escrito, pero el <code class="term">dispositivo</code> tiene sus propios criterios de entrada: qué idiomas, qué formatos, qué redes de distribución.</li>
+          <li><strong>Prensa de masas, radio, cine, televisión (<em>siglos XIX–XX</em>)</strong>: la memoria se industrializa. La infraestructura escala, la concentración de influencia y poder se consolida.</li>
+          <li><strong>Computadores (<em>siglo XX</em>)</strong>: ¿qué tenemos que decir sobre la computación y su historia en el <em>Sur</em>?. En <em>Argentina</em>, <em>Cecilia Berdichevsky</em> fue la primera programadora de <em>Clementina</em>, la primera computadora científica del país, y junto con <em>Rebeca Guber</em> inició el grupo de mujeres en informática de la <em>Facultad de Ciencias Exactas</em> de la <em>UBA</em>.</li>
+          <li><strong>Internet y Web 2.0 (<em>finales del siglo XX</em>)</strong>: el mayor repositorio de representaciones digitales de la historia: fotos, videos, documentos, mensajes, registros de comportamiento. La cantidad de <code class="term">objetos digitales</code> no tiene precedentes; la <code class="term">gobernanza</code>, centralizada y concentrada en actores privados y "públicos", en el último caso conviene preguntarse: si no podemos acceder a la información "pública", <strong>¿qué es lo que la hace pública?</strong></li>
+          <li><strong>Inteligencia Artificial (<em>siglo XXI</em>)</strong>: un <code class="term">dispositivo</code> que extiende las posibilidades para navegar, reorganizar y transformar nuestras representaciones digitales de la realidad. <strong>La pregunta sobre quién controla la <code class="term">infraestructura de la memoria</code> se vuelve más necesaria que nunca</strong>.</li>
+        </ul>
+      </blockquote>
+
+      <div class="callout">
+        <span class="callout__label">La observación</span>
+        <p>Quien controla la <code class="term">infraestructura</code> de <code class="term">almacenamiento</code> y <code class="term">replicación</code> controla qué memorias sobreviven. <strong>La imprenta no copió todos los saberes</strong>: copió los que cabían en sus tipos, en sus idiomas, en sus redes. <strong>La Web 2.0 no conserva todas las memorias</strong>: conserva las que las <em>personas</em> que diseñan las <code class="term">interfaces</code> con las que interactuamos todos los días consideran relevantes, y las que <strong>los intereses de otros, que no somos nosotros mismos</strong>, permiten mantener activas.</p>
+      </div>
+
+      <p>Lo mismo ocurre con las lenguas. <em>Yásnaya Aguilar</em>, lingüista <em>ayuujk</em>, sostiene que <strong>el Estado es el principal responsable de la extinción de las lenguas indígenas</strong> de <em>México</em>. En qué lenguas llega a describir la realidad un <code class="term">dispositivo</code> también es una decisión de <code class="term">gobernanza</code>.</p>
+
+      <h3>La conjetura</h3>
+
+      <p>En los tiempos de las <code class="term">Inteligencias Artificiales</code> (IA), una de las descripciones más populares para los <strong>Grandes Modelos de Lenguaje (LLM)</strong> es la de <strong>"loros estocásticos"</strong>: la idea de que, lejos de ser entidades conscientes, se comportan como repetidores de palabras organizadas según su probabilidad de ocurrencia.</p>
+
+      <p>La expresión viene de un artículo de <em>2021</em> de <em>Emily M. Bender</em>, <em>Timnit Gebru</em>, <em>Angelina McMillan-Major</em> y <em>Shmargaret Shmitchell</em>, que advierte sobre los costos ambientales y financieros de los modelos cada vez más grandes y sobre entrenarlos con datos de internet sin curar. En español, <em>La Fontaine</em> (<em>2024</em>) ofrece una lectura sobre el asunto.</p>
+
+      <blockquote>
+        <p><em>Bender, E. M.</em>, <em>Gebru, T.</em>, <em>McMillan-Major, A.</em>, &amp; <em>Shmitchell, S.</em> (<em>2021</em>). On the Dangers of Stochastic Parrots: Can Language Models Be Too Big? FAccT '21.</p>
+        <p><em>La Fontaine, G.</em> (<em>2024</em>). Sobre loros estocásticos. Una mirada a los modelos grandes de lenguaje. Lógoi. Revista de Filosofía, (45), 75–87.</p>
+      </blockquote>
+
+      <p>La idea de la curaduría nos conecta con la pregunta sobre la <code class="term">gobernanza</code>: quien tiene la oportunidad de decidir qué se debe conservar, lo hace desde su propio sesgo, <strong>no podemos comprender bien el valor de <em>todo</em> puesto que a duras penas somos capaces de identificar lo que es valioso para nosotros mismos</strong>; así que, <strong>¿cuál debería ser el criterio de <code class="term">participación</code> para un proceso de <code class="term">gobernanza</code> colectiva?</strong></p>
+
+      <div class="callout">
+        <span class="callout__label">La conjetura</span>
+        <p>Podemos entender las <code class="term">Inteligencias Artificiales</code> (IA) como <code class="term">dispositivos</code>, similares a la imprenta y a los computadores, que <strong>posibilitan navegar en una colección de ideas, memorias y reflexiones preservadas como representaciones físicas y digitales de la experiencia humana</strong>. La relación entre la imprenta, los computadores y las IA (los LLM por ejemplo) surge de su efecto sobre el <code class="term">lenguaje</code>: todos transforman la conexión entre la <code class="term">experiencia</code> sensible, el <code class="term">símbolo</code> y las <code class="term">memorias colectivas</code>. Creemos que la pregunta sobre si las IA tienen o no la capacidad de <code class="term">emular</code> la <code class="term">inteligencia</code> humana es <strong>necesaria</strong>; pero es más <strong>urgente</strong> preguntarnos por <strong>quiénes controlan las infraestructuras que las hacen posibles y con qué propósitos las usan</strong>.</p>
+      </div>
+
+      <h3>La pregunta</h3>
+
+      <p>El colombiano <em>Arturo Escobar</em> retoma una frase del <em>movimiento Zapatista</em> en <em>México</em> para describir la posibilidad de <strong>"un mundo en el que quepan muchos mundos"</strong>, lo que él llama el <code class="term">pluriverso</code>. En sus propuestas de <strong>alternativas al <code class="term">desarrollo</code></strong>, Escobar recupera las visiones de <em>mujeres</em>, <em>indígenas</em>, <em>campesinos</em> y <em>afrodescendientes</em>: personas que entienden a cada individuo en relación con los otros, en <strong>una red que conecta humanos y no humanos, cultura y naturaleza</strong>. De ahí surge la pregunta que nos motiva:</p>
+
+      <div class="callout">
+        <span class="callout__label">La pregunta</span>
+        <p>¿Qué conjunto de prácticas y tecnologías necesitamos para vivir en un mundo en el que, efectivamente, quepan muchos mundos?</p>
+        <p class="section-ref">Arturo Escobar, <code class="term">Sentipensar</code> con la tierra (<em>2014</em>)</p>
+      </div>
+
+      <p>Esta inquietud también se ha formulado desde otros lugares de <em>Abya Yala</em> y de la <em>diáspora</em> africana. <em>Silvia Rivera Cusicanqui</em> propone pensar un mundo <code class="term">ch'ixi</code>: uno donde las diferencias coexisten sin fundirse en una síntesis. <em>Lélia Gonzalez</em> nombra <code class="term">amefricanidad</code> la experiencia histórica y cultural compartida de los pueblos <strong>afrodescendientes e indígenas</strong> de <em>las Américas</em>. <em>Julieta Paredes</em>, desde el feminismo comunitario <em>aymara</em>, pone el <strong>cuerpo-territorio</strong> en el centro de la respuesta al colonialismo.</p>
+
+      <blockquote>
+        <p>La pregunta nos invita a pensar en <strong>propuestas que sean simultáneamente técnicas, políticas y pedagógicas</strong>. Esa triple condición es la que da forma a <code class="term">alfabeto.digital</code>.</p>
+      </blockquote>
+
+      <h3>El <code class="term">contexto</code></h3>
+
+      <p>La <strong>Web 2.0</strong>, o la idea de que podíamos construir colectivamente un repositorio de representaciones digitales, facilitó la compilación del archivo más extenso en la historia humana: fotos y videos que capturan momentos, archivos que simbolizan leyes y contratos, hojas de cálculo que registran transacciones y movimientos, <code class="term">sistemas de información</code> que orientan nuestras decisiones cotidianas.</p>
+
+      <p>El internet, que era un espacio abierto donde la <strong>conectividad natural</strong> de los <code class="term">objetos digitales</code> nos daría mejor <code class="term">información</code> para tomar decisiones, se ha transformado en un <strong>laberinto con muros y ventanas, de tiempo y de pago</strong>, que dificultan o imposibilitan el acceso a las <code class="term">memorias colectivas</code>.</p>
+
+      <p>Las <code class="term">infraestructuras</code> que sostienen <strong>nuestras memorias son gobernadas por un conjunto reducido de actores</strong>: privados como empresas con grandes recursos, y públicos que no tienen la misma capacidad para el registro o la custodia. Sus <code class="term">interfaces</code> deciden qué se ve, qué se replica, qué se conserva, qué se olvida. Una persona puede no estar tan preocupada por la idea de <strong>regalar</strong> sus <code class="term">datos</code> porque con toda seguridad <strong>"no tiene nada que ocultar"</strong>, pero qué tal si empezamos a <strong>entender los datos como fragmentos de nuestra memoria</strong>, <strong>¿será que esa persona no tiene nada dentro de esos datos que regala que le gustaría poder usar y recordar?</strong></p>
+
+      <p><strong>Las memorias son nuestras; las infraestructuras que las hacen posibles, de otros.</strong></p>
+
+      <p><strong>Este control tiene una geografía.</strong> <em>Abeba Birhane</em> llama <code class="term">colonización algorítmica</code> a la llegada al <em>Sur Global</em> de tecnologías desarrolladas con perspectivas, valores e intereses occidentales, con poca regulación y poco escrutinio. Y los pueblos indígenas ya formularon reglas propias para gobernar sus <code class="term">datos</code>: <strong>los principios CARE (beneficio colectivo, autoridad para controlar, responsabilidad y ética)</strong>, presentados en <em>2018</em> en un taller del grupo internacional de soberanía de datos indígenas de la <em>Research Data Alliance</em>, en <em>Gaborone</em> (<em>Botswana</em>). En <em>Aotearoa Nueva Zelanda</em>, la red <em>Te Mana Raraunga</em> aprendió a defender la soberanía de los datos <em>māori</em>.</p>
+
+      <div class="callout">
+        <span class="callout__label">El contexto</span>
+        <p>"La cultura no hace a la gente. La gente hace la cultura."</p>
+        <p class="section-ref"><em>Chimamanda Ngozi Adichie</em>, We should all be feminists (<em>2013</em>)</p>
+      </div>
+
+      <p>La implicación de Adichie: las <code class="term">infraestructuras</code> del presente no determinan el <strong>futuro</strong>. Es necesario trabajar en la <strong>imaginación, diseño y construcción</strong> de otros futuros posibles.</p>
+
+      <hr class="section-divider">
+
+      <h2>II. Interfaces</h2>
+
+      <h3>Las infraestructuras</h3>
+
+      <blockquote>
+        <p>¿Qué se necesita para <strong>crear, leer, actualizar y borrar</strong> <code class="term">objetos digitales</code> en nuestras memorias?</p>
+      </blockquote>
+
+      <p>Hablaremos de <strong>"las <code class="term">infraestructuras</code>"</strong> o de <strong>"las <code class="term">infraestructuras</code> de la memoria"</strong> y podemos distinguir tres según el nivel en el que operan: <code class="term">infraestructura física</code>, <code class="term">infraestructura digital</code> e <code class="term">infraestructura humana</code>.</p>
+
+      <blockquote>
+        <ul>
+          <li>La <strong>infraestructura física</strong> es el <code class="term">hardware</code>: desde los generadores y transmisores de energía pasando por las torres de comunicación, los servidores, cables y enrutadores, hasta lo que hoy conocemos como <code class="term">electrónica de consumo</code>: computadores, celulares, relojes inteligentes, neveras y televisores, carros y drones. El elemento más versátil de esta lista es el <code class="term">computador</code>, porque agrupa una gran variedad de elementos que pueden ser descritos como: dispositivos con <code class="term">memoria</code>, <code class="term">procesador</code>, <code class="term">capacidad de convertir energía para sus componentes internos</code> y una forma de <code class="term">transmitir y recibir señales</code>. Hay computadores de distintos tamaños configurados para distintas tareas. <strong>Un servidor no es más que un gran computador que puede ser tan pequeño como un reloj inteligente</strong>.</li>
+          <li>La <strong>infraestructura digital</strong> es el <code class="term">software</code>: rutinas programadas para conectar partes de la infraestructura física. El software controla cómo se conecta una llamada, cómo se captura una imagen en una cámara, cómo se procesan los <code class="term">datos</code>; en general, todos los <code class="term">comportamientos predeterminados</code> que nos permiten usar un <code class="term">computador</code> para transformar experiencias sensibles en <code class="term">objetos digitales</code>.</li>
+          <li>La <strong>infraestructura humana</strong> agrupa a todas las <em>personas</em> que <em>trabajan</em> a lo largo de toda la cadena de <code class="term">valor</code>: minería, energía, transporte, investigación, diseño, producción, desarrollo, enseñanza. Esta <code class="term">infraestructura</code> es la que hace posible la existencia de las demás; y la propiedad de <code class="term">transferir subjetividades</code> es inherente al elemento humano.</li>
+        </ul>
+      </blockquote>
+
+      <p>Estas <code class="term">infraestructuras</code> se han desarrollado replicando los modelos de <code class="term">gobernanza</code> centralizada de las personas que intervienen en el nivel humano. El resultado es que el acceso a los fragmentos de nuestras <code class="term">memorias digitales</code> no es un proceso autónomo ni soberano, los actores que gobiernan el acceso y la custodia tienen intereses que no coinciden con nuestras necesidades más inmediatas: <strong>no podemos usar nuestras <code class="term">memorias</code> individuales y colectivas para comprender mejor el mundo en el que vivimos ni para tomar decisiones mejor informadas</strong>.</p>
+
+      <div class="callout">
+        <span class="callout__label">La infraestructura</span>
+        <p>Podemos introducir ahora el concepto de <code class="term">interfaz</code>: una <strong>posible</strong> configuración particular de elementos de <code class="term">infraestructura</code> física, digital y humana, con un <strong>propósito</strong> declarado o no, compuesta no solo de las tecnologías y los materiales que utiliza, sino también de <strong>las <code class="term">subjetividades</code> que han sido transferidas en su producción</strong>. Como cada interfaz es solo una de las posibles formas de organizar las infraestructuras, existen y usamos múltiples <code class="term">interfaces</code> todos los días. Estas <code class="term">interfaces</code> nos permiten abstraer la <code class="term">experiencia humana</code> en <code class="term">representaciones digitales</code>.</p>
+      </div>
+
+      <h3>El dispositivo</h3>
+
+      <p><em>Michel Foucault</em> usó la palabra <code class="term">dispositif</code> para nombrar <strong>una red heterogénea de elementos, discursos, instituciones, leyes, enunciados científicos, que en conjunto producen efectos sobre las personas que los habitan</strong>. <em>Gilles Deleuze</em> lo describió como <strong>una máquina de hacer ver y de hacer hablar</strong>: <strong>el dispositivo no refleja la realidad, la construye</strong> al determinar qué puede ser dicho, qué puede ser visto, qué puede ser pensado.</p>
+
+      <p><em>Sueli Carneiro</em> llevó esa idea al análisis del racismo con el dispositivo de racialidad: <strong>una red de discursos, saberes e instituciones que construye a unas personas como sujetos plenos y a otras como su "otro"</strong>.</p>
+
+      <p>En ese sentido, <code class="term">alfabeto.digital</code> es un <code class="term">dispositivo</code> con tres dimensiones simultáneas que buscan reflexionar sobre sí mismas y sobre las posibilidades de <code class="term">participación</code> en una red de <code class="term">gobernanza</code> colectiva de las <code class="term">memorias</code> humanas.</p>
+
+      <ul>
+        <li>Como <code class="term">dispositivo tecnológico</code>, es una <strong>Mínima <code class="term">Interfaz</code> Digital Viable (<code class="term">midu</code>)</strong>: un conjunto de <code class="term">infraestructuras</code> posible, configuradas con herramientas que permiten la <code class="term">gobernanza</code> de las memorias con un criterio de <code class="term">soberanía</code> digital.</li>
+        <li>Como <code class="term">dispositivo pedagógico</code>, es una propuesta de <code class="term">alfabetización digital popular</code>: <em>Paulo Freire</em> nos propone la <code class="term">documentación</code> como práctica pedagógica, en este caso, <strong>de un experimento de gobernanza participativa y descentralizada</strong> de las <code class="term">memorias colectivas</code>, y de una invitación a la <code class="term">replicación</code> de la <code class="term">midu</code> en diferentes contextos. El proceso de <code class="term">adaptación</code> y <code class="term">transformación</code> que ocurre durante la <code class="term">replicación</code> genera el conocimiento necesario para entender los principios de su funcionamiento, los detalles de su configuración y las posibilidades de <code class="term">viabilidad</code>; <strong>documentar el desarrollo del dispositivo permite compartir el proceso y poder transferirlo a otras personas o comunidades</strong>.</li>
+        <li>Como <code class="term">dispositivo político</code>, es una <strong>narrativa sobre el presente</strong> que busca <code class="term">transferir</code> unas <code class="term">subjetividades</code> en las <code class="term">infraestructuras</code> sobre las que nos <strong>imaginamos el futuro</strong>. Cada decisión técnica, qué servicios incluir, qué protocolos usar, cómo documentar, para quién, encarna valores sobre la privacidad, la soberanía, la participación. <strong>Esa subjetividad se transfiere a quien usa el dispositivo y, en cada replicación, tiene la oportunidad de ser cuestionada y adaptada</strong>.</li>
+      </ul>
+
+      <h3>La <code class="term">midu</code></h3>
+      <h4>Mínima Interfaz Digital Viable (MIDV)</h4>
+
+      <p>Una <code class="term">midu</code> es un <strong>conjunto posible de infraestructuras físicas y digitales</strong> que permiten a una persona o comunidad <code class="term">gobernar</code> las <code class="term">memorias</code>, individuales y colectivas, con un criterio de <code class="term">soberanía</code>.</p>
+
+      <p>Disponible en un <code class="term">repositorio</code> de <a href="https://github.com/alfabeto-digital/conspiratorios_populares_de_las_soberanias" target="_blank" rel="noopener noreferrer">github</a> y de <a href="https://forgejo.alfabeto.digital/conspiratorios_populares_de_las_soberanias" target="_blank" rel="noopener noreferrer">forgejo</a>.</p>
+
+      <p>La idea de lo <code class="term">viable</code> proviene de la biología. Un organismo viable es el que tiene los componentes mínimos para existir de forma <code class="term">autónoma</code> y <code class="term">replicarse</code> en nuevos <code class="term">contextos</code>. <strong>Cada <code class="term">midu</code> configura su propio conjunto de infraestructuras</strong>, las que decide que necesita para su existencia <code class="term">soberana</code> y su <code class="term">replicación</code> en otro lugar.</p>
+
+      <p>Identificamos <code class="term">necesidades</code> que se traducen en <strong>principios</strong> de diseño, necesitamos:</p>
+
+      <ul>
+        <li><strong>Autenticación</strong>: un sistema de <code class="term">verificación</code> de identidad en el que podamos <code class="term">confiar</code>.</li>
+        <li><strong>Comunicaciones</strong> <code class="term">privadas</code> y <code class="term">seguras</code>: correo electrónico propio, chat, notificaciones.</li>
+        <li><strong>Almacenamiento</strong> <code class="term">encriptado</code> y <code class="term">resiliente</code>: un modo de <strong>guardar, sincronizar y recuperar</strong> <code class="term">objetos digitales</code>.</li>
+        <li><strong><code class="term">Gobernanza participativa</code></strong>: un conjunto de herramientas que habiliten a cada persona o comunidad participar de una red de <strong>construcción, custodia y administración</strong> de las <code class="term">memorias</code> individuales y colectivas. Esta red posibilita la construcción de nuestros propios <code class="term">sistemas de información soberanos</code> y preserva lo que cada <code class="term">infraestructura humana</code> detrás de una <code class="term">midu</code> decida que se debe preservar.</li>
+      </ul>
+
+      <p>La <code class="term">midu</code>, además, incorpora unos <strong>valores</strong> concretos:</p>
+
+      <ul>
+        <li><strong>Transparencia</strong> (<code class="term">Código abierto y de libre acceso</code>).</li>
+        <li><strong>Reproducibilidad</strong> (<code class="term">Infraestructura como código</code>).</li>
+        <li><strong>Descentralización</strong> (<code class="term">Infraestructuras distribuidas</code>).</li>
+        <li><strong>Interoperabilidad</strong> o <strong>compatibilidad</strong> (<code class="term">servicios</code> que <code class="term">dialogan</code> con interfaces <code class="term">compatibles</code>).</li>
+        <li><strong>Privacidad</strong> (los <code class="term">datos</code> son de quien los genera y cada <em>persona</em> decide con quién compartirlos).</li>
+      </ul>
+
+      <p>Una <code class="term">midu</code> es una posibilidad: una configuración particular de <strong>infraestructuras físicas, digitales y humanas, orientadas a gobernar las memorias individuales y colectivas con un criterio de <code class="term">soberanía</code></strong>.</p>
+
+      <h3>Las subjetividades</h3>
+
+      <p>Quince <code class="term">subjetividades</code> articulan la <strong>narrativa sobre el presente</strong> que busca incorporar <code class="term">alfabeto.digital</code>. Cada una responde a una pregunta específica, se apoya en varios referentes y conecta una posición teórica con una decisión sobre las <code class="term">infraestructuras</code>.</p>
+
+      <ul>
+        <li><strong>Pluriverso</strong>: <em>¿Cómo respetamos la diversidad epistémica?</em> Referentes: Arturo Escobar; Silvia Rivera Cusicanqui (mundo ch'ixi); Julieta Paredes (feminismo comunitario); Lélia Gonzalez (amefricanidad); Yuderkys Espinosa Miñoso, Ochy Curiel y Betty Ruth Lozano (feminismos decoloniales y negros). Conexión con la infraestructura: federación de servicios; múltiples nodos soberanos.</li>
+        <li><strong>Transdisciplinariedad</strong>: <em>¿Cómo diseñamos para múltiples saberes?</em> Referentes: Jesús Martín Barbero. Conexión con la infraestructura: la interfaz como articuladora de lenguajes y saberes.</li>
+        <li><strong>Las interfaces</strong>: <em>¿Quién controla cómo nos relacionamos digitalmente y qué condiciones impone esa relación?</em> Referentes: Brenda Laurel; Branden Hookway. Conexión con la infraestructura: configuración de infraestructura con subjetividades transferidas; la <code class="term">midu</code> como propuesta alternativa.</li>
+        <li><strong>Soberanía digital</strong>: <em>¿Cómo gobernamos nuestros datos y herramientas?</em> Referentes: Principios CARE (Stephanie Russo Carroll et al.); Tahu Kukutai y Te Mana Raraunga; Linda Tuhiwai Smith; Abeba Birhane; Kemly Camacho (Sulá Batsú); Paz Peña y Joana Varon (Coding Rights); Principios Feministas de Internet (APC); Lorena Cabnal (cuerpo-territorio). Conexión con la infraestructura: control sobre hardware, software y conocimiento.</li>
+        <li><strong>Imaginación moral</strong>: <em>¿Cómo imaginamos futuros en los que podemos coexistir?</em> Referentes: John Paul Lederach; Chimamanda Ngozi Adichie. Conexión con la infraestructura: la apuesta de construir lo que parece inaccesible.</li>
+        <li><strong>Alfabetización digital popular</strong>: <em>¿Cómo democratizamos el conocimiento técnico?</em> Referentes: Paulo Freire. Conexión con la infraestructura: la documentación como práctica pedagógica.</li>
+        <li><strong>Replicación</strong>: <em>¿Cómo se reproducen los sistemas de manera viable?</em> Referentes: biología. Conexión con la infraestructura: fidelidad estructural con adaptación contextual.</li>
+        <li><strong>Ecologías queer</strong>: <em>¿Qué podemos aprender de las infraestructuras de la vida que ya existen y que se reproducen en resistencia a la biología hegemónica que se niega a describirlas?</em> Referentes: Catriona Mortimer-Sandilands y Bruce Erickson (eds.); Brigitte Baptiste (Colombia); Donna Haraway (simpoiesis); ecologías cuir latinoamericanas; las prácticas de archivo y cuidado de comunidades queer y trans. Conexión con la infraestructura: la viabilidad viene de las relaciones, no de la autosuficiencia; federación entre nodos distintos.</li>
+        <li><strong>Desarrollo</strong>: <em>¿Desarrollo para quién, bajo qué condiciones?</em> Referentes: Arturo Escobar. Conexión con la infraestructura: crítica al progreso como único horizonte posible.</li>
+        <li><strong>Infraestructuras</strong>: <em>¿Cuáles son las capas que sostienen todo?</em> Referentes: TIC A.C. (red celular comunitaria de Talea de Castro, Oaxaca); Tejido de Comunicación Nasa (ACIN, Cauca) y Vilma Almendra. Conexión con la infraestructura: física (hardware) + digital (software) + humana (personas) = interfaces.</li>
+        <li><strong>Contexto</strong>: <em>¿Cómo produce significado el contexto?</em> Referentes: semiótica. Conexión con la infraestructura: todo está situado; ninguna infraestructura es neutral.</li>
+        <li><strong>Gobernanza</strong>: <em>¿Quién decide sobre la memoria colectiva?</em> Referentes: Raquel Gutiérrez Aguilar (producción de lo común). Conexión con la infraestructura: distribuida vs. centralizada.</li>
+        <li><strong>Memorias colectivas</strong>: <em>¿Qué se conserva y quién lo decide?</em> Referentes: Yásnaya Aguilar; Grada Kilomba. Conexión con la infraestructura: la <code class="term">midu</code> como infraestructura de preservación y replicación de la memoria.</li>
+        <li><strong>Dispositivo</strong>: <em>¿Cómo operan las tecnologías sobre la realidad?</em> Referentes: Michel Foucault; Gilles Deleuze; Sueli Carneiro. Conexión con la infraestructura: máquina de hacer ver y de hacer hablar.</li>
+        <li><strong>Conspiratorios</strong>: <em>¿Qué significa respirar juntos hacia la soberanía?</em> Referentes: etimología (con-spirare). Conexión con la infraestructura: nodos de la red con imaginación moral compartida.</li>
+      </ul>
+
+      <h3>Las capas de la memoria</h3>
+
+      <p>Las <code class="term">interfaces</code> son los puntos donde las <code class="term">experiencias</code> sensibles se convierten en <code class="term">representaciones digitales</code>. Son también los <strong>sistemas de navegación de las memorias colectivas</strong>: la forma en que le damos <strong>significado</strong>, organizamos y transformamos todo con lo que interactuamos, construye lo que llamamos <strong>"la realidad"</strong>.</p>
+
+      <p>Cada servicio que compone la <code class="term">midu</code>, y cada uno de los que está planeado en la <code class="term">hoja de ruta</code>, ocupa un lugar en esas capas. Puestos juntos todos los servicios se convierten en una <strong>propuesta</strong> de la <code class="term">arquitectura</code> de las <code class="term">memorias</code> individuales y colectivas.</p>
+
+      <h4>Comunicaciones</h4>
+
+      <p>La capa más inmediata: el <code class="term">intercambio</code> de mensajes, documentos y notificaciones entre personas. Segura, porque nadie externo puede leer los contenidos. Privada, porque los datos no pasan por servidores de terceros sin antes ser cifrados.</p>
+
+      <blockquote>
+        <p>Servicios implementados: Stalwart (correo), Dendrite (mensajería Matrix), ntfy (notificaciones push), Vaultwarden (gestión de contraseñas), Syncthing (sincronización de archivos), AdGuard Home (DNS), Authelia (autenticación), Caddy (red y acceso).</p>
+      </blockquote>
+
+      <h4>Observabilidad</h4>
+
+      <p>La capacidad de saber qué ocurre en todo momento dentro del sistema; la capacidad de <code class="term">reflexionar</code> sobre la información que se obtiene del mundo. Sin observabilidad, la memoria es opaca: existe, pero no puede examinarse.</p>
+
+      <h4>Procesamiento</h4>
+
+      <p>Todas las <code class="term">transformaciones</code> de los objetos de la memoria digital: las herramientas que permiten reorganizar el <code class="term">contexto</code>, crear nuevas representaciones a partir de las existentes, extraer significado de lo acumulado.</p>
+
+      <h4>Descubribilidad</h4>
+
+      <p>La pregunta de la <code class="term">visibilidad</code> recíproca: ¿cómo me descubren y descubro a otros y sus objetos de la memoria en esta red? La descubribilidad nos permite la comunicación entre nodos que no se conocen todavía.</p>
+
+      <h4>Reproducibilidad</h4>
+
+      <p>Las capacidades del sistema para la <code class="term">adaptación</code>, <code class="term">mutación</code> y <code class="term">replicación</code> en nuevos contextos. La condición esencial es que la interfaz pueda ser tomada por otras personas en otras situaciones y convertida en algo propio. La <code class="term">Infraestructura como código</code>, <code class="term">NixOS</code> y el <code class="term">patrón dendrítico</code> son la forma técnica de esta capa.</p>
+
+      <h4>Resiliencia</h4>
+
+      <p>La capacidad de <code class="term">recuperación</code> de las memorias y de las interfaces ante un evento catastrófico. La resiliencia debe diseñarse de manera preventiva para procurar que la <code class="term">preservación</code> de las <code class="term">memorias</code> no dependa de un único punto de falla.</p>
+
+      <p><strong>La resiliencia es infraestructura humana</strong>. Podemos aprender de las comunidades que han construido mecanismos de resiliencia cuando las instituciones se niegan a proveerlas: archivos propios como el Archivo de la Memoria Trans (Buenos Aires, 2012) y Faces and Phases de Zanele Muholi, y redes de cuidado mutuo como las casas de la escena ballroom, que respondieron mejor que cualquiera a la crisis del VIH. Lo mismo vale para una <code class="term">midu</code>: además de backups, <strong>necesitamos personas que puedan cuidarla, documentación que cualquiera pueda seguir y una comunidad que sepa qué hacer cuando algo falla</strong>.</p>
+
+      <div class="callout">
+        <span class="callout__label">Las capas de la memoria</span>
+        <p>Las seis capas no son una <code class="term">taxonomía</code> definitiva. Son una propuesta de organización que puede <strong>revisarse, extenderse y adaptarse</strong> según las necesidades de cada comunidad o persona que replique la interfaz.</p>
+      </div>
+
+      <h3>La gobernanza</h3>
+
+      <p><em>Raquel Gutiérrez Aguilar</em>, en <em>Horizontes comunitario-populares</em> (2017), propone el concepto de <strong>producción de lo común</strong>: la idea de que las comunidades construyen, conservan y distribuyen bienes comunes, <strong>la tierra, el agua, el conocimiento</strong>, a través de formas de organización que no pasan por el Estado ni por el mercado. Aplicado a las <code class="term">memorias digitales</code>, la pregunta sobre <code class="term">gobernanza</code> es la pregunta sobre <strong>quién tiene autoridad para decidir qué se guarda, cómo se accede y bajo qué condiciones se comparte</strong>. Los <em>Principios CARE</em>, <strong>Beneficio colectivo, Autoridad para controlar, Responsabilidad, Ética</strong>, formulados por <em>Stephanie Carroll</em>, <em>Ibrahim Garba</em>, <em>Oscar Luis Figueroa-Rodríguez</em> y <em>Jarita Holbrook</em> en <em>2020</em> para la soberanía de <code class="term">datos</code> indígenas, son una propuesta desde las comunidades que más han visto sus <code class="term">memorias</code> extraídas y reinterpretadas por otros. La red <em>Te Mana Raraunga</em> en <em>Aotearoa Nueva Zelanda</em> los aplica a los datos <em>māori</em>: <strong>quien produce los datos tiene derecho a gobernarlos</strong>, y esa autoridad no puede cederse sin consentimiento.</p>
+
+      <p>Existen ya ejercicios de <code class="term">gobernanza</code> alternativa de las <code class="term">infraestructuras</code> de la <code class="term">memoria</code>. En <em>Talea de Castro, Oaxaca</em>, las <em>Telecomunicaciones Indígenas Comunitarias</em> (TIC A.C.) construyeron y operan su propia red de telefonía celular desde <em>2013</em>: la infraestructura es de la comunidad, la <code class="term">gobernanza</code> es la asamblea. <em>Vilma Almendra</em> y el <em>Tejido de Comunicación Nasa</em> del Cauca documentan décadas de comunicación propia: radios comunitarias y redes de información construidas de manera autónoma. <em>Sulá Batsú</em>, la cooperativa tecnológica costarricense coordinada por <em>Kemly Camacho</em>, construye modelos de <code class="term">apropiación tecnológica</code> situados en las realidades del Sur. Y el estándar <em>ActivityPub</em>, recomendación del <em>W3C</em> desde <em>2018</em>, ofrece un protocolo abierto para <code class="term">federar</code> servicios independientes sin depender de ninguna plataforma central. <strong>El <code class="term">Fediverso</code> demuestra que la <code class="term">gobernanza</code> técnica distribuida es posible</strong>; una pregunta que debe permanecer siempre abierta es qué <code class="term">subjetividades</code> se <code class="term">transfieren</code> en su implementación.</p>
+
+      <p>La <code class="term">federación</code> no es neutral. <em>Marcia X</em>, en conversación con <em>Logic Magazine</em>, señala que <em>Mastodon</em> y el <code class="term">Fediverso</code> replican las dinámicas de exclusión de las plataformas centralizadas: sus normas de moderación, sus idiomas dominantes y sus culturas de diseño reflejan los valores de quienes los administran. <em>Paz Peña</em> y <em>Joana Varon</em> (Coding Rights) hacen una crítica equivalente desde los feminismos del Sur: el <code class="term">consentimiento</code> sobre los datos del cuerpo no puede ser un acto individual descontextualizado; requiere condiciones materiales, culturales y políticas para ser real. <em>Lorena Cabnal</em>, desde el feminismo comunitario <em>aymara</em>, pone el <strong>cuerpo-territorio</strong> como la primera unidad de <code class="term">gobernanza</code>. La <code class="term">gobernanza</code> de las <code class="term">memorias colectivas</code> debe sustentarse tanto en infraestructuras distribuidas como en la deliberación explícita sobre las <code class="term">subjetividades</code> que esas infraestructuras encarnan.</p>
+
+      <h3>Los cuidados</h3>
+
+      <p>Un <code class="term">modelo</code> de cuidados <code class="term">distribuido</code> en múltiples capas: <code class="term">LUKS</code>, <code class="term">age</code>, <code class="term">sops</code>, <code class="term">TLS</code>, <code class="term">TOTP</code>, <code class="term">Zero Trust</code>, <code class="term">túnel cifrado</code>. El fallo en una no compromete el sistema completo. La analogía biológica: una célula tiene membrana plasmática, pared celular, y cada estructura celular tiene sus propios mecanismos de integridad. Todas las capas se cuidan entre sí y <code class="term">reaccionan</code> dependiendo del <code class="term">contexto</code>.</p>
+
+      <p>La <code class="term">confianza</code> entre los actores de esta red se construye por <code class="term">visibilidad</code>. Las <code class="term">infraestructuras</code> de esta interfaz son abiertas y auditables: el código es público, la configuración está documentada, los protocolos son estándar. <strong>Esa visibilidad es la forma concreta de la confianza en un sistema distribuido</strong>. No se confía porque alguien lo dice, todos podemos <code class="term">verificar</code> porque las infraestructuras son <code class="term">visibles</code>.</p>
+
+      <p>La <strong>propuesta</strong> de <code class="term">almacenamiento federado</code> añade a estos principios de <code class="term">cuidado</code> tres niveles de <code class="term">resiliencia</code>. El <em>nivel 0</em> es el almacenamiento operativo rápido (NVMe): sistema, servicios activos, <code class="term">datos</code> temporales. El <em>nivel 1</em> es un almacenamiento persistente local con réplica en espejo entre dos discos físicos (HDD en RAID1): <code class="term">configuración</code> del nodo y <code class="term">datos críticos</code> que deben sobrevivir un fallo de discos. El <em>nivel 2</em> es la <strong>red federada de recuperación</strong>: respaldos <code class="term">cifrados</code>, <code class="term">fragmentados</code> y <code class="term">distribuidos</code> geográficamente entre nodos independientes, de modo que ningún nodo alberga una copia completa de los datos de otro.</p>
+
+      <p>El principio fundamental es que <strong>el almacenamiento tiene capas de <code class="term">resiliencia</code> que se activan ante diferentes tipos y escalas de daño</strong>; cada nodo opera de manera autónoma aunque esté temporalmente desconectado de la federación. La <code class="term">midu</code> sigue un principio de crecimiento, modular y distribuido, que permite <strong>compartir</strong> capacidad de <code class="term">almacenamiento</code> y <code class="term">procesamiento</code> con la red, un mecanismo adicional de resiliencia basado en la <code class="term">solidaridad</code>.</p>
+
+      <h3>La replicación</h3>
+
+      <p>La <code class="term">replicación</code> documenta el proceso completo de construir una <code class="term">midu</code>: cada paso explica qué hacemos y por qué. Documentar el proceso mientras ocurre es parte de la <code class="term">replicación</code> misma; el conocimiento que generamos puede transferirse a quien venga después.</p>
+
+      <p>La secuencia cubre ocho pasos:</p>
+
+      <ul>
+        <li><strong>Documentar el proceso</strong>: registrar decisiones, obstáculos y adaptaciones convierte cada <code class="term">replicación</code> en una práctica pedagógica transferible.</li>
+        <li><strong>Preparativos</strong>: hardware necesario, nombre de <code class="term">dominio</code>, <code class="term">computador</code> local, memoria USB con el instalador de NixOS.</li>
+        <li><strong>NixOS I</strong>: instalación del sistema operativo, cifrado de discos con LUKS y configuración del acceso SSH en la fase de arranque.</li>
+        <li><strong>Personalizar la configuración</strong>: completar <code class="term">config.nix</code> con los valores específicos de cada instalación: nombre del <code class="term">computador</code>, UUIDs de los discos, dominio.</li>
+        <li><strong>Generar secretos</strong>: claves de cifrado con <code class="term">age</code>, secretos cifrados con <code class="term">sops</code>.</li>
+        <li><strong>NixOS II</strong>: clonar el repositorio, enlazar la configuración y ejecutar la primera construcción del sistema.</li>
+        <li><strong>Conectarse a internet</strong>: elegir entre tres rutas según el modelo de amenaza y el presupuesto:
+          <ul>
+            <li>Ruta A: VPS propio con NixOS; <code class="term">soberanía</code> completa sobre el tráfico.</li>
+            <li>Ruta B: VPS propio con Podman; misma <code class="term">soberanía</code>, sin NixOS en el servidor remoto.</li>
+            <li>Ruta C: túnel de Cloudflare; sin VPS propio, con compensación explícita de <code class="term">soberanía</code>.</li>
+          </ul>
+        </li>
+      </ul>
+
+      <h3>El lenguaje común</h3>
+
+      <p>El mismo símbolo produce significados distintos en contextos distintos, las <code class="term">infraestructuras</code> que queremos estarán construidas desde una posición que produce efectos situados. Sabemos que ninguna tecnología es neutral; siempre tiene inscrita la subjetividad de quienes la construyen y la usan.</p>
+
+      <p>El lenguaje es común sólo para quienes lo comparten, este es un recuento conceptual, una semilla disponible en la <code class="term">base de conocimientos</code> dentro del <code class="term">repositorio</code> de la <code class="term">midu</code>.</p>
+
+      <h4>La cartografía de lo esencial</h4>
+
+      <p>La IA nos permite encontrar relaciones semánticas entre todos los conceptos y textos que componen la base de conocimientos y el código en sí mismo; también produce una <a href="/assets/graph.html" target="_blank" rel="noopener noreferrer">visualización interactiva</a> automatizada que puede servir para explorar los conceptos de dos maneras:</p>
+
+      <ul>
+        <li>El pensamiento espacial puede ayudarnos a ubicar conceptos y entender mejor las conexiones entre ellos.</li>
+        <li>La visualización es producida por el plugin <code class="term">graphify</code> de <code class="term">Claude Code</code>. Si otra persona quisiera modificar el código de la <code class="term">midu</code>, el grafo de conocimiento es todo el <code class="term">contexto</code> necesario para que cualquier LLM entienda el <code class="term">repositorio</code> en su conjunto. Es un mapa de relaciones que una máquina puede navegar.</li>
+      </ul>
+
+      <h3>Las referencias</h3>
+
+      <p>Una lista de las personas que han trabajado en el desarrollo de todas las <code class="term">subjetividades</code> que buscamos introducir en el desarrollo de la <code class="term">midu</code>:</p>
+
+      <p class="section-ref"><a href="https://github.com/alfabeto-digital/conspiratorios_populares_de_las_soberanias" target="_blank" rel="noopener noreferrer">github.com/alfabeto-digital/conspiratorios_populares_de_las_soberanias</a></p>
+
+      <hr class="section-divider">
+
+      <h2>III. Conspiratorios populares de las soberanías</h2>
+
+      <p><code class="term">Con-spirare</code>. En su origen latino, <code class="term">conspirar</code> no se asociaba a la traición o al secreto: describía <strong>el acto de respirar con otros</strong>, de compartir el mismo aire, de coexistir. Suponemos que la connotación negativa que acumuló con el tiempo dice algo sobre cómo las estructuras de gobernanza hegemónicas leen la <strong>solidaridad</strong>: <strong>reunirse, ponerse de acuerdo, actuar en conjunto por pura voluntad</strong>.</p>
+
+      <p>La etimología puede ayudarnos a redefinir colectivamente qué significa estar juntos, <strong>bien podrían ser las "<em>Mingas</em>" populares de las soberanías</strong>. Un Conspiratorio popular de las soberanías es un espacio donde personas con preguntas similares se encuentran, comparten lo que saben y construyen algo que no podrían construir solos; reconociendo que la soberanía es posible cuando logramos <code class="term">conspirar</code> con otros.</p>
+
+      <p>Aquí habitarán las <code class="term">midu</code> que se sumen a la red. Cada una será el hogar de un <em>Conspiratorio popular de las soberanías</em> y hará parte del ejercicio de gobernanza colectiva:</p>
+
+      <ul>
+        <li><a href="https://alfabeto.digital" target="_blank" rel="noopener noreferrer">alfabeto.digital</a></li>
+      </ul>
+
     </div>
-  </div>
-  <div class="helloWorld">
-    <div class="article">
-        <section class="content" style="padding: 5px; font-size: medium;">
-            <h1>Hello world!</h1>
-            
-            <p>It is common to find discussions about the effects of the spread of the printing press worldwide <a href="#ref1"><sup>[1]</sup></a>, the dissemination of 
-                printed material, and the unprecedented exchange of ideas that led humanity from the Middle Ages to the Renaissance. This shift in historical periods may 
-                be happening again, driven by the development of large language models (LLMs), which form the foundation of aspirations toward <b style="color: #ff4081">
-                Artificial General Intelligence</b>. The full extent of their impact remains impossible to foresee. This technology has the potential to radically change 
-                how we interact with information. We are already witnessing how it enables not only translations between languages but also between levels of abstraction, 
-                between forms and models we use to understand and describe the world. The door has been opened to free access to a human knowledge base—a collection of 
-                experiences, memories, and reflections; a repository of <b style="color: #ff4081">shared, open knowledge</b>.</p>
-    
-            <blockquote>
-                <p>"I imagine <b style="color: #0b6cda">a world where many worlds fit</b>"</p>
-                <footer>— Arturo Escobar <cite>uses this Zapatista phrase to illustrate the concept of <b style="color: #ff4081">pluriverse</b>.</cite></footer>
-            </blockquote>
-    
-            <p>In his proposals for alternatives to development, he draws from the marginalized perspectives of women, Indigenous peoples, farmers, and Afro-descendants, 
-                who understand each individual in relation to others—an inherent relational characteristic that keeps us interconnected, both human and non-human, overcoming
-                the division between culture and nature. He suggests the need for a system that responds to the epistemic diversity of human experience and emphasizes the 
-                importance of building from the bottom up and from the peripheries—an alternative to the hegemonic Western, white, and male model. Escobar outlines a project 
-                called <b style="color: #0b6cda">"Transitions: A Space for Research and Design Toward the Pluriverse"</b> <a href="#ref2"><sup>[2]</sup></a>, in which he 
-                raises the question of what forms of communication would be necessary for a transition, and what set of practices and technologies we need in a world where, 
-                indeed, all worlds can fit.</p>
-    
-            <p>This raises the need to move beyond traditional disciplines toward a form of knowledge that captures the multidimensionality of our social challenges. Jesús 
-                Martín Barbero calls this approach <b style="color: #ff4081">transdisciplinarity</b>—a way to think about world issues. He argues that:</p>
-    
-            <blockquote>
-                <p>"The keys to the new figures of reason lie in the <b style="color: #ff4081">interface and hypertext</b>, as devices for articulating multiple types of 
-                    languages, knowledge systems, and writings, which form part of a new <b style="color: #ff4081">communicative ecosystem</b> that interweaves audiovisual 
-                    media, telecommunications, and computing, while destabilizing traditional knowledge institutions"</p>
-                <footer>— Jesús Barbero <a href="#ref3"><sup>[3]</sup></a></footer>
-            </blockquote>
-    
-            <p>These reflections lead me to the central concept behind <b style="color: #0b6cda">alfabeto.digital</b>: <b style="color: #ff4081">the interface</b>. Platforms,
-                 corporations, and governments act like massive dams that interrupt or divert the natural flow of information. To do so, they have developed operating systems, 
-                 software, storage processes, data transformation, analysis and visualization tools, applications, predictive models, and automated algorithms. In other words, 
-                 their tools function as an interface that shapes our <b style="color: #ff4081">user experience</b><a id="footnote-1-ref" href="#footnote-1"><sub>1</sub></a>. 
-                 These interfaces regulate a specific flow of data, signs, and symbols, making it difficult to overcome inequality or construct new meanings and forms of interaction. 
-                 The idea of digital and technological sovereignty becomes increasingly relevant, prompting questions such as:</p>
-    
-            <ol>
-                <li>What is needed to trigger a process of <b style="color: #ff4081">popular digital literacy and transformation</b>?</li>
-                <li>How can we design a system that enables us to be <b style="color: #ff4081">sovereign</b> and allows us to <b style="color: #ff4081">trust</b> the information 
-                    we use to make decisions, to understand the world, and to live?</li>
-            </ol>
-    
-            <p>Water is essential to all life forms on Earth. Each species has developed a unique relationship with it, as it enables cellular biological processes. Life's message is 
-                encoded in its cycle, reaching all areas and influencing individual decisions. It determines climate and migration patterns. Information in our <b style="color: #ff4081">
-                social system</b> plays a similar role: it allows us to adapt to environmental conditions, coordinate with others, and use available resources to perform increasingly complex 
-                activities. In a sense, it is ironic that even Artificial Intelligence systems have developed a relationship in which they depend on vast amounts of water for their existence. 
-                Information is embedded in <b style="color: #0b6cda">practices, customs, knowledge, images, sounds, and texts</b>. While we may not see exactly how, we can sense that it moves 
-                according to some kind of rhythm and that there is a cycle in which we all participate.</p>
-    
-            <p>Contaminating water or contaminating information has similar consequences, and we are gradually understanding the strategic importance of the latter in preserving the conditions 
-                that make our existence possible. We are being given contaminated water to drink; potable water is expensive and scarce, and many turn to the saltwater of the sea to avoid dying 
-                of thirst.</p>
-    
-            <p>This does not seem to be a problem limited to <b style="color: #ff4081">platforms</b>. <b style="color: #ff4081">Governments</b> do not provide us with accurate records that 
-                facilitate our daily lives. Instead, we face bureaucracies that often seem absurd and make it difficult—if not impossible—to effectively access state services. 
-                The <b style="color: #ff4081">press</b> does not help us reach a consensus, as it lacks the capacity for impartiality. Even if it were transparent about its interests and funding 
-                sources, at best, we would only be aware of the biases shaping our information. However, the need to survive in the attention economy has led to a shift toward subscription models, 
-                where quality information (not free from bias) comes at a cost—the same challenge we face in <b style="color: #ff4081">academia</b> when trying to access journal articles or 
-                indexed publications. We do not own the music we listen to or the movies we watch. Accessing our own history or the data that could <b style="color: #0b6cda">add value and context</b> 
-                to our thoughts is a task for an engineer, not for a user.</p>
-    
-            <p>The interface can be understood as the <b style="color: #0b6cda">set of tools</b> that define our experience in the digital world. However, it is also possible to argue that, at 
-                this historical moment in the technological development of our species, almost every sensory experience is mediated by our relationship with technology. The economic relationships 
-                that allow us to meet <b style="color: #ff4081">basic needs</b>, our <b style="color: #ff4081">desires</b>, and even our <b style="color: #ff4081">emotions</b> are constantly 
-                threatened by market dynamics that do not seek to provide us with a dignified life or achieve balance but rather to extract the maximum profit from our time and the planet's resources 
-                for the accumulation of wealth in a few hands.</p>
-    
-            <p>A few years ago, I discovered the <b style="color: #ff4081">moral imagination</b> <a href="#ref4"><sup>[4]</sup></a>—the ability to reach agreements that transform conflicts and enable 
-                coexistence in the futures we envision as possible. I believe the time has come for all of us to <b style="color: #0b6cda">hold ourselves accountable</b>. To do so, we need to build a 
-                different interface—one that recognizes the common interest in regulating the conditions of our lives, one that we can <b style="color: #0b6cda">trust</b>, one in which we can 
-                <b style="color: #0b6cda">freely choose</b> between exchange, cooperation, or competition with others.</p>
-    
-            <p>The appropriation and development of digital skills emerge as knowledge that is &lt;<b style="color: #0b6cda">not utopian, but atopic</b>, belonging to a 
-                <b style="color: #ff4081">'placeless place'</b>&gt; <a href="#ref3"><sup>[3]</sup></a>. Since we cannot yet place them anywhere, we cannot yet know what future they represent. What we 
-                do know is that they are urgently needed. This is an open invitation to work together in <b style="color: #ff4081">deconstructing and reconstructing</b> our social relationships—to take 
-                Chimamanda Ngozi's words seriously when she states that:</p>
-    
-            <blockquote>
-                <p><b style="color: #0b6cda">"Culture does not make people. People make culture."</b></p>
-                <footer>— Chimamanda Ngozi Adichie <a href="#ref5"><sup>[5]</sup></a></footer>
-            </blockquote>
-    
-            <section class="references">
-                <h2>References</h2>
-                <ol>
-                    <li id="ref1">Rummel E, Wilson M, Kooistra M. Printing and the book. In: <em>Renaissance and Reformation</em>. Oxford University Press; 2010. Available from: 
-                        <a href="http://dx.doi.org/10.1093/obo/9780195399301-0004" target="_blank">http://dx.doi.org/10.1093/obo/9780195399301-0004</a></li>
-                    <li id="ref2">Escobar A. <em>Sentipensar con la tierra: Nuevas lecturas sobre desarrollo, territorio y diferencia.</em> Ediciones Unaula; 2014. p. 139.</li>
-                    <li id="ref3">Martín Barbero J. <em>Transdisciplinariedad: Notas para un mapa de sus encrucijadas cognitivas y sus conflictos culturales</em> [Internet]. 2005 
-                        [cited 2025 Mar 9]. Available from: <a href="../assets/library/transdisciplinariedad-martin-barbero.pdf" target="_blank">
-                        https://www.debatecultural.net.ve/Observatorio/JesusMartinBarbero2.htm</a></li>
-                    <li id="ref4">Lederach JP. <em>The Moral Imagination</em>. Oxford University Press; 2005.</li>
-                    <li id="ref5">Adichie CN. <em>We should all be feminists</em> [Internet]. In: TED Talks [Video]. 2017 [cited 2025 Mar 9]. Available from:
-                        <a href="https://www.ted.com/talks/chimamanda_ngozi_adichie_we_should_all_be_feminists" target="_blank">
-                        https://www.ted.com/talks/chimamanda_ngozi_adichie_we_should_all_be_feminists</a></li>
-                </ol>
-                <hr width="100%" size="1" color="black">
-                <ol>
-                    <li id="footnote-1">
-                        <p>Understanding user experience as a collection of interactions between a person and an environment or device; time, usage 
-                            possibilities, and system inputs/outputs.
-                            <a href="#footnote-1-ref">&#8617;</a></p>
-                    </li>
-                </ol>
-            </section>
-        </section>
-    </div>
-  </div>
-
-  <!-- Second row 
-  <div class="timer-container">
-    <div class="timer">
-        <div class="timer-unit">
-            <div class="number" id="days">00</div>
-            <div class="label">Días</div>
-        </div>
-        <div class="timer-unit">
-            <div class="number" id="hours">00</div>
-            <div class="label">Horas</div>
-        </div>
-        <div class="timer-unit">
-            <div class="number" id="minutes">00</div>
-            <div class="label">Minutos</div>
-        </div>
-        <div class="timer-unit">
-            <div class="number" id="seconds">00</div>
-            <div class="label">Segundos</div>
-        </div>
-    </div>
-  </div>-->
-</div>
-
-<!--<script src="../assets/js/landing.js"></script>-->
+  </article>
+</body>
+</html>
