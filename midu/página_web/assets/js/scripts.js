@@ -15,12 +15,7 @@ function loadHTML(containerId, filePath, callback) {
 
 // Update HTML
 function updateContent(page) {
-  const container = document.getElementById('dynamic-content');
-  container.classList.remove('clip');
   loadHTML('dynamic-content', page, () => {
-    if (container.querySelector('.no-overflow')) {
-      container.classList.add('clip');
-    }
     const icons = document.querySelectorAll('.navbar .icon-box');
     icons.forEach(icon => {
       icon.classList.remove('selected');
@@ -46,13 +41,11 @@ function initMenu() {
     menu.classList.remove('active');
     document.getElementById('floating-menu').style.display = 'flex';
   };
-  
+
   menu.onclick = (e) => {
     const icon = e.target.closest('.icon-box');
     if (icon) {
-      if (icon.dataset.page) {
-        updateContent(icon.dataset.page);
-      }
+      updateContent(icon.dataset.page);
       menu.classList.remove('active');
       document.getElementById('floating-menu').style.display = 'flex';
     }
@@ -65,13 +58,13 @@ function initMenu() {
 // Events listener
 document.addEventListener('DOMContentLoaded', () => {
   sessionStorage.removeItem('currentPage');
-  
+
   Promise.all([
     loadHTML('header-container', '../components/header.html'),
     loadHTML('expanded-menu-container', '../components/menu.html')
   ]).then(() => {
     initMenu();
-    
+
     document.getElementById('header-click-area').onclick = () => {
       sessionStorage.setItem('currentPage', '../components/landing.html');
       updateContent('../components/landing.html');
