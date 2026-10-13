@@ -1,6 +1,6 @@
 ﻿# Dendrite
 
-← [Servicios](servicios.md)
+← [Servicios](../servicios.md)
 
 ## ¿Qué es esto?
 

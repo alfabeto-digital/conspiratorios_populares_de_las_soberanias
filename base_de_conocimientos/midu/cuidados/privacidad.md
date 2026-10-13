@@ -2,7 +2,7 @@
 
 ## La privacidad como afterthought
 
-La mayoría de los servicios digitales funcionan así: primero se construye el producto, se optimiza para crecimiento y monetización, y al final —cuando hay problemas legales o presión de usuarios— se añaden controles de privacidad. Un botón para borrar tu cuenta. Una opción para desactivar el seguimiento de anuncios. Un aviso de cookies.
+La mayoría de los servicios digitales funcionan así: primero se construye el producto, se optimiza para crecimiento y monetización, y al final, cuando hay problemas legales o presión de usuarios, se añaden controles de privacidad. Un botón para borrar nuestra cuenta. Una opción para desactivar el seguimiento de anuncios. Un aviso de cookies.
 
 Esto se llama privacidad como afterthought, como algo que se añade después. El problema es que cuando la arquitectura ya está construida para recopilar y compartir `datos`, los controles superficiales no cambian la naturaleza del sistema.
 
@@ -20,9 +20,9 @@ Cuando guardas una contraseña en Vaultwarden, ese dato vive en el disco cifrado
 
 **DNS local: la privacidad que se olvida**
 
-Las consultas DNS son un vector de vigilancia que mucha gente ignora. Cada vez que visitas un sitio web, tu `dispositivo` pregunta a un servidor DNS: "¿cuál es la dirección IP de este dominio?" Esa consulta revela qué sitios visitas, a qué hora, con qué frecuencia.
+Las consultas DNS son un vector de vigilancia que mucha gente ignora. Cada vez que visitamos un sitio web, nuestro `dispositivo` pregunta a un servidor DNS: "¿cuál es la dirección IP de este dominio?" Esa consulta revela qué sitios visitamos, a qué hora, con qué frecuencia.
 
-Si usas el DNS de Google (8.8.8.8) o el de Cloudflare (1.1.1.1), esas empresas tienen un registro detallado de tu comportamiento en internet.
+Si usamos el DNS de Google (8.8.8.8) o el de Cloudflare (1.1.1.1), esas empresas tienen un registro detallado de nuestro comportamiento en internet.
 
 Esta `interfaz` usa **AdGuard Home** como servidor DNS local. Todas las consultas DNS de la red local se resuelven a través de él, sin salir a proveedores externos. Además bloquea dominios de rastreo y publicidad a nivel de DNS, antes de que lleguen al navegador.
 
@@ -46,19 +46,17 @@ Si alguien obtiene acceso físico al servidor —lo roba, lo confisca, lo inspec
 
 Esta `interfaz` puede configurarse de dos maneras para el tunelado:
 
-1. **Newt + Pangolin**: el tráfico va del usuario al VPS propio, a través del túnel WireGuard, hasta el `computador` local. Ningún tercero ve el tráfico.
+1. **Pangolin**: el tráfico va del cliente al VPS arrendado, a través del túnel WireGuard, hasta el `computador` local. Ningún tercero ve el tráfico.
 
-2. **Cloudflare Tunnel**: el tráfico pasa por la red de Cloudflare antes de llegar al servidor. Cloudflare puede ver el tráfico HTTPS.
+2. **Cloudflare Tunnel**: el tráfico pasa por la red de Cloudflare antes de llegar al `computador` local. Cloudflare se dedica explícitamente a monitorear patrones de tráfico con propósitos comerciales.
 
-La opción con Cloudflare es más sencilla de configurar y más resiliente ante ataques DDoS. Pero implica que Cloudflare tiene acceso al tráfico que pasa por su red. Aunque el contenido de las aplicaciones individuales puede estar cifrado adicionalmente, la capa de transporte HTTPS la gestiona Cloudflare.
+La opción con Cloudflare es más sencilla de configurar y más resiliente ante ataques DDoS. Como intermediario, Cloudflare tiene acceso al tráfico que transita por su red. Cada comunidad decide según su modelo de amenaza.
 
-Esta es una decisión que cada administrador toma según su modelo de amenaza. No hay una respuesta universalmente correcta.
+## Nuestro modelo de amenaza
 
-## Tu modelo de amenaza
+Un **modelo de amenaza** es una manera de pensar sistemáticamente en los riesgos. En lugar de intentar protegerse de todo (imposible), respondemos preguntas concretas:
 
-Un **modelo de amenaza** es una manera de pensar sistemáticamente en los riesgos. En lugar de intentar protegerse de todo (imposible), se responden preguntas concretas:
-
-- ¿De quién te estás protegiendo?
+- ¿De quién nos estamos protegiendo?
 - ¿Qué recursos tiene ese adversario?
 - ¿Qué consecuencias tiene un fallo?
 
@@ -68,10 +66,10 @@ Los modelos de amenaza más comunes:
 
 **Atacantes oportunistas**: buscan sistemas con vulnerabilidades conocidas para comprometer, ransomware, acceso no autorizado. El modelo Zero Trust, TOTP, y mantener el software actualizado es protección suficiente.
 
-**Proveedores de servicios**: la empresa cuyo servicio usas tiene acceso a tus `datos` por definición. La única protección real es no usar sus servicios y alojar los propios. Eso es exactamente lo que hace esta `interfaz`.
+**Proveedores de servicios**: la empresa cuyo servicio usamos tiene acceso a nuestros `datos` por definición. La única protección real es alojar los servicios propios. Eso es exactamente lo que hace esta `interfaz`.
 
 **Adversarios con recursos estatales**: agencias de inteligencia con capacidad de interceptar tráfico a escala, comprometer hardware, presionar a proveedores. Protegerse de este nivel de amenaza requiere medidas adicionales que están fuera del alcance de esta `interfaz`.
 
-Saber contra qué te proteges ayuda a tomar decisiones razonables: Cloudflare puede ser aceptable si tu modelo de amenaza son publicistas y atacantes oportunistas, y no lo es si tu adversario es Cloudflare mismo.
+Saber contra qué te proteges ayuda a tomar decisiones razonables: Cloudflare puede ser aceptable si nuestro modelo de amenaza son publicistas y atacantes oportunistas; deja de serlo si nuestro adversario es Cloudflare mismo.
 
-Ver también: [Modelo de `cuidados`](modelo.md) · [Cifrado en capas](cifrado.md) · [Servicios: túnel](../servicios/túnel_cifrado.md) · [Servicios: DNS](../servicios/)
+Ver también: [`cuidados`](../cuidados.md) · [Cifrado en capas](cifrado.md) · [Servicios: túnel](../servicios/túnel_cifrado.md) · [Servicios: DNS](../servicios/)

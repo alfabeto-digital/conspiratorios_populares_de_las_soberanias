@@ -4,7 +4,7 @@ El cifrado es el proceso de convertir información legible en `datos` ininteligi
 
 ## LUKS: el disco cifrado
 
-LUKS (Linux Unified Key Setup) es el estándar de cifrado de disco en Linux. La analogía más cercana: imagina meter tus documentos dentro de un sobre sellado antes de guardarlos en el archivador. Alguien que robe el archivador solo tiene sobres sellados. Sin la clave para abrirlos, no puede leer nada.
+LUKS (Linux Unified Key Setup) es el estándar de cifrado de disco en Linux. La analogía más cercana: imaginemos meter nuestros documentos dentro de un sobre sellado antes de guardarlos en el archivador. Alguien que robe el archivador solo tiene sobres sellados. Sin la clave para abrirlos, no puede leer nada.
 
 En esta `interfaz` hay dos discos, y ambos están cifrados:
 
@@ -47,7 +47,7 @@ Secretos que gestiona este sistema: contraseñas de root y admin, contraseñas d
 
 ## TLS: el tráfico cifrado
 
-TLS (Transport Layer Security) es el protocolo que cifra el tráfico entre tu navegador y un servidor web. Cuando ves el candado en la barra de direcciones del navegador, es TLS en acción.
+TLS (Transport Layer Security) es el protocolo que cifra el tráfico entre el navegador y un servidor web. Cuando vemos el candado en la barra de direcciones del navegador, es TLS en acción.
 
 La analogía: un sobre sellado para cada paquete que viaja por internet. Aunque alguien intercepte el paquete en tránsito, no puede leer su contenido sin la clave.
 
@@ -59,7 +59,7 @@ Todo el tráfico externo hacia alfabeto.digital pasa por TLS. No hay excepciones
 
 ## TOTP: el segundo factor de autenticación
 
-TOTP (Time-based One-Time Password) es el sistema de códigos de un solo uso que cambian cada 30 segundos. Lo conoces de la verificación en dos pasos de bancos y servicios web.
+TOTP (Time-based One-Time Password) es el sistema de códigos de un solo uso que cambian cada 30 segundos. Lo conocemos de la verificación en dos pasos de bancos y servicios web.
 
 La analogía: un candado que cambia su combinación cada 30 segundos. Incluso si alguien roba tu contraseña, necesita también el código TOTP del momento exacto. Y ese código expira en 30 segundos.
 
@@ -85,4 +85,4 @@ El flujo completo de autenticación:
 | Túnel VPS ↔ Servidor | WireGuard | En tránsito |
 | Identidad de usuario | TOTP (Authelia) | En la autenticación |
 
-Ver también: [Modelo de `cuidados`](modelo.md) · [Arquitectura Zero Trust](zero-trust.md) · [Servicios: túnel](../servicios/túnel_cifrado.md)
+Ver también: [`cuidados`](../cuidados.md) · [Arquitectura Zero Trust](zero-trust.md) · [Servicios: túnel](../servicios/túnel_cifrado.md)

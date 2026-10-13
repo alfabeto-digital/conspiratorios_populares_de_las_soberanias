@@ -1,6 +1,6 @@
 ﻿# Ruta A: VPS con NixOS + Pangolin + Newt
 
-← [Conectarse a internet](../../conectarse_a_internet.md)
+← [Conectarse a internet](../../arquitectura/conectarse_a_internet.md)
 
 ## Qué es esta ruta
 

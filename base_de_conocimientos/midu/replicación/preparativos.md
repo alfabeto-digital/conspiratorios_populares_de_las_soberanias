@@ -45,7 +45,7 @@ sequenceDiagram
     ISPB-->>DB: mensaje recibido
 ```
 
-Las [tres rutas](../conectarse_a_internet.md) difieren en quién es ese intermediario, quién controla el DNS autoritativo de la `midu` y cuánta visibilidad tiene el ISP sobre ese tráfico.
+Las [tres rutas](../arquitectura/conectarse_a_internet.md) difieren en quién es ese intermediario, quién controla el DNS autoritativo de la `midu` y cuánta visibilidad tiene el ISP sobre ese tráfico.
 
 ### Suministro estable de energía
 
@@ -71,7 +71,7 @@ El **servidor DNS** responde esas consultas: cuando alguien escribe `mail.tusiti
 | **Subdominios de servicios** | Se crean aquí, o en Cloudflare si los nameservers son de Cloudflare | Traefik los recibe en el VPS y los reenvía | Caddy los dirige al servicio correcto |
 | **Certificados [TLS](../../lenguaje_común/lenguaje_común.md#tls)** | No participa | Cloudflare gestiona los suyos; el VPS usa [Let's Encrypt](../../lenguaje_común/lenguaje_común.md#lets-encrypt) | Caddy renueva automáticamente |
 
-Más detalles en [conectarse a internet: ISP, DNS y registrador de dominio](conectarse_a_internet.md#isp-dns-y-registrador-de-dominio).
+Más detalles en [conectarse a internet: ISP, DNS y registrador de dominio](../arquitectura/conectarse_a_internet.md#isp-dns-y-registrador-de-dominio).
 
 ### Un `computador` local
 
@@ -101,8 +101,8 @@ El `computador` en "la nube" es **desechable** porque no podemos confiar en el t
 - **IP pública fija**
 - Sistema operativo: NixOS (Ruta A) o cualquier Linux con Docker/Podman (Ruta B)
 
-> Más detalles sobre la [ruta A](conectarse_a_internet.md#ruta-a-vps-con-nixos--pangolin--newt)
-> Más detalles sobre la [ruta B](conectarse_a_internet.md#ruta-b-vps-con-podman-sin-nixos)
+> Más detalles sobre la [ruta A](../arquitectura/conectarse_a_internet.md#ruta-a-vps-con-nixos--pangolin--newt)
+> Más detalles sobre la [ruta B](../arquitectura/conectarse_a_internet.md#ruta-b-vps-con-podman-sin-nixos)
 > Más detalles sobre el [VPS](vps.md).
 
 ### Una `memoria` USB

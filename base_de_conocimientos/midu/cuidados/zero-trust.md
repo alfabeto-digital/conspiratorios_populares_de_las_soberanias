@@ -6,7 +6,7 @@ El modelo tradicional de seguridad de redes se parece a un castillo medieval: ha
 
 El problema con este modelo es que asume que el perímetro es impenetrable. Pero ¿qué pasa cuando alguien con malas intenciones ya está dentro? ¿O cuando el perímetro tiene una grieta que no se detectó? Una vez dentro del castillo, ese alguien tiene acceso a todo.
 
-En el mundo actual, este modelo tiene otra debilidad: el "interior" ya no existe de manera clara. Los servicios están en la nube, los usuarios acceden desde casa, los `dispositivo`s se conectan desde redes distintas. No hay un perímetro definido que defender.
+En el mundo actual, este modelo tiene otra debilidad: el "interior" ya no existe de manera clara. Los servicios están en la nube, los usuarios acceden desde casa, los `dispositivos` se conectan desde redes distintas. No hay un perímetro definido que defender.
 
 ## Zero Trust: no confíes en nada, verifica todo
 
@@ -54,8 +54,8 @@ Adoptar Zero Trust es también una postura honesta sobre la naturaleza de la seg
 
 El modelo del castillo con foso implica decir "somos seguros porque nadie ha entrado". Zero Trust implica decir "en algún momento algo va a fallar, y hemos diseñado el sistema para que ese fallo tenga consecuencias limitadas".
 
-La segunda postura es más honesta. No promete seguridad perfecta —que no existe— sino **contención del daño** cuando algo sale mal.
+La segunda postura es más honesta. Promete **contención del daño** cuando algo sale mal.
 
 En términos prácticos: si mañana hay una vulnerabilidad crítica en uno de los servicios y un atacante la explota, los `datos` de los demás servicios siguen protegidos. El disco sigue cifrado. Los secretos siguen cifrados. El atacante tiene acceso a ese servicio, no al sistema completo.
 
-Ver también: [Modelo de `cuidados`](modelo.md) · [Cifrado en capas](cifrado.md) · [Privacidad por diseño](privacidad.md) · [Arquitectura general](../arquitectura/)
+Ver también: [`cuidados`](../cuidados.md) · [Cifrado en capas](cifrado.md) · [Privacidad por diseño](privacidad.md) · [Arquitectura general](../arquitectura/)

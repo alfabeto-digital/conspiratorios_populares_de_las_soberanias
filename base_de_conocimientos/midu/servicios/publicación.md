@@ -1,6 +1,6 @@
-# Publicación
+﻿# Publicación
 
-← [Servicios](servicios.md)
+← [Servicios](../servicios.md)
 
 Publicar la `base_de_conocimientos/` como sitio web la hace accesible sin clonar el repositorio, y transferible a personas que no usan git. Documentar es comunicar; publicar hace que esa comunicación llegue más lejos.
 

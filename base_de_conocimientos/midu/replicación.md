@@ -54,7 +54,7 @@ Una vez hemos completado `config.nix` y cifrado los secretos, el sistema puede c
 
 La `midu` necesita un intermediario con IP pública fija para recibir tráfico desde internet. Hay tres rutas posibles; la elección determina el nivel de `exposición` del tráfico entrante y saliente.
 
-> [Servicios de internet, nombres de dominio y rutas](conectarse_a_internet.md)
+> [Servicios de internet, nombres de dominio y rutas](arquitectura/conectarse_a_internet.md)
 
 #### El `computador` desechable
 
@@ -73,7 +73,7 @@ El [servidor virtual privado](../lenguaje_común/lenguaje_común.md#vps) es el p
 | [Personalizar la configuración](replicación/configuración.md) | Completar `config.nix` con los valores del `computador` | 20–30 min |
 | [Generar los secretos](replicación/secretos.md) | Claves age, sops-nix, cifrado de secretos y LUKS | 30–45 min |
 | [Construir el sistema](replicación/nixos.md#paso-6-clonar-el-repositorio-y-construir-el-sistema) | Clonar el `repositorio`, enlazar la configuración y ejecutar la primera construcción | 20–30 min |
-| [Conectarse a internet](conectarse_a_internet.md) | Elegir una alternativa | 10 min |
+| [Conectarse a internet](arquitectura/conectarse_a_internet.md) | Elegir una alternativa | 10 min |
 | [Desplegar un VPS](replicación/vps.md) | Despliegue del punto de entrada público (Ruta A o B) | 30–60 min |
 | [Crear un túnel ZeroTrust](servicios/zero_trust.md) | Crear una cuenta en Cloudflare y configurar el túnel | 30 min |
 
@@ -82,42 +82,33 @@ El [servidor virtual privado](../lenguaje_común/lenguaje_común.md#vps) es el p
 Los pasos están diseñados para seguirse en esta secuencia. Hay dependencias entre ellos: no podemos cifrar secretos antes de tener la clave age, y no podemos construir el sistema antes de tener los secretos cifrados.
 
 ```mermaid
-%%{init: {'theme': 'base', 'themeVariables': {'background': '#fbf1c7', 'primaryColor': '#f2e5bc', 'primaryBorderColor': '#3c3836', 'primaryTextColor': '#3c3836', 'lineColor': '#a89984', 'git0': '#458588', 'git1': '#427b58', 'git2': '#427b58', 'git3': '#427b58', 'git4': '#427b58', 'git5': '#b57614', 'git6': '#d65d0e', 'git7': '#cc241d', 'gitBranchLabel0': '#fbf1c7', 'gitBranchLabel1': '#fbf1c7', 'gitBranchLabel2': '#fbf1c7', 'gitBranchLabel3': '#fbf1c7', 'gitBranchLabel4': '#fbf1c7', 'gitBranchLabel5': '#fbf1c7', 'gitBranchLabel6': '#fbf1c7', 'gitBranchLabel7': '#fbf1c7', 'gitInv0': '#fbf1c7', 'gitInv1': '#fbf1c7', 'gitInv2': '#fbf1c7', 'gitInv3': '#fbf1c7', 'gitInv4': '#fbf1c7', 'gitInv5': '#fbf1c7', 'gitInv6': '#fbf1c7', 'gitInv7': '#fbf1c7', 'commitLabelBackground': '#f2e5bc', 'commitLabelColor': '#3c3836'}}}%%
+%%{init: {'theme': 'base', 'gitGraph': {'mainBranchName': 'replicacion'}, 'themeVariables': {'background': '#fbf1c7', 'primaryColor': '#f2e5bc', 'primaryBorderColor': '#3c3836', 'primaryTextColor': '#3c3836', 'lineColor': '#a89984', 'git0': '#458588', 'git1': '#8f3f71', 'git2': '#427b58', 'git3': '#b57614', 'git4': '#cc241d', 'git5': '#b57614', 'git6': '#d65d0e', 'git7': '#cc241d', 'gitBranchLabel0': '#fbf1c7', 'gitBranchLabel1': '#fbf1c7', 'gitBranchLabel2': '#fbf1c7', 'gitBranchLabel3': '#fbf1c7', 'gitBranchLabel4': '#fbf1c7', 'gitBranchLabel5': '#fbf1c7', 'gitBranchLabel6': '#fbf1c7', 'gitBranchLabel7': '#fbf1c7', 'gitInv0': '#fbf1c7', 'gitInv1': '#fbf1c7', 'gitInv2': '#fbf1c7', 'gitInv3': '#fbf1c7', 'gitInv4': '#fbf1c7', 'gitInv5': '#fbf1c7', 'gitInv6': '#fbf1c7', 'gitInv7': '#fbf1c7', 'commitLabelBackground': '#f2e5bc', 'commitLabelColor': '#3c3836'}}}%%
 gitGraph
-  commit id: "documentar el proceso"
+  commit id: "documentación"
+  branch documentacion
+  checkout replicacion
   commit id: "prepararse"
-  branch nixos-i
-  checkout nixos-i
-  commit id: "instalar SO y cifrar discos"
-  checkout main
-  merge nixos-i
-  branch config
-  checkout config
+  checkout documentacion
+  commit id: "hardware y herramientas"
+  checkout replicacion
+  commit id: "instalar NixOS"
+  checkout documentacion
+  commit id: "obstáculos encontrados"
+  checkout replicacion
   commit id: "personalizar config.nix"
-  checkout main
-  merge config
-  branch secretos
-  checkout secretos
+  checkout documentacion
+  commit id: "decisiones de configuración"
+  checkout replicacion
   commit id: "generar secretos"
-  checkout main
-  merge secretos
-  branch nixos-ii
-  checkout nixos-ii
+  checkout documentacion
+  commit id: "claves y estructura"
+  checkout replicacion
   commit id: "construir sistema"
-  checkout main
-  merge nixos-ii
+  checkout documentacion
+  commit id: "errores y soluciones"
+  checkout replicacion
   commit id: "conectarse a internet"
-  branch ruta-a
-  checkout ruta-a
-  commit id: "VPS + NixOS"
-  checkout main
-  branch ruta-b
-  checkout ruta-b
-  commit id: "VPS + Podman"
-  checkout main
-  branch ruta-c
-  checkout ruta-c
-  commit id: "ZeroTrust"
+  merge documentacion
 ```
 
 ## La posibilidad del error

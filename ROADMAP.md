@@ -8,6 +8,7 @@
 ## Comunicaciones
 
 - [x] Servidor principal + VPS con túnel WireGuard (Pangolin/Gerbil/Newt)
+- [ ] Investigación: WireGuard dentro del túnel ZeroTrust — cloudflared opera sobre TCP/HTTP; WireGuard necesita UDP. Requiere envolver UDP en TCP (udp2raw, wstunnel u otro adaptador) o usar Cloudflare WARP Gateway (capa de pago) que soporta UDP nativamente
 - [x] Cifrado en reposo (LUKS) + gestión de secretos (sops-nix/age)
 - [x] Stalwart — email (SMTP/IMAP)
 - [x] Dendrite — mensajería Matrix

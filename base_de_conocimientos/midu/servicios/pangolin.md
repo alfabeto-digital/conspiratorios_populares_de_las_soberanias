@@ -1,6 +1,6 @@
 ﻿# Pangolin: el túnel cifrado del VPS
 
-← [Servicios](servicios.md)
+← [Servicios](../servicios.md)
 
 ## ¿Qué es esto?
 

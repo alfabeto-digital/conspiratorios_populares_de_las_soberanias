@@ -1,6 +1,6 @@
 ﻿# herramientas de terminal
 
-← [Servicios](servicios.md)
+← [Servicios](../servicios.md)
 
 Las herramientas de terminal son la `interfaz` directa con el `computador`. No tienen `interfaz` gráfica: operan sobre el sistema declarativo de NixOS y el repositorio de configuración. Se gestionan con home-manager, declarado en `midu/nixos/modules/nixos/admin.nix`, que aplica la configuración del usuario `admin` cada vez que se reconstruye el sistema.
 

@@ -2,29 +2,46 @@
 
 ← [Inicio](../../README.md#la-midu)
 
-La `midu` está construida como un organismo. Tiene un núcleo donde viven los `datos`, una membrana que filtra el tráfico de entrada y un genoma que describe cómo se configura todo. Estas no son metáforas decorativas; articulan la lógica de cada decisión técnica.
+La `midu` imita el funcionamiento de un organismo vivo. Tiene un núcleo en donde viven las `memorias`, una membrana que filtra el tráfico de entrada y un genoma que describe cómo se configura todo. Estas metáforas articulan la lógica de cada decisión técnica.
 
-Cada documento de esta sección desarrolla uno de esos conceptos: cómo se mueve el tráfico, qué papel tiene cada máquina, por qué NixOS, cómo se organizan los módulos, cómo se protegen los secretos. Juntos construyen el argumento de que una `infraestructura` propia puede ser comprensible, reproducible y soberana.
+Esta sección desarrolla cada uno de estos conceptos: cómo se mueve el tráfico, qué función tiene cada `computador`, qué es NixOS, cómo se organizan los módulos, cómo se protegen los secretos. Juntos constituyen la propuesta de una `infraestructura` propia que sea comprensible, reproducible y soberana.
 
-## Documentos de esta sección
+```mermaid
+%%{init: {'theme': 'base', 'gitGraph': {'mainBranchName': 'internet'}, 'themeVariables': {'background': '#fbf1c7', 'primaryColor': '#f2e5bc', 'primaryBorderColor': '#3c3836', 'primaryTextColor': '#3c3836', 'lineColor': '#a89984', 'git0': '#458588', 'git1': '#427b58', 'git2': '#b57614', 'git3': '#427b58', 'git4': '#427b58', 'git5': '#b57614', 'git6': '#d65d0e', 'git7': '#cc241d', 'gitBranchLabel0': '#fbf1c7', 'gitBranchLabel1': '#fbf1c7', 'gitBranchLabel2': '#fbf1c7', 'gitBranchLabel3': '#fbf1c7', 'gitBranchLabel4': '#fbf1c7', 'gitBranchLabel5': '#fbf1c7', 'gitBranchLabel6': '#fbf1c7', 'gitBranchLabel7': '#fbf1c7', 'gitInv0': '#fbf1c7', 'gitInv1': '#fbf1c7', 'gitInv2': '#fbf1c7', 'gitInv3': '#fbf1c7', 'gitInv4': '#fbf1c7', 'gitInv5': '#fbf1c7', 'gitInv6': '#fbf1c7', 'gitInv7': '#fbf1c7', 'commitLabelBackground': '#f2e5bc', 'commitLabelColor': '#3c3836'}}}%%
+gitGraph
+  commit id: " "
+  branch vps
+  commit id: "VPS arrendado"
+  commit id: "Túnel cifrado"
+  checkout internet
+  branch cloudflare
+  commit id: "red de Cloudflare"
+  commit id: "ZeroTrust"
+  checkout vps
+  merge cloudflare
+  commit id: "midu"
+  commit id: "servicios"
+```
 
-**[Descripciones generales](arquitectura/descripciones_generales.md)**: el flujo completo del tráfico como célula con membrana. El `computador` local es el núcleo donde viven los `datos`; el VPS es la membrana plasmática, el único punto de contacto con internet; el túnel cifrado es el citoplasma que conecta ambos sin exponer el núcleo. Un buen lugar para empezar.
+El tráfico de internet llega a la membrana: un `computador` arrendado (VPS) o la red de Cloudflare y su túnel ZeroTrust. La membrana recibe las solicitudes y las reenvía a través de un túnel cifrado hacia el `computador` local, sin exponer la dirección real del núcleo. Caddy recibe el tráfico dentro del `computador` local y lo distribuye a cada servicio después de que Authelia verifica la identidad de quien intenta acceder. Las `memorias` viven y se procesan únicamente en el `computador` local.
 
-**[El `computador` local y el VPS](arquitectura/hosts.md)**: las dos máquinas tienen roles deliberadamente asimétricos. El `computador` local almacena todo; el VPS sabe casi nada. Esa asimetría define el modelo de amenaza: si el VPS se compromete, los `datos` siguen seguros.
+[**El `computador` local y el `computador` desechable**](arquitectura/hosts.md) son los anfitriones de nuestro sistema: el `computador` local almacena las `memorias` y ejecuta todos los servicios; el `computador` desechable actúa como intermediario público (membrana) y no sabe casi nada del núcleo. Esa asimetría define el modelo de amenaza: si el `computador` desechable es comprometido, los `datos` siguen seguros en el núcleo y podemos reemplazar la membrana completa rápidamente.
 
-**[¿Qué es NixOS?](arquitectura/nixos.md)**: si la célula tiene genoma, el sistema tiene `flake.nix`. NixOS describe el estado completo de cada máquina en código: qué servicios corren, cómo están configurados, qué dependencias tienen. Modificar el genoma reconstruye el sistema; revertir el genoma lo restaura.
+En las Rutas A y B, el `computador` desechable corre Pangolin, que gestiona los túneles y el enrutamiento HTTP/S. El protocolo del túnel es WireGuard; Newt es el cliente que corre en el `computador` local.
 
-**[¿Qué es un Nix Flake?](arquitectura/flake.md)**: el punto de entrada del sistema, el archivo que actúa como información genética de la `midu`. Declara las dependencias exactas y cómo ensamblarlas; el `flake.lock` fija la secuencia precisa para que dos máquinas construidas desde el mismo repositorio produzcan el mismo sistema.
+[**NixOS**](arquitectura/nixos.md) es el genoma del sistema: describe el estado completo de cada máquina en código.
 
-**[El patrón dendrítico](arquitectura/patrón_dendrítico.md)**: las dendritas de una neurona crecen hacia nuevas conexiones sin modificar el cuerpo de la neurona. El sistema de módulos funciona igual: añadir un servicio nuevo es crear un archivo nuevo en el directorio correcto. No hay un archivo central que tenga que actualizarse cada vez.
+[**El Nix Flake**](arquitectura/flake.md) es el punto de entrada: el archivo que declara las dependencias exactas y cómo ensamblarlas. El `flake.lock` fija la secuencia precisa para que dos máquinas construidas desde el mismo repositorio produzcan el mismo sistema.
 
-**[Gestión de secretos](arquitectura/secretos.md)**: la configuración vive en el repositorio; los secretos no. `age` cifra cada secreto para la máquina que lo necesita; `sops-nix` los descifra durante la construcción del sistema. El resultado es un repositorio auditable sin ningún valor sensible.
+[**El patrón dendrítico**](arquitectura/patrón_dendrítico.md): añadir un servicio nuevo se reduce a crear un archivo nuevo en el directorio correcto, sin modificar ningún archivo central.
 
-**[Las capas de la memoria](arquitectura/capas_de_la_memoria.md)**: las seis funciones de la `midu` como estratos de la memoria digital: comunicaciones, observabilidad, procesamiento, descubribilidad, reproducibilidad y resiliencia. Cada capa puede estar bajo control propio o delegada a `infraestructuras` externas; la `soberanía` es la capacidad de intervenir en cualquiera de ellas.
+[**Gestión de secretos**](arquitectura/secretos.md): la configuración vive en el repositorio; los secretos no. `age` cifra cada secreto para la máquina que lo necesita; `sops-nix` los descifra durante la construcción del sistema.
 
-**[Almacenamiento federado](arquitectura/almacenamiento_federado.md)**: el modelo de tres capas de almacenamiento y la topología de federación entre nodos. Los `datos` permanecen cifrados, fragmentados y distribuidos geográficamente; ningún nodo alberga una copia completa de los `datos` de otro.
+[**Las capas de la memoria**](arquitectura/capas_de_la_memoria.md): seis niveles en los que se pueden describir los estratos de las `memorias digitales` según la forma en la que se agregan objetos en los discos duros de la `midu`. La `soberanía` sobre las `infraestructuras` locales nos permite intervenir en la forma en la que esas capas organizan y transforman los `datos`.
 
-## Archivos de la `interfaz`
+[**Almacenamiento federado**](arquitectura/almacenamiento_federado.md): un modelo de tres capas de almacenamiento y la topología de federación entre nodos. Las `memorias` permanecen cifradas, fragmentadas y distribuidas geográficamente; ningún nodo alberga una copia completa de las `memorias` de otro pero juntos agregan un nivel de resiliencia adicional a la posibilidad de pérdida de nuestras `memorias` individuales y colectivas.
+
+## La `interfaz` descrita en código
 
 Esta tabla describe los archivos más importantes del repositorio y para qué sirve cada uno.
 
@@ -37,16 +54,16 @@ Esta tabla describe los archivos más importantes del repositorio y para qué si
 | `flake.nix` | Punto de entrada de Nix Flakes |
 | `hardware-configuration.nix` | Generado automáticamente por el instalador; no editar ni subir al repositorio |
 | `home/default.nix` | Configuración del entorno de usuario (home-manager) |
-| `secrets/secrets.plain.template` | Plantilla de secretos del `computador` local; subir vacía al repositorio |
-| `secrets/secrets-vps.plain.template` | Plantilla de secretos del VPS; subir vacía al repositorio |
+| `secrets/secrets.plain.template` | Plantilla de secretos del `computador` local; vacía al repositorio |
+| `secrets/secrets-vps.plain.template` | Plantilla de secretos del VPS; vacía al repositorio |
 | `secrets/secrets.yaml` | Secretos cifrados del `computador` local; no se sube al repositorio |
 | `secrets/secrets-vps.yaml` | Secretos cifrados del VPS; no se sube al repositorio |
-| `.sops.yaml.template` | Plantilla de reglas sops; subir con claves placeholder |
+| `.sops.yaml.template` | Plantilla de reglas sops |
 | `replicate-grub/` | ISOs y tema Ventoy para el USB de `replicación` |
 
 Los archivos que no se suben al repositorio existen únicamente en la máquina donde deben estar: si alguien accede al repositorio, no encuentra nada que le sirva para comprometer el sistema. Los archivos `.template` contienen la estructura pero no los valores reales.
 
 ## Ver también
 
-- [Conectarse a internet](conectarse_a_internet.md): cómo llega el tráfico externo hasta el `computador` local
-- [`replicación`](replicación.md): cómo reproducir este sistema desde cero
+- [Conectarse a internet](arquitectura/conectarse_a_internet.md): cómo llega el tráfico externo hasta el `computador` local
+- [`replicación`](replicación.md): cómo replicar tu propia `midu`

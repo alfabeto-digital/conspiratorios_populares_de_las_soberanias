@@ -274,7 +274,7 @@ El principio fundamental es que **el almacenamiento tiene capas de `resiliencia`
 
 ### La replicación
 
-La `replicación` documenta el proceso completo de construir una `midu`: cada paso explica qué hacemos y por qué. Documentar el proceso mientras ocurre es parte de la `replicación` misma; el conocimiento que generamos puede transferirse a quien venga después.
+La `replicación` documenta el proceso completo de darle cuerpo a una `midu`: cada paso explica qué hacemos y por qué. Documentar el proceso mientras ocurre es parte de la `replicación` misma; el conocimiento que generamos puede transferirse a quien venga después.
 
 La secuencia cubre ocho pasos:
 
@@ -284,10 +284,10 @@ La secuencia cubre ocho pasos:
 - **Personalizar la configuración**: completar `config.nix` con los valores específicos de cada instalación: nombre del `computador`, UUIDs de los discos, dominio.
 - **Generar secretos**: claves de cifrado con `age`, secretos cifrados con `sops`.
 - **NixOS II**: clonar el repositorio, enlazar la configuración y ejecutar la primera construcción del sistema.
-- **Conectarse a internet**: elegir entre tres rutas según el modelo de amenaza y el presupuesto:
+- **Conectarse a internet**: elegir entre tres rutas según el modelo de amenaza y el presupuesto disponible:
     - Ruta A: VPS propio con NixOS; `soberanía` completa sobre el tráfico.
-    - Ruta B: VPS propio con Podman; misma `soberanía`, sin NixOS en el servidor remoto.
-    - Ruta C: túnel de Cloudflare; sin VPS propio, con compensación explícita de `soberanía`.
+    - Ruta B: VPS propio con Podman; `soberanía` completa sobre el tráfico, sin NixOS en el `computador` desechable.
+    - Ruta C: túnel de Cloudflare; sin VPS propio, solución gratuita de un tercero.
 
 > [`replicación`](base_de_conocimientos/midu/replicación.md)
 

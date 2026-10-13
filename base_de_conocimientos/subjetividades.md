@@ -27,5 +27,5 @@ Las 15 que aparecen en esta tabla no son una clasificación exhaustiva sino una 
 ## Ver también
 
 - [la `midu`](midu.md): la implementación concreta de las subjetividades
-- [Arquitectura](midu/arquitectura.md): los componentes técnicos que las subjetividades informan
+- [Arquitectura](midu/arquitectura.md): cómo reorganizar las `infraestrucutras`
 - [Referencias](referencias.md): fuentes completas de los referentes citados

@@ -1,6 +1,6 @@
 ﻿# virtualización
 
-← [Servicios](servicios.md)
+← [Servicios](../servicios.md)
 
 ## qué es la virtualización
 
