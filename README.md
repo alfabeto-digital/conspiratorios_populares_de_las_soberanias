@@ -295,15 +295,25 @@ La secuencia cubre ocho pasos:
 
 El mismo símbolo produce significados distintos en contextos distintos, las infraestructuras que queremos estarán construidas desde una posición que produce efectos situados. Sabemos que ninguna tecnología es neutral; siempre tiene inscrita la subjetividad de quienes la construyen y la usan.
 
-El lenguaje es común sólo para quienes lo comparten, este es un recuento conceptual, una [semilla](base_de_conocimientos/lenguaje_común/lenguaje_común.md) disponible en la `base de conocimientos` dentro del `repositorio` de la `midu`.
+Entendemos que el lenguaje es común sólo para quienes lo comparten, este es un recuento conceptual, una [semilla](base_de_conocimientos/lenguaje_común/lenguaje_común.md) disponible en la `base de conocimientos` dentro del `repositorio`.
 
 #### La cartografía de lo esencial
 
-La IA nos permite encontrar relaciones semánticas entre todos los conceptos y textos que componen la base de conocimientos y el código en si mismo, también produce una [visualización interactiva](https://alfabeto.digital/assets/graph.html) automatizada que puede servir para explorar de dos maneras los conceptos:
+La Inteligencia Artificial nos permite encontrar relaciones semánticas entre las ideas y los textos (los símbolos) que componen la base de conocimientos y el código en si mismo, y producir una [visualización interactiva](https://alfabeto.digital/assets/graph.html) que puede servir para explorar de dos maneras las ideas:
 
-- El pensamiento espacial puede ayudarnos a ubicar conceptos y entender mejor las conexiones entre ellos.
-- La visualización es producida por el plugin `graphify` de `Claude Code`. Si otra persona quisiera modificar el código de la `midu`, el texto de este [archivo](base_de_conocimientos/graphify/graph.json) es todo el `contexto` necesario para que cualquier LLM entienda el `repositorio` en su conjunto. Es un mapa de relaciones que una máquina puede navegar.
- 
+- El pensamiento espacial ayuda a ubicar conceptos y entender mejor las conexiones entre ellos.
+- La visualización es producida por el plugin `graphify` de `Claude Code`. Si otra persona quisiera modificar el código de la `midu` haciendo uso de Intenigencia Artificial, el texto de este [archivo](base_de_conocimientos/graphify/graph.json) y el propio repositorio, son el `contexto` necesario para que cualquier LLM entienda la `midu` en su conjunto. Es un mapa de relaciones que las personas y las máquinas podemos navegar.
+
+Añadimos también una cartografía animada: una serie de diagramas hechos con [Excalidraw](https://excalidraw.com/) que narran, paso a paso, cómo entendemos y creemos que es posible transformar la internet del presente en una red federada soberana. Cada diagrama es el mapa de un territorio en disputa y construcción.
+
+- [La internet del presente](base_de_conocimientos/lenguaje_común/visualizaciones/midu-la_internet_del_presente.png): el mapa de la red que habitamos hoy, con sus `dispositivos`, sus proveedores y los centros de `datos` de los actores que concentran las `memorias` en **la nube**. Es el laberinto con muros y ventanas, la arquitectura que hace imposible la gobernanza participativa.
+- [Una red local soberana](base_de_conocimientos/lenguaje_común/visualizaciones/midu-una_red_local_soberana.png): una `midu` habilita la representación digital de una infraestructura humana compuesta de una o más personas. El `computador` local custodia las `memorias` haciendo uso de unos sistemas operativos, un sistema de enrutamiento y una fuente de energía propia.
+- [Conectarse en internet](base_de_conocimientos/lenguaje_común/visualizaciones/midu-conectarse_en_internet.png): Una `midu` se hace visible en internet sin poner en riesgo sus `datos`. Traza las rutas del `computador` desechable y el túnel cifrado hacia el `computador` local, y distingue los servicios soberanos de los que no lo son.
+- [Una red federada](base_de_conocimientos/lenguaje_común/visualizaciones/midu-una_red_federada.png): muchas `midu` que se encuentran a través de las `infraestructuras` de hoy, cada una sosteniendo la `soberanía` de su propia infraestructura humana.
+- [Una red federada soberana](base_de_conocimientos/lenguaje_común/visualizaciones/midu-una_red_federada_soberana.png): Muchas `midu` federadas sobre `infraestructuras` colectivas propias (registros de dominios, sistemas de nombres, `memorias` colectivas y `sistemas de información` soberanos), unidas por túneles cifrados directos, sin intermediarios.
+
+En la [cartografía de lo esencial](base_de_conocimientos/lenguaje_común/cartografía_de_lo_esencial.md) encontraremos la descripción detallada de estas tres formas: el grafo de `graphify`, los diagramas de Excalidraw y sus presentaciones animadas.
+
 ### Las referencias
 
 Una lista de las personas que han trabajado en el desarrollo de todas las subjetividades que buscamos introducir en el desarrollo de la `midu`:

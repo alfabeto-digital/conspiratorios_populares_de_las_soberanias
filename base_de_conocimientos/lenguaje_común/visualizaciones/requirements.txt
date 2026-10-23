@@ -1,0 +1,3 @@
+# Dependencias de los scripts build_*.py que generan las presentaciones Slideshow.
+# El resto de imports (json, re, random, glob, os, ...) son de la biblioteca estándar de Python.
+lzstring==1.0.4
