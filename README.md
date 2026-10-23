@@ -307,10 +307,20 @@ La Inteligencia Artificial nos permite encontrar relaciones semánticas entre la
 Añadimos también una cartografía animada: una serie de diagramas hechos con [Excalidraw](https://excalidraw.com/) que narran, paso a paso, cómo entendemos y creemos que es posible transformar la internet del presente en una red federada soberana. Cada diagrama es el mapa de un territorio en disputa y construcción.
 
 - [La internet del presente](base_de_conocimientos/lenguaje_común/visualizaciones/midu-la_internet_del_presente.png): el mapa de la red que habitamos hoy, con sus `dispositivos`, sus proveedores y los centros de `datos` de los actores que concentran las `memorias` en **la nube**. Es el laberinto con muros y ventanas, la arquitectura que hace imposible la gobernanza participativa.
+
+  ![La internet del presente](base_de_conocimientos/lenguaje_común/visualizaciones/midu-la_internet_del_presente.png)
 - [Una red local soberana](base_de_conocimientos/lenguaje_común/visualizaciones/midu-una_red_local_soberana.png): una `midu` habilita la representación digital de una infraestructura humana compuesta de una o más personas. El `computador` local custodia las `memorias` haciendo uso de unos sistemas operativos, un sistema de enrutamiento y una fuente de energía propia.
+
+  ![Una red local soberana](base_de_conocimientos/lenguaje_común/visualizaciones/midu-una_red_local_soberana.png)
 - [Conectarse en internet](base_de_conocimientos/lenguaje_común/visualizaciones/midu-conectarse_en_internet.png): Una `midu` se hace visible en internet sin poner en riesgo sus `datos`. Traza las rutas del `computador` desechable y el túnel cifrado hacia el `computador` local, y distingue los servicios soberanos de los que no lo son.
+
+  ![Conectarse en internet](base_de_conocimientos/lenguaje_común/visualizaciones/midu-conectarse_en_internet.png)
 - [Una red federada](base_de_conocimientos/lenguaje_común/visualizaciones/midu-una_red_federada.png): muchas `midu` que se encuentran a través de las `infraestructuras` de hoy, cada una sosteniendo la `soberanía` de su propia infraestructura humana.
+
+  ![Una red federada](base_de_conocimientos/lenguaje_común/visualizaciones/midu-una_red_federada.png)
 - [Una red federada soberana](base_de_conocimientos/lenguaje_común/visualizaciones/midu-una_red_federada_soberana.png): Muchas `midu` federadas sobre `infraestructuras` colectivas propias (registros de dominios, sistemas de nombres, `memorias` colectivas y `sistemas de información` soberanos), unidas por túneles cifrados directos, sin intermediarios.
+
+  ![Una red federada soberana](base_de_conocimientos/lenguaje_común/visualizaciones/midu-una_red_federada_soberana.png)
 
 En la [cartografía de lo esencial](base_de_conocimientos/lenguaje_común/cartografía_de_lo_esencial.md) encontraremos la descripción detallada de estas tres formas: el grafo de `graphify`, los diagramas de Excalidraw y sus presentaciones animadas.
 

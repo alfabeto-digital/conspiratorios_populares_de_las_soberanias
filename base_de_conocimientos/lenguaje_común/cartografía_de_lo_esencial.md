@@ -16,10 +16,20 @@ El [lenguaje común](lenguaje_común.md) también se dibuja. Reunimos tres forma
 Cada diagrama reúne cuatro archivos: la imagen fija, el diagrama editable de Excalidraw, su presentación animada y el script de Python que la genera. El script recorre el diagrama, resuelve sus elementos por nombre, texto y grupo, y arma la secuencia de frames con sus animaciones de aparición; el diagrama original nunca se toca, así que volver a correr el script recoge los últimos cambios del diagrama. Los cinco scripts comparten dependencias en [requirements.txt](visualizaciones/requirements.txt).
 
 - **La internet del presente**: [imagen](visualizaciones/midu-la_internet_del_presente.png), [diagrama](visualizaciones/midu-la_internet_del_presente.excalidraw.md), [presentación](visualizaciones/midu-la_internet_del_presente-slideshow.excalidraw.md), [script](visualizaciones/midu-la_internet_del_presente-slideshow.py)
+
+  ![La internet del presente](visualizaciones/midu-la_internet_del_presente.png)
 - **Una red local soberana**: [imagen](visualizaciones/midu-una_red_local_soberana.png), [diagrama](visualizaciones/midu-una_red_local_soberana.excalidraw.md), [presentación](visualizaciones/midu-una_red_local_soberana-slideshow.excalidraw.md), [script](visualizaciones/midu-una_red_local_soberana-slideshow.py)
+
+  ![Una red local soberana](visualizaciones/midu-una_red_local_soberana.png)
 - **Conectarse en internet**: [imagen](visualizaciones/midu-conectarse_en_internet.png), [diagrama](visualizaciones/midu-conectarse_en_internet.excalidraw.md), [presentación](visualizaciones/midu-conectarse_en_internet-slideshow.excalidraw.md), [script](visualizaciones/midu-conectarse_en_internet-slideshow.py)
+
+  ![Conectarse en internet](visualizaciones/midu-conectarse_en_internet.png)
 - **Una red federada**: [imagen](visualizaciones/midu-una_red_federada.png), [diagrama](visualizaciones/midu-una_red_federada.excalidraw.md), [presentación](visualizaciones/midu-una_red_federada-slideshow.excalidraw.md), [script](visualizaciones/midu-una_red_federada-slideshow.py)
+
+  ![Una red federada](visualizaciones/midu-una_red_federada.png)
 - **Una red federada soberana**: [imagen](visualizaciones/midu-una_red_federada_soberana.png), [diagrama](visualizaciones/midu-una_red_federada_soberana.excalidraw.md), [presentación](visualizaciones/midu-una_red_federada_soberana-slideshow.excalidraw.md), [script](visualizaciones/midu-una_red_federada_soberana-slideshow.py)
+
+  ![Una red federada soberana](visualizaciones/midu-una_red_federada_soberana.png)
 
 ## Navegar y editar los mapas
 
