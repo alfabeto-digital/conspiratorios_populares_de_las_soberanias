@@ -51,7 +51,7 @@ Sistema de archivos mínimo que NixOS carga en memoria durante los primeros segu
 Dirección numérica única que identifica un `dispositivo` en internet. Dos formatos coexisten actualmente: IPv4 (cuatro grupos de números, ej: `203.0.113.42`) e IPv6 (ocho grupos hexadecimales, ej: `2001:db8::1`). Los servidores necesitan una IP pública fija para ser accesibles desde internet. Los routers domésticos suelen asignar IPs privadas (192.168.x.x, 10.x.x.x) que no son accesibles directamente desde el exterior, por eso la `interfaz` usa un [VPS](#vps) con IP pública.
 
 **ISP** (Internet Service Provider / Proveedor de acceso a internet)
-Empresa que conecta hogares u oficinas con internet. Asigna una dirección [IP](#ip) al router; en contratos residenciales esa IP es dinámica y puede cambiar sin previo aviso. Los ISP residenciales también suelen bloquear los puertos de entrada estándar (80 y 443), lo que impide recibir conexiones externas directas. Por eso la `midu` usa un intermediario con IP pública fija, Cloudflare o un [VPS](#vps), en lugar de exponer el `computador` local directamente a internet. Ver [conectarse a internet](../conectarse_a_internet.md).
+Empresa que conecta hogares u oficinas con internet. Asigna una dirección [IP](#ip) al router; en contratos residenciales esa IP es dinámica y puede cambiar sin previo aviso. Los ISP residenciales también suelen bloquear los puertos de entrada estándar (80 y 443), lo que impide recibir conexiones externas directas. Por eso la `midu` usa un intermediario con IP pública fija, Cloudflare o un [VPS](#vps), en lugar de exponer el `computador` local directamente a internet. Ver [conectarse en internet](../midu/arquitectura/conectarse_en_internet.md).
 
 ## L
 
@@ -103,7 +103,7 @@ Dar a cada componente del sistema solo los permisos que necesita para funcionar,
 ## R
 
 **Registrador de dominio** (DNS Registrar)
-Empresa acreditada para vender y gestionar nombres de dominio. Mantiene el registro oficial del propietario y controla qué servidores de nombres (nameservers) son autoritativos para ese dominio: es decir, decide qué servidor [DNS](#dns) responde las consultas sobre ese nombre. Cambiar los nameservers en el registrador redirige todas las consultas hacia otro proveedor. Registradores comunes: Namecheap, Porkbun, Gandi, Cloudflare Registrar. Ver [conectarse a internet: ISP, DNS y registrador de dominio](../conectarse_a_internet.md#isp-dns-y-registrador-de-dominio).
+Empresa acreditada para vender y gestionar nombres de dominio. Mantiene el registro oficial del propietario y controla qué servidores de nombres (nameservers) son autoritativos para ese dominio: es decir, decide qué servidor [DNS](#dns) responde las consultas sobre ese nombre. Cambiar los nameservers en el registrador redirige todas las consultas hacia otro proveedor. Registradores comunes: Namecheap, Porkbun, Gandi, Cloudflare Registrar. Ver [conectarse en internet: ISP, DNS y registrador de dominio](../midu/arquitectura/conectarse_en_internet.md#isp-dns-y-registrador-de-dominio).
 
 **Reverse proxy** (proxy inverso)
 Servidor intermediario que recibe solicitudes de los clientes y las reenvía al servicio interno apropiado. Permite tener múltiples servicios en el mismo servidor usando el mismo puerto (443/HTTPS): el reverse proxy decide a cuál servicio reenviar cada solicitud según el subdominio (`mail.tusitio.com` va al servidor de correo, `chat.tusitio.com` va al servidor de mensajería). [Caddy](#caddy) actúa como reverse proxy en esta `interfaz`. Traefik cumple el mismo rol en el [VPS](#vps).

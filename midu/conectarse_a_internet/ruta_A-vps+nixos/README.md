@@ -2,7 +2,7 @@
 
 Configuración del VPS con [NixOS](../../../base_de_conocimientos/midu/arquitectura/nixos.md) y el túnel cifrado para la `midu`.
 
-→ [conectarse a internet: ruta A - VPS con NixOS](../../../base_de_conocimientos/conectarse_a_internet/ruta_A-vps+nixos.md)
+→ [conectarse en internet: ruta A - VPS con NixOS](../../../base_de_conocimientos/conectarse_a_internet/ruta_A-vps+nixos.md)
 
 ## Archivos de configuración
 

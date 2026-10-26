@@ -2,7 +2,7 @@
 
 Configuración del túnel de Cloudflare para el `computador` local de la `midu`.
 
-→ [conectarse a internet: ruta C - cloudflare](../../../base_de_conocimientos/conectarse_a_internet/ruta_C-cloudflare.md)
+→ [conectarse en internet: ruta C - cloudflare](../../../base_de_conocimientos/conectarse_a_internet/ruta_C-cloudflare.md)
 
 ## Archivos de configuración
 

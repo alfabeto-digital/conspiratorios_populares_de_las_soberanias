@@ -2,7 +2,7 @@
 
 Configuración del VPS con [Podman](../../../base_de_conocimientos/midu/servicios/virtualización.md) y el túnel cifrado para la `midu`.
 
-→ [conectarse a internet: ruta B - VPS con Podman](../../../base_de_conocimientos/conectarse_a_internet/ruta_B-vps+podman.md)
+→ [conectarse en internet: ruta B - VPS con Podman](../../../base_de_conocimientos/conectarse_a_internet/ruta_B-vps+podman.md)
 
 ## Archivos de configuración
 

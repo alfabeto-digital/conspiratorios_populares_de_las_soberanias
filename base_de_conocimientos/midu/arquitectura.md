@@ -25,7 +25,11 @@ gitGraph
 
 El tráfico de internet llega a la membrana: un `computador` arrendado (VPS) o la red de Cloudflare y su túnel ZeroTrust. La membrana recibe las solicitudes y las reenvía a través de un túnel cifrado hacia el `computador` local, sin exponer la dirección real del núcleo. Caddy recibe el tráfico dentro del `computador` local y lo distribuye a cada servicio después de que Authelia verifica la identidad de quien intenta acceder. Las `memorias` viven y se procesan únicamente en el `computador` local.
 
-[**El `computador` local y el `computador` desechable**](arquitectura/hosts.md) son los anfitriones de nuestro sistema: el `computador` local almacena las `memorias` y ejecuta todos los servicios; el `computador` desechable actúa como intermediario público (membrana) y no sabe casi nada del núcleo. Esa asimetría define el modelo de amenaza: si el `computador` desechable es comprometido, los `datos` siguen seguros en el núcleo y podemos reemplazar la membrana completa rápidamente.
+![La arquitectura de una red local soberana](../lenguaje_común/visualizaciones/midu-una_red_local_soberana.png)
+
+La [presentación animada](../lenguaje_común/visualizaciones/midu-una_red_local_soberana-slideshow.excalidraw.md) presenta la arquitectura de una `midu` elemento por elemento. Todas las visualizaciones están reunidas en la [cartografía de lo esencial](../lenguaje_común/cartografía_de_lo_esencial.md).
+
+[**El `computador` local y el `computador` desechable**](arquitectura/computadores.md) son los anfitriones de nuestro sistema: el `computador` local almacena las `memorias` y ejecuta todos los servicios; el `computador` desechable actúa como intermediario público (membrana) y no sabe casi nada del núcleo. Esa asimetría define el modelo de amenaza: si el `computador` desechable es comprometido, los `datos` siguen seguros en el núcleo y podemos reemplazar la membrana completa rápidamente.
 
 En las Rutas A y B, el `computador` desechable corre Pangolin, que gestiona los túneles y el enrutamiento HTTP/S. El protocolo del túnel es WireGuard; Newt es el cliente que corre en el `computador` local.
 
@@ -39,23 +43,27 @@ En las Rutas A y B, el `computador` desechable corre Pangolin, que gestiona los 
 
 [**Las capas de la memoria**](arquitectura/capas_de_la_memoria.md): seis niveles en los que se pueden describir los estratos de las `memorias digitales` según la forma en la que se agregan objetos en los discos duros de la `midu`. La `soberanía` sobre las `infraestructuras` locales nos permite intervenir en la forma en la que esas capas organizan y transforman los `datos`.
 
-[**Almacenamiento federado**](arquitectura/almacenamiento_federado.md): un modelo de tres capas de almacenamiento y la topología de federación entre nodos. Las `memorias` permanecen cifradas, fragmentadas y distribuidas geográficamente; ningún nodo alberga una copia completa de las `memorias` de otro pero juntos agregan un nivel de resiliencia adicional a la posibilidad de pérdida de nuestras `memorias` individuales y colectivas.
+[**Almacenamiento federado**](arquitectura/almacenamiento_federado.md): un modelo de tres capas de resiliencia y la topología de federación entre varias `midu`. Las `memorias` permanecen cifradas, fragmentadas y distribuidas geográficamente; ninguna `midu` alberga una copia completa de las `memorias` de otra pero juntas agregan una capa de resiliencia adicional a la posibilidad de pérdida de nuestras `memorias` individuales y colectivas.
+
+[**Tipos de midu**](arquitectura/tipos_de_midu.md): el espectro de configuraciones de hardware que pueden darle forma a una `midu`, desde un `computador` reutilizado con un disco externo hasta un rack con cuatro tarjetas gráficas, con sus pros y contras respecto del gabinete de 8 Unidades, que usamos como una configuración de referencia.
+
+[**Estimaciones**](arquitectura/estimaciones.md): los valores aproximados de cada configuración: costo del hardware, consumo de energía, horas de trabajo humano para la puesta en marcha, la configuración inicial de los servicios, y los costos fijos recurrentes.
 
 ## La `interfaz` descrita en código
 
-Esta tabla describe los archivos más importantes del repositorio y para qué sirve cada uno.
+Estos son los archivos más importantes del repositorio:
 
 | Archivo | Descripción |
 |---|---|
 | `config.nix.template` | Plantilla de configuración del `computador` local |
-| `config-vps.nix.template` | Plantilla de configuración del VPS |
+| `config-vps.nix.template` | Plantilla de configuración del computador desechable (VPS) |
 | `config.nix` | Configuración del `computador` local; existe solo en el `computador` local, no se sube al repositorio |
 | `config-vps.nix` | Configuración del VPS; existe solo en el VPS, no se sube al repositorio |
 | `flake.nix` | Punto de entrada de Nix Flakes |
 | `hardware-configuration.nix` | Generado automáticamente por el instalador; no editar ni subir al repositorio |
 | `home/default.nix` | Configuración del entorno de usuario (home-manager) |
-| `secrets/secrets.plain.template` | Plantilla de secretos del `computador` local; vacía al repositorio |
-| `secrets/secrets-vps.plain.template` | Plantilla de secretos del VPS; vacía al repositorio |
+| `secrets/secrets.plain.template` | Plantilla de secretos del `computador` local; vacía en el repositorio |
+| `secrets/secrets-vps.plain.template` | Plantilla de secretos del VPS; vacía en el repositorio |
 | `secrets/secrets.yaml` | Secretos cifrados del `computador` local; no se sube al repositorio |
 | `secrets/secrets-vps.yaml` | Secretos cifrados del VPS; no se sube al repositorio |
 | `.sops.yaml.template` | Plantilla de reglas sops |
@@ -65,5 +73,5 @@ Los archivos que no se suben al repositorio existen únicamente en la máquina d
 
 ## Ver también
 
-- [Conectarse a internet](arquitectura/conectarse_a_internet.md): cómo llega el tráfico externo hasta el `computador` local
+- [Conectarse en internet](arquitectura/conectarse_en_internet.md): cómo llega el tráfico externo hasta el `computador` local
 - [`replicación`](replicación.md): cómo replicar tu propia `midu`

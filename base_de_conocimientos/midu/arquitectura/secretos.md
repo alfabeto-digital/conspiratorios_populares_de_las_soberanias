@@ -125,6 +125,6 @@ En el repositorio hay archivos template que sí se commitean:
 Estos templates son documentación ejecutable: muestran exactamente qué hay que rellenar para poner en marcha el sistema, sin revelar ningún valor real.
 
 Ver también:
-- [El `computador` local y el VPS](hosts.md)
+- [El `computador` local y el VPS](computadores.md)
 - [Descripciones generales](descripciones_generales.md)
 - [¿Qué es NixOS?](nixos.md)

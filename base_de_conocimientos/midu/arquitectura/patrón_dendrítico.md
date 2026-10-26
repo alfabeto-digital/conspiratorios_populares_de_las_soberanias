@@ -95,4 +95,4 @@ Un sistema que cualquier persona técnica puede entender, extender y auditar sin
 Ver también:
 - [¿Qué es un Nix Flake?](flake.md)
 - [¿Qué es NixOS?](nixos.md)
-- [El `computador` local y el VPS](hosts.md)
+- [El `computador` local y el VPS](computadores.md)

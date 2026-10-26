@@ -266,11 +266,14 @@ Un `modelo` de cuidados `distribuido` en múltiples capas: `LUKS`, `age`, `sops`
 
 La `confianza` entre los actores de esta red se construye por `visibilidad`. Las `infraestructuras` de esta interfaz son abiertas y auditables: el código es público, la configuración está documentada, los protocolos son estándar. **Esa visibilidad es la forma concreta de la confianza en un sistema distribuido**. No se confía porque alguien lo dice, todos podemos `verificar` porque las infraestructuras son `visibles`.
 
-La **propuesta** de `almacenamiento federado` añade a estos principios de `cuidado` tres niveles de `resiliencia`. El _nivel 0_ es el almacenamiento operativo rápido (NVMe): sistema, servicios activos, `datos` temporales. El _nivel 1_ es un almacenamiento persistente local con réplica en espejo entre dos discos físicos (HDD en RAID1): `configuración` del nodo y `datos críticos` que deben sobrevivir un fallo de discos. El _nivel 2_ es la **red federada de recuperación**: respaldos `cifrados`, `fragmentados` y `distribuidos` geográficamente entre nodos independientes, de modo que ningún nodo alberga una copia completa de los datos de otro. 
+La **propuesta** de `almacenamiento federado` añade a estos principios de `cuidado` tres capas de `resiliencia`. La _capa operativa_ es el almacenamiento rápido (NVMe): sistema, servicios activos, `datos` temporales. La _capa local_ es un almacenamiento persistente con réplica en espejo entre dos discos físicos (HDD en RAID1): `configuración` de la `midu` y `datos críticos` que deben sobrevivir un fallo de discos. La _capa federada_ es la **red de recuperación**: respaldos `cifrados`, `fragmentados` y `distribuidos` geográficamente entre `midu` independientes, de modo que ninguna `midu` alberga una copia completa de los datos de otra.
 
-El principio fundamental es que **el almacenamiento tiene capas de `resiliencia` que se activan ante diferentes tipos y escalas de daño**; cada nodo opera de manera autónoma aunque esté temporalmente desconectadao de la federación. La `midu` sigue un principio de crecimiento, modular y distribuído, que permite **compartir** capacidad de `almacenamiento` y `procesamiento` con la red, un mecanismo adicional de resiliencia basado en la `solidaridad`.
+El principio fundamental es que **el almacenamiento tiene capas de `resiliencia` que se activan ante diferentes tipos y escalas de daño**; cada `midu` opera de manera autónoma aunque esté temporalmente desconectada de la federación. La `midu` sigue un principio de crecimiento, modular y distribuído, que permite **compartir** capacidad de `almacenamiento` y `procesamiento` con la red, un mecanismo adicional de resiliencia basado en la `solidaridad`.
+
+La `midu` es viable a muchas escalas, desde un `computador` reutilizado con un disco externo hasta un rack con varias GPU; los costos, el consumo de energía y las horas de trabajo de cada configuración están estimados en la documentación.
 
 > [`cuidados`](base_de_conocimientos/midu/cuidados.md)
+> [almacenamiento federado](base_de_conocimientos/midu/arquitectura/almacenamiento_federado.md) · [tipos de midu](base_de_conocimientos/midu/arquitectura/tipos_de_midu.md) · [estimaciones](base_de_conocimientos/midu/arquitectura/estimaciones.md)
 
 ### La replicación
 
@@ -284,7 +287,7 @@ La secuencia cubre ocho pasos:
 - **Personalizar la configuración**: completar `config.nix` con los valores específicos de cada instalación: nombre del `computador`, UUIDs de los discos, dominio.
 - **Generar secretos**: claves de cifrado con `age`, secretos cifrados con `sops`.
 - **NixOS II**: clonar el repositorio, enlazar la configuración y ejecutar la primera construcción del sistema.
-- **Conectarse a internet**: elegir entre tres rutas según el modelo de amenaza y el presupuesto disponible:
+- **Conectarse en internet**: elegir entre tres rutas según el modelo de amenaza y el presupuesto disponible:
     - Ruta A: VPS propio con NixOS; `soberanía` completa sobre el tráfico.
     - Ruta B: VPS propio con Podman; `soberanía` completa sobre el tráfico, sin NixOS en el `computador` desechable.
     - Ruta C: túnel de Cloudflare; sin VPS propio, solución gratuita de un tercero.

@@ -1,4 +1,4 @@
-# Conectarse a internet
+# Conectarse en internet
 
 ← [`replicación`](../replicación.md)
 
@@ -7,6 +7,10 @@
 El `computador` local de la `midu` vive en una red privada, una casa, una oficina, cualquier lugar con una conexión convencional a internet. Esa conexión no tiene una IP pública fija, y exponer puertos directamente al exterior abre una superficie de ataque enorme.
 
 La solución es un intermediario: el `computador` local abre una conexión saliente hacia un punto público en lugar de hablar directamente con internet. El tráfico llega a ese punto y es reenviado al `computador` local. Nadie en internet conoce la IP real.
+
+![Diagrama de la conexión de una midu a internet](../../lenguaje_común/visualizaciones/midu-conectarse_en_internet.png)
+
+La [presentación animada](../../lenguaje_común/visualizaciones/midu-conectarse_en_internet-slideshow.excalidraw.md) recorre las rutas y los actores paso a paso.
 
 Hay tres rutas posibles. La elección depende del modelo de amenaza, el presupuesto y el nivel de [`soberanía`](../../subjetividades/soberanía_digital.md) que se quiera mantener sobre el tráfico.
 

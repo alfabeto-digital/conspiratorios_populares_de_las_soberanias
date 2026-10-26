@@ -34,4 +34,4 @@ La Ruta A (VPS con NixOS) también puede usar Podman o Docker como `container_ru
 
 - [Pangolin](pangolin.md): el stack del túnel cifrado que se puede desplegar con Podman
 - [el túnel: Cloudflare o Newt](túnel.md): análisis de las opciones de conexión al VPS
-- [conectarse a internet: ruta B - VPS con Podman](../replicación/rutas/ruta_B-vps+podman.md): la guía completa para la ruta con Podman
+- [conectarse en internet: ruta B - VPS con Podman](../replicación/rutas/ruta_B-vps+podman.md): la guía completa para la ruta con Podman

@@ -68,4 +68,4 @@ Esta separación es intencional: el VPS es descartable. Se puede destruir y reco
 - [Túnel](túnel.md): la decisión entre Cloudflare y Newt+WireGuard
 - [Caddy](caddy.md): el reverse proxy del `computador` local que recibe el tráfico del VPS
 - [Visión general](../arquitectura/visión-general.md): el flujo completo de tráfico
-- [El `computador` local y el VPS](../arquitectura/hosts.md): las dos máquinas, sus roles y por qué están separadas
+- [El `computador` local y el VPS](../arquitectura/computadores.md): las dos máquinas, sus roles y por qué están separadas

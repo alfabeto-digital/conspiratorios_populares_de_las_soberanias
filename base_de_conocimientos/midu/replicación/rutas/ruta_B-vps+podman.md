@@ -1,6 +1,6 @@
 ﻿# Ruta B: VPS con Podman (sin NixOS)
 
-← [Conectarse a internet](../../arquitectura/conectarse_a_internet.md)
+← [Conectarse en internet](../../arquitectura/conectarse_en_internet.md)
 
 ## Qué es esta ruta
 

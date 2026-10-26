@@ -10,9 +10,9 @@ La noción de la *viabilidad* proviene de la biología. Un organismo viable es e
 
 `alfabeto.digital` es un [`dispositivo`](subjetividades/`dispositivo`.md) con tres dimensiones simultáneas:
 
-- Como `dispositivo tecnológico`, es una `midu`: un conjunto de `infraestructuras` configurado con herramientas que permiten la `gobernanza` de las `memorias` con un criterio de `soberanía` digital.
-- Como `dispositivo pedagógico`, es una propuesta de [`alfabetización digital popular`](subjetividades/alfabetización_digital_popular.md): documentar el `desarrollo` del `dispositivo` permite compartir el proceso y poder transferirlo a otra persona o comunidad.
-- Como `dispositivo político`, es una narrativa sobre el presente que busca introducir unas `subjetividades` en las `infraestructuras` sobre las que nos imaginamos el futuro. Cada decisión técnica encarna valores sobre la privacidad, la `soberanía`, la participación. **Esa subjetividad se transfiere a quien usa el `dispositivo` y, en cada `replicación`, tiene la oportunidad de ser cuestionada, modificada, adaptada**.
+- Como `dispositivo tecnológico` es una `midu`: un conjunto de `infraestructuras` configurado con herramientas que permiten la `gobernanza` de las `memorias` con un criterio de `soberanía` digital.
+- Como `dispositivo pedagógico` es una propuesta de [`alfabetización digital popular`](subjetividades/alfabetización_digital_popular.md): documentar el `desarrollo` del `dispositivo` permite compartir el proceso y poder transferirlo a otra persona o comunidad.
+- Como `dispositivo político` es una narrativa sobre el presente que busca introducir unas `subjetividades` en las `infraestructuras` sobre las que nos imaginamos el futuro. Cada decisión técnica encarna valores sobre la privacidad, la `soberanía`, la participación. **Esa subjetividad se transfiere a quien usa el `dispositivo` y, en cada `replicación`, tiene la oportunidad de ser cuestionada, modificada, adaptada**.
 
 ## Los principios
 
@@ -39,21 +39,27 @@ NixOS es el genoma del sistema: describe el estado completo de cada máquina com
 
 El patrón dendrítico organiza la configuración: añadir un servicio nuevo es crear un archivo nuevo en el directorio correcto, sin modificar ningún archivo central. Los secretos (contraseñas, tokens, claves) viven cifrados en el repositorio; `age` los cifra para la máquina que los necesita y `sops-nix` los descifra durante la construcción del sistema.
 
-- [El `computador` local y el `computador` desechable](midu/arquitectura/hosts.md)
+La [visualización de una red local soberana](lenguaje_común/visualizaciones/midu-una_red_local_soberana.png) muestra esta arquitectura completa; su [presentación animada](lenguaje_común/visualizaciones/midu-una_red_local_soberana-slideshow.excalidraw.md) la recorre paso a paso.
+
+- [El `computador` local y el `computador` desechable](midu/arquitectura/computadores.md)
 - [NixOS](midu/arquitectura/nixos.md)
 - [El Nix Flake](midu/arquitectura/flake.md)
 - [El patrón dendrítico](midu/arquitectura/patrón_dendrítico.md)
 - [Gestión de secretos](midu/arquitectura/secretos.md)
 - [Las capas de la memoria](midu/arquitectura/capas_de_la_memoria.md)
 - [Almacenamiento federado](midu/arquitectura/almacenamiento_federado.md)
+- [Tipos de midu](midu/arquitectura/tipos_de_midu.md)
+- [Estimaciones](midu/arquitectura/estimaciones.md)
 
-### Conectarse a internet
+### Conectarse en internet
 
 El `computador` local vive en una red privada sin IP pública fija. Un intermediario público recibe el tráfico desde internet y lo reenvía al `computador` local. Antes de llegar a la `midu`, toda solicitud pasa por el Proveedor de internet ISP, el DNS y el registrador de dominio; la ruta que decidamos usar determina qué información se expone y a quién.
 
-Hay tres rutas posibles. Las Rutas A y B usan un VPS arrendado como `computador` desechable que expone un `túnel cifrado`. La Ruta C usa la red de Cloudflare y un tunel ZeroTrust; la configuración es más simple pero Cloudflare se dedica explícitamente a monitorear patrones de tráfico en internet con propósitos comerciales. La `soberanía` sobre el tráfico en las tres rutas depende de la combinación del tunel cifrado y la naturaleza desechable de estas opciones para conectarse a internet. 
+Hay tres rutas posibles. Las Rutas A y B usan un VPS arrendado como `computador` desechable que expone un `túnel cifrado`. La Ruta C usa la red de Cloudflare y un tunel ZeroTrust; la configuración es más simple pero Cloudflare se dedica explícitamente a monitorear patrones de tráfico en internet con propósitos comerciales. La `soberanía` sobre el tráfico en las tres rutas depende de la combinación del tunel cifrado y la naturaleza desechable de estas opciones para conectarse en internet. 
 
-- [Conectarse a internet](midu/arquitectura/conectarse_a_internet.md)
+La [visualización de la conexión a internet](lenguaje_común/visualizaciones/midu-conectarse_en_internet.png) traza las rutas y los actores; su [presentación animada](lenguaje_común/visualizaciones/midu-conectarse_en_internet-slideshow.excalidraw.md) las recorre paso a paso.
+
+- [Conectarse en internet](midu/arquitectura/conectarse_en_internet.md)
 - [Ruta A: VPS con NixOS](midu/replicación/rutas/ruta_A-vps+nixos.md)
 - [Ruta B: VPS con Podman](midu/replicación/rutas/ruta_B-vps+podman.md)
 - [Ruta C: túnel de Cloudflare](midu/replicación/rutas/ruta_C-cloudflare.md)
@@ -115,3 +121,4 @@ El tiempo estimado para la `replicación` es de unas 6 horas. NixOS incluye la o
 
 - [Subjetividades](subjetividades.md): las ideas que articulan las decisiones de la `midu`
 - [Lenguaje común](lenguaje_común/lenguaje_común.md): definiciones del vocabulario usado en la documentación
+- [Cartografía de lo esencial](lenguaje_común/cartografía_de_lo_esencial.md): las visualizaciones de las `infraestructuras` y sus presentaciones animadas

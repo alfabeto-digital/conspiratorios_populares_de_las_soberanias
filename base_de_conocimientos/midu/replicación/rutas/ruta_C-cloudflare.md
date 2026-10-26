@@ -1,6 +1,6 @@
 ﻿# Ruta C: túnel de Cloudflare
 
-← [Conectarse a internet](../../arquitectura/conectarse_a_internet.md)
+← [Conectarse en internet](../../arquitectura/conectarse_en_internet.md)
 
 ## Qué es esta ruta
 

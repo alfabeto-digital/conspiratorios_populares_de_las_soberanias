@@ -50,11 +50,11 @@ Una vez hemos completado `config.nix` y cifrado los secretos, el sistema puede c
 
 > [Clonar el `repositorio` y construir el sistema](replicación/nixos.md#paso-6-clonar-el-repositorio-y-construir-el-sistema)
 
-### Conectarse a internet
+### Conectarse en internet
 
 La `midu` necesita un intermediario con IP pública fija para recibir tráfico desde internet. Hay tres rutas posibles; la elección determina el nivel de `exposición` del tráfico entrante y saliente.
 
-> [Servicios de internet, nombres de dominio y rutas](arquitectura/conectarse_a_internet.md)
+> [Servicios de internet, nombres de dominio y rutas](arquitectura/conectarse_en_internet.md)
 
 #### El `computador` desechable
 
@@ -73,7 +73,7 @@ El [servidor virtual privado](../lenguaje_común/lenguaje_común.md#vps) es el p
 | [Personalizar la configuración](replicación/configuración.md) | Completar `config.nix` con los valores del `computador` | 20–30 min |
 | [Generar los secretos](replicación/secretos.md) | Claves age, sops-nix, cifrado de secretos y LUKS | 30–45 min |
 | [Construir el sistema](replicación/nixos.md#paso-6-clonar-el-repositorio-y-construir-el-sistema) | Clonar el `repositorio`, enlazar la configuración y ejecutar la primera construcción | 20–30 min |
-| [Conectarse a internet](arquitectura/conectarse_a_internet.md) | Elegir una alternativa | 10 min |
+| [Conectarse en internet](arquitectura/conectarse_en_internet.md) | Elegir una alternativa | 10 min |
 | [Desplegar un VPS](replicación/vps.md) | Despliegue del punto de entrada público (Ruta A o B) | 30–60 min |
 | [Crear un túnel ZeroTrust](servicios/zero_trust.md) | Crear una cuenta en Cloudflare y configurar el túnel | 30 min |
 
@@ -107,7 +107,7 @@ gitGraph
   checkout documentacion
   commit id: "errores y soluciones"
   checkout replicacion
-  commit id: "conectarse a internet"
+  commit id: "conectarse en internet"
   merge documentacion
 ```
 

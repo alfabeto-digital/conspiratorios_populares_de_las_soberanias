@@ -45,7 +45,7 @@ sequenceDiagram
     ISPB-->>DB: mensaje recibido
 ```
 
-Las [tres rutas](../arquitectura/conectarse_a_internet.md) difieren en quién es ese intermediario, quién controla el DNS autoritativo de la `midu` y cuánta visibilidad tiene el ISP sobre ese tráfico.
+Las [tres rutas](../arquitectura/conectarse_en_internet.md) difieren en quién es ese intermediario, quién controla el DNS autoritativo de la `midu` y cuánta visibilidad tiene el ISP sobre ese tráfico.
 
 ### Suministro estable de energía
 
@@ -71,11 +71,11 @@ El **servidor DNS** responde esas consultas: cuando alguien escribe `mail.tusiti
 | **Subdominios de servicios** | Se crean aquí, o en Cloudflare si los nameservers son de Cloudflare | Traefik los recibe en el VPS y los reenvía | Caddy los dirige al servicio correcto |
 | **Certificados [TLS](../../lenguaje_común/lenguaje_común.md#tls)** | No participa | Cloudflare gestiona los suyos; el VPS usa [Let's Encrypt](../../lenguaje_común/lenguaje_común.md#lets-encrypt) | Caddy renueva automáticamente |
 
-Más detalles en [conectarse a internet: ISP, DNS y registrador de dominio](../arquitectura/conectarse_a_internet.md#isp-dns-y-registrador-de-dominio).
+Más detalles en [conectarse en internet: ISP, DNS y registrador de dominio](../arquitectura/conectarse_en_internet.md#isp-dns-y-registrador-de-dominio).
 
 ### Un `computador` local
 
-El `computador` que vamos a configurar será la máquina que `ejecuta` todos los `servicios` que usaremos. Será la primera de nuestras `anfitrionas` ([hosts](../arquitectura/hosts.md)). Vamos a usar, en este primer caso de configuración, dos `Discos Duros` de estado sólido _SSD_ del tipo _NVMe_. Estos representarán los _niveles 0 y 1_ de nuestro modelo de `resiliencia` de las `memorias`.
+El `computador` que vamos a configurar será la máquina que `ejecuta` todos los `servicios` que usaremos. Será la primera de nuestras `anfitrionas` ([hosts](../arquitectura/computadores.md)). Vamos a usar, en este primer caso de configuración, dos `Discos Duros` de estado sólido _SSD_ del tipo _NVMe_. Estos representarán los _niveles 0 y 1_ de nuestro modelo de `resiliencia` de las `memorias`.
 
 - **2 Discos [NVMe](../../lenguaje_común/lenguaje_común.md#nvme)**: uno para el sistema operativo (`nvme0`) y otro para los `datos` de las aplicaciones (`nvme1`). La separación permite `cifrar` cada disco de manera independiente, y protege los `datos` de las aplicaciones incluso si el Sistema Operativo se reinstala o compromete.
 - **Memoria RAM**: 8 GB mínimo, 16 GB recomendado. Los servicios de correo, base de `datos` y mensajería corren simultáneamente, cada servicio adicional consume `recursos` de esa memoria, así que hay que encontrar una configuración de servicios que se ajuste a las posibilidades de cada `contexto`.
@@ -101,8 +101,8 @@ El `computador` en "la nube" es **desechable** porque no podemos confiar en el t
 - **IP pública fija**
 - Sistema operativo: NixOS (Ruta A) o cualquier Linux con Docker/Podman (Ruta B)
 
-> Más detalles sobre la [ruta A](../arquitectura/conectarse_a_internet.md#ruta-a-vps-con-nixos--pangolin--newt)
-> Más detalles sobre la [ruta B](../arquitectura/conectarse_a_internet.md#ruta-b-vps-con-podman-sin-nixos)
+> Más detalles sobre la [ruta A](../arquitectura/conectarse_en_internet.md#ruta-a-vps-con-nixos--pangolin--newt)
+> Más detalles sobre la [ruta B](../arquitectura/conectarse_en_internet.md#ruta-b-vps-con-podman-sin-nixos)
 > Más detalles sobre el [VPS](vps.md).
 
 ### Una `memoria` USB
