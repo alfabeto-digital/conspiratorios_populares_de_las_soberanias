@@ -103,6 +103,10 @@
       };
     };
 
+    # 26.05 renombró el módulo a `services.stalwart` y volvió obligatorio `stateVersion`.
+    # Lo fijamos a la versión de nuestros datos actuales para no disparar una migración.
+    services.stalwart.stateVersion = "25.11";
+
     services.stalwart-mail = {
       enable   = true;
       settings = {
