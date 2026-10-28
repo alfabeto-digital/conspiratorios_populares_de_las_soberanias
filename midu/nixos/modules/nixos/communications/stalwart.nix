@@ -59,8 +59,9 @@
     systemd.services.stalwart-bootstrap = {
       description = "Create initial Stalwart accounts";
       wantedBy    = [ "multi-user.target" ];
-      after       = [ "stalwart.service" ];
+      after       = [ "stalwart.service" "stalwart-env-setup.service" ];
       wants       = [ "stalwart.service" ];
+      requires    = [ "stalwart-env-setup.service" ];
       serviceConfig = {
         Type            = "oneshot";
         RemainAfterExit = true;
@@ -69,12 +70,22 @@
           url="http://127.0.0.1:${toString cfg.stalwart_port}"
           auth="admin:$STALWART_ADMIN_PASSWORD"
 
-          for i in $(seq 1 30); do
+          # En arranque frío el API de Stalwart tarda en escuchar: `Started` sólo
+          # significa que el proceso arrancó, no que ya sirve. Además la base vive en
+          # el disco de datos, que se desbloquea tras el arranque, así que Postgres y
+          # Stalwart pueden venir varios segundos tarde. Esperamos hasta tres minutos
+          # a que el API responda antes de rendirnos.
+          ready=0
+          for i in $(seq 1 90); do
             code=$(${pkgs.curl}/bin/curl -s -o /dev/null -w "%{http_code}" \
               -u "$auth" "$url/api/principal" 2>/dev/null)
-            [ "$code" = "200" ] && break
-            sleep 1
+            [ "$code" = "200" ] && { ready=1; break; }
+            sleep 2
           done
+          if [ "$ready" -ne 1 ]; then
+            echo "El API de Stalwart no respondió a tiempo, no creamos las cuentas"
+            exit 1
+          fi
 
           create_principal() {
             local name=$1 json=$2
