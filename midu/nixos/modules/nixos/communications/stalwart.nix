@@ -30,8 +30,8 @@
 
     systemd.services.stalwart-env-setup = {
       description = "Write Stalwart admin environment file";
-      wantedBy    = [ "stalwart-mail.service" ];
-      before      = [ "stalwart-mail.service" ];
+      wantedBy    = [ "stalwart.service" ];
+      before      = [ "stalwart.service" ];
       serviceConfig = {
         Type            = "oneshot";
         RemainAfterExit = true;
@@ -43,7 +43,9 @@
       };
     };
 
-    systemd.services.stalwart-mail = {
+    # El override extiende la unidad real del módulo (renombrada a `stalwart.service` en 26.05):
+    # abre /home para los blobs, añade su ruta de escritura y el EnvironmentFile con la contraseña admin.
+    systemd.services.stalwart = {
       after    = [ "postgresql-stalwart-setup.service" "stalwart-env-setup.service" ];
       requires = [ "postgresql-stalwart-setup.service" ];
       serviceConfig = {
@@ -57,8 +59,8 @@
     systemd.services.stalwart-bootstrap = {
       description = "Create initial Stalwart accounts";
       wantedBy    = [ "multi-user.target" ];
-      after       = [ "stalwart-mail.service" ];
-      wants       = [ "stalwart-mail.service" ];
+      after       = [ "stalwart.service" ];
+      wants       = [ "stalwart.service" ];
       serviceConfig = {
         Type            = "oneshot";
         RemainAfterExit = true;
@@ -103,11 +105,10 @@
       };
     };
 
-    # 26.05 renombró el módulo a `services.stalwart` y volvió obligatorio `stateVersion`.
-    # Lo fijamos a la versión de nuestros datos actuales para no disparar una migración.
-    services.stalwart.stateVersion = "25.11";
-
-    services.stalwart-mail = {
+    # 26.05 renombró el módulo a `services.stalwart` (unidad `stalwart.service`, usuario `stalwart-mail`).
+    # `stateVersion` es obligatorio; lo fijamos a la versión de nuestros datos para no disparar migración.
+    services.stalwart = {
+      stateVersion = "25.11";
       enable   = true;
       settings = {
         server = {
