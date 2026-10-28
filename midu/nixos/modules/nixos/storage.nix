@@ -30,7 +30,14 @@
     fileSystems."${dataPath}" = {
       device  = "/dev/mapper/data-disk";
       fsType  = "ext4";
-      options = [ "x-systemd.requires=unlock-data-disk.service" ];
+      # `unlock-data-disk` corre tras `basic.target` (lo desbloqueamos con una llave que
+      # vive en la raíz, ya arrancado el sistema), pero `local-fs.target` espera a todos
+      # los montajes locales. Sin `nofail`, el montaje de datos va antes de `local-fs.target`
+      # y después del desbloqueo, lo que cierra un ciclo de orden y systemd descarta el
+      # montaje al arrancar: Postgres queda sin su disco y toda la cadena se cae. `nofail`
+      # saca este montaje de `local-fs.target`, rompe el ciclo y deja que se monte tarde,
+      # justo tras el desbloqueo. Postgres sigue requiriéndolo de forma explícita.
+      options = [ "x-systemd.requires=unlock-data-disk.service" "nofail" ];
     };
 
     systemd.tmpfiles.rules = [
