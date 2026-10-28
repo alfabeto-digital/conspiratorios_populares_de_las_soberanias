@@ -14,6 +14,7 @@
 
     services.postgresql = {
       enable          = true;
+      package         = pkgs.postgresql_17;
       dataDir         = "${dataPath}/postgresql";
       ensureDatabases = [ cfg.db_name ];
       ensureUsers     = [{ name = cfg.db_username; }];
