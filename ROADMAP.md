@@ -36,32 +36,51 @@
 - [ ] Backups automatizados (restic)
 - [ ] Runbooks de recuperación ante desastre
 - [ ] CI/CD para el flake NixOS (Woodpecker CI, integrado con Forgejo)
+- [ ] Automatización de flujos de trabajo (n8n)
 
 ## Servicios
 
 ### Descubribilidad
 - [ ] Motor de búsqueda interno (SearXNG)
-- [ ] Gestor de bookmarks y conocimiento (Linkding o Hoarder)
+- [ ] Gestor de marcadores y conocimiento (Karakeep)
+- [ ] Automatización de series de TV (Sonarr)
+- [ ] Automatización de películas (Radarr)
+- [ ] Automatización de música (Lidarr)
+- [ ] Automatización de libros y audiolibros (Readarr)
+- [ ] Gestor de indexadores (Prowlarr)
+- [ ] Automatización de subtítulos (Bazarr)
+- [ ] Cliente de torrents (qBittorrent)
+- [ ] Cliente de Usenet (SABnzbd)
 
 ### Transferencias
-- [ ] Transferencia de archivos efímera (Send o Pairdrop)
+- [ ] Transferencia de archivos efímera (Pairdrop)
 
-### Almacenamiento
+### Navegación
 - [ ] Gestión documental (Paperless-ngx)
-- [ ] Fotos (Immich)
 - [ ] Archivado web (Archivebox)
+- [ ] Finanzas personales (Firefly III)
+- [ ] Fotos y videos (Immich)
+- [ ] Servidor de video y TV (Jellyfin)
+- [ ] Streaming de música (Navidrome)
+- [ ] Audiolibros y podcasts (Audiobookshelf)
+- [ ] Biblioteca de libros (Calibre)
 
 ### Procesamiento
 - [ ] LLM local (Ollama + Open WebUI)
+- [ ] Procesamiento con modelos de IA (Hermes)
+- [ ] Coordinación de agentes (Paperclip)
 
 ### Colaboración
-- [ ] Suite ofimática (Collabora Online)
-- [ ] Wiki / gestión del conocimiento (Wiki.js)
-- [ ] Gestión de proyectos (Plane)
+- [ ] Plataforma colaborativa (NextCloud)
+- [ ] Suite ofimática (EuroOffice)
+- [ ] Wiki / gestión del conocimiento (FrankMD)
+- [ ] Gestión de proyectos (OpenProject)
 
 ### Participación (Red Federada)
-- [ ] Microblogging federado (GoToSocial o Mastodon)
+- [ ] Microblogging federado (Mastodon)
+- [ ] Fotos federadas (Pixelfed)
 - [ ] Video federado (PeerTube)
-- [ ] Blog / publicación (WriteFreely)
 - [ ] Foro federado (Lemmy)
-- [ ] Podcast (Castopod)
+- [ ] Eventos y grupos federados (Mobilizon)
+- [ ] Lectura social federada (Bookwyrm)
+- [ ] Podcast federado (Castopod)

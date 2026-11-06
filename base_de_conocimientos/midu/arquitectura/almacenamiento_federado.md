@@ -369,4 +369,4 @@ Este resiliencia de servicios es una capa de resiliencia adicional, por fuera de
 
 - [tipos de `midu`](tipos_de_midu.md): las configuraciones de hardware de cada tipo, desde un `computador` reutilizado hasta un gabienete con varias GPU.
 - [estimaciones](estimaciones.md): costos, consumo de energía y horas de trabajo de cada configuración.
-- [las capas de la memoria](capas_de_la_memoria.md): los estratos de las `memorias`, distintos de estas capas físicas de resiliencia.
+- [las capas de la memoria](capas_de_la_memoria.md): las dimensiones funcionales de las `memorias`; ahí la `resiliencia` es una propiedad transversal, distinta de las tres capas físicas de resiliencia de este documento.

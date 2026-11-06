@@ -3,7 +3,7 @@
 El [lenguaje común](lenguaje_común.md) también se dibuja. Reunimos tres formas de cartografía visual que acompañan a la `base de conocimientos`, cada una mira el mismo territorio desde una distancia distinta.
 
 - **El grafo de `graphify`** es una vista amplia. El plugin `graphify` de `Claude Code` recorre las ideas, los textos y el código del `repositorio`, encuentra las relaciones semánticas entre ellos y produce un mapa que las personas y las máquinas podemos navegar.
-- **Los diagramas de Excalidraw** son una vista en detalle. Son cinco mapas que narran, en orden, cómo entendemos el paso de la internet del presente hacia una red federada soberana. Cada diagrama es un `objeto digital` editable, y de cada uno exportamos una imagen fija.
+- **Los diagramas de Excalidraw** son una vista en detalle. Una serie de cinco mapas narra, en orden, cómo entendemos el paso de la internet del presente hacia una red federada soberana; otra serie retrata las capas de la memoria, una por una. Cada diagrama es un `objeto digital` editable, y de cada uno exportamos una imagen fija.
 - **Las presentaciones con Slideshow** son una vista en el tiempo. Cada diagrama tiene una animación que lo recorre poco a poco, primero las personas, luego sus `dispositivos`, sus `infraestructuras` y las conexiones que se van creando entre ellas. Cada animación vive en un archivo producido por un script de Python que la genera a partir del diagrama.
 
 ## El grafo de graphify
@@ -30,6 +30,32 @@ Cada diagrama reúne cuatro archivos: la imagen fija, el diagrama editable de Ex
 - **Una red federada soberana**: [imagen](visualizaciones/midu-una_red_federada_soberana.png), [diagrama](visualizaciones/midu-una_red_federada_soberana.excalidraw.md), [presentación](visualizaciones/midu-una_red_federada_soberana-slideshow.excalidraw.md), [script](visualizaciones/midu-una_red_federada_soberana-slideshow.py)
 
   ![Una red federada soberana](visualizaciones/midu-una_red_federada_soberana.png)
+
+## Las capas de la memoria
+
+Una segunda serie retrata las [capas de la memoria](../midu/arquitectura/capas_de_la_memoria.md): una vista general y un mapa por cada capa. No tienen presentación animada; cada una reúne el diagrama editable y su imagen fija.
+
+- **Las capas de la memoria**: [imagen](visualizaciones/midu-las_capas_de_las_memorias.png), [diagrama](visualizaciones/midu-las_capas_de_las_memorias.excalidraw.md)
+
+  ![Las capas de la memoria](visualizaciones/midu-las_capas_de_las_memorias.png)
+- **Comunicaciones**: [imagen](visualizaciones/midu-las_memorias-comunicaciones.png), [diagrama](visualizaciones/midu-las_memorias-comunicaciones.excalidraw.md)
+
+  ![Comunicaciones](visualizaciones/midu-las_memorias-comunicaciones.png)
+- **Observabilidad**: [imagen](visualizaciones/midu-las_memorias-observabilidad.png), [diagrama](visualizaciones/midu-las_memorias-observabilidad.excalidraw.md)
+
+  ![Observabilidad](visualizaciones/midu-las_memorias-observabilidad.png)
+- **Procesamiento**: [imagen](visualizaciones/midu-las_memorias-procesamiento.png), [diagrama](visualizaciones/midu-las_memorias-procesamiento.excalidraw.md)
+
+  ![Procesamiento](visualizaciones/midu-las_memorias-procesamiento.png)
+- **Descubribilidad**: [imagen](visualizaciones/midu-las_memorias-descubribilidad.png), [diagrama](visualizaciones/midu-las_memorias-descubribilidad.excalidraw.md)
+
+  ![Descubribilidad](visualizaciones/midu-las_memorias-descubribilidad.png)
+- **Reproducibilidad**: [imagen](visualizaciones/midu-las_memorias-reproducibilidad.png), [diagrama](visualizaciones/midu-las_memorias-reproducibilidad.excalidraw.md)
+
+  ![Reproducibilidad](visualizaciones/midu-las_memorias-reproducibilidad.png)
+- **Navegación**: [imagen](visualizaciones/midu-las_memorias-navegación.png), [diagrama](visualizaciones/midu-las_memorias-navegación.excalidraw.md)
+
+  ![Navegación](visualizaciones/midu-las_memorias-navegación.png)
 
 ## Navegar y editar los mapas
 

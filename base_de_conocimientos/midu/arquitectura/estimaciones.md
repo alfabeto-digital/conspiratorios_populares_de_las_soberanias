@@ -302,12 +302,12 @@ Estimación de la primera configuración de cada servicio, incluyendo pruebas, p
 | Enrutamiento | Pangolin, túnel cifrado, Caddy, AdGuard, Authelia | 10–17 |
 | Comunicaciones | Stalwart, Dendrite, ntfy | 8–15 |
 | Observabilidad | Prometheus, Loki + Promtail, Grafana, Alertmanager, Homepage, Cockpit | 9–16 |
-| Almacenamiento | PostgreSQL, Syncthing, Vaultwarden, Paperless-ngx, Immich, Archivebox, Send / Pairdrop | 10–17 |
-| Procesamiento | Ollama, Open WebUI | 2–4 |
-| Descubribilidad | Publicación (Hugo + Pagefind), SearXNG, Linkding / Hoarder | 5–9 |
-| Colaboración | Collabora Online, Wiki.js, Plane | 5–9 |
-| Participación | GoToSocial / Mastodon, PeerTube, WriteFreely, Lemmy, Castopod | 10–17 |
-| Reproducibilidad y operaciones | Terminal, Forgejo, Woodpecker CI, Restic, runbooks de recuperación | 10–18 |
+| Navegación | PostgreSQL, Syncthing, Vaultwarden, Paperless-ngx, Archivebox, Pairdrop, Firefly III, Immich, Jellyfin, Navidrome, Audiobookshelf, Calibre | 10–17 |
+| Procesamiento | Ollama, Open WebUI, Hermes, Paperclip | 2–4 |
+| Descubribilidad | Publicación (Hugo + Pagefind), SearXNG, Karakeep, Sonarr, Radarr, Lidarr, Readarr, Prowlarr, Bazarr, qBittorrent, SABnzbd | 5–9 |
+| Colaboración | NextCloud, EuroOffice, FrankMD, OpenProject | 5–9 |
+| Participación | Mastodon, Pixelfed, PeerTube, Lemmy, Mobilizon, Bookwyrm, Castopod | 10–17 |
+| Reproducibilidad y operaciones | Terminal, Forgejo, Woodpecker CI, Restic, n8n, runbooks de recuperación | 10–18 |
 | **Total servicios** | | **79–122** |
 
 ### Total por `midu`

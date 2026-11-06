@@ -15,11 +15,14 @@
   - [Las subjetividades](#las-subjetividades)
   - [Las capas de la memoria](#las-capas-de-la-memoria)
     - [Comunicaciones](#comunicaciones)
+      - [Enrutamiento](#enrutamiento)
     - [Observabilidad](#observabilidad)
     - [Procesamiento](#procesamiento)
+      - [Colaboración](#colaboración)
+      - [Participación](#participación)
     - [Descubribilidad](#descubribilidad)
     - [Reproducibilidad](#reproducibilidad)
-    - [Resiliencia](#resiliencia)
+    - [Navegación](#navegación)
   - [La gobernanza](#la-gobernanza)
   - [Los cuidados](#los-cuidados)
   - [La replicación](#la-replicación)
@@ -206,46 +209,70 @@ Quince `subjetividades` articulan la **narrativa sobre el presente** que busca i
 
 Las `interfaces` son los puntos donde las `experiencias` sensibles se convierten en `representaciones digitales`. Son también los **sistemas de navegación de las memorias colectivas**: la forma en que le damos **significado**, organizamos y transformamos todo con lo que interactuamos, construye lo que llamamos **"la realidad"**.
 
-Cada servicio que compone la `midu`, y cada uno de los que está planeado en la `hoja de ruta` ([ROADMAP](/ROADMAP.md)), ocupa un lugar en esas capas. Puestos juntos todos los servicios se convierten en una **propuesta** de la `arquitectura` de las `memorias` individuales y colectivas.
+Cada servicio que compone la `midu`, y cada uno de los que está planeado en la `hoja de ruta` ([ROADMAP](/ROADMAP.md)), ocupa un lugar en esas capas. Puestos juntos todos los servicios se convierten en una **propuesta** de la `arquitectura` de las `memorias` individuales y colectivas. Las capas funcionan como la red de activación de una red neuronal: cada una participa en los procesos de las demás. La `resiliencia` es una propiedad transversal que existe como principio fundamental en todas las capas.
+
+![Las capas de la memoria](base_de_conocimientos/lenguaje_común/visualizaciones/midu-las_capas_de_las_memorias.png)
 
 #### Comunicaciones
 
 La capa más inmediata: el `intercambio` de mensajes, documentos y notificaciones entre personas. Segura, porque nadie externo puede leer los contenidos. Privada, porque los datos no pasan por servidores de terceros sin antes ser cifrados.
 
-> Servicios implementados: Stalwart (correo), Dendrite (mensajería Matrix), ntfy (notificaciones push), Vaultwarden (gestión de contraseñas), Syncthing (sincronización de archivos), AdGuard Home (DNS), Authelia (autenticación), Caddy (red y acceso).
+> Servicios implementados: Stalwart (correo), Dendrite (mensajería Matrix), ntfy (notificaciones push).
 
-> En el horizonte: Hugo — sitio web navegable de la base de conocimientos (`info.alfabeto.digital`) y migración del sitio principal (`alfabeto.digital`).
+##### Enrutamiento
+
+Subcapa de las comunicaciones: el único camino hacia los servicios. El tráfico entra por el `computador` desechable y viaja cifrado hasta el `computador` local, que nunca expone su dirección, con autenticación en cada paso.
+
+> Servicios implementados: Pangolin (`computador` desechable), túnel cifrado (Newt con WireGuard o Cloudflare), Caddy (proxy HTTPS), AdGuard Home (DNS local), Authelia (autenticación de dos factores).
 
 #### Observabilidad
 
 La capacidad de saber qué ocurre en todo momento dentro del sistema; la capacidad de `reflexionar` sobre la información que se obtiene del mundo. Sin observabilidad, la memoria es opaca: existe, pero no puede examinarse.
 
-> En el horizonte: Prometheus (métricas), Loki + Promtail (logs), Grafana (visualización), Alertmanager (alertas), Homepage (portal de servicios), Cockpit (gestión del sistema), Forgejo (repositorio de configuración).
+> En el horizonte: Prometheus (métricas), Loki + Promtail (logs), Grafana (visualización), Alertmanager (alertas), Homepage (portal de servicios), Cockpit (gestión del sistema).
 
 #### Procesamiento
 
 Todas las `transformaciones` de los objetos de la memoria digital: las herramientas que permiten reorganizar el `contexto`, crear nuevas representaciones a partir de las existentes, extraer significado de lo acumulado.
 
-> En el horizonte: Ollama + Open WebUI (LLM local), Collabora Online (suite ofimática), Paperless-ngx (gestión documental), Immich (fotos), Archivebox (archivo web), Wiki.js (gestión del conocimiento), Plane (gestión de proyectos).
+> En el horizonte: Ollama (modelos de lenguaje locales), Open WebUI (`interfaz` para interactuar con los modelos), Hermes (procesamiento con modelos de IA), Paperclip (coordinación de los agentes de Hermes).
+
+##### Colaboración
+
+Subcapa del procesamiento: donde varias personas trabajan sobre las mismas `memorias`, con producción conjunta de documentos, organización del conocimiento compartido y coordinación del trabajo.
+
+> En el horizonte: NextCloud (plataforma colaborativa), EuroOffice (suite ofimática), FrankMD (gestión del conocimiento), OpenProject (gestión de proyectos).
+
+##### Participación
+
+Subcapa del procesamiento: la presencia pública federada, cómo una `midu` se relaciona con otras `midu` y con el `Fediverso` sin ceder el control de las `memorias` a una plataforma centralizada.
+
+> En el horizonte: Mastodon (microblogging federado), Pixelfed (fotos federadas), PeerTube (video federado), Lemmy (foro federado), Mobilizon (eventos y grupos), Bookwyrm (lectura social), Castopod (podcasts).
 
 #### Descubribilidad
 
 La pregunta de la `visibilidad` recíproca: ¿cómo me descubren y descubro a otros y sus objetos de la memoria en esta red? La descubribilidad nos permite la comunicación entre nodos que no se conocen todavía.
 
-> En el horizonte: SearXNG (motor de búsqueda interno), Linkding o Hoarder (bookmarks), GoToSocial o Mastodon (microblogging federado), PeerTube (video federado), WriteFreely (publicación), Lemmy (foro federado), Castopod (podcast).
+> Servicios implementados: Hugo (base de conocimientos navegable en `info.alfabeto.digital`).
+> En el horizonte: SearXNG (buscador federado), Karakeep (marcadores), y un stack de automatización de medios: Sonarr (series), Radarr (películas), Lidarr (música), Readarr (libros), Prowlarr (indexadores), Bazarr (subtítulos), qBittorrent (torrents) y SABnzbd (Usenet).
 
 #### Reproducibilidad
 
 Las capacidades del sistema para la `adaptación`, `mutación` y `replicación` en nuevos contextos. La condición esencial es que la interfaz pueda ser tomada por otras personas en otras situaciones y convertida en algo propio. La `Infraestructura como código`, `NixOS` y el `patrón dendrítico` son la forma técnica de esta capa.
 
-> **En desarrollo:** Documentación transferible, base de conocimientos.
-> En el horizonte: CI/CD automatizado (Woodpecker CI + Forgejo), `replicación` automatizada.
+> Servicios implementados: virtualización (Podman), terminal (git, SSH, nix). En desarrollo: documentación transferible y base de conocimientos.
+> En el horizonte: Forgejo (repositorio git), Woodpecker CI (CI/CD), Restic (backups cifrados), n8n (automatización de flujos de trabajo).
 
-#### Resiliencia
+#### Navegación
 
-La capacidad de `recuperación` de las memorias y de las interfaces ante un evento catastrófico. La resiliencia debe diseñarse de manera preventiva para procurar que la `preservación` de las `memorias` no dependa de un único punto de falla.
+Recorrer las memorias: la capa donde las `memorias` y los `datos` viven físicamente y donde los consultamos, recorremos y servimos.
 
->En el horizonte: Backups automatizados (restic), manuales de recuperación ante desastre, **almacenamiento federado como capa de recuperación colectiva**.
+> Servicios implementados: PostgreSQL (base de `datos`), Syncthing (sincronización de archivos), Vaultwarden (gestión de contraseñas).
+> En el horizonte: Paperless-ngx (gestión documental), Archivebox (archivo web), Pairdrop (transferencia efímera), Firefly III (finanzas personales), y una biblioteca de medios: Immich (fotos y videos), Jellyfin (video), Navidrome (música), Audiobookshelf (audiolibros), Calibre (libros).
+
+#### La resiliencia (transversal)
+
+La `resiliencia` es una propiedad transversal que existe como principio fundamental en todas las capas: el cifrado, los rollbacks de NixOS, los backups (Restic) y el almacenamiento federado como recuperación colectiva. Se diseña de manera preventiva para que la `preservación` de las `memorias` no dependa de un único punto de falla.
 
 **La resiliencia es infraestructura humana**. Podemos aprender de las comunidades que han construido mecanismos de resiliencia cuando las instituciones se niegan a proveerlas: archivos propios como el Archivo de la Memoria Trans (Buenos Aires, 2012) y Faces and Phases de Zanele Muholi, y redes de cuidado mutuo como las casas de la escena ballroom, que respondieron mejor que cualquiera a la crisis del VIH. Lo mismo vale para una `midu`: además de backups, **necesitamos personas que puedan cuidarla, documentación que cualquiera pueda seguir y una comunidad que sepa qué hacer cuando algo falla**.
 
@@ -324,6 +351,8 @@ Añadimos también una cartografía animada: una serie de diagramas hechos con [
 - [Una red federada soberana](base_de_conocimientos/lenguaje_común/visualizaciones/midu-una_red_federada_soberana.png): Muchas `midu` federadas sobre `infraestructuras` colectivas propias (registros de dominios, sistemas de nombres, `memorias` colectivas y `sistemas de información` soberanos), unidas por túneles cifrados directos, sin intermediarios.
 
   ![Una red federada soberana](base_de_conocimientos/lenguaje_común/visualizaciones/midu-una_red_federada_soberana.png)
+
+Una segunda serie de diagramas retrata las [capas de la memoria](base_de_conocimientos/midu/arquitectura/capas_de_la_memoria.md), con un mapa general y uno por cada capa, embebidos en cada capa y reunidos en la cartografía de lo esencial.
 
 En la [cartografía de lo esencial](base_de_conocimientos/lenguaje_común/cartografía_de_lo_esencial.md) encontraremos la descripción detallada de estas tres formas: el grafo de `graphify`, los diagramas de Excalidraw y sus presentaciones animadas.
 

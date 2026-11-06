@@ -82,17 +82,17 @@ Cinco principios articulan el modelo:
 
 ## Los servicios
 
-Los servicios son los programas que corren continuamente en el `computador` local y responden cuando los necesitamos. Se organizan según las [capas de la memoria](midu/arquitectura/capas_de_la_memoria.md): los estratos funcionales donde cada capa sostiene lo que puede existir en las capas superiores.
+Los servicios son los programas que corren continuamente en el `computador` local y responden cuando los necesitamos. Se organizan según las [capas de la memoria](midu/arquitectura/capas_de_la_memoria.md): capas que funcionan como la red de activación de una red neuronal, donde cada una participa en los procesos de las demás; la `resiliencia` es una propiedad transversal que existe como principio fundamental en todas las capas.
 
 - **Enrutamiento**: el único camino hacia cualquier servicio. Pangolin en el `computador` desechable, Caddy como proxy inverso, AdGuard como DNS local, Authelia como autenticación de dos factores.
 - **Comunicaciones**: correo con Stalwart, chat federado con Dendrite, notificaciones con ntfy.
 - **Observabilidad**: métricas con Prometheus, logs con Loki, visualización con Grafana, alertas con Alertmanager.
-- **Almacenamiento**: base de `datos` con PostgreSQL, archivos con Syncthing, contraseñas con Vaultwarden, documentos con Paperless-ngx, fotos con Immich.
-- **Procesamiento**: modelos de lenguaje locales con Ollama.
-- **Descubribilidad**: base de conocimientos navegable con Hugo, búsqueda federada con SearXNG.
-- **Colaboración**: documentos con Collabora Online, gestión del conocimiento con Wiki.js.
-- **Participación**: microblogging federado con GoToSocial, video con PeerTube, blog con WriteFreely.
-- **Reproducibilidad**: repositorio git con Forgejo, CI/CD con Woodpecker, backups con Restic.
+- **Navegación**: recorrer las memorias; base de `datos` con PostgreSQL, archivos con Syncthing, contraseñas con Vaultwarden, documentos con Paperless-ngx, finanzas con Firefly III, y una biblioteca de medios con Immich, Jellyfin, Navidrome, Audiobookshelf y Calibre.
+- **Procesamiento**: modelos de lenguaje locales con Ollama y Open WebUI, procesamiento con IA con Hermes, coordinación de agentes con Paperclip.
+- **Descubribilidad**: base de conocimientos navegable con Hugo, búsqueda federada con SearXNG, marcadores con Karakeep, automatización de medios con el stack \*arr (Sonarr, Radarr, Lidarr, Readarr, Prowlarr, Bazarr, qBittorrent, SABnzbd).
+- **Colaboración**: plataforma colaborativa con NextCloud, documentos con EuroOffice, gestión del conocimiento con FrankMD, proyectos con OpenProject.
+- **Participación**: microblogging con Mastodon, fotos con Pixelfed, video con PeerTube, foro con Lemmy, eventos con Mobilizon, lectura social con Bookwyrm, podcasts con Castopod.
+- **Reproducibilidad**: repositorio git con Forgejo, CI/CD con Woodpecker, backups con Restic, automatización con n8n.
 
 - [Todos los servicios](midu/servicios.md)
 

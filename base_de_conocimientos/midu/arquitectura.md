@@ -41,7 +41,7 @@ En las Rutas A y B, el `computador` desechable corre Pangolin, que gestiona los 
 
 [**Gestión de secretos**](arquitectura/secretos.md): la configuración vive en el repositorio; los secretos no. `age` cifra cada secreto para la máquina que lo necesita; `sops-nix` los descifra durante la construcción del sistema.
 
-[**Las capas de la memoria**](arquitectura/capas_de_la_memoria.md): seis niveles en los que se pueden describir los estratos de las `memorias digitales` según la forma en la que se agregan objetos en los discos duros de la `midu`. La `soberanía` sobre las `infraestructuras` locales nos permite intervenir en la forma en la que esas capas organizan y transforman los `datos`.
+[**Las capas de la memoria**](arquitectura/capas_de_la_memoria.md): seis capas que funcionan como la red de activación de una red neuronal, donde cada una participa en los procesos de las demás y la `resiliencia` existe como principio fundamental y transversal en todas. La `soberanía` sobre las `infraestructuras` locales nos permite intervenir en la forma en la que esas capas organizan y transforman los `datos`.
 
 [**Almacenamiento federado**](arquitectura/almacenamiento_federado.md): un modelo de tres capas de resiliencia y la topología de federación entre varias `midu`. Las `memorias` permanecen cifradas, fragmentadas y distribuidas geográficamente; ninguna `midu` alberga una copia completa de las `memorias` de otra pero juntas agregan una capa de resiliencia adicional a la posibilidad de pérdida de nuestras `memorias` individuales y colectivas.
 
