@@ -141,6 +141,11 @@
     environment.systemPackages = with pkgs; [
       vim neovim git wget fzf kitty sops hostname bashtop gtop postgresql cryptsetup
       pciutils ethtool iproute2 net-tools unzip python3
+      # Almacenamiento y salud de discos
+      btrfs-progs      # mkfs.btrfs, btrfs scrub / filesystem / device
+      smartmontools    # smartctl: estado SMART de HDD y SSD
+      nvme-cli         # nvme: estado y SMART de discos NVMe
+      hdparm           # información y parámetros de discos SATA/HDD
     ];
 
     programs.bash.shellAliases = {
