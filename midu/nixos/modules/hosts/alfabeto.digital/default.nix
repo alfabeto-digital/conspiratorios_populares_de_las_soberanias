@@ -17,7 +17,7 @@ in {
         specialArgs = {
           inherit cfg storagePath dataPath pkgsUnstable;
           flakeDir     = configDir;
-          exchangePath = "${dataPath}/exchange";
+          servicesPath = "${dataPath}/services";
         };
         modules = [
           inputs.sops-nix.nixosModules.sops

@@ -1,11 +1,11 @@
 { inputs, ... }: {
-  flake.nixosModules.adguard = { config, lib, pkgs, cfg, exchangePath, ... }: {
+  flake.nixosModules.adguard = { config, lib, pkgs, cfg, servicesPath, ... }: {
 
     users.users.adguardhome = { isSystemUser = true; group = "adguardhome"; };
     users.groups.adguardhome = {};
 
     systemd.tmpfiles.rules = [
-      "d ${exchangePath}/adguard 0750 adguardhome adguardhome - -"
+      "d ${servicesPath}/adguard 0750 adguardhome adguardhome - -"
     ];
 
     services.adguardhome = {
@@ -32,9 +32,9 @@
       User           = lib.mkForce "adguardhome";
       Group          = lib.mkForce "adguardhome";
       ExecStart      = lib.mkForce
-        "${pkgs.adguardhome}/bin/AdGuardHome --no-check-update -w ${exchangePath}/adguard";
+        "${pkgs.adguardhome}/bin/AdGuardHome --no-check-update -w ${servicesPath}/adguard";
       ProtectHome    = lib.mkForce "no";
-      ReadWritePaths = [ "${exchangePath}/adguard" ];
+      ReadWritePaths = [ "${servicesPath}/adguard" ];
     };
 
     networking.firewall.allowedTCPPorts = [ 53 ];

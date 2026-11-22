@@ -47,11 +47,10 @@
 
     systemd.tmpfiles.rules = [
       "d ${storagePath}                                           0750 ${cfg.admin_username}       storage                     - -"
-      "d ${storagePath}/exchange                                  0750 ${cfg.admin_username}       storage                     - -"
       "d ${storagePath}/helios         0755 ${cfg.syncthing_username} storage - -"
       "d /var/www/${cfg.domain}       0755 caddy                   caddy   - -"
       "d ${dataPath}            0755 postgres postgres - -"
-      "d ${dataPath}/exchange   0755 ${cfg.admin_username} storage - -"
+      "d ${dataPath}/services   0755 ${cfg.admin_username} storage - -"
       "d ${dataPath}/postgresql 0750 postgres postgres - -"
     ];
   };

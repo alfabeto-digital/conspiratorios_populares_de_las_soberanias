@@ -1,9 +1,9 @@
 { inputs, ... }: {
-  flake.nixosModules.stalwart = { config, lib, pkgs, cfg, exchangePath, ... }: {
+  flake.nixosModules.stalwart = { config, lib, pkgs, cfg, servicesPath, ... }: {
 
     systemd.tmpfiles.rules = [
-      "d ${exchangePath}/stalwart       0750 stalwart-mail stalwart-mail - -"
-      "d ${exchangePath}/stalwart/blobs 0750 stalwart-mail stalwart-mail - -"
+      "d ${servicesPath}/stalwart       0750 stalwart-mail stalwart-mail - -"
+      "d ${servicesPath}/stalwart/blobs 0750 stalwart-mail stalwart-mail - -"
     ];
 
     services.postgresql.ensureDatabases = [ "stalwart" ];
@@ -50,7 +50,7 @@
       requires = [ "postgresql-stalwart-setup.service" ];
       serviceConfig = {
         ProtectHome     = lib.mkForce "no";
-        ReadWritePaths  = [ "${exchangePath}/stalwart" ];
+        ReadWritePaths  = [ "${servicesPath}/stalwart" ];
         ReadOnlyPaths   = [ "/run/secrets" ];
         EnvironmentFile = "/run/stalwart-env";
       };
@@ -170,7 +170,7 @@
         };
         store.blobs = {
           type = "fs";
-          path = "${exchangePath}/stalwart/blobs";
+          path = "${servicesPath}/stalwart/blobs";
         };
         directory.internal = {
           type  = "internal";

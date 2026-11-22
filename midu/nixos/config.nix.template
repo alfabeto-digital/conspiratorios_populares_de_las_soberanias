@@ -80,15 +80,20 @@
   data_disk_uuid = "";   # <-- fill after installation
 
   ###############################################################
-  # Storage (external disk)
+  # Storage — capa local (btrfs raid1 sobre LUKS)
   ###############################################################
 
   # Mounted at: <storage_mount_point>/<storage_name>
   storage_mount_point = "/mnt/storage";
   storage_name        = "";   # disk label / directory name under storage_mount_point
 
-  # External disk UUID — fill from: blkid /dev/<device>
+  # btrfs filesystem UUID of the raid1 array — fill from: blkid /dev/mapper/local-0
   storage_uuid = "";
+
+  # crypto_LUKS UUIDs of the two mirror disks — fill from: blkid /dev/sdX /dev/sdY
+  # Each disk is auto-unlocked with its own key (luks_local_0_key / luks_local_1_key).
+  storage_disk0_uuid = "";
+  storage_disk1_uuid = "";
 
   ###############################################################
   # Domain & ACME

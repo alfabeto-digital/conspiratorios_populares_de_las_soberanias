@@ -156,10 +156,6 @@
       history       = "history | tac | fzf";
     };
 
-    systemd.tmpfiles.rules = [
-      "d /home/${cfg.admin_username}/exchange 0755 ${cfg.admin_username} users - -"
-    ];
-
     system.stateVersion = cfg.nixos_state_version;
   };
 }

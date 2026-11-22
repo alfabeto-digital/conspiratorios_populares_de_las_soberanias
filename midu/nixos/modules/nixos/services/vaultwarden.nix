@@ -1,13 +1,13 @@
 { inputs, ... }: {
-  flake.nixosModules.vaultwarden = { config, lib, pkgs, cfg, exchangePath, pkgsUnstable, ... }: {
+  flake.nixosModules.vaultwarden = { config, lib, pkgs, cfg, servicesPath, pkgsUnstable, ... }: {
 
     systemd.tmpfiles.rules = [
-      "d ${exchangePath}/vaultwarden 0750 vaultwarden vaultwarden - -"
+      "d ${servicesPath}/vaultwarden 0750 vaultwarden vaultwarden - -"
     ];
 
     systemd.services.vaultwarden = {
       serviceConfig = {
-        ReadWritePaths = [ "${exchangePath}/vaultwarden" ];
+        ReadWritePaths = [ "${servicesPath}/vaultwarden" ];
         ProtectHome    = lib.mkForce "no";
       };
     };
@@ -19,7 +19,7 @@
         DOMAIN         = "https://warden.${cfg.domain}";
         ROCKET_ADDRESS = "0.0.0.0";
         ROCKET_PORT    = cfg.vaultwarden_port;
-        DATA_FOLDER    = "${exchangePath}/vaultwarden";
+        DATA_FOLDER    = "${servicesPath}/vaultwarden";
       };
     };
   };

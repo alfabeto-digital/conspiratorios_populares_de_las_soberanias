@@ -1,12 +1,12 @@
 { inputs, ... }: {
-  flake.nixosModules.authelia = { config, lib, pkgs, cfg, exchangePath, ... }: {
+  flake.nixosModules.authelia = { config, lib, pkgs, cfg, servicesPath, ... }: {
 
     # services.authelia uses DynamicUser — declare explicitly so sops-nix resolves owner at eval time.
     users.users.authelia-main = { isSystemUser = true; group = "authelia-main"; };
     users.groups.authelia-main = {};
 
     systemd.tmpfiles.rules = [
-      "d ${exchangePath}/authelia 0750 authelia-main authelia-main - -"
+      "d ${servicesPath}/authelia 0750 authelia-main authelia-main - -"
     ];
 
     # Secrets must be added to secrets.yaml before deploying:
@@ -49,7 +49,7 @@
       };
       serviceConfig = {
         ProtectHome    = lib.mkForce "no";
-        ReadWritePaths = [ "${exchangePath}/authelia" ];
+        ReadWritePaths = [ "${servicesPath}/authelia" ];
       };
     };
 
