@@ -92,6 +92,11 @@
           path = config.sops.secrets.authelia_users_file.path;
         };
 
+        # No abortar el arranque si el correo (Stalwart:587) aún no está listo.
+        # Authelia es la puerta de autenticación: debe levantar aunque el SMTP
+        # esté caído o todavía no haya enlazado el puerto. Las notificaciones
+        # siguen funcionando en tiempo de ejecución.
+        notifier.disable_startup_check = true;
         notifier.smtp = {
           address         = "smtp://127.0.0.1:587";
           sender          = "Authelia <${cfg.authelia_smtp_username}@${cfg.domain}>";
