@@ -3,8 +3,8 @@
 
     fileSystems."${storagePath}" = {
       device  = "/dev/disk/by-uuid/${cfg.storage_uuid}";
-      fsType  = "ext4";
-      options = [ "nofail" ];
+      fsType  = "btrfs";
+      options = [ "x-systemd.requires=unlock-local-raid.service" "compress=zstd" "nofail" ];
     };
 
     systemd.services.unlock-data-disk = {
@@ -33,12 +33,34 @@
       options = [ "x-systemd.requires=unlock-data-disk.service" "nofail" ];
     };
 
+    systemd.services.unlock-local-raid = {
+      description = "Unlock LUKS raid1 disks and register btrfs (capa local)";
+      wantedBy    = [ "multi-user.target" ];
+      after       = [ "systemd-udev-settle.service" ];
+      wants       = [ "systemd-udev-settle.service" ];
+      unitConfig.ConditionPathExists = "!/dev/mapper/local-0";
+      serviceConfig = {
+        Type            = "oneshot";
+        RemainAfterExit = true;
+      };
+      script = ''
+        ${pkgs.systemd}/bin/udevadm settle
+        ${pkgs.cryptsetup}/bin/cryptsetup open \
+          /dev/disk/by-uuid/${cfg.storage_disk0_uuid} local-0 \
+          --key-file ${config.sops.secrets.luks_local_0_key.path}
+        ${pkgs.cryptsetup}/bin/cryptsetup open \
+          /dev/disk/by-uuid/${cfg.storage_disk1_uuid} local-1 \
+          --key-file ${config.sops.secrets.luks_local_1_key.path}
+        ${pkgs.btrfs-progs}/bin/btrfs device scan
+      '';
+    };
+
     # El estado de estos servicios ahora vive en el disco `data` (LUKS), que se
     # monta tarde (unlock-data-disk en multi-user.target). Sin esto, en el arranque
     # pueden iniciar antes del montaje y fallar por rutas inexistentes.
     systemd.services.vaultwarden.unitConfig.RequiresMountsFor    = dataPath;
-    systemd.services.syncthing.unitConfig.RequiresMountsFor      = dataPath;
-    systemd.services.syncthing-init.unitConfig.RequiresMountsFor = dataPath;
+    systemd.services.syncthing.unitConfig.RequiresMountsFor      = [ dataPath storagePath ];
+    systemd.services.syncthing-init.unitConfig.RequiresMountsFor = [ dataPath storagePath ];
     systemd.services.adguardhome.unitConfig.RequiresMountsFor    = dataPath;
     systemd.services.dendrite.unitConfig.RequiresMountsFor       = dataPath;
     systemd.services.authelia-main.unitConfig.RequiresMountsFor  = dataPath;
