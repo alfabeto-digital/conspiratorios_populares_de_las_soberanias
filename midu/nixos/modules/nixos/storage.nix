@@ -33,12 +33,25 @@
       options = [ "x-systemd.requires=unlock-data-disk.service" "nofail" ];
     };
 
+    # El estado de estos servicios ahora vive en el disco `data` (LUKS), que se
+    # monta tarde (unlock-data-disk en multi-user.target). Sin esto, en el arranque
+    # pueden iniciar antes del montaje y fallar por rutas inexistentes.
+    systemd.services.vaultwarden.unitConfig.RequiresMountsFor    = dataPath;
+    systemd.services.syncthing.unitConfig.RequiresMountsFor      = dataPath;
+    systemd.services.syncthing-init.unitConfig.RequiresMountsFor = dataPath;
+    systemd.services.adguardhome.unitConfig.RequiresMountsFor    = dataPath;
+    systemd.services.dendrite.unitConfig.RequiresMountsFor       = dataPath;
+    systemd.services.authelia-main.unitConfig.RequiresMountsFor  = dataPath;
+    systemd.services.ntfy-sh.unitConfig.RequiresMountsFor        = dataPath;
+    systemd.services.stalwart-mail.unitConfig.RequiresMountsFor  = dataPath;
+
     systemd.tmpfiles.rules = [
       "d ${storagePath}                                           0750 ${cfg.admin_username}       storage                     - -"
       "d ${storagePath}/exchange                                  0750 ${cfg.admin_username}       storage                     - -"
       "d ${storagePath}/helios         0755 ${cfg.syncthing_username} storage - -"
       "d /var/www/${cfg.domain}       0755 caddy                   caddy   - -"
-      "d ${dataPath}            0750 postgres postgres - -"
+      "d ${dataPath}            0755 postgres postgres - -"
+      "d ${dataPath}/exchange   0755 ${cfg.admin_username} storage - -"
       "d ${dataPath}/postgresql 0750 postgres postgres - -"
     ];
   };
