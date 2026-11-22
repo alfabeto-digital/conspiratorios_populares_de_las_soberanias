@@ -67,6 +67,8 @@
         luks_data_key = {
           mode = "0400";
         };
+        luks_local_0_key = { mode = "0400"; };
+        luks_local_1_key = { mode = "0400"; };
       };
     };
 
@@ -139,7 +141,7 @@
     ];
 
     environment.systemPackages = with pkgs; [
-      vim neovim git wget fzf kitty sops hostname bashtop gtop postgresql cryptsetup
+      vim neovim git wget fzf kitty sops age hostname bashtop gtop postgresql cryptsetup
       pciutils ethtool iproute2 net-tools unzip python3
       # Almacenamiento y salud de discos
       btrfs-progs      # mkfs.btrfs, btrfs scrub / filesystem / device
