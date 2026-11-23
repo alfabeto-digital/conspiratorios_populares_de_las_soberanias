@@ -108,5 +108,46 @@
         fi
       '';
     };
+
+    # ------------------------------------------------------------------ #
+    # Collabora Online (CODE) para Nextcloud Office (richdocuments)        #
+    # ------------------------------------------------------------------ #
+    # Servidor de edición de documentos en loopback; Caddy termina TLS y lo
+    # expone en collabora.<dominio> (el vhost está en caddy.nix).
+    services.collabora-online = {
+      enable = true;
+      port   = cfg.collabora_port;   # 9980, solo loopback
+      # Autoriza a NextCloud como host WOPI (quién puede pedir/guardar documentos).
+      aliasGroups = [ { host = "https://cloud.${cfg.domain}:443"; } ];
+      settings = {
+        # TLS lo termina Caddy; Collabora habla http en loopback y usa el
+        # X-Forwarded-Proto para construir sus URLs como https.
+        ssl.enable      = false;
+        ssl.termination = true;
+        server_name     = "collabora.${cfg.domain}";
+        net = {
+          proto  = "IPv4";
+          listen = "loopback";
+        };
+      };
+    };
+
+    # Cablea NextCloud Office (richdocuments) al Collabora local. richdocuments
+    # se instala desde la tienda (no es declarativa), así que solo fijamos su
+    # config si la app está presente. wopi_url interno (server-a-server, sin
+    # pasar por el túnel); public_wopi_url público (lo usa el navegador).
+    systemd.services.nextcloud-collabora-setup = {
+      description = "Point Nextcloud Office (richdocuments) at the local Collabora server";
+      wantedBy    = [ "multi-user.target" ];
+      after       = [ "nextcloud-setup.service" ];
+      requires    = [ "nextcloud-setup.service" ];
+      serviceConfig = { Type = "oneshot"; RemainAfterExit = true; };
+      script = let occ = "${config.services.nextcloud.occ}/bin/nextcloud-occ"; in ''
+        if ${occ} app:list | ${pkgs.gnugrep}/bin/grep -q richdocuments; then
+          ${occ} config:app:set richdocuments wopi_url        --value="http://127.0.0.1:${toString cfg.collabora_port}"
+          ${occ} config:app:set richdocuments public_wopi_url --value="https://collabora.${cfg.domain}"
+        fi
+      '';
+    };
   };
 }

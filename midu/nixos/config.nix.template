@@ -131,4 +131,5 @@
   stalwart_port = 8080;    # Stalwart Mail management
   ntfy_port     = 2586;    # ntfy push notifications
   nextcloud_port = 8083;   # NextCloud (nginx interno en localhost; Caddy hace reverse_proxy)
+  collabora_port = 9980;   # Collabora Online (CODE) para Nextcloud Office; loopback, Caddy expone collabora.<domain>
 }
