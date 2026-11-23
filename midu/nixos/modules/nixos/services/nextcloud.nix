@@ -10,6 +10,15 @@
       datadir  = "${servicesPath}/nextcloud";
       https    = true;
 
+      # Tienda de apps habilitada de forma declarativa. Con appstoreEnable = null
+      # (default) el módulo no escribe `appstoreenabled`, y aquí quedó en `false`
+      # en el config.php mutable (puesto a mano en el setup inicial). Fijarlo en
+      # true lo fuerza en el override de Nix. El directorio escribible store-apps
+      # (${home}/store-apps, writable=true) ya lo provisiona el módulo.
+      # Nota: las apps instaladas desde la tienda no las gestiona Nix (no se
+      # actualizan por rebuild; se actualizan desde la propia interfaz).
+      appstoreEnable = true;
+
       # notify_push ("Client Push") queda PENDIENTE: su auto-test de trusted-proxy
       # no pasa detrás del túnel de Cloudflare, que reescribe el X-Forwarded-For,
       # así que el self-test resuelve "::1" en vez del valor de prueba y el unit
