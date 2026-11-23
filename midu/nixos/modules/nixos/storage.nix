@@ -68,7 +68,7 @@
     systemd.services.stalwart-mail.unitConfig.RequiresMountsFor  = dataPath;
 
     systemd.tmpfiles.rules = [
-      "d ${storagePath}                                           0750 ${cfg.admin_username}       storage                     - -"
+      "d ${storagePath}                                           0770 ${cfg.admin_username}       storage                     - -"
       "d ${dataPath}/helios            0755 ${cfg.syncthing_username} storage - -"
       "d /var/www/${cfg.domain}       0755 caddy                   caddy   - -"
       "d ${dataPath}            0755 postgres postgres - -"

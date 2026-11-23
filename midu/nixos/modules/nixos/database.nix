@@ -23,6 +23,7 @@
         local dendrite dendrite       peer
         local authelia authelia-main  peer
         local stalwart stalwart-mail  peer
+        local nextcloud nextcloud     peer
         local all      all            md5
         host  stalwart stalwart-mail  127.0.0.1/32 trust
         host  all      all            127.0.0.1/32 md5

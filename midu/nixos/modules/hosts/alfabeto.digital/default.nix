@@ -37,6 +37,7 @@ in {
           # Services
           self.nixosModules.vaultwarden
           self.nixosModules.syncthing
+          self.nixosModules.nextcloud
 
           # Admin user (home-manager)
           self.nixosModules.admin

@@ -82,6 +82,14 @@
             reverse_proxy localhost:${toString cfg.adguard_port}
           '';
         };
+
+        "${h "cloud.${cfg.domain}"}" = {
+          extraConfig = ''
+            reverse_proxy localhost:${toString cfg.nextcloud_port} {
+              ${fwdProto}
+            }
+          '';
+        };
       };
     };
   };
