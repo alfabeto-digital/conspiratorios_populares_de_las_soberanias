@@ -59,8 +59,8 @@
     # monta tarde (unlock-data-disk en multi-user.target). Sin esto, en el arranque
     # pueden iniciar antes del montaje y fallar por rutas inexistentes.
     systemd.services.vaultwarden.unitConfig.RequiresMountsFor    = dataPath;
-    systemd.services.syncthing.unitConfig.RequiresMountsFor      = [ dataPath storagePath ];
-    systemd.services.syncthing-init.unitConfig.RequiresMountsFor = [ dataPath storagePath ];
+    systemd.services.syncthing.unitConfig.RequiresMountsFor      = dataPath;
+    systemd.services.syncthing-init.unitConfig.RequiresMountsFor = dataPath;
     systemd.services.adguardhome.unitConfig.RequiresMountsFor    = dataPath;
     systemd.services.dendrite.unitConfig.RequiresMountsFor       = dataPath;
     systemd.services.authelia-main.unitConfig.RequiresMountsFor  = dataPath;
@@ -69,7 +69,7 @@
 
     systemd.tmpfiles.rules = [
       "d ${storagePath}                                           0750 ${cfg.admin_username}       storage                     - -"
-      "d ${storagePath}/helios         0755 ${cfg.syncthing_username} storage - -"
+      "d ${dataPath}/helios            0755 ${cfg.syncthing_username} storage - -"
       "d /var/www/${cfg.domain}       0755 caddy                   caddy   - -"
       "d ${dataPath}            0755 postgres postgres - -"
       "d ${dataPath}/services   0755 ${cfg.admin_username} storage - -"
