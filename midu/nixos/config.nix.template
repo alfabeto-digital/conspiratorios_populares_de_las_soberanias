@@ -67,6 +67,7 @@
 
   # NextCloud admin login (cloud.<domain>). Independent from admin_username so
   # the cloud admin can have its own name. Password: nextcloud_admin_password (sops).
+  
   nextcloud_admin_username = "";
 
   ###############################################################

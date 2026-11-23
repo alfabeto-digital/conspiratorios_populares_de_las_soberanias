@@ -10,10 +10,13 @@
       datadir  = "${servicesPath}/nextcloud";
       https    = true;
 
-      # "Client Push": empuja los cambios a los clientes de escritorio y móvil en
-      # vez de que hagan polling. Enablarlo también activa configureRedis (redis
-      # para caché local y bloqueo de archivos), lo que calla otras advertencias.
-      notify_push.enable = true;
+      # notify_push ("Client Push") queda PENDIENTE: su auto-test de trusted-proxy
+      # no pasa detrás del túnel de Cloudflare, que reescribe el X-Forwarded-For,
+      # así que el self-test resuelve "::1" en vez del valor de prueba y el unit
+      # entra en bucle de reinicio, colgando el switch. Se retoma como tarea
+      # aparte apuntando el push server a la URL interna (nginx en localhost) y
+      # afinando trusted_domains/trusted_proxies.
+      # notify_push.enable = true;
 
       # El panel avisa que el buffer de strings internos de OPcache (default 8) se
       # queda corto. Las entradas de phpOptions son defaults, así que esta se
