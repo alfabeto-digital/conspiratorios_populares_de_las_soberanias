@@ -32,7 +32,11 @@
         adminpassFile = config.sops.secrets.nextcloud_admin_password.path;
       };
       settings = {
-        trusted_proxies     = [ "127.0.0.1" ];
+        # 127.0.0.1 = nginx local; ::1 = el salto de cloudflared→Caddy por loopback
+        # IPv6. Sin ::1, NextCloud toma "::1" como IP del cliente (todo el tráfico
+        # parece venir de ahí) y el anti-fuerza-bruta lo throttlea. Con ::1 confiado,
+        # camina el X-Forwarded-For ("<cliente_real>, ::1") hasta la IP real.
+        trusted_proxies     = [ "127.0.0.1" "::1" ];
         overwriteprotocol   = "https";
         overwritehost       = "cloud.${cfg.domain}";
         "overwrite.cli.url" = "https://cloud.${cfg.domain}";
