@@ -9,12 +9,23 @@
       hostName = "cloud.${cfg.domain}";
       datadir  = "${servicesPath}/nextcloud";
       https    = true;
+
+      # "Client Push": empuja los cambios a los clientes de escritorio y móvil en
+      # vez de que hagan polling. Enablarlo también activa configureRedis (redis
+      # para caché local y bloqueo de archivos), lo que calla otras advertencias.
+      notify_push.enable = true;
+
+      # El panel avisa que el buffer de strings internos de OPcache (default 8) se
+      # queda corto. Las entradas de phpOptions son defaults, así que esta se
+      # fusiona con el resto sin pisarlas.
+      phpOptions."opcache.interned_strings_buffer" = "16";
+
       config = {
         dbtype        = "pgsql";
         dbname        = "nextcloud";
         dbuser        = "nextcloud";
         dbhost        = "/run/postgresql";   # socket Unix → peer auth, sin contraseña
-        adminuser     = cfg.admin_username;
+        adminuser     = cfg.nextcloud_admin_username;   # login del admin de cloud (independiente de admin_username)
         adminpassFile = config.sops.secrets.nextcloud_admin_password.path;
       };
       settings = {
@@ -22,6 +33,10 @@
         overwriteprotocol   = "https";
         overwritehost       = "cloud.${cfg.domain}";
         "overwrite.cli.url" = "https://cloud.${cfg.domain}";
+
+        # Ventana de mantenimiento (hora UTC; bloque de 4h): corre las tareas
+        # pesadas de fondo fuera del horario de uso. 4 = 04:00–08:00 UTC.
+        maintenance_window_start = 4;
       };
     };
 
