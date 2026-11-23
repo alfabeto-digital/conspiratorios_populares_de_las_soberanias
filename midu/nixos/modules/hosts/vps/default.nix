@@ -83,7 +83,7 @@ in {
             system.stateVersion = cfg.nixos_state_version;
           })
 
-          self.nixosModules.pangolin-server
+          self.nixosModules.pangolin
         ];
       };
     });

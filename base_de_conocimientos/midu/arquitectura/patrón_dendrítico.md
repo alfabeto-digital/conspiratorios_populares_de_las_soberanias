@@ -45,7 +45,7 @@ nixos/modules/nixos/
 │   ├── caddy.nix        , proxy reverso
 │   ├── cloudflare.nix   , túnel Cloudflare
 │   ├── newt.nix         , cliente Newt
-│   └── pangolin-server.nix, stack Pangolin+Traefik
+│   └── pangolin.nix, stack Pangolin+Traefik
 ├── services/
 │   ├── vaultwarden.nix
 │   └── syncthing.nix
@@ -77,7 +77,7 @@ config = mkIf cfg.enable {
 Y en la configuración del host se activa o desactiva:
 
 ```nix
-# En hosts/alfabeto.digital/default.nix
+# En hosts/midu/default.nix
 misServicios.vaultwarden.enable = true;
 misServicios.dendrite.enable = false;  # todavía no está listo
 ```

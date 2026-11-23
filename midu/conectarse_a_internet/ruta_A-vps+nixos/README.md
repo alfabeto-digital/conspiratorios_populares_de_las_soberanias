@@ -10,7 +10,7 @@ Configuración del VPS con [NixOS](../../../base_de_conocimientos/midu/arquitect
 
 - [`.sops-vps.yaml.template`](.sops-vps.yaml.template): plantilla de configuración [sops](../../../base_de_conocimientos/midu/arquitectura/secretos.md); copiar como `.sops.yaml` en el VPS y completar con la clave [age](../../../base_de_conocimientos/midu/arquitectura/secretos.md) pública
 - [`nixos/config-vps.nix.template`](../../nixos/config-vps.nix.template): configuración declarativa del VPS; contiene hostname, dominio e IP
-- [`nixos/modules/nixos/network/pangolin-server.nix`](../../nixos/modules/nixos/network/pangolin-server.nix): módulo NixOS del túnel cifrado
+- [`nixos/modules/nixos/network/pangolin.nix`](../../nixos/modules/nixos/network/pangolin.nix): módulo NixOS del túnel cifrado
 - [`nixos/secrets/secrets-vps.plain.template`](../../nixos/secrets/secrets-vps.plain.template): plantilla de secretos del VPS
 
 ### `Computador` local (NixOS)

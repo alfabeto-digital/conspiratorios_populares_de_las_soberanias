@@ -157,7 +157,7 @@ Las fuentes y las familias de archivos de cada visualización se colapsan para h
 │   │   │   └── default.nix
 │   │   ├── modules/
 │   │   │   ├── hosts/
-│   │   │   │   ├── alfabeto.digital/
+│   │   │   │   ├── midu/
 │   │   │   │   │   └── default.nix
 │   │   │   │   └── vps/
 │   │   │   │       └── default.nix
@@ -173,7 +173,7 @@ Las fuentes y las familias de archivos de cada visualización se colapsan para h
 │   │   │       │   ├── caddy.nix
 │   │   │       │   ├── cloudflare.nix
 │   │   │       │   ├── newt.nix
-│   │   │       │   └── pangolin-server.nix
+│   │   │       │   └── pangolin.nix
 │   │   │       ├── security/
 │   │   │       │   ├── adguard.nix
 │   │   │       │   └── authelia.nix

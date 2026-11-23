@@ -54,7 +54,7 @@ INTERNET
 
 El stack de Pangolin puede correr de dos formas:
 
-- **Como módulos NixOS**: si el VPS corre NixOS. La configuración está declarada en `nixos/modules/nixos/network/pangolin-server.nix`.
+- **Como módulos NixOS**: si el VPS corre NixOS. La configuración está declarada en `nixos/modules/nixos/network/pangolin.nix`.
 - **Como contenedores Docker**: si el VPS corre cualquier otra distribución de Linux. La configuración está en `vps/docker-compose.yml`. Esta es la opción más común para VPS de proveedores que no ofrecen NixOS como imagen base.
 
 ## El rol del VPS en la arquitectura de seguridad

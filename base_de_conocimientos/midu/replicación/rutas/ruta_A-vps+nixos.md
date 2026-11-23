@@ -38,7 +38,7 @@ WireGuard es el protocolo VPN que cifra todo el tráfico entre el VPS y el `comp
 
 La herramienta `nixos-anywhere` instala NixOS en un servidor remoto desde la máquina local, sin acceso físico ni ISO de instalación. Solo se necesita acceso [SSH](../../../lenguaje_común/lenguaje_común.md#ssh) con usuario `root`.
 
-Módulo NixOS del VPS: `nixos/modules/nixos/network/pangolin-server.nix`
+Módulo NixOS del VPS: `nixos/modules/nixos/network/pangolin.nix`
 
 ## Instalación del VPS
 

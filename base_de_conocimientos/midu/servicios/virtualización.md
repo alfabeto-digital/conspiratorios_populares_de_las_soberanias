@@ -28,7 +28,7 @@ La Ruta B del túnel de internet despliega el stack del VPS (Traefik, Pangolin, 
 
 **Nota sobre NET_ADMIN:** [Gerbil](pangolin.md), el componente que crea las interfaces WireGuard, necesita la capacidad `NET_ADMIN` del sistema operativo. En Podman rootless esa capacidad no está disponible. La solución es ejecutar Podman como `root` en el VPS para este caso específico.
 
-La Ruta A (VPS con NixOS) también puede usar Podman o Docker como `container_runtime` alternativo al modo nativo de NixOS. El módulo `pangolin-server.nix` expone la variable `container_runtime` con tres opciones: `flake` (NixOS nativo), `podman`, `docker`.
+La Ruta A (VPS con NixOS) también puede usar Podman o Docker como `container_runtime` alternativo al modo nativo de NixOS. El módulo `pangolin.nix` expone la variable `container_runtime` con tres opciones: `flake` (NixOS nativo), `podman`, `docker`.
 
 ## Ver también
 

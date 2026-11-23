@@ -1,5 +1,5 @@
 { inputs, ... }: {
-  flake.nixosModules.pangolin-server = { config, lib, pkgs, cfg, flakeDir, ... }: {
+  flake.nixosModules.pangolin = { config, lib, pkgs, cfg, flakeDir, ... }: {
 
     # ------------------------------------------------------------------ #
     # Sops secret + env file — needed by both native and container modes  #
@@ -65,14 +65,14 @@
     # Update cfg.newt_peer_ip and rebuild after first Newt connection.
     environment.etc."traefik/dynamic/routes.toml".text = ''
       [tcp.routers]
-        [tcp.routers.alfabeto-https]
+        [tcp.routers.midu-https]
           rule        = "HostSNIRegexp(`^(.+\\.)?${cfg.domain}$`)"
           entryPoints = ["websecure"]
           service     = "pangolin-tunnel"
-          [tcp.routers.alfabeto-https.tls]
+          [tcp.routers.midu-https.tls]
             passthrough = true
 
-        [tcp.routers.alfabeto-http]
+        [tcp.routers.midu-http]
           rule        = "HostSNI(`*`)"
           entryPoints = ["web"]
           service     = "pangolin-tunnel-http"
