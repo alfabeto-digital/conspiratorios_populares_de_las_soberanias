@@ -1,5 +1,5 @@
 {
-  description = "alfabeto.digital: conspiratorios populares de las soberanías";
+  description = "midu - Mínima Interfaz Digital Viable";
 
   inputs = {
     nixpkgs.url          = "github:nixos/nixpkgs/nixos-26.05";

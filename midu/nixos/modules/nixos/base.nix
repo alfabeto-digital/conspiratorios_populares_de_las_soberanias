@@ -148,11 +148,13 @@
       smartmontools    # smartctl: estado SMART de HDD y SSD
       nvme-cli         # nvme: estado y SMART de discos NVMe
       hdparm           # información y parámetros de discos SATA/HDD
+      psmisc           # fuser, killall, pstree: qué proceso ocupa un montaje
+      lsof             # archivos abiertos: qué retiene un filesystem ocupado
     ];
 
     programs.bash.shellAliases = {
       ll            = "ls -la";
-      update-nixos  = "nix flake update";
+      update-nixos  = "nix flake update --flake /etc/nixos";
       rebuild-nixos = "nixos-rebuild build  --flake /etc/nixos#$(hostname) --impure";
       switch-nixos  = "nixos-rebuild switch --flake /etc/nixos#$(hostname) --impure";
       history       = "history | tac | fzf";
