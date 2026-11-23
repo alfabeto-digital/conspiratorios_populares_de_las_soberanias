@@ -5,7 +5,7 @@
     # interno escucha solo en localhost y Caddy (o Cloudflare) termina TLS.
     services.nextcloud = {
       enable   = true;
-      package  = pkgs.nextcloud31;   # AJUSTAR a la versión disponible en tu nixpkgs (ver nota)
+      package  = pkgs.nextcloud32;   # versión disponible en nixpkgs 26.05 (la 31 fue removida)
       hostName = "cloud.${cfg.domain}";
       datadir  = "${dataPath}/nextcloud";
       https    = true;
