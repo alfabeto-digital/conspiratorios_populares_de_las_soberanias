@@ -1,5 +1,5 @@
 { inputs, ... }: {
-  flake.nixosModules.nextcloud = { config, lib, pkgs, cfg, dataPath, storagePath, ... }: {
+  flake.nixosModules.nextcloud = { config, lib, pkgs, cfg, dataPath, servicesPath, storagePath, ... }: {
 
     # NextCloud corre detrás de Caddy, igual que el resto de servicios: su nginx
     # interno escucha solo en localhost y Caddy (o Cloudflare) termina TLS.
@@ -7,7 +7,7 @@
       enable   = true;
       package  = pkgs.nextcloud33;   # 31 removida, 32 quedó EOL; probamos la mantenida
       hostName = "cloud.${cfg.domain}";
-      datadir  = "${dataPath}/nextcloud";
+      datadir  = "${servicesPath}/nextcloud";
       https    = true;
       config = {
         dbtype        = "pgsql";
