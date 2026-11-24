@@ -111,12 +111,14 @@
           ${occ} files_external:create "storage" local null::null \
             --config datadir="${storagePath}"
         fi
-        # Folders de Syncthing (disco data) como almacenamiento externo R/W.
-        # Montamos solo ${dataPath}/helios: así NextCloud ve los folders de
-        # Syncthing pero no postgres/root/services, que viven fuera de helios.
-        if ! ${occ} files_external:list | ${pkgs.gnugrep}/bin/grep -q "${dataPath}/helios"; then
-          ${occ} files_external:create "syncthing" local null::null \
-            --config datadir="${dataPath}/helios"
+        # Disco `data` como almacenamiento externo "data". helios (dentro) es R/W
+        # vía el grupo storage; el nivel superior (${dataPath}) es root:root, así
+        # que NextCloud lo lista pero no puede crear/borrar ahí. Eso protege
+        # services/ y postgresql/ de borrado (su contenido además queda bloqueado
+        # por sus propios permisos); sus nombres sí son visibles en el nivel superior.
+        if ! ${occ} files_external:list | ${pkgs.gnugrep}/bin/grep -qE "${dataPath}[ |]"; then
+          ${occ} files_external:create "data" local null::null \
+            --config datadir="${dataPath}"
         fi
       '';
     };
