@@ -69,7 +69,9 @@
 
     systemd.tmpfiles.rules = [
       "d ${storagePath}                                           0770 ${cfg.admin_username}       storage                     - -"
-      "d ${dataPath}/helios            0755 ${cfg.syncthing_username} storage - -"
+      # 2775 = setgid + escritura de grupo: Syncthing (owner) y NextCloud (grupo
+      # storage) comparten R/W sobre los folders; lo nuevo hereda el grupo storage.
+      "d ${dataPath}/helios            2775 ${cfg.syncthing_username} storage - -"
       "d /var/www/${cfg.domain}       0755 caddy                   caddy   - -"
       "d ${dataPath}            0755 root root - -"
       "d ${dataPath}/services   0755 root root - -"

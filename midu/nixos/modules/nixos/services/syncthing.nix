@@ -16,5 +16,11 @@
       overrideFolders = false;
       settings.gui.insecureSkipHostcheck = true;
     };
+
+    # NextCloud (grupo storage) comparte R/W con Syncthing sobre ${dataPath}/helios.
+    # umask 0002 → los archivos que crea Syncthing nacen con escritura de grupo
+    # (0664), de modo que NextCloud pueda modificarlos. Con el setgid del directorio
+    # (storage.nix) el grupo de lo nuevo es `storage`.
+    systemd.services.syncthing.serviceConfig.UMask = "0002";
   };
 }

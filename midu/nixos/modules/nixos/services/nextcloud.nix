@@ -71,6 +71,11 @@
     systemd.services.nextcloud-setup.unitConfig.RequiresMountsFor  = [ dataPath storagePath ];
     systemd.services.phpfpm-nextcloud.unitConfig.RequiresMountsFor = [ dataPath storagePath ];
 
+    # NextCloud escribe en el almacenamiento externo (raid1 y folders de Syncthing)
+    # como el usuario `nextcloud`. umask 0002 → archivos con escritura de grupo
+    # `storage`, para compartir R/W con Syncthing en ${dataPath}/helios.
+    systemd.services.phpfpm-nextcloud.serviceConfig.UMask = "0002";
+
     # Contraseña del admin (owner nextcloud).
     sops.secrets.nextcloud_admin_password = { owner = "nextcloud"; mode = "0400"; };
 
@@ -105,6 +110,13 @@
         if ! ${occ} files_external:list | ${pkgs.gnugrep}/bin/grep -q "${storagePath}"; then
           ${occ} files_external:create "storage" local null::null \
             --config datadir="${storagePath}"
+        fi
+        # Folders de Syncthing (disco data) como almacenamiento externo R/W.
+        # Montamos solo ${dataPath}/helios: así NextCloud ve los folders de
+        # Syncthing pero no postgres/root/services, que viven fuera de helios.
+        if ! ${occ} files_external:list | ${pkgs.gnugrep}/bin/grep -q "${dataPath}/helios"; then
+          ${occ} files_external:create "syncthing" local null::null \
+            --config datadir="${dataPath}/helios"
         fi
       '';
     };
