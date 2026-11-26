@@ -1,0 +1,72 @@
+/* ============================================================
+   Gruvbox para info.alfabeto.digital — tema claro y oscuro.
+   Hextra carga automáticamente assets/css/custom.css.
+   Hextra (Tailwind v4) selecciona el modo oscuro con la clase
+   .dark en <html>: html[class~="dark"].
+   ============================================================ */
+
+/* --- Acento primario (HSL, única forma documentada en Hextra) --- */
+/* claro: gruvbox azul #458588 · oscuro: gruvbox aqua #83a598 */
+:root {
+  --primary-hue: 183deg;
+  --primary-saturation: 35%;
+  --primary-lightness: 40%;
+}
+html[class~="dark"] {
+  --primary-hue: 155deg;
+  --primary-saturation: 30%;
+  --primary-lightness: 60%;
+}
+
+/* --- Superficies gruvbox (variables propias) --- */
+:root {
+  --gbg:     #fbf1c7;  /* fondo */
+  --gbg1:    #f2e5bc;  /* fondo suave: tarjetas, código en línea */
+  --gborder: #d5c4a1;
+  --gfg:     #3c3836;  /* texto */
+  --gmuted:  #665c54;
+}
+html[class~="dark"] {
+  --gbg:     #282828;
+  --gbg1:    #3c3836;
+  --gborder: #504945;
+  --gfg:     #ebdbb2;
+  --gmuted:  #a89984;
+}
+
+/* --- Remapeo de la escala gris de Tailwind v4 a tonos gruvbox ---
+   Hextra usa esta escala para fondos y textos; un solo remapeo sirve para
+   claro y oscuro (el modo oscuro usa los tonos más oscuros de la misma escala). */
+@layer theme {
+  :root {
+    --color-gray-50:  #fbf1c7;  --color-neutral-50:  #fbf1c7;
+    --color-gray-100: #f2e5bc;  --color-neutral-100: #f2e5bc;
+    --color-gray-200: #ebdbb2;  --color-neutral-200: #ebdbb2;
+    --color-gray-300: #d5c4a1;  --color-neutral-300: #d5c4a1;
+    --color-gray-400: #a89984;  --color-neutral-400: #a89984;
+    --color-gray-500: #928374;  --color-neutral-500: #928374;
+    --color-gray-600: #665c54;  --color-neutral-600: #665c54;
+    --color-gray-700: #504945;  --color-neutral-700: #504945;
+    --color-gray-800: #3c3836;  --color-neutral-800: #3c3836;
+    --color-gray-900: #282828;  --color-neutral-900: #282828;
+    --color-gray-950: #1d2021;  --color-neutral-950: #1d2021;
+  }
+}
+
+/* --- Refuerzo directo sobre contenedores conocidos de Hextra --- */
+body { background-color: var(--gbg); color: var(--gfg); }
+.content { color: var(--gfg); }
+.hextra-nav-container   { background-color: var(--gbg); }
+.hextra-sidebar-container { background-color: var(--gbg); }
+.hextra-footer { background-color: var(--gbg); color: var(--gmuted); }
+.hextra-card   { background-color: var(--gbg1); border-color: var(--gborder); }
+.hextra-toc    { color: var(--gmuted); }
+
+/* Código en línea (naranja gruvbox claro / oscuro) */
+.content code:not(.code-block code) {
+  color: #af3a03;
+  background-color: var(--gbg1);
+  border-radius: 0.25rem;
+  padding: 0.1em 0.3em;
+}
+html[class~="dark"] .content code:not(.code-block code) { color: #fe8019; }

@@ -42,3 +42,9 @@ ignoreFiles = [
 # Hextra: diagramas Mermaid (los bloques ```mermaid de replicación.md, etc.).
 [params.navbar]
   displayTitle = true
+
+# Modo de color: inicia según el sistema y muestra el interruptor claro/oscuro.
+# La paleta gruvbox (claro y oscuro) vive en assets/css/custom.css.
+[params.theme]
+  default       = "system"
+  displayToggle = true

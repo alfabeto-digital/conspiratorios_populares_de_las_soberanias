@@ -137,6 +137,22 @@ def rewrite(text, orig, readme):
         return pre + new + post
     return INLINE.sub(repl, text)
 
+def clean_body(body):
+    """Quita el primer encabezado H1 (Hextra ya muestra el título del frontmatter) y
+    las migas de pan manuales (líneas que empiezan con ←; Hextra genera breadcrumbs)."""
+    out, h1 = [], False
+    for ln in body.split("\n"):
+        s = ln.lstrip("﻿")
+        if not h1 and re.match(r'#\s+\S', s):
+            h1 = True
+            continue
+        if s.lstrip().startswith("←"):
+            continue
+        out.append(ln)
+    while out and out[0].strip() == "":
+        out.pop(0)
+    return "\n".join(out)
+
 # ---- 3. pesos ----
 def weight_target(section, child):
     base = (section + "/") if section else ""
@@ -180,7 +196,7 @@ for rel in notes:
         body = text
     else:
         if not text.startswith("---"):
-            output[newpath[rel]] = rewrite(text, rel, readme); continue
+            output[newpath[rel]] = rewrite(clean_body(text), rel, readme); continue
         end = text.find("\n---", 3)
         fm = text[3:end].split("\n")
         # quitar líneas vacías de borde del bloque fm
@@ -190,7 +206,7 @@ for rel in notes:
     np = newpath[rel]
     if np in weights:
         fm = set_weight(fm, weights[np])
-    body = rewrite(body, rel, readme)
+    body = rewrite(clean_body(body), rel, readme)
     output[np] = "---\n" + "\n".join(fm) + "\n---\n" + body
 
 # ---- 5. escribir y borrar originales ----
