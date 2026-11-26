@@ -49,7 +49,7 @@
 
       installPhase = ''
         mkdir -p $out
-        cp -r work/public/. $out/
+        cp -r public/. $out/
       '';
     };
   in {
