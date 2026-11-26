@@ -1,5 +1,5 @@
 ---
-title: Ruta B: VPS con Podman (sin NixOS)
+title: "Ruta B: VPS con Podman (sin NixOS)"
 tipo: ruta
 estado: borrador
 tags: [replicación, enrutamiento]

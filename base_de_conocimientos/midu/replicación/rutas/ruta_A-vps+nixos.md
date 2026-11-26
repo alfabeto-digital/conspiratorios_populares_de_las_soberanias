@@ -1,5 +1,5 @@
 ---
-title: Ruta A: VPS con NixOS + Pangolin + Newt
+title: "Ruta A: VPS con NixOS + Pangolin + Newt"
 tipo: ruta
 estado: borrador
 tags: [replicación, enrutamiento]

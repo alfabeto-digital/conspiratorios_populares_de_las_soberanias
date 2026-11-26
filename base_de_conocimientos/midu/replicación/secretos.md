@@ -1,5 +1,5 @@
 ---
-title: Secretos: sops-nix, age y cifrado LUKS
+title: "Secretos: sops-nix, age y cifrado LUKS"
 tipo: replicación
 estado: borrador
 tags: [replicación]

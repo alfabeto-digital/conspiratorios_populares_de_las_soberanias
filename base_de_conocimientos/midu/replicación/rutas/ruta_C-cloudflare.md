@@ -1,5 +1,5 @@
 ---
-title: Ruta C: túnel de Cloudflare
+title: "Ruta C: túnel de Cloudflare"
 tipo: ruta
 estado: borrador
 tags: [replicación, enrutamiento]
