@@ -1,37 +1,49 @@
 /* ============================================================
    Gruvbox para info.alfabeto.digital — tema claro y oscuro.
+   Acento peach, igual que la bóveda de Obsidian (AnuPpuccin
+   gruvbox, ctp-accent-peach). Códigos exactos en la skill
+   identidad.visual.alfabeto.digital.
    Hextra carga automáticamente assets/css/custom.css.
-   Hextra (Tailwind v4) selecciona el modo oscuro con la clase
+   Hextra (Tailwind v4) marca el modo oscuro con la clase
    .dark en <html>: html[class~="dark"].
    ============================================================ */
 
-/* --- Acento primario (HSL, única forma documentada en Hextra) --- */
-/* claro: gruvbox azul #458588 · oscuro: gruvbox aqua #83a598 */
+/* --- Acento primario (HSL, única forma documentada en Hextra) ---
+   claro: peach gruvbox #d65d0e · oscuro: naranja brillante #fe8019
+   (par faded/bright de gruvbox, para legibilidad sobre fondo oscuro). */
 :root {
-  --primary-hue: 183deg;
-  --primary-saturation: 35%;
-  --primary-lightness: 40%;
+  --primary-hue: 24deg;
+  --primary-saturation: 88%;
+  --primary-lightness: 45%;
 }
 html[class~="dark"] {
-  --primary-hue: 155deg;
-  --primary-saturation: 30%;
-  --primary-lightness: 60%;
+  --primary-hue: 27deg;
+  --primary-saturation: 95%;
+  --primary-lightness: 55%;
 }
 
-/* --- Superficies gruvbox (variables propias) --- */
+/* --- Superficies y texto gruvbox (valores exactos de la bóveda) --- */
 :root {
-  --gbg:     #fbf1c7;  /* fondo */
-  --gbg1:    #f2e5bc;  /* fondo suave: tarjetas, código en línea */
-  --gborder: #d5c4a1;
-  --gfg:     #3c3836;  /* texto */
-  --gmuted:  #665c54;
+  --gbg:     #f9f5d7;  /* base */
+  --gbg1:    #f2e5bc;  /* surface0: tarjetas, código en línea, menús */
+  --gborder: #d6c4a1;  /* surface2 */
+  --gfg:     #282828;  /* text */
+  --gmuted:  #665c54;  /* subtext0 */
 }
 html[class~="dark"] {
   --gbg:     #282828;
-  --gbg1:    #3c3836;
+  --gbg1:    #32302f;
   --gborder: #504945;
-  --gfg:     #ebdbb2;
-  --gmuted:  #a89984;
+  --gfg:     #fbf1c7;
+  --gmuted:  #bdae93;
+}
+
+/* --- Acentos gruvbox para los títulos (idénticos en claro y oscuro) --- */
+:root {
+  --g-peach:  #d65d0e;  /* H1, acento primario */
+  --g-yellow: #d79921;  /* H2, resaltado */
+  --g-teal:   #66981a;  /* H3 */
+  --g-blue:   #458588;  /* H4 */
 }
 
 /* --- Remapeo de la escala gris de Tailwind v4 a tonos gruvbox ---
@@ -39,15 +51,15 @@ html[class~="dark"] {
    claro y oscuro (el modo oscuro usa los tonos más oscuros de la misma escala). */
 @layer theme {
   :root {
-    --color-gray-50:  #fbf1c7;  --color-neutral-50:  #fbf1c7;
+    --color-gray-50:  #f9f5d7;  --color-neutral-50:  #f9f5d7;
     --color-gray-100: #f2e5bc;  --color-neutral-100: #f2e5bc;
-    --color-gray-200: #ebdbb2;  --color-neutral-200: #ebdbb2;
-    --color-gray-300: #d5c4a1;  --color-neutral-300: #d5c4a1;
-    --color-gray-400: #a89984;  --color-neutral-400: #a89984;
+    --color-gray-200: #ebdbb3;  --color-neutral-200: #ebdbb3;
+    --color-gray-300: #d6c4a1;  --color-neutral-300: #d6c4a1;
+    --color-gray-400: #bdae93;  --color-neutral-400: #bdae93;
     --color-gray-500: #928374;  --color-neutral-500: #928374;
     --color-gray-600: #665c54;  --color-neutral-600: #665c54;
     --color-gray-700: #504945;  --color-neutral-700: #504945;
-    --color-gray-800: #3c3836;  --color-neutral-800: #3c3836;
+    --color-gray-800: #32302f;  --color-neutral-800: #32302f;
     --color-gray-900: #282828;  --color-neutral-900: #282828;
     --color-gray-950: #1d2021;  --color-neutral-950: #1d2021;
   }
@@ -56,7 +68,14 @@ html[class~="dark"] {
 /* --- Refuerzo directo sobre contenedores conocidos de Hextra --- */
 body { background-color: var(--gbg); color: var(--gfg); }
 .content { color: var(--gfg); }
-.content h1, .content h2, .content h3, .content h4, .content h5, .content h6 { color: var(--gfg); }
+
+/* Títulos con los colores de la bóveda: H1 peach, H2 yellow, H3 teal, H4 blue;
+   H5 y H6 sin color propio (texto base). */
+.content h1 { color: var(--g-peach); }
+.content h2 { color: var(--g-yellow); }
+.content h3 { color: var(--g-teal); }
+.content h4 { color: var(--g-blue); }
+.content h5, .content h6 { color: var(--gfg); }
 
 /* Navbar (encabezado principal): el fondo visible vive en la capa blur, que trae
    hx:bg-white / hx:dark:bg-dark; la .hextra-nav-container de arriba es transparente. */
@@ -69,9 +88,15 @@ body { background-color: var(--gbg); color: var(--gfg); }
 .hextra-card   { background-color: var(--gbg1); border-color: var(--gborder); }
 .hextra-toc    { color: var(--gmuted); }
 
-/* Selector de modo (claro/oscuro/sistema): el botón e iconos heredan currentColor;
-   el menú desplegable trae hx:bg-white / hx:dark:bg-neutral-900 y texto gris. */
+/* Selector de modo (claro/oscuro/sistema).
+   El botón que DESPLIEGA el menú es .hextra-theme-toggle; sus iconos son SVG que
+   heredan currentColor, pero en la navbar el botón no recibe clase de color de
+   Tailwind, así que forzamos también el svg. */
 .hextra-theme-toggle { color: var(--gfg) !important; }
+.hextra-theme-toggle svg { color: var(--gfg) !important; }
+.hextra-theme-toggle:hover { background-color: var(--gbg1) !important; }
+
+/* El menú desplegado trae hx:bg-white / hx:dark:bg-neutral-900 y borde gris. */
 .hextra-theme-toggle-options {
   background-color: var(--gbg1) !important;
   border-color: var(--gborder) !important;
@@ -81,6 +106,11 @@ body { background-color: var(--gbg); color: var(--gfg); }
   background-color: transparent !important;
 }
 .hextra-theme-toggle-options button:hover { background-color: var(--gbg) !important; }
+
+/* La opción activa no tiene clase: se marca con aria-checked="true" (role
+   menuitemradio) y su checkmark es un svg. La resaltamos con el acento peach. */
+.hextra-theme-toggle-options button[aria-checked="true"] { color: var(--g-peach) !important; }
+.hextra-theme-toggle-options button[aria-checked="true"] svg { color: var(--g-peach) !important; }
 
 /* Código en línea (naranja gruvbox claro / oscuro) */
 .content code:not(.code-block code) {
