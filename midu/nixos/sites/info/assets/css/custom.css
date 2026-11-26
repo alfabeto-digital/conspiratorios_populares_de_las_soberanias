@@ -229,27 +229,43 @@ html.opendyslexic .content blockquote {
   letter-spacing: 0.02em;
 }
 
-/* "lectura accesible" (OpenDyslexic): botón hermano del selector de tema, dentro del pie
-   fijo de la barra lateral (inyectado por custom/footer.html). No va en el desplegable;
-   es un botón de alternar junto a "◐ Sistema", en peach cuando está activo. */
+/* Pie fijo de la barra lateral (hx:sticky hx:bottom-0): su fondo venía de hx:dark:bg-dark
+   (var(--hx-color-dark) = #111) y hx:bg-white; lo pasamos a gruvbox. Además lo apilamos en
+   columna para que "lectura accesible" quede DEBAJO del selector de tema, no al lado. */
+.hx\:sticky.hx\:bottom-0 {
+  background-color: var(--gbg) !important;
+  box-shadow: 0 -12px 16px var(--gbg) !important;
+  border-color: var(--gborder) !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+  justify-content: flex-start !important;
+  gap: 0.25rem !important;
+}
+.hx\:sticky.hx\:bottom-0 > div { flex-grow: 0 !important; }
+
+/* "lectura accesible" (OpenDyslexic): botón de alternar debajo de "◐ Sistema", con su
+   misma forma de fila. Peach en texto y fondo cuando está activo. */
 .a11y-font-toggle {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 0.4em;
-  flex-shrink: 0;
+  gap: 0.5em;
+  width: 100%;
   padding: 0.25rem 0.5rem;
   font-family: var(--font-ui);
   font-size: 0.75rem;
-  line-height: 1.75;
   color: var(--gmuted);
   background-color: transparent;
   border: 0;
   border-radius: 0.375rem;
   cursor: pointer;
+  text-align: left;
   white-space: nowrap;
 }
 .a11y-font-toggle:hover {
   color: var(--gfg);
   background-color: color-mix(in srgb, var(--gfg) 10%, transparent);
 }
-.a11y-font-toggle[aria-pressed="true"] { color: var(--g-peach); }
+.a11y-font-toggle[aria-pressed="true"] {
+  color: var(--g-peach);
+  background-color: color-mix(in srgb, var(--g-peach) 14%, transparent);
+}
