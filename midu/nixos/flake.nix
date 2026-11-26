@@ -28,6 +28,18 @@
       url   = "github:imfing/hextra/v0.13.0";
       flake = false;
     };
+
+    # Librerías JS que Hextra baja de un CDN en tiempo de construcción (Mermaid,
+    # FlexSearch). Las vendorizamos como inputs para construir sin red; se fijan
+    # en flake.lock. Hextra las carga localmente si apuntamos params.*.js a ellas.
+    mermaidjs = {
+      url   = "file+https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js";
+      flake = false;
+    };
+    flexsearchjs = {
+      url   = "file+https://cdn.jsdelivr.net/npm/flexsearch@0.8.143/dist/flexsearch.bundle.min.js";
+      flake = false;
+    };
   };
 
   outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } {

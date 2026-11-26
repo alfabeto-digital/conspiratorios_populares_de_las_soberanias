@@ -22,11 +22,15 @@ ignoreFiles = [
   # TREE.md, archivos de despliegue, etc.) se reescriben contra esta URL.
   repoBrowser = "https://github.com/alfabeto-digital/conspiratorios_populares_de_las_soberanias/blob/main"
 
-  # La búsqueda de Hextra (FlexSearch) descarga su JS desde un CDN en tiempo de
-  # construcción, lo que falla en el sandbox de Nix (sin red). La desactivamos;
-  # se reemplaza por Pagefind (indexa localmente) como paso siguiente.
+  # Hextra baja Mermaid y FlexSearch de un CDN en tiempo de construcción, lo que
+  # falla en el sandbox de Nix. Vendorizamos esas librerías (inputs del flake,
+  # copiadas a assets/js) y le decimos a Hextra que las cargue localmente.
+  [params.mermaid]
+    js = "js/mermaid.min.js"
   [params.search]
-    enable = false
+    enable = true
+    [params.search.flexsearch]
+      js = "js/flexsearch.bundle.min.js"
 
 [markup]
   [markup.goldmark.renderer]

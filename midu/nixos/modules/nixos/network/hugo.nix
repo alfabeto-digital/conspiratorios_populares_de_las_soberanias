@@ -24,6 +24,11 @@
         # Tema.
         ln -s ${inputs.hextra} work/themes/hextra
 
+        # Librerías JS vendorizadas (Hextra las carga desde assets/js en vez del CDN).
+        mkdir -p work/assets/js
+        cp ${inputs.mermaidjs} work/assets/js/mermaid.min.js
+        cp ${inputs.flexsearchjs} work/assets/js/flexsearch.bundle.min.js
+
         # Íconos y visualizaciones como estáticos, para que resuelvan las imágenes
         # embebidas y las referencias de los diagramas.
         mkdir -p "work/static/lenguaje_común/visualizaciones"
