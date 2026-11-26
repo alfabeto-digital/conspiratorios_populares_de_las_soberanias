@@ -1,8 +1,26 @@
+---
+title: Almacenamiento federado
+tipo: arquitectura
+estado: borrador
+tags: [infraestructuras]
+nix:
+  - midu/nixos/modules/nixos/storage.nix
+relaciones:
+  parte_de: midu/arquitectura.md
+  relacionado:
+    - midu.md
+    - midu/arquitectura/tipos_de_midu.md
+    - midu/arquitectura/estimaciones.md
+    - midu/arquitectura/capas_de_la_memoria.md
+---
+
 # Almacenamiento federado
 
 El almacenamiento federado es una propuesta de cooperación entre dos o más [`midu`](../../midu.md) autónomas, cada una conserva capacidad propia de cómputo, almacenamiento, operación y custodia sus propias `memorias`; sin embargo, también participa en una red federada de recuperación en caso de desastre.
 
 La red federada sostiene la recuperación ante la pérdida completa de una `midu`, el trabajo diario ocurre en el almacenamiento local de cada `midu`; la federación almacena una copia cifrada y distribuida de todas las `midu` que permite reconstruir cada una en caso de ser necesario.
+
+El montaje de los discos, su cifrado con LUKS y la creación de los directorios de cada servicio se declaran en [`nixos/modules/nixos/storage.nix`](../../../midu/nixos/modules/nixos/storage.nix).
 
 ## Las tres capas de resiliencia
 

@@ -1,3 +1,20 @@
+---
+title: NixOS
+tipo: arquitectura
+estado: borrador
+tags: [infraestructuras]
+nix:
+  - midu/nixos/modules/nixos/base.nix
+  - midu/nixos/modules/nixos/admin.nix
+relaciones:
+  parte_de: midu/arquitectura.md
+  relacionado:
+    - lenguaje_común/lenguaje_común.md
+    - midu/arquitectura/secretos.md
+    - midu/arquitectura/flake.md
+    - midu/arquitectura/patrón_dendrítico.md
+---
+
 # NixOS
 
 ## El sistema operativo
@@ -75,6 +92,10 @@ En NixOS, si algo está en el sistema es porque está declarado en el código. N
 Usar NixOS es apostar por la **transparencia radical** del sistema. Quien revise el repositorio de esta `interfaz` puede entender exactamente qué está corriendo en el `computador` local, cómo está configurado y por qué. No hay pasos manuales que sólo conoce quien montó el sistema originalmente.
 
 Esta transparencia es compatible con la seguridad: lo que vive en el repositorio es el código que describe la configuración, no los secretos (contraseñas, claves). Los secretos tienen su propio sistema de gestión, descrito en [gestión de secretos](secretos.md).
+
+## Los módulos base del sistema
+
+La configuración del `computador` local empieza por dos módulos. [`base.nix`](../../../midu/nixos/modules/nixos/base.nix) define los cimientos: el usuario `admin`, el acceso [SSH](../../lenguaje_común/lenguaje_común.md#ssh), el firewall y la configuración regional. [`admin.nix`](../../../midu/nixos/modules/nixos/admin.nix) declara con home-manager el entorno de ese usuario, las [herramientas de terminal](../servicios/terminal.md) con las que administramos el sistema.
 
 ## Ver también
 

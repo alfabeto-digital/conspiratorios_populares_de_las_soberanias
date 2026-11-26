@@ -87,65 +87,65 @@ Películas ^RAJqLPcp
 Ánime ^MvlKDtAB
 
 ## Embedded Files
-867cbff9092c4b45525685d16d942cf530115b6b: [[assets/image/attachments/midu/concepts/memory.png]]
+867cbff9092c4b45525685d16d942cf530115b6b: [[lenguaje_común/objetos_digitales/midu/concepts/memory.png]]
 
-9e40e6a2bf01e5211bab1a040305065e70d2924e: [[assets/image/attachments/midu/concepts/digital_brain.png]]
+9e40e6a2bf01e5211bab1a040305065e70d2924e: [[lenguaje_común/objetos_digitales/midu/concepts/digital_brain.png]]
 
-f5a69f8cec18ed50bfc121ea9554e34954f332cc: [[assets/image/attachments/midu/physical_infrastructures/external_hard_drive.png]]
+f5a69f8cec18ed50bfc121ea9554e34954f332cc: [[lenguaje_común/objetos_digitales/midu/physical_infrastructures/external_hard_drive.png]]
 
-fff37d9b6732f7ba57615bfd24d13e87c63f7413: [[assets/image/attachments/midu/physical_infrastructures/computer_local_server.png]]
+fff37d9b6732f7ba57615bfd24d13e87c63f7413: [[lenguaje_común/objetos_digitales/midu/physical_infrastructures/computer_local_server.png]]
 
-383dbf8b8c8574472c86afa54de9559830bf1270: [[assets/image/attachments/midu/physical_infrastructures/solar_energy.png]]
+383dbf8b8c8574472c86afa54de9559830bf1270: [[lenguaje_común/objetos_digitales/midu/physical_infrastructures/solar_energy.png]]
 
-7cf3f48ff7a5a86c5dcd18e691148146bb863691: [[assets/image/attachments/midu/physical_infrastructures/antenna.png]]
+7cf3f48ff7a5a86c5dcd18e691148146bb863691: [[lenguaje_común/objetos_digitales/midu/physical_infrastructures/antenna.png]]
 
-393122f7abf706a3dcbb3d092d931d7925fec611: [[assets/image/attachments/midu/physical_infrastructures/smartphone_chat.png]]
+393122f7abf706a3dcbb3d092d931d7925fec611: [[lenguaje_común/objetos_digitales/midu/physical_infrastructures/smartphone_chat.png]]
 
-be774d13ff415297a9346c3aea6ec2975784e364: [[assets/image/attachments/midu/people/person_x.png]]
+be774d13ff415297a9346c3aea6ec2975784e364: [[lenguaje_común/objetos_digitales/midu/people/person_x.png]]
 
-5efd97cb7b15876a42a95426e09895df77414bed: [[assets/image/attachments/midu/concepts/descoverability.png]]
+5efd97cb7b15876a42a95426e09895df77414bed: [[lenguaje_común/objetos_digitales/midu/concepts/descoverability.png]]
 
-a4a0b2e0714c4e918f2dbf87c22ce2f3c0f51c4e: [[assets/image/attachments/midu/digital_infrastructures/hugo.png]]
+a4a0b2e0714c4e918f2dbf87c22ce2f3c0f51c4e: [[lenguaje_común/objetos_digitales/midu/digital_infrastructures/hugo.png]]
 
-f41e5b7031d7655fa70b5f3cdfb5fdb4e28e4d2b: [[assets/image/attachments/midu/digital_infrastructures/karakeep.png]]
+f41e5b7031d7655fa70b5f3cdfb5fdb4e28e4d2b: [[lenguaje_común/objetos_digitales/midu/digital_infrastructures/karakeep.png]]
 
-da5bd9372ffbdd444eac2a28d5086a61fcf2179e: [[assets/image/attachments/midu/digital_infrastructures/searxng.png]]
+da5bd9372ffbdd444eac2a28d5086a61fcf2179e: [[lenguaje_común/objetos_digitales/midu/digital_infrastructures/searxng.png]]
 
-aab09e3f083fc6be98c583e80a9fa1f6cfbfff5f: [[assets/image/attachments/midu/digital_infrastructures/arr.png]]
+aab09e3f083fc6be98c583e80a9fa1f6cfbfff5f: [[lenguaje_común/objetos_digitales/midu/digital_infrastructures/arr.png]]
 
-e11f32183b4099242e963beaaf9715cbf5e1ccca: [[assets/image/attachments/midu/digital_infrastructures/joomla.png]]
+e11f32183b4099242e963beaaf9715cbf5e1ccca: [[lenguaje_común/objetos_digitales/midu/digital_infrastructures/joomla.png]]
 
-4235ee184ae18854ca2872436c6ca38bff46f32b: [[assets/image/attachments/midu/digital_infrastructures/hubspot.png]]
+4235ee184ae18854ca2872436c6ca38bff46f32b: [[lenguaje_común/objetos_digitales/midu/digital_infrastructures/hubspot.png]]
 
-56aa30186980bdf9bb443c21d9dc5560aa1d8afc: [[assets/image/attachments/midu/digital_infrastructures/yahoo.png]]
+56aa30186980bdf9bb443c21d9dc5560aa1d8afc: [[lenguaje_común/objetos_digitales/midu/digital_infrastructures/yahoo.png]]
 
-755c490ed7015e0f6a881f04fd6c8e60cb7ecde8: [[assets/image/attachments/midu/digital_infrastructures/hostinger.png]]
+755c490ed7015e0f6a881f04fd6c8e60cb7ecde8: [[lenguaje_común/objetos_digitales/midu/digital_infrastructures/hostinger.png]]
 
-f1e30e1ef6995251f31227b43243a51a58b53e00: [[assets/image/attachments/midu/digital_infrastructures/bing.png]]
+f1e30e1ef6995251f31227b43243a51a58b53e00: [[lenguaje_común/objetos_digitales/midu/digital_infrastructures/bing.png]]
 
-05a3a7b6c00fe429461333c140052cf99c1ecd0e: [[assets/image/attachments/midu/digital_infrastructures/wordpress.png]]
+05a3a7b6c00fe429461333c140052cf99c1ecd0e: [[lenguaje_común/objetos_digitales/midu/digital_infrastructures/wordpress.png]]
 
-f3cf4ce86d53b2266748e78348876c3248c3816c: [[assets/image/attachments/midu/digital_infrastructures/google.png]]
+f3cf4ce86d53b2266748e78348876c3248c3816c: [[lenguaje_común/objetos_digitales/midu/digital_infrastructures/google.png]]
 
-6e192e34ff092cec7903a90237c7b11b380b8da7: [[assets/image/attachments/midu/digital_infrastructures/raindropio.png]]
+6e192e34ff092cec7903a90237c7b11b380b8da7: [[lenguaje_común/objetos_digitales/midu/digital_infrastructures/raindropio.png]]
 
-eb8b98cb3cb4436f4bc17d69c4d1b50d08bc3c06: [[assets/image/attachments/midu/digital_infrastructures/readwise.png]]
+eb8b98cb3cb4436f4bc17d69c4d1b50d08bc3c06: [[lenguaje_común/objetos_digitales/midu/digital_infrastructures/readwise.png]]
 
-c9f533340b3fe585cced70e7b00873efb0a61fd8: [[assets/image/attachments/midu/digital_infrastructures/bazarr.png]]
+c9f533340b3fe585cced70e7b00873efb0a61fd8: [[lenguaje_común/objetos_digitales/midu/digital_infrastructures/bazarr.png]]
 
-88da3e8e2a54eb931e34579d9d8e5f5f8e7bdc18: [[assets/image/attachments/midu/digital_infrastructures/readarr.png]]
+88da3e8e2a54eb931e34579d9d8e5f5f8e7bdc18: [[lenguaje_común/objetos_digitales/midu/digital_infrastructures/readarr.png]]
 
-8ca76ac4ad4f0a53ae3463473e3f50208768e601: [[assets/image/attachments/midu/digital_infrastructures/sabnzbd.png]]
+8ca76ac4ad4f0a53ae3463473e3f50208768e601: [[lenguaje_común/objetos_digitales/midu/digital_infrastructures/sabnzbd.png]]
 
-38d01bc7ec24c14a915f699978512803ba82147e: [[assets/image/attachments/midu/digital_infrastructures/qbittorrent.png]]
+38d01bc7ec24c14a915f699978512803ba82147e: [[lenguaje_común/objetos_digitales/midu/digital_infrastructures/qbittorrent.png]]
 
-3dcf941aa13001382b36ec03a7a7c5dcfe8ebd3b: [[assets/image/attachments/midu/digital_infrastructures/lidarr.png]]
+3dcf941aa13001382b36ec03a7a7c5dcfe8ebd3b: [[lenguaje_común/objetos_digitales/midu/digital_infrastructures/lidarr.png]]
 
-d96788d9a7340dbf11d86c1ba495a7db8766956b: [[assets/image/attachments/midu/digital_infrastructures/radarr.png]]
+d96788d9a7340dbf11d86c1ba495a7db8766956b: [[lenguaje_común/objetos_digitales/midu/digital_infrastructures/radarr.png]]
 
-f0a24bc759e7b2347dfaecc106e15adf741ac7ce: [[assets/image/attachments/midu/digital_infrastructures/prowlarr.png]]
+f0a24bc759e7b2347dfaecc106e15adf741ac7ce: [[lenguaje_común/objetos_digitales/midu/digital_infrastructures/prowlarr.png]]
 
-a507b1c576c085e71a23cfafeef15bc1a82baef4: [[assets/image/attachments/midu/digital_infrastructures/sonarr.png]]
+a507b1c576c085e71a23cfafeef15bc1a82baef4: [[lenguaje_común/objetos_digitales/midu/digital_infrastructures/sonarr.png]]
 
 %%
 ## Drawing

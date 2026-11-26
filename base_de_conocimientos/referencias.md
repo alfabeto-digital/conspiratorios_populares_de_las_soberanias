@@ -1,3 +1,11 @@
+---
+title: Referencias
+tipo: referencia
+estado: borrador
+tags: [memorias]
+relaciones:
+---
+
 ﻿# Referencias
 
 ← [Inicio](../README.md#las-referencias)

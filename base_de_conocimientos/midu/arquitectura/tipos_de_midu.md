@@ -1,3 +1,16 @@
+---
+title: Tipos de midu
+tipo: arquitectura
+estado: borrador
+tags: [infraestructuras]
+relaciones:
+  parte_de: midu/arquitectura.md
+  relacionado:
+    - midu.md
+    - midu/arquitectura/almacenamiento_federado.md
+    - midu/arquitectura/estimaciones.md
+---
+
 # Tipos de midu
 
 La [`midu`](../../midu.md) es viable en muchas escalas. La misma arquitectura puede darle vida a una `midu` en un `computador` reutilizado con un disco externo o en un gabinete especialmente diseñado para utilizar cuatro tarjetas gráficas (GPU). En cada configuración obtenemos distintas capacidades de cómputo, de almacenamiento y un grado diferente de resiliencia.

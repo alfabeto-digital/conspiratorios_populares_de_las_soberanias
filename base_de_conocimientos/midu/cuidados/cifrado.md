@@ -1,3 +1,15 @@
+---
+title: Cifrado en capas
+tipo: cuidado
+estado: borrador
+tags: [cuidados]
+relaciones:
+  parte_de: midu/cuidados.md
+  relacionado:
+    - midu/cuidados/zero-trust.md
+    - midu/servicios/túnel_cifrado.md
+---
+
 ﻿# Cifrado en capas
 
 El cifrado es el proceso de convertir información legible en `datos` ininteligibles sin la clave correcta. Esta `interfaz` usa cuatro formas distintas de cifrado, cada una protegiendo una cosa diferente en un momento diferente.

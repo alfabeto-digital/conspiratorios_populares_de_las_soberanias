@@ -1,3 +1,19 @@
+---
+title: El Nix Flake
+tipo: arquitectura
+estado: borrador
+tags: [infraestructuras]
+nix:
+  - midu/nixos/flake.nix
+relaciones:
+  parte_de: midu/arquitectura.md
+  relacionado:
+    - midu/arquitectura/nixos.md
+    - midu/arquitectura/patrón_dendrítico.md
+    - midu/replicación.md
+    - midu/arquitectura/computadores.md
+---
+
 # El Nix Flake
 
 Si [NixOS](nixos.md) es el genoma del sistema, el Nix Flake es la forma en que ese genoma fija su material y su secuencia exacta para replicarse sin variaciones. Dos archivos lo componen:
@@ -7,7 +23,7 @@ Si [NixOS](nixos.md) es el genoma del sistema, el Nix Flake es la forma en que e
 
 ## La estructura de `flake.nix`
 
-El archivo `nixos/flake.nix` tiene dos secciones principales.
+El archivo [`nixos/flake.nix`](../../../midu/nixos/flake.nix) tiene dos secciones principales.
 
 ### Los inputs: las fuentes del material
 

@@ -1,3 +1,25 @@
+---
+title: Vaultwarden
+tipo: servicio
+estado: revisado
+codigo: abierto
+capa_memoria: navegación
+tags: [navegación, cuidados]
+nix:
+  - midu/nixos/modules/nixos/services/vaultwarden.nix
+icono: lenguaje_común/objetos_digitales/midu/digital_infrastructures/vaultwarden.png
+relaciones:
+  parte_de: midu/servicios.md
+  requiere:
+    - midu/servicios/postgresql.md
+    - midu/servicios/caddy.md
+  relacionado:
+    - midu/servicios/authelia.md
+    - midu/cuidados.md
+  reemplaza_a:
+    - lenguaje_común/definiciones/servicios_no_soberanos/1password.md
+---
+
 ﻿# Vaultwarden
 
 ← [Servicios](../servicios.md)
@@ -10,7 +32,7 @@ Es compatible con los clientes oficiales de Bitwarden: las mismas aplicaciones p
 
 ## ¿Para qué sirve?
 
-Las contraseñas son la puerta de entrada a toda tu vida digital. Si alguien tiene acceso a tu gestor de contraseñas, tiene acceso a todo lo demás: correo, banca, redes sociales, servicios de trabajo.
+Las contraseñas son la puerta de entrada a toda nuestra vida digital. Si alguien tiene acceso a nuestro gestor de contraseñas, tiene acceso a todo lo demás: correo, banca, redes sociales, servicios de trabajo.
 
 Un buen gestor de contraseñas permite:
 
@@ -35,10 +57,10 @@ Vaultwarden corre en el `computador` local y usa SQLite como base de `datos` pro
 
 El acceso está protegido por Caddy (HTTPS) y opcionalmente por Authelia, aunque el propio Vaultwarden tiene su propio sistema de autenticación con soporte para 2FA.
 
-**Módulo NixOS:** `nixos/modules/nixos/services/vaultwarden.nix`
+**Módulo NixOS:** [`nixos/modules/nixos/services/vaultwarden.nix`](../../../midu/nixos/modules/nixos/services/vaultwarden.nix)
 
 ## Ver también
 
 - [Authelia](authelia.md): SSO que protege el acceso al panel de administración
 - [Caddy](caddy.md): gestiona el HTTPS del servicio
-- [`cuidados`](../../`cuidados`/modelo_de_`cuidados`.md): cifrado y protección de `datos` sensibles
+- [`cuidados`](../cuidados.md): cifrado y protección de `datos` sensibles

@@ -1,3 +1,34 @@
+---
+title: Las capas de la memoria
+tipo: arquitectura
+estado: borrador
+tags: [infraestructuras]
+relaciones:
+  parte_de: midu/arquitectura.md
+  relacionado:
+    - midu/servicios.md
+    - midu/servicios/stalwart.md
+    - midu/servicios/dendrite.md
+    - midu/servicios/ntfy.md
+    - midu/cuidados.md
+    - midu/servicios/pangolin.md
+    - midu/servicios/túnel_cifrado.md
+    - midu/servicios/caddy.md
+    - midu/servicios/adguard.md
+    - midu/servicios/authelia.md
+    - midu/servicios/hugo.md
+    - midu/arquitectura/patrón_dendrítico.md
+    - midu/servicios/virtualización.md
+    - midu/servicios/terminal.md
+    - midu/servicios/postgresql.md
+    - midu/servicios/syncthing.md
+    - midu/servicios/vaultwarden.md
+    - midu/arquitectura/almacenamiento_federado.md
+    - midu.md
+    - subjetividades/memorias_colectivas.md
+    - subjetividades/infraestructuras.md
+---
+
 # Las capas de la memoria
 
 ← [Arquitectura](../arquitectura.md)

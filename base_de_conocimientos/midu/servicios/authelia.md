@@ -1,3 +1,28 @@
+---
+title: Authelia
+tipo: servicio
+estado: revisado
+codigo: abierto
+capa_memoria: comunicaciones
+tags: [cuidados, soberanía]
+nix:
+  - midu/nixos/modules/nixos/security/authelia.nix
+icono: lenguaje_común/objetos_digitales/midu/digital_infrastructures/authelia.png
+relaciones:
+  parte_de: midu/servicios.md
+  requiere:
+    - midu/servicios/postgresql.md
+    - midu/servicios/caddy.md
+  implementa:
+    - midu/cuidados/zero-trust.md
+  relacionado:
+    - midu/servicios/vaultwarden.md
+    - midu/cuidados.md
+  reemplaza_a:
+    - lenguaje_común/definiciones/servicios_no_soberanos/googleauthenticator.md
+    - lenguaje_común/definiciones/servicios_no_soberanos/microsoftauthenticator.md
+---
+
 ﻿# Authelia
 
 ← [Servicios](../servicios.md)
@@ -10,9 +35,9 @@ Authelia verifica la identidad de quien solicita acceso antes de que cualquier p
 
 Authelia implementa dos conceptos que vale la pena entender por separado:
 
-**SSO (Single Sign-On, inicio de sesión único):** una sola autenticación da acceso a todos los servicios del sistema. No necesitas una contraseña distinta para el correo, otra para el gestor de archivos y otra para el chat. Te autenticas una vez con Authelia y todas las puertas quedan abiertas durante tu sesión.
+**SSO (Single Sign-On, inicio de sesión único):** una sola autenticación da acceso a todos los servicios del sistema. No necesitamos una contraseña distinta para el correo, otra para el gestor de archivos y otra para el chat. Nos autenticamos una vez con Authelia y todas las puertas quedan abiertas durante la sesión.
 
-**2FA (autenticación de dos factores):** además de la contraseña (algo que sabes), Authelia pide un código TOTP (algo que tienes). TOTP significa *Time-based One-Time Password*: un código de seis dígitos que cambia cada 30 segundos y que genera una aplicación en tu teléfono (como Aegis en Android o Raivo en iOS). Un atacante que robe tu contraseña no puede entrar sin también tener tu teléfono físico.
+**2FA (autenticación de dos factores):** además de la contraseña (algo que sabemos), Authelia pide un código TOTP (algo que tenemos). TOTP significa *Time-based One-Time Password*: un código de seis dígitos que cambia cada 30 segundos y que genera una aplicación en el teléfono (como Aegis en Android o Raivo en iOS). Un atacante que robe nuestra contraseña no puede entrar sin tener también nuestro teléfono físico.
 
 **Forward auth:** este es el mecanismo técnico que conecta Authelia con Caddy. Cuando alguien pide acceso a un servicio protegido, Caddy no lo manda directamente al servicio, primero le pregunta a Authelia: "¿tiene este usuario una sesión válida?". Si la respuesta es sí, el tráfico pasa. Si no, Authelia redirige al usuario a la pantalla de inicio de sesión. El servicio protegido nunca ve tráfico no autenticado.
 
@@ -40,7 +65,7 @@ Si no: Authelia muestra el formulario de login (contraseña + TOTP)
 Si sí: Caddy pasa el tráfico a Stalwart (el servidor de correo)
 ```
 
-**Módulo NixOS:** `nixos/modules/nixos/security/authelia.nix`
+**Módulo NixOS:** [`nixos/modules/nixos/security/authelia.nix`](../../../midu/nixos/modules/nixos/security/authelia.nix)
 
 ## La decisión ética: un solo punto de autenticación
 
@@ -57,4 +82,4 @@ La alternativa, no tener SSO y manejar contraseñas separadas por servicio, pare
 - [Caddy](caddy.md): el proxy que consulta a Authelia mediante forward auth
 - [Vaultwarden](vaultwarden.md): donde se guarda la contraseña maestra de Authelia
 - [PostgreSQL](postgresql.md): la base de `datos` de Authelia
-- [`cuidados`](../../`cuidados`/modelo_de_`cuidados`.md): el modelo de `cuidados` general del sistema
+- [`cuidados`](../cuidados.md): el modelo de `cuidados` general del sistema

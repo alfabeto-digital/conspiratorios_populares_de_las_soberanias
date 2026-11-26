@@ -94,81 +94,81 @@ microsoft ^TV3d4rls
 Autenticación ^lrRCsREP
 
 ## Embedded Files
-41d0fa4de539ba296db4b552ff98eceed0ffcf51: [[assets/image/attachments/midu/physical_infrastructures/generator.png]]
+41d0fa4de539ba296db4b552ff98eceed0ffcf51: [[lenguaje_común/objetos_digitales/midu/physical_infrastructures/generator.png]]
 
-9e40e6a2bf01e5211bab1a040305065e70d2924e: [[assets/image/attachments/midu/concepts/digital_brain.png]]
+9e40e6a2bf01e5211bab1a040305065e70d2924e: [[lenguaje_común/objetos_digitales/midu/concepts/digital_brain.png]]
 
-f5a69f8cec18ed50bfc121ea9554e34954f332cc: [[assets/image/attachments/midu/physical_infrastructures/external_hard_drive.png]]
+f5a69f8cec18ed50bfc121ea9554e34954f332cc: [[lenguaje_común/objetos_digitales/midu/physical_infrastructures/external_hard_drive.png]]
 
-867cbff9092c4b45525685d16d942cf530115b6b: [[assets/image/attachments/midu/concepts/memory.png]]
+867cbff9092c4b45525685d16d942cf530115b6b: [[lenguaje_común/objetos_digitales/midu/concepts/memory.png]]
 
-695d35629cb0c80016425cdee1d0385c65d9de48: [[assets/image/attachments/midu/physical_infrastructures/computer_local_server_b.png]]
+695d35629cb0c80016425cdee1d0385c65d9de48: [[lenguaje_común/objetos_digitales/midu/physical_infrastructures/computer_local_server_b.png]]
 
-35940f826e7dbff2414f928645fe5b564d376f48: [[assets/image/attachments/midu/physical_infrastructures/smartphone_development.png]]
+35940f826e7dbff2414f928645fe5b564d376f48: [[lenguaje_común/objetos_digitales/midu/physical_infrastructures/smartphone_development.png]]
 
-20c72ce7ffeabc590c34bfcd9a79f17b0203f643: [[assets/image/attachments/midu/physical_infrastructures/computer_graphic_design.png]]
+20c72ce7ffeabc590c34bfcd9a79f17b0203f643: [[lenguaje_común/objetos_digitales/midu/physical_infrastructures/computer_graphic_design.png]]
 
-a88dcfc38963249702742caf8330927ace2b4bf7: [[assets/image/attachments/midu/people/infrastructure_4.png]]
+a88dcfc38963249702742caf8330927ace2b4bf7: [[lenguaje_común/objetos_digitales/midu/people/infrastructure_4.png]]
 
-908458c0043017c32c3ff8aafde57e2e6c27953f: [[assets/image/attachments/midu/people/person_d.png]]
+908458c0043017c32c3ff8aafde57e2e6c27953f: [[lenguaje_común/objetos_digitales/midu/people/person_d.png]]
 
-ffd28da43bd9011f116ec55215a3155745388978: [[assets/image/attachments/midu/people/person_i.png]]
+ffd28da43bd9011f116ec55215a3155745388978: [[lenguaje_común/objetos_digitales/midu/people/person_i.png]]
 
-40c1fd491df6b5ce96e0fd8d3d1b814b25a2da54: [[assets/image/attachments/midu/people/person.png]]
+40c1fd491df6b5ce96e0fd8d3d1b814b25a2da54: [[lenguaje_común/objetos_digitales/midu/people/person.png]]
 
-1e65201126c858db4340d7cb5295265ad7c13d0a: [[assets/image/attachments/midu/concepts/communications.png]]
+1e65201126c858db4340d7cb5295265ad7c13d0a: [[lenguaje_común/objetos_digitales/midu/concepts/communications.png]]
 
-56577c99835eab6092865277ebd2fedb23d1922a: [[assets/image/attachments/midu/physical_infrastructures/router.png]]
+56577c99835eab6092865277ebd2fedb23d1922a: [[lenguaje_común/objetos_digitales/midu/physical_infrastructures/router.png]]
 
-4f9abcf42ec03a2d147675f5fc187355ed1ecac0: [[assets/image/attachments/midu/physical_infrastructures/switch.png]]
+4f9abcf42ec03a2d147675f5fc187355ed1ecac0: [[lenguaje_común/objetos_digitales/midu/physical_infrastructures/switch.png]]
 
-3cd2ff56ffc97871f79581e0b7774d2a07bad011: [[assets/image/attachments/midu/concepts/routing.png]]
+3cd2ff56ffc97871f79581e0b7774d2a07bad011: [[lenguaje_común/objetos_digitales/midu/concepts/routing.png]]
 
-c49f778d9c1c73d9038dd621e309859951216920: [[assets/image/attachments/midu/digital_infrastructures/element.png]]
+c49f778d9c1c73d9038dd621e309859951216920: [[lenguaje_común/objetos_digitales/midu/digital_infrastructures/element.png]]
 
-b476485603c888d684d58e0877462243de1853c7: [[assets/image/attachments/midu/digital_infrastructures/matrix.png]]
+b476485603c888d684d58e0877462243de1853c7: [[lenguaje_común/objetos_digitales/midu/digital_infrastructures/matrix.png]]
 
-be431c54995d1aea80dce56cae6fb56130d0ffba: [[assets/image/attachments/midu/digital_infrastructures/stalwart.png]]
+be431c54995d1aea80dce56cae6fb56130d0ffba: [[lenguaje_común/objetos_digitales/midu/digital_infrastructures/stalwart.png]]
 
-17cf600b352ac9cabea3cc4e783d518fdc138c7d: [[assets/image/attachments/midu/digital_infrastructures/ntfy.png]]
+17cf600b352ac9cabea3cc4e783d518fdc138c7d: [[lenguaje_común/objetos_digitales/midu/digital_infrastructures/ntfy.png]]
 
-e1d5148f5026f1341a1c387b47f2118e77aad00d: [[assets/image/attachments/midu/digital_infrastructures/gmail.png]]
+e1d5148f5026f1341a1c387b47f2118e77aad00d: [[lenguaje_común/objetos_digitales/midu/digital_infrastructures/gmail.png]]
 
-219a7ed64e6976f5b587d26123702aa21d1573dd: [[assets/image/attachments/midu/digital_infrastructures/protonmail.png]]
+219a7ed64e6976f5b587d26123702aa21d1573dd: [[lenguaje_común/objetos_digitales/midu/digital_infrastructures/protonmail.png]]
 
-0bb8a933c03bf17675b89a905f10e57460108088: [[assets/image/attachments/midu/digital_infrastructures/outlook.png]]
+0bb8a933c03bf17675b89a905f10e57460108088: [[lenguaje_común/objetos_digitales/midu/digital_infrastructures/outlook.png]]
 
-82ca90216217774f452d3a9e2df8bdfb0528daed: [[assets/image/attachments/midu/digital_infrastructures/whatsapp.png]]
+82ca90216217774f452d3a9e2df8bdfb0528daed: [[lenguaje_común/objetos_digitales/midu/digital_infrastructures/whatsapp.png]]
 
-e54bee95a21f22b75aeb568a6d1ff83548bd80f4: [[assets/image/attachments/midu/digital_infrastructures/telegram.png]]
+e54bee95a21f22b75aeb568a6d1ff83548bd80f4: [[lenguaje_común/objetos_digitales/midu/digital_infrastructures/telegram.png]]
 
-9dfca1f6b08ecbceb345a9a6529b8ab43645f5d5: [[assets/image/attachments/midu/digital_infrastructures/signal.png]]
+9dfca1f6b08ecbceb345a9a6529b8ab43645f5d5: [[lenguaje_común/objetos_digitales/midu/digital_infrastructures/signal.png]]
 
-b13d1bc6c9c0409bd9331923932a59560d1143e5: [[assets/image/attachments/midu/digital_infrastructures/caddy.png]]
+b13d1bc6c9c0409bd9331923932a59560d1143e5: [[lenguaje_común/objetos_digitales/midu/digital_infrastructures/caddy.png]]
 
-b324efad33abfb41478caaa3537d4e2c6d5c1640: [[assets/image/attachments/midu/digital_infrastructures/authelia.png]]
+b324efad33abfb41478caaa3537d4e2c6d5c1640: [[lenguaje_común/objetos_digitales/midu/digital_infrastructures/authelia.png]]
 
-d62bb83eba351b4c5420cd6312db59e96d44f666: [[assets/image/attachments/midu/digital_infrastructures/wireguard.png]]
+d62bb83eba351b4c5420cd6312db59e96d44f666: [[lenguaje_común/objetos_digitales/midu/digital_infrastructures/wireguard.png]]
 
-bcce4d0ce355d804a51d2e5b07627cf51dfd9f3e: [[assets/image/attachments/midu/digital_infrastructures/adguard.png]]
+bcce4d0ce355d804a51d2e5b07627cf51dfd9f3e: [[lenguaje_común/objetos_digitales/midu/digital_infrastructures/adguard.png]]
 
-4e3695e970442673e2456c54934860974ec025bb: [[assets/image/attachments/midu/digital_infrastructures/pangolin.png]]
+4e3695e970442673e2456c54934860974ec025bb: [[lenguaje_común/objetos_digitales/midu/digital_infrastructures/pangolin.png]]
 
-a22145e45868930d463b51778dbbd9830b9958a0: [[assets/image/attachments/midu/people/person_q.png]]
+a22145e45868930d463b51778dbbd9830b9958a0: [[lenguaje_común/objetos_digitales/midu/people/person_q.png]]
 
-b6772140ac8c9fc0c16e194e9812854551c6aa6d: [[assets/image/attachments/midu/digital_infrastructures/nordvpn.png]]
+b6772140ac8c9fc0c16e194e9812854551c6aa6d: [[lenguaje_común/objetos_digitales/midu/digital_infrastructures/nordvpn.png]]
 
-2c6eb6916c4792bec30be3c06b90f373b92f9015: [[assets/image/attachments/midu/digital_infrastructures/surfsharkvpn.png]]
+2c6eb6916c4792bec30be3c06b90f373b92f9015: [[lenguaje_común/objetos_digitales/midu/digital_infrastructures/surfsharkvpn.png]]
 
-5bfb4621cfcd0501ac9fcdef247b41c7c64e5e58: [[assets/image/attachments/midu/digital_infrastructures/protonvpn.png]]
+5bfb4621cfcd0501ac9fcdef247b41c7c64e5e58: [[lenguaje_común/objetos_digitales/midu/digital_infrastructures/protonvpn.png]]
 
-5369b365c1b1b80889c1b3c9557313a5e5f46498: [[assets/image/attachments/midu/digital_infrastructures/dns.png]]
+5369b365c1b1b80889c1b3c9557313a5e5f46498: [[lenguaje_común/objetos_digitales/midu/digital_infrastructures/dns.png]]
 
-041577f9e9168efd1c8f83f96fcc230f454bad09: [[assets/image/attachments/midu/digital_infrastructures/adblockplus.png]]
+041577f9e9168efd1c8f83f96fcc230f454bad09: [[lenguaje_común/objetos_digitales/midu/digital_infrastructures/adblockplus.png]]
 
-202ae7e96851492777248cd1e2c591b554edbd72: [[assets/image/attachments/midu/digital_infrastructures/googleauthenticator.png]]
+202ae7e96851492777248cd1e2c591b554edbd72: [[lenguaje_común/objetos_digitales/midu/digital_infrastructures/googleauthenticator.png]]
 
-bf9b462452eda42257b5f088b809e0a37a85992d: [[assets/image/attachments/midu/digital_infrastructures/microsoftauthenticator.png]]
+bf9b462452eda42257b5f088b809e0a37a85992d: [[lenguaje_común/objetos_digitales/midu/digital_infrastructures/microsoftauthenticator.png]]
 
 %%
 ## Drawing

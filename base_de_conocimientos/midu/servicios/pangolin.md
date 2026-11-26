@@ -1,10 +1,29 @@
+---
+title: Pangolin
+tipo: servicio
+estado: revisado
+codigo: abierto
+capa_memoria: comunicaciones
+tags: [enrutamiento, infraestructuras]
+nix:
+  - midu/nixos/modules/nixos/network/pangolin.nix
+icono: lenguaje_común/objetos_digitales/midu/digital_infrastructures/pangolin.png
+relaciones:
+  parte_de: midu/servicios.md
+  relacionado:
+    - midu/servicios/túnel_cifrado.md
+    - midu/servicios/caddy.md
+    - midu/arquitectura.md
+    - midu/arquitectura/computadores.md
+---
+
 ﻿# Pangolin: el túnel cifrado del VPS
 
 ← [Servicios](../servicios.md)
 
 ## ¿Qué es esto?
 
-Pangolin es el sistema que vive en el VPS y gestiona el tráfico que llega de internet antes de enviarlo al `computador` local. No es un solo programa: es un conjunto de tres piezas que trabajan juntas, Pangolin, Gerbil y Traefik, más el protocolo WireGuard que conecta todo.
+Pangolin es el sistema que vive en el VPS y gestiona el tráfico que llega de internet antes de enviarlo al `computador` local. Es un conjunto de tres piezas que trabajan juntas, Pangolin, Gerbil y Traefik, más el protocolo WireGuard que conecta todo.
 
 El VPS (Virtual Private Server) es un servidor alquilado en la nube con una dirección IP pública fija y conocida. Su único rol es ser la dirección postal visible del sistema: recibe el tráfico que viene de internet y lo reenvía por el túnel cifrado al `computador` local, donde viven los `datos`. El VPS no almacena nada importante.
 
@@ -54,7 +73,7 @@ INTERNET
 
 El stack de Pangolin puede correr de dos formas:
 
-- **Como módulos NixOS**: si el VPS corre NixOS. La configuración está declarada en `nixos/modules/nixos/network/pangolin.nix`.
+- **Como módulos NixOS**: si el VPS corre NixOS. La configuración está declarada en [`nixos/modules/nixos/network/pangolin.nix`](../../../midu/nixos/modules/nixos/network/pangolin.nix).
 - **Como contenedores Docker**: si el VPS corre cualquier otra distribución de Linux. La configuración está en `vps/docker-compose.yml`. Esta es la opción más común para VPS de proveedores que no ofrecen NixOS como imagen base.
 
 ## El rol del VPS en la arquitectura de seguridad
@@ -65,7 +84,7 @@ Esta separación es intencional: el VPS es descartable. Se puede destruir y reco
 
 ## Ver también
 
-- [Túnel](túnel.md): la decisión entre Cloudflare y Newt+WireGuard
+- [Túnel](túnel_cifrado.md): la decisión entre Cloudflare y Newt+WireGuard
 - [Caddy](caddy.md): el reverse proxy del `computador` local que recibe el tráfico del VPS
-- [Visión general](../arquitectura/visión-general.md): el flujo completo de tráfico
+- [Arquitectura](../arquitectura.md): el flujo completo de tráfico
 - [El `computador` local y el VPS](../arquitectura/computadores.md): las dos máquinas, sus roles y por qué están separadas

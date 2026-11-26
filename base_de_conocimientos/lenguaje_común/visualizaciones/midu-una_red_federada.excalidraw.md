@@ -76,79 +76,79 @@ Tarjeta gráfica
 Inteligencia Artificial local ^gselVkcA
 
 ## Embedded Files
-56577c99835eab6092865277ebd2fedb23d1922a: [[assets/image/attachments/midu/physical_infrastructures/router.png]]
+56577c99835eab6092865277ebd2fedb23d1922a: [[lenguaje_común/objetos_digitales/midu/physical_infrastructures/router.png]]
 
-4f9abcf42ec03a2d147675f5fc187355ed1ecac0: [[assets/image/attachments/midu/physical_infrastructures/switch.png]]
+4f9abcf42ec03a2d147675f5fc187355ed1ecac0: [[lenguaje_común/objetos_digitales/midu/physical_infrastructures/switch.png]]
 
-006f21be8212124f528f1cede1dd9fb67e1e4e29: [[assets/image/attachments/midu/digital_infrastructures/vpn.png]]
+006f21be8212124f528f1cede1dd9fb67e1e4e29: [[lenguaje_común/objetos_digitales/midu/digital_infrastructures/vpn.png]]
 
-9e40e6a2bf01e5211bab1a040305065e70d2924e: [[assets/image/attachments/midu/concepts/digital_brain.png]]
+9e40e6a2bf01e5211bab1a040305065e70d2924e: [[lenguaje_común/objetos_digitales/midu/concepts/digital_brain.png]]
 
-f5a69f8cec18ed50bfc121ea9554e34954f332cc: [[assets/image/attachments/midu/physical_infrastructures/external_hard_drive.png]]
+f5a69f8cec18ed50bfc121ea9554e34954f332cc: [[lenguaje_común/objetos_digitales/midu/physical_infrastructures/external_hard_drive.png]]
 
-867cbff9092c4b45525685d16d942cf530115b6b: [[assets/image/attachments/midu/concepts/memory.png]]
+867cbff9092c4b45525685d16d942cf530115b6b: [[lenguaje_común/objetos_digitales/midu/concepts/memory.png]]
 
-20c72ce7ffeabc590c34bfcd9a79f17b0203f643: [[assets/image/attachments/midu/physical_infrastructures/computer_laptop.png]]
+20c72ce7ffeabc590c34bfcd9a79f17b0203f643: [[lenguaje_común/objetos_digitales/midu/physical_infrastructures/computer_laptop.png]]
 
-35940f826e7dbff2414f928645fe5b564d376f48: [[assets/image/attachments/midu/physical_infrastructures/smartphone.png]]
+35940f826e7dbff2414f928645fe5b564d376f48: [[lenguaje_común/objetos_digitales/midu/physical_infrastructures/smartphone.png]]
 
-a88dcfc38963249702742caf8330927ace2b4bf7: [[assets/image/attachments/midu/people/infrastructure_4.png]]
+a88dcfc38963249702742caf8330927ace2b4bf7: [[lenguaje_común/objetos_digitales/midu/people/infrastructure_4.png]]
 
-7cf3f48ff7a5a86c5dcd18e691148146bb863691: [[assets/image/attachments/midu/physical_infrastructures/antenna.png]]
+7cf3f48ff7a5a86c5dcd18e691148146bb863691: [[lenguaje_común/objetos_digitales/midu/physical_infrastructures/antenna.png]]
 
-41d0fa4de539ba296db4b552ff98eceed0ffcf51: [[assets/image/attachments/midu/physical_infrastructures/generator.png]]
+41d0fa4de539ba296db4b552ff98eceed0ffcf51: [[lenguaje_común/objetos_digitales/midu/physical_infrastructures/generator.png]]
 
-48ddacac8bed50b012b83177fae2b3f000fef8b9: [[assets/image/attachments/midu/physical_infrastructures/isp_a.png]]
+48ddacac8bed50b012b83177fae2b3f000fef8b9: [[lenguaje_común/objetos_digitales/midu/physical_infrastructures/isp_a.png]]
 
-f169abb8ca06a9cc088be3241eab28f6245a7465: [[assets/image/attachments/midu/concepts/global_network.png]]
+f169abb8ca06a9cc088be3241eab28f6245a7465: [[lenguaje_común/objetos_digitales/midu/concepts/global_network.png]]
 
-32cdc3bd8a6f41479cecfdef09b7561267bf1e24: [[assets/image/attachments/midu/physical_infrastructures/isp_b.png]]
+32cdc3bd8a6f41479cecfdef09b7561267bf1e24: [[lenguaje_común/objetos_digitales/midu/physical_infrastructures/isp_b.png]]
 
-ed514b2917e8ce3eb45732b4e52caa6855421f0b: [[assets/image/attachments/midu/physical_infrastructures/isp_c.png]]
+ed514b2917e8ce3eb45732b4e52caa6855421f0b: [[lenguaje_común/objetos_digitales/midu/physical_infrastructures/isp_c.png]]
 
-5369b365c1b1b80889c1b3c9557313a5e5f46498: [[assets/image/attachments/midu/digital_infrastructures/dns.png]]
+5369b365c1b1b80889c1b3c9557313a5e5f46498: [[lenguaje_común/objetos_digitales/midu/digital_infrastructures/dns.png]]
 
-fc2e93c0c93b20d411f06dc84ce06a7e6a828e10: [[assets/image/attachments/midu/digital_infrastructures/domain_name.png]]
+fc2e93c0c93b20d411f06dc84ce06a7e6a828e10: [[lenguaje_común/objetos_digitales/midu/digital_infrastructures/domain_name.png]]
 
-7f1e32cfb63cfe5c882c8150d7112533589c12bf: [[assets/image/attachments/midu/digital_infrastructures/cloud_server.png]]
+7f1e32cfb63cfe5c882c8150d7112533589c12bf: [[lenguaje_común/objetos_digitales/midu/digital_infrastructures/cloud_server.png]]
 
-9016f810dac796b128e5948b8644f79fc175fba8: [[assets/image/attachments/midu/digital_infrastructures/cloudflare.png]]
+9016f810dac796b128e5948b8644f79fc175fba8: [[lenguaje_común/objetos_digitales/midu/digital_infrastructures/cloudflare.png]]
 
-bfe30b73175426077288e439f4c0b84d1c01badc: [[assets/image/attachments/midu/physical_infrastructures/satellite.png]]
+bfe30b73175426077288e439f4c0b84d1c01badc: [[lenguaje_común/objetos_digitales/midu/physical_infrastructures/satellite.png]]
 
-393122f7abf706a3dcbb3d092d931d7925fec611: [[assets/image/attachments/midu/physical_infrastructures/smartphone_chat.png]]
+393122f7abf706a3dcbb3d092d931d7925fec611: [[lenguaje_común/objetos_digitales/midu/physical_infrastructures/smartphone_chat.png]]
 
-f527740fa9ea9a4c59b89748f63c04263b7e59ac: [[assets/image/attachments/midu/physical_infrastructures/smartphone_development.png]]
+f527740fa9ea9a4c59b89748f63c04263b7e59ac: [[lenguaje_común/objetos_digitales/midu/physical_infrastructures/smartphone_development.png]]
 
-3047542a9de044ab2dfcd143cc079c2ba6c749bf: [[assets/image/attachments/midu/physical_infrastructures/computer_graphic_design.png]]
+3047542a9de044ab2dfcd143cc079c2ba6c749bf: [[lenguaje_común/objetos_digitales/midu/physical_infrastructures/computer_graphic_design.png]]
 
-a22145e45868930d463b51778dbbd9830b9958a0: [[assets/image/attachments/midu/people/person_q.png]]
+a22145e45868930d463b51778dbbd9830b9958a0: [[lenguaje_común/objetos_digitales/midu/people/person_q.png]]
 
-5c4b79f4d76398658294b553b4193c5b6f8f6e6e: [[assets/image/attachments/midu/people/infrastructure_2.png]]
+5c4b79f4d76398658294b553b4193c5b6f8f6e6e: [[lenguaje_común/objetos_digitales/midu/people/infrastructure_2.png]]
 
-56b65c30219ed49f9a702b37b33d893332d1e9e5: [[assets/image/attachments/midu/people/person_p.png]]
+56b65c30219ed49f9a702b37b33d893332d1e9e5: [[lenguaje_común/objetos_digitales/midu/people/person_p.png]]
 
-fe38aa126139167417bee891fb5991dacee6309b: [[assets/image/attachments/midu/people/person_o.png]]
+fe38aa126139167417bee891fb5991dacee6309b: [[lenguaje_común/objetos_digitales/midu/people/person_o.png]]
 
-1925a28208f76fcba03ca9cf1b83db6097ec1afe: [[assets/image/attachments/midu/people/person_g.png]]
+1925a28208f76fcba03ca9cf1b83db6097ec1afe: [[lenguaje_común/objetos_digitales/midu/people/person_g.png]]
 
-dc55c59ba72f59ce1fd3f4fa2f459d9aaffff96d: [[assets/image/attachments/midu/people/person_k.png]]
+dc55c59ba72f59ce1fd3f4fa2f459d9aaffff96d: [[lenguaje_común/objetos_digitales/midu/people/person_k.png]]
 
-be774d13ff415297a9346c3aea6ec2975784e364: [[assets/image/attachments/midu/people/person_n.png]]
+be774d13ff415297a9346c3aea6ec2975784e364: [[lenguaje_común/objetos_digitales/midu/people/person_n.png]]
 
-9638a047c4af56f6ee467d5d0e01235d71d0ca13: [[assets/image/attachments/midu/people/person_u.png]]
+9638a047c4af56f6ee467d5d0e01235d71d0ca13: [[lenguaje_común/objetos_digitales/midu/people/person_u.png]]
 
-98f68e57abb98af741c72e76ce516e64fa1a42ef: [[assets/image/attachments/midu/physical_infrastructures/computer_shopping_online.png]]
+98f68e57abb98af741c72e76ce516e64fa1a42ef: [[lenguaje_común/objetos_digitales/midu/physical_infrastructures/computer_shopping_online.png]]
 
-520728e99f73892539996e91e4a49ab3329a2440: [[assets/image/attachments/midu/people/person_w.png]]
+520728e99f73892539996e91e4a49ab3329a2440: [[lenguaje_común/objetos_digitales/midu/people/person_w.png]]
 
-75c158d719ba49a900f1a3fafcb86945d98e410b: [[assets/image/attachments/midu/physical_infrastructures/computer_local_server_a.png]]
+75c158d719ba49a900f1a3fafcb86945d98e410b: [[lenguaje_común/objetos_digitales/midu/physical_infrastructures/computer_local_server_a.png]]
 
-f1c5edfeab7fac4def6725927e9815f97e7803c3: [[assets/image/attachments/midu/physical_infrastructures/electric_tower.png]]
+f1c5edfeab7fac4def6725927e9815f97e7803c3: [[lenguaje_común/objetos_digitales/midu/physical_infrastructures/electric_tower.png]]
 
-6b5d7ccee0db01d597d57b52efbc63dd114978a9: [[assets/image/attachments/midu/physical_infrastructures/graphic_card.png]]
+6b5d7ccee0db01d597d57b52efbc63dd114978a9: [[lenguaje_común/objetos_digitales/midu/physical_infrastructures/graphic_card.png]]
 
-7b649f63a3bc6213af4649620bf522487dc1c396: [[assets/image/attachments/midu/physical_infrastructures/computer_local_server_b.png]]
+7b649f63a3bc6213af4649620bf522487dc1c396: [[lenguaje_común/objetos_digitales/midu/physical_infrastructures/computer_local_server_b.png]]
 
 %%
 ## Drawing

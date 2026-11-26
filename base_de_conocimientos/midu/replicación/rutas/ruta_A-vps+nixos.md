@@ -1,3 +1,22 @@
+---
+title: Ruta A: VPS con NixOS + Pangolin + Newt
+tipo: ruta
+estado: borrador
+tags: [replicación, enrutamiento]
+relaciones:
+  parte_de: midu/replicación.md
+  relacionado:
+    - midu/arquitectura/conectarse_en_internet.md
+    - lenguaje_común/lenguaje_común.md
+    - midu/servicios/pangolin.md
+    - midu/arquitectura/nixos.md
+    - midu/replicación/vps.md
+    - midu/arquitectura/secretos.md
+    - subjetividades/soberanía_digital.md
+    - midu/servicios/túnel_cifrado.md
+    - midu/replicación/rutas/ruta_B-vps+podman.md
+---
+
 ﻿# Ruta A: VPS con NixOS + Pangolin + Newt
 
 ← [Conectarse en internet](../../arquitectura/conectarse_en_internet.md)
@@ -60,6 +79,13 @@ Pasos clave:
 - Se usa NixOS en el `computador` local y se quiere consistencia declarativa también en el VPS.
 - Se puede invertir tiempo en la configuración inicial y en mantener el VPS.
 - El presupuesto incluye un VPS (entre 4 y 6 USD al mes en proveedores como Hetzner o BuyVM).
+
+## Los archivos de la ruta
+
+El material de despliegue específico de esta ruta vive en `midu/conectarse_a_internet/ruta_A-vps+nixos/`:
+
+- [README.md](../../../../midu/conectarse_a_internet/ruta_A-vps+nixos/README.md): las instrucciones del despliegue
+- [.sops-vps.yaml.template](../../../../midu/conectarse_a_internet/ruta_A-vps+nixos/.sops-vps.yaml.template): la plantilla de la configuración de `sops` para el VPS
 
 ## Ver también
 

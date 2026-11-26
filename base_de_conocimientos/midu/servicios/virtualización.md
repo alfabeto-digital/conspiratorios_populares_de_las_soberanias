@@ -1,3 +1,19 @@
+---
+title: Virtualización
+tipo: servicio
+estado: revisado
+codigo: abierto
+capa_memoria: reproducibilidad
+tags: [reproducibilidad, infraestructuras]
+icono: lenguaje_común/objetos_digitales/midu/digital_infrastructures/docker.png
+relaciones:
+  parte_de: midu/servicios.md
+  relacionado:
+    - midu/servicios/pangolin.md
+    - midu/servicios/túnel_cifrado.md
+    - midu/replicación/rutas/ruta_B-vps+podman.md
+---
+
 ﻿# virtualización
 
 ← [Servicios](../servicios.md)
@@ -24,7 +40,7 @@ Es el estándar de facto en la industria y la referencia que usan la mayoría de
 
 ## en la `midu`
 
-La Ruta B del túnel de internet despliega el stack del VPS (Traefik, Pangolin, Gerbil) con Podman en lugar de NixOS. Es la opción cuando el VPS corre cualquier distribución Linux y no se quiere gestionar NixOS en el servidor remoto.
+La Ruta B del túnel de internet despliega el stack del VPS (Traefik, Pangolin, Gerbil) con Podman en lugar de NixOS. Es la opción cuando el VPS corre cualquier distribución Linux y no queremos gestionar NixOS en el servidor remoto.
 
 **Nota sobre NET_ADMIN:** [Gerbil](pangolin.md), el componente que crea las interfaces WireGuard, necesita la capacidad `NET_ADMIN` del sistema operativo. En Podman rootless esa capacidad no está disponible. La solución es ejecutar Podman como `root` en el VPS para este caso específico.
 
@@ -33,5 +49,5 @@ La Ruta A (VPS con NixOS) también puede usar Podman o Docker como `container_ru
 ## Ver también
 
 - [Pangolin](pangolin.md): el stack del túnel cifrado que se puede desplegar con Podman
-- [el túnel: Cloudflare o Newt](túnel.md): análisis de las opciones de conexión al VPS
+- [el túnel: Cloudflare o Newt](túnel_cifrado.md): análisis de las opciones de conexión al VPS
 - [conectarse en internet: ruta B - VPS con Podman](../replicación/rutas/ruta_B-vps+podman.md): la guía completa para la ruta con Podman

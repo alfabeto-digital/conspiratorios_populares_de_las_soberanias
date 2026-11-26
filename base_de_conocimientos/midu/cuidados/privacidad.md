@@ -1,3 +1,15 @@
+---
+title: Privacidad por diseño
+tipo: cuidado
+estado: borrador
+tags: [cuidados]
+relaciones:
+  parte_de: midu/cuidados.md
+  relacionado:
+    - midu/cuidados/cifrado.md
+    - midu/servicios/túnel_cifrado.md
+---
+
 ﻿# Privacidad por diseño
 
 ## La privacidad como afterthought

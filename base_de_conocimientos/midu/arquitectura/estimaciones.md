@@ -1,3 +1,18 @@
+---
+title: Estimaciones
+tipo: arquitectura
+estado: borrador
+tags: [infraestructuras]
+relaciones:
+  parte_de: midu/arquitectura.md
+  relacionado:
+    - midu.md
+    - midu/arquitectura/tipos_de_midu.md
+    - midu/arquitectura/almacenamiento_federado.md
+    - midu/arquitectura/nixos.md
+    - midu/servicios.md
+---
+
 # Estimaciones
 
 Reunimos aquí los valores de referencia para dimensionar una [`midu`](../../midu.md) y una federación de ejemplo: el costo del hardware de cada configuración, el consumo de energía, las horas de trabajo humano y los costos fijos recurrentes. Las configuraciones están descritas en [tipos de `midu`](tipos_de_midu.md) y el modelo de almacenamiento en [almacenamiento federado](almacenamiento_federado.md).

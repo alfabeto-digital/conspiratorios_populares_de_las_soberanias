@@ -32,6 +32,9 @@ nixos/result-*
 # Claude Code settings
 .claude
 
+# Obsidian vault
+.obsidian
+
 # Graphify — knowledge graph outputs (keep only the rendered artifacts)
 base_de_conocimientos/graphify/*
 !base_de_conocimientos/graphify/graph.html

@@ -1,3 +1,25 @@
+---
+title: Ruta C: túnel de Cloudflare
+tipo: ruta
+estado: borrador
+tags: [replicación, enrutamiento]
+relaciones:
+  parte_de: midu/replicación.md
+  relacionado:
+    - midu/arquitectura/conectarse_en_internet.md
+    - midu/servicios/caddy.md
+    - midu/servicios/authelia.md
+    - midu/cuidados/zero-trust.md
+    - lenguaje_común/lenguaje_común.md
+    - subjetividades/interfaces.md
+    - subjetividades/soberanía_digital.md
+    - midu/replicación/rutas/ruta_A-vps+nixos.md
+    - midu/replicación/rutas/ruta_B-vps+podman.md
+    - midu/arquitectura/nixos.md
+    - midu/servicios/virtualización.md
+    - midu/servicios/túnel_cifrado.md
+---
+
 ﻿# Ruta C: túnel de Cloudflare
 
 ← [Conectarse en internet](../../arquitectura/conectarse_en_internet.md)
@@ -22,7 +44,7 @@ Más detalle: [Arquitectura Zero Trust](../../cuidados/zero-trust.md)
 
 Cloudflare termina el [TLS](../../../lenguaje_común/lenguaje_común.md#tls) en su red antes de reenviar el tráfico al `computador` local. Técnicamente puede leer el contenido de las comunicaciones que pasan por el túnel. Es un hombre en el medio ([*man in the middle*](../../../lenguaje_común/lenguaje_común.md#mitm)) de confianza: tiene la capacidad técnica aunque no la use por política.
 
-Para una [`interfaz`](../../../subjetividades/interfaces.md) cuyo propósito declarado es la [`soberanía`](../../../subjetividades/`soberanía`_digital.md) digital, esta es una tensión real que vale la pena nombrar con honestidad. Los servicios del `computador` local tienen cifrado propio (HTTPS, Signal Protocol en [Matrix](../../../lenguaje_común/lenguaje_común.md#matrix)) que añade capas adicionales. La decisión debe ser consciente.
+Para una [`interfaz`](../../../subjetividades/interfaces.md) cuyo propósito declarado es la [`soberanía`](../../../subjetividades/soberanía_digital.md) digital, esta es una tensión real que vale la pena nombrar con honestidad. Los servicios del `computador` local tienen cifrado propio (HTTPS, Signal Protocol en [Matrix](../../../lenguaje_común/lenguaje_común.md#matrix)) que añade capas adicionales. La decisión debe ser consciente.
 
 Si el modelo de amenaza incluye a Cloudflare como adversario potencial, ver [Ruta A](ruta_A-vps+nixos.md) o [Ruta B](ruta_B-vps+podman.md).
 
@@ -48,6 +70,12 @@ nixos/modules/nixos/network/cloudflare.nix
 - Se prioriza la simplicidad de instalación sobre la `soberanía` completa del tráfico.
 - Se confía en Cloudflare como proveedor o se acepta la compensación explícitamente.
 - El presupuesto inicial no incluye un servidor adicional.
+
+## Los archivos de la ruta
+
+El material de despliegue específico de esta ruta vive en `midu/conectarse_a_internet/ruta_C-cloudflare/`:
+
+- [README.md](../../../../midu/conectarse_a_internet/ruta_C-cloudflare/README.md): las instrucciones del despliegue del túnel de Cloudflare
 
 ## Ver también
 

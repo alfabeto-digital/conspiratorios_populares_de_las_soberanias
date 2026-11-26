@@ -1,8 +1,25 @@
+---
+title: Terminal
+tipo: servicio
+estado: revisado
+codigo: abierto
+capa_memoria: reproducibilidad
+tags: [reproducibilidad]
+nix:
+  - midu/nixos/home/default.nix
+relaciones:
+  parte_de: midu/servicios.md
+  relacionado:
+    - midu/arquitectura/secretos.md
+    - midu/replicación/vps.md
+    - midu/replicación/nixos.md
+---
+
 ﻿# herramientas de terminal
 
 ← [Servicios](../servicios.md)
 
-Las herramientas de terminal son la `interfaz` directa con el `computador`. No tienen `interfaz` gráfica: operan sobre el sistema declarativo de NixOS y el repositorio de configuración. Se gestionan con home-manager, declarado en `midu/nixos/modules/nixos/admin.nix`, que aplica la configuración del usuario `admin` cada vez que se reconstruye el sistema.
+Las herramientas de terminal son la `interfaz` directa con el `computador`, sin `interfaz` gráfica. Operan sobre el sistema declarativo de NixOS y el repositorio de configuración. Se gestionan con home-manager, declarado en [`midu/nixos/modules/nixos/admin.nix`](../../../midu/nixos/modules/nixos/admin.nix), que aplica la configuración del usuario `admin` cada vez que se reconstruye el sistema.
 
 ## git
 
@@ -27,7 +44,7 @@ Ver: [`secretos`](../arquitectura/secretos.md) para el uso de SSH en la gestión
 
 ## neovim
 
-Editor de texto del usuario `admin`. Configurado en `midu/nixos/home/default.nix` con una configuración mínima (números de línea, resaltado de sintaxis). Es el editor usado para editar archivos de configuración directamente en el `computador` o en el VPS.
+Editor de texto del usuario `admin`. Configurado en [`midu/nixos/home/default.nix`](../../../midu/nixos/home/default.nix) con una configuración mínima (números de línea, resaltado de sintaxis). Es el editor usado para editar archivos de configuración directamente en el `computador` o en el VPS.
 
 ```nix
 home.file.".config/nvim/init.vim".text = ''
@@ -56,7 +73,7 @@ nix-store --gc              # limpiar paquetes no usados
 
 `nixos-anywhere` instala NixOS en un servidor remoto sin acceso físico ni ISO de instalación. Solo requiere acceso SSH con usuario `root`. Se usa una sola vez, durante la instalación inicial del VPS.
 
-Ver: [despliegue del VPS](../`replicación`/vps.md) para el proceso completo.
+Ver: [despliegue del VPS](../replicación/vps.md) para el proceso completo.
 
 ## sops y age
 
@@ -72,5 +89,5 @@ Ver: [`secretos`](../arquitectura/secretos.md) para la arquitectura completa de 
 ## Ver también
 
 - [`secretos`](../arquitectura/secretos.md): cómo se cifran y gestionan las claves
-- [`replicación`: nixos](../`replicación`/nixos.md): instalar la `midu` desde cero
-- [`replicación`: VPS](../`replicación`/vps.md): desplegar el VPS
+- [`replicación`: nixos](../replicación/nixos.md): instalar la `midu` desde cero
+- [`replicación`: VPS](../replicación/vps.md): desplegar el VPS

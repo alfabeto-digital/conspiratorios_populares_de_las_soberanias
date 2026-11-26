@@ -1,3 +1,26 @@
+---
+title: Arquitectura del sistema
+tipo: índice
+estado: borrador
+tags: [infraestructuras, midu]
+relaciones:
+  parte_de: midu.md
+  relacionado:
+    - lenguaje_común/visualizaciones/midu-una_red_local_soberana-slideshow.excalidraw.md
+    - lenguaje_común/cartografía_de_lo_esencial.md
+    - midu/arquitectura/computadores.md
+    - midu/arquitectura/nixos.md
+    - midu/arquitectura/flake.md
+    - midu/arquitectura/patrón_dendrítico.md
+    - midu/arquitectura/secretos.md
+    - midu/arquitectura/capas_de_la_memoria.md
+    - midu/arquitectura/almacenamiento_federado.md
+    - midu/arquitectura/tipos_de_midu.md
+    - midu/arquitectura/estimaciones.md
+    - midu/arquitectura/conectarse_en_internet.md
+    - midu/replicación.md
+---
+
 # Arquitectura del sistema
 
 ← [Inicio](../../README.md#la-midu)

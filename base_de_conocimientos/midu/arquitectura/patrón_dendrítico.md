@@ -1,3 +1,19 @@
+---
+title: El patrón dendrítico
+tipo: arquitectura
+estado: borrador
+tags: [infraestructuras]
+nix:
+  - midu/nixos/modules/hosts/midu/default.nix
+  - midu/nixos/modules/hosts/vps/default.nix
+relaciones:
+  parte_de: midu/arquitectura.md
+  relacionado:
+    - midu/arquitectura/flake.md
+    - midu/arquitectura/nixos.md
+    - midu/arquitectura/computadores.md
+---
+
 ﻿# El patrón dendrítico
 
 ## Dendritas: crecer sin modificar el tronco
@@ -58,7 +74,9 @@ nixos/modules/nixos/
     └── adguard.nix      , DNS con bloqueo de anuncios
 ```
 
-Para añadir un nuevo servicio, creas un archivo `.nix` en el directorio que corresponda. No hay nada más que hacer. `import-tree` lo encuentra en la siguiente construcción del sistema.
+Para añadir un nuevo servicio, creamos un archivo `.nix` en el directorio que corresponda. No hay nada más que hacer. `import-tree` lo encuentra en la siguiente construcción del sistema.
+
+El árbol completo del repositorio, no solo los módulos de NixOS, se mantiene en [TREE.md](../../../TREE.md), con las instrucciones para regenerarlo.
 
 ## Activar y desactivar módulos
 
@@ -82,7 +100,7 @@ misServicios.vaultwarden.enable = true;
 misServicios.dendrite.enable = false;  # todavía no está listo
 ```
 
-Así, tener el archivo del módulo en el árbol no activa nada por defecto. Solo se activa lo que el host declara explícitamente.
+Así, tener el archivo del módulo en el árbol no activa nada por defecto. Solo se activa lo que el host declara explícitamente. Cada máquina tiene su punto de entrada: [`hosts/midu/default.nix`](../../../midu/nixos/modules/hosts/midu/default.nix) para el `computador` local y [`hosts/vps/default.nix`](../../../midu/nixos/modules/hosts/vps/default.nix) para el `computador` desechable; ahí el host importa el árbol de módulos y declara cuáles activa.
 
 ## El origen del nombre
 

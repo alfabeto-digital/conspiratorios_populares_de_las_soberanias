@@ -1,3 +1,17 @@
+---
+title: NixOS y configuración de discos
+tipo: replicación
+estado: borrador
+tags: [replicación]
+relaciones:
+  parte_de: midu/replicación.md
+  relacionado:
+    - lenguaje_común/lenguaje_común.md
+    - midu/replicación/configuración.md
+    - midu/replicación/secretos.md
+    - midu/replicación/vps.md
+---
+
 ﻿# NixOS y configuración de discos
 
 Esta sección cubre los pasos 1 al 3 de la instalación: instalar NixOS en el disco principal, cifrar el disco de `datos` manualmente, y configurar el acceso SSH en la fase de arranque para poder desbloquear el servidor de forma remota.

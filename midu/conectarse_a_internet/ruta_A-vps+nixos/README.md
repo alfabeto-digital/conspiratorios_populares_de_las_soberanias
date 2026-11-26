@@ -1,4 +1,4 @@
-﻿# Ruta A: VPS con NixOS + Pangolin + Newt
+# Ruta A: VPS con NixOS + Pangolin + Newt
 
 Configuración del VPS con [NixOS](../../../base_de_conocimientos/midu/arquitectura/nixos.md) y el túnel cifrado para la `midu`.
 

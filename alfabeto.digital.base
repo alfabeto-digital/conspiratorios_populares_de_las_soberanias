@@ -1,0 +1,13 @@
+views:
+  - type: table
+    name: View
+    order:
+      - file.tags
+      - capa_memoria
+      - estado
+      - file.name
+      - tags
+      - tipo
+    sort:
+      - property: tipo
+        direction: ASC

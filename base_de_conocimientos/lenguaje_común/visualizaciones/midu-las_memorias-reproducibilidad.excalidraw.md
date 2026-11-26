@@ -60,49 +60,49 @@ entorno gráfico o en modo de administración? ^GxMn2Fp0
 Infraestructura humana ^ZKcyBMrj
 
 ## Embedded Files
-867cbff9092c4b45525685d16d942cf530115b6b: [[assets/image/attachments/midu/concepts/memory.png]]
+867cbff9092c4b45525685d16d942cf530115b6b: [[lenguaje_común/objetos_digitales/midu/concepts/memory.png]]
 
-9e40e6a2bf01e5211bab1a040305065e70d2924e: [[assets/image/attachments/midu/concepts/digital_brain.png]]
+9e40e6a2bf01e5211bab1a040305065e70d2924e: [[lenguaje_común/objetos_digitales/midu/concepts/digital_brain.png]]
 
-f5a69f8cec18ed50bfc121ea9554e34954f332cc: [[assets/image/attachments/midu/physical_infrastructures/external_hard_drive.png]]
+f5a69f8cec18ed50bfc121ea9554e34954f332cc: [[lenguaje_común/objetos_digitales/midu/physical_infrastructures/external_hard_drive.png]]
 
-fff37d9b6732f7ba57615bfd24d13e87c63f7413: [[assets/image/attachments/midu/physical_infrastructures/computer_local_server_b.png]]
+fff37d9b6732f7ba57615bfd24d13e87c63f7413: [[lenguaje_común/objetos_digitales/midu/physical_infrastructures/computer_local_server_b.png]]
 
-383dbf8b8c8574472c86afa54de9559830bf1270: [[assets/image/attachments/midu/physical_infrastructures/generator.png]]
+383dbf8b8c8574472c86afa54de9559830bf1270: [[lenguaje_común/objetos_digitales/midu/physical_infrastructures/generator.png]]
 
-7cf3f48ff7a5a86c5dcd18e691148146bb863691: [[assets/image/attachments/midu/physical_infrastructures/antenna.png]]
+7cf3f48ff7a5a86c5dcd18e691148146bb863691: [[lenguaje_común/objetos_digitales/midu/physical_infrastructures/antenna.png]]
 
-393122f7abf706a3dcbb3d092d931d7925fec611: [[assets/image/attachments/midu/physical_infrastructures/computer_laptop.png]]
+393122f7abf706a3dcbb3d092d931d7925fec611: [[lenguaje_común/objetos_digitales/midu/physical_infrastructures/computer_laptop.png]]
 
-9267029655d4afe4b0f40ab179dc2d722bb8a685: [[assets/image/attachments/midu/concepts/reproducibility.png]]
+9267029655d4afe4b0f40ab179dc2d722bb8a685: [[lenguaje_común/objetos_digitales/midu/concepts/reproducibility.png]]
 
-2d93060e3bae7d174b6b0c9bcc1910dac5786340: [[assets/image/attachments/midu/digital_infrastructures/woodpeckerci.png]]
+2d93060e3bae7d174b6b0c9bcc1910dac5786340: [[lenguaje_común/objetos_digitales/midu/digital_infrastructures/woodpeckerci.png]]
 
-00745714b0e3958baf451a00a8f4d931ba4b1451: [[assets/image/attachments/midu/digital_infrastructures/forgejo.png]]
+00745714b0e3958baf451a00a8f4d931ba4b1451: [[lenguaje_común/objetos_digitales/midu/digital_infrastructures/forgejo.png]]
 
-ad8f857c2014ed39867a17e7b6d0b8fa4c36acbd: [[assets/image/attachments/midu/digital_infrastructures/podman.png]]
+ad8f857c2014ed39867a17e7b6d0b8fa4c36acbd: [[lenguaje_común/objetos_digitales/midu/digital_infrastructures/podman.png]]
 
-8fe0d80e50e3be153cfb818daf7c0668ff082bf8: [[assets/image/attachments/midu/digital_infrastructures/docker.png]]
+8fe0d80e50e3be153cfb818daf7c0668ff082bf8: [[lenguaje_común/objetos_digitales/midu/digital_infrastructures/docker.png]]
 
-46ab36fc0563b832d46898e8284d43cbff02e6a3: [[assets/image/attachments/midu/digital_infrastructures/n8n.png]]
+46ab36fc0563b832d46898e8284d43cbff02e6a3: [[lenguaje_común/objetos_digitales/midu/digital_infrastructures/n8n.png]]
 
-33203d14f820ac03ef22aad040f73ff5ced82740: [[assets/image/attachments/midu/digital_infrastructures/restic.png]]
+33203d14f820ac03ef22aad040f73ff5ced82740: [[lenguaje_común/objetos_digitales/midu/digital_infrastructures/restic.png]]
 
-9290ca23a884274d14bb6d10925119d36cda3b19: [[assets/image/attachments/midu/digital_infrastructures/github.png]]
+9290ca23a884274d14bb6d10925119d36cda3b19: [[lenguaje_común/objetos_digitales/midu/digital_infrastructures/github.png]]
 
-4480c58d704346cf39acec3009f5a647e1cd08cd: [[assets/image/attachments/midu/digital_infrastructures/bitbucket.png]]
+4480c58d704346cf39acec3009f5a647e1cd08cd: [[lenguaje_común/objetos_digitales/midu/digital_infrastructures/bitbucket.png]]
 
-1301263d635639f3d27724ae522c56fa261eb377: [[assets/image/attachments/midu/digital_infrastructures/gitlab.png]]
+1301263d635639f3d27724ae522c56fa261eb377: [[lenguaje_común/objetos_digitales/midu/digital_infrastructures/gitlab.png]]
 
-0b4e6d3ceaf4e469d5755acfc50c1205010a647a: [[assets/image/attachments/midu/digital_infrastructures/kitty.png]]
+0b4e6d3ceaf4e469d5755acfc50c1205010a647a: [[lenguaje_común/objetos_digitales/midu/digital_infrastructures/kitty.png]]
 
-a88dcfc38963249702742caf8330927ace2b4bf7: [[assets/image/attachments/midu/people/infrastructure_3.png]]
+a88dcfc38963249702742caf8330927ace2b4bf7: [[lenguaje_común/objetos_digitales/midu/people/infrastructure_3.png]]
 
-908458c0043017c32c3ff8aafde57e2e6c27953f: [[assets/image/attachments/midu/people/person_d.png]]
+908458c0043017c32c3ff8aafde57e2e6c27953f: [[lenguaje_común/objetos_digitales/midu/people/person_d.png]]
 
-ffd28da43bd9011f116ec55215a3155745388978: [[assets/image/attachments/midu/people/person_e.png]]
+ffd28da43bd9011f116ec55215a3155745388978: [[lenguaje_común/objetos_digitales/midu/people/person_e.png]]
 
-40c1fd491df6b5ce96e0fd8d3d1b814b25a2da54: [[assets/image/attachments/midu/people/person_s.png]]
+40c1fd491df6b5ce96e0fd8d3d1b814b25a2da54: [[lenguaje_común/objetos_digitales/midu/people/person_s.png]]
 
 %%
 ## Drawing

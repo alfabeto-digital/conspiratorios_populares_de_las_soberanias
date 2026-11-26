@@ -1,3 +1,14 @@
+---
+title: Despliegue del VPS
+tipo: replicación
+estado: borrador
+tags: [replicación]
+relaciones:
+  parte_de: midu/replicación.md
+  relacionado:
+    - lenguaje_común/lenguaje_común.md
+---
+
 ﻿# Despliegue del VPS
 
 El [VPS](../../lenguaje_común/lenguaje_común.md#vps) (Servidor Virtual Privado) es el punto de entrada público de toda la infraestructura. El `computador` local donde corren los servicios puede estar en una red doméstica sin IP pública fija, el VPS resuelve eso actuando como intermediario que recibe el tráfico y lo reenvía al servidor real.

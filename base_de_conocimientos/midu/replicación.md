@@ -1,3 +1,24 @@
+---
+title: replicación
+tipo: índice
+estado: borrador
+tags: [replicación, midu]
+relaciones:
+  parte_de: midu.md
+  relacionado:
+    - midu/replicación/documentación.md
+    - midu/replicación/preparativos.md
+    - midu/arquitectura/nixos.md
+    - midu/replicación/nixos.md
+    - midu/replicación/configuración.md
+    - lenguaje_común/lenguaje_común.md
+    - midu/replicación/secretos.md
+    - midu/arquitectura/conectarse_en_internet.md
+    - midu/replicación/vps.md
+    - midu/cuidados/zero-trust.md
+    - lenguaje_común/objetos_digitales.md
+---
+
 # `replicación`
 
 ← [Inicio](../../README.md#la-replicación)
@@ -61,7 +82,7 @@ La `midu` necesita un intermediario con IP pública fija para recibir tráfico d
 El [servidor virtual privado](../lenguaje_común/lenguaje_común.md#vps) es el punto de entrada público de la `midu`, un `computador` arrendado en "la nube" que actúa como intermediario. Es desechable por diseño: la estrategia consiste en poder reemplazarlo sin perder ningún `dato`. El túnel ZeroTrust es una `abstracción` de la idea del `computador` **desechable**, en este caso lo que sería desechable es la `cuenta` asociada a los recursos de Cloudflare que usaremos.
 
 > [Despliegue del VPS](replicación/vps.md)
-> [Túnel ZeroTrust](servicios/zero_trust.md)
+> [Túnel ZeroTrust](cuidados/zero-trust.md)
 
 ## La secuencia de replicación
 
@@ -75,7 +96,7 @@ El [servidor virtual privado](../lenguaje_común/lenguaje_común.md#vps) es el p
 | [Construir el sistema](replicación/nixos.md#paso-6-clonar-el-repositorio-y-construir-el-sistema) | Clonar el `repositorio`, enlazar la configuración y ejecutar la primera construcción | 20–30 min |
 | [Conectarse en internet](arquitectura/conectarse_en_internet.md) | Elegir una alternativa | 10 min |
 | [Desplegar un VPS](replicación/vps.md) | Despliegue del punto de entrada público (Ruta A o B) | 30–60 min |
-| [Crear un túnel ZeroTrust](servicios/zero_trust.md) | Crear una cuenta en Cloudflare y configurar el túnel | 30 min |
+| [Crear un túnel ZeroTrust](cuidados/zero-trust.md) | Crear una cuenta en Cloudflare y configurar el túnel | 30 min |
 
 **Tiempo total estimado para el proceso de `replicación`: 4-6 horas.**
 
@@ -110,6 +131,37 @@ gitGraph
   commit id: "conectarse en internet"
   merge documentacion
 ```
+
+## Los objetos digitales de la replicación
+
+El proceso de `replicación` tiene sus propios `objetos digitales`: los archivos con los que preparamos el medio de arranque desde el que instalamos la `midu`. Viven en `midu/nixos/replicate/` y este es su índice completo.
+
+### Imágenes de arranque
+
+Las ISOs que arrancan el instalador o un entorno de rescate:
+
+- [nixos-minimal](../../midu/nixos/replicate/nixos-minimal-25.11.6495.e764fc9a4058-x86_64-linux.iso): imagen mínima de [NixOS](arquitectura/nixos.md) para la instalación por consola
+- [nixos-graphical](../../midu/nixos/replicate/nixos-graphical-25.11.6495.e764fc9a4058-x86_64-linux.iso): imagen de NixOS con entorno gráfico
+- [archlinux](../../midu/nixos/replicate/archlinux-2026.02.01-x86_64.iso): imagen de Arch Linux como entorno de rescate alternativo
+
+### Objetos de diseño
+
+Los archivos fuente de GIMP de los gráficos del arranque:
+
+- [replicate-logo.xcf](../../midu/nixos/replicate/replicate-logo.xcf): el logo de la `replicación`
+- [replicate-grub.xcf](../../midu/nixos/replicate/replicate-grub.xcf): el fondo del menú de arranque GRUB
+
+### Ventoy: el USB multiarranque
+
+Ventoy permite poner varias ISOs en un mismo USB y elegir cuál arrancar desde un menú con tema propio. La carpeta `ventoy/` se copia a la partición Ventoy del USB:
+
+- [ventoy.json](../../midu/nixos/replicate/ventoy/ventoy.json): la configuración de Ventoy y sus plugins
+- [README.md](../../midu/nixos/replicate/ventoy/README.md): las instrucciones para preparar el USB
+- [theme.txt](../../midu/nixos/replicate/ventoy/theme/replicate/theme.txt): la definición del tema del menú de arranque
+- [background.png](../../midu/nixos/replicate/ventoy/theme/replicate/background.png): el fondo del menú
+- [ShureTechMonoNerdFont-Regular-32.pf2](../../midu/nixos/replicate/ventoy/theme/replicate/ShureTechMonoNerdFont-Regular-32.pf2): la tipografía del menú
+
+El repertorio visual de íconos de las visualizaciones se cataloga aparte, en [objetos digitales](../lenguaje_común/objetos_digitales.md).
 
 ## La posibilidad del error
 

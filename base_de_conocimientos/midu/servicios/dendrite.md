@@ -1,12 +1,38 @@
+---
+title: Dendrite
+tipo: servicio
+estado: revisado
+codigo: abierto
+capa_memoria: comunicaciones
+tags: [comunicaciones, soberanía]
+nix:
+  - midu/nixos/modules/nixos/communications/dendrite.nix
+icono: lenguaje_común/objetos_digitales/midu/digital_infrastructures/matrix.png
+relaciones:
+  parte_de: midu/servicios.md
+  requiere:
+    - midu/servicios/postgresql.md
+    - midu/servicios/caddy.md
+  implementa:
+    - subjetividades/soberanía_digital.md
+  relacionado:
+    - midu/servicios/stalwart.md
+    - midu/servicios/ntfy.md
+  reemplaza_a:
+    - lenguaje_común/definiciones/servicios_no_soberanos/whatsapp.md
+    - lenguaje_común/definiciones/servicios_no_soberanos/telegram.md
+    - lenguaje_común/definiciones/servicios_no_soberanos/signal.md
+---
+
 ﻿# Dendrite
 
 ← [Servicios](../servicios.md)
 
 ## ¿Qué es esto?
 
-Dendrite es el servidor de mensajería instantánea del sistema. Implementa Matrix, un protocolo abierto y federado de chat. Federado significa que tu servidor puede comunicarse con otros servidores Matrix en internet, igual que con el correo electrónico, donde puedes enviar un mensaje desde Gmail a Outlook aunque sean servidores distintos.
+Dendrite es el servidor de mensajería instantánea del sistema. Implementa Matrix, un protocolo abierto y federado de chat. Federado significa que nuestro servidor puede comunicarse con otros servidores Matrix en internet, igual que con el correo electrónico, donde podemos enviar un mensaje desde Gmail a Outlook aunque sean servidores distintos.
 
-La analogía es directa: WhatsApp es como un teléfono de empresa, todos los usuarios tienen que estar en la misma red, y si la empresa cierra o cambia las reglas, te quedas sin servicio. Matrix es como el teléfono público, cualquier operadora puede conectarse con cualquier otra. Si tu servidor de Matrix habla con el servidor de Matrix de otra comunidad, los mensajes fluyen entre ellos sin necesidad de que estén en la misma empresa ni en el mismo país.
+La analogía es directa: WhatsApp es como un teléfono de empresa, todos los usuarios tienen que estar en la misma red, y si la empresa cierra o cambia las reglas, nos quedamos sin servicio. Matrix es como el teléfono público, cualquier operadora puede conectarse con cualquier otra. Si nuestro servidor de Matrix habla con el servidor de Matrix de otra comunidad, los mensajes fluyen entre ellos sin necesidad de que estén en la misma empresa ni en el mismo país.
 
 ## ¿Para qué sirve?
 
@@ -37,13 +63,13 @@ Dendrite corre en el `computador` local y usa PostgreSQL como base de `datos` pa
 
 El acceso a Dendrite desde el exterior pasa por Caddy (HTTPS) y Authelia (autenticación). Los clientes de Matrix (Element en escritorio, FluffyChat o Element en móvil) se conectan al servidor usando sus propios mecanismos de autenticación del protocolo Matrix.
 
-**Módulo NixOS:** `nixos/modules/nixos/communications/dendrite.nix`
+**Módulo NixOS:** [`nixos/modules/nixos/communications/dendrite.nix`](../../../midu/nixos/modules/nixos/communications/dendrite.nix)
 
-## La decisión ética: dónde viven tus conversaciones
+## La decisión ética: dónde viven nuestras conversaciones
 
 Los mensajes en WhatsApp pertenecen técnicamente a Meta. Los mensajes en Telegram están en servidores de Telegram Ltd. Los mensajes en Discord están en servidores de Discord Inc. En todos estos casos, la empresa tiene acceso a los metadatos de las conversaciones (quién habla con quién, cuándo, con qué frecuencia) aunque no al contenido si hay cifrado de extremo a extremo.
 
-Con Dendrite en un servidor propio, los mensajes viven en el servidor que administras tú. Los metadatos solo son accesibles para el administrador del sistema. Si hay federación con otros servidores, los mensajes de esas salas también existen en esos otros servidores, lo cual es inherente a la federación, y algo a considerar al decidir qué se comparte en salas federadas.
+Con Dendrite en un servidor propio, los mensajes viven en el servidor que administramos. Los metadatos solo son accesibles para el administrador del sistema. Si hay federación con otros servidores, los mensajes de esas salas también existen en esos otros servidores, lo cual es inherente a la federación, y algo a considerar al decidir qué se comparte en salas federadas.
 
 ## Ver también
 

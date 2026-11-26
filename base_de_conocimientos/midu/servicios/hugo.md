@@ -1,3 +1,22 @@
+---
+title: Hugo
+tipo: servicio
+estado: revisado
+codigo: abierto
+capa_memoria: descubribilidad
+tags: [descubribilidad, memorias]
+icono: lenguaje_común/objetos_digitales/midu/digital_infrastructures/hugo.png
+relaciones:
+  parte_de: midu/servicios.md
+  requiere:
+    - midu/servicios/caddy.md
+  relacionado:
+    - midu/servicios/terminal.md
+  reemplaza_a:
+    - lenguaje_común/definiciones/servicios_no_soberanos/wordpress.md
+    - lenguaje_común/definiciones/servicios_no_soberanos/joomla.md
+---
+
 # Hugo
 
 ← [Servicios](../servicios.md)
@@ -83,4 +102,5 @@ El directorio `base_de_conocimientos/` se monta como contenido del sitio:
 ## Ver también
 
 - [Caddy](caddy.md): el proxy inverso que sirve los archivos estáticos
+- [página web](../../../midu/página_web/página_web.md): el sitio estático actual que migraremos a Hugo
 - [Terminal](terminal.md): las herramientas de línea de comandos para `hugo server` y `hugo build`

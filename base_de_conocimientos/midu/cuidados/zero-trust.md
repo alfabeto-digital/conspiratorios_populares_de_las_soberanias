@@ -1,3 +1,15 @@
+---
+title: Arquitectura Zero Trust
+tipo: cuidado
+estado: borrador
+tags: [cuidados]
+relaciones:
+  parte_de: midu/cuidados.md
+  relacionado:
+    - midu/cuidados/cifrado.md
+    - midu/cuidados/privacidad.md
+---
+
 ﻿# Arquitectura Zero Trust
 
 ## El problema del castillo con foso

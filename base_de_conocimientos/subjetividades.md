@@ -1,8 +1,20 @@
+---
+title: Subjetividades iniciales
+tipo: índice
+estado: revisado
+tags: [soberanía, gobernanza, memorias]
+relaciones:
+  relacionado:
+    - midu.md
+    - midu/arquitectura.md
+    - referencias.md
+---
+
 ﻿# Subjetividades iniciales
 
 ← [Inicio](../README.md#las-subjetividades)
 
-Las subjetividades conceptos y referencias que orientan cada decisión de diseño en la `midu`. Cada una articula una pregunta sobre cómo se vive, se gobierna y se construye en red, un conjunto de referentes situados en el Sur Global y la diáspora africana, y una conexión directa con una decisión sobre `infraestructuras`.
+Las subjetividades son los conceptos y referencias que orientan cada decisión de diseño en la `midu`. Cada una articula una pregunta sobre cómo se vive, se gobierna y se construye en red, un conjunto de referentes situados en el Sur Global y la diáspora africana, y una conexión directa con una decisión sobre `infraestructuras`.
 
 Las 15 que aparecen en esta tabla no son una clasificación exhaustiva sino una propuesta viva: pueden revisarse, cuestionarse y ampliarse en cada `replicación`.
 
@@ -27,5 +39,5 @@ Las 15 que aparecen en esta tabla no son una clasificación exhaustiva sino una 
 ## Ver también
 
 - [la `midu`](midu.md): la implementación concreta de las subjetividades
-- [Arquitectura](midu/arquitectura.md): cómo reorganizar las `infraestrucutras`
+- [Arquitectura](midu/arquitectura.md): cómo reorganizar las `infraestructuras`
 - [Referencias](referencias.md): fuentes completas de los referentes citados

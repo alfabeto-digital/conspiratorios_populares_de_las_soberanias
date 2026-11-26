@@ -1,3 +1,24 @@
+---
+title: PostgreSQL
+tipo: servicio
+estado: revisado
+codigo: abierto
+capa_memoria: navegación
+tags: [datos, navegación]
+nix:
+  - midu/nixos/modules/nixos/database.nix
+icono: lenguaje_común/objetos_digitales/midu/digital_infrastructures/postgresql.png
+relaciones:
+  parte_de: midu/servicios.md
+  relacionado:
+    - midu/servicios/authelia.md
+    - midu/servicios/stalwart.md
+    - midu/servicios/dendrite.md
+    - midu/cuidados.md
+  reemplaza_a:
+    - lenguaje_común/definiciones/servicios_no_soberanos/supabase.md
+---
+
 ﻿# PostgreSQL
 
 ← [Servicios](../servicios.md)
@@ -10,7 +31,7 @@ Cada servicio tiene su propio espacio en esa biblioteca: como si hubiera estante
 
 ## ¿Para qué sirve?
 
-PostgreSQL no es un servicio que los usuarios vean directamente. Es la capa de almacenamiento que usan otros servicios internamente.
+PostgreSQL es la capa de almacenamiento que otros servicios usan internamente; los usuarios no interactúan con él directamente.
 
 En alfabeto.digital, estos servicios guardan sus `datos` en PostgreSQL:
 
@@ -45,11 +66,11 @@ PostgreSQL corre en el `computador` local. Cada servicio tiene su propio usuario
 
 Este es el **principio de menor privilegio**: cada componente del sistema tiene exactamente los permisos que necesita para funcionar, y ninguno más. Si la cuenta de base de `datos` de Stalwart fuera comprometida, el atacante no podría acceder a los `datos` de Authelia ni de Dendrite, cada uno vive en su propia base de `datos` con su propia llave.
 
-**Módulo NixOS:** `nixos/modules/nixos/database.nix`
+**Módulo NixOS:** [`nixos/modules/nixos/database.nix`](../../../midu/nixos/modules/nixos/database.nix)
 
 ## Ver también
 
 - [Authelia](authelia.md): usa PostgreSQL para sesiones y usuarios
 - [Stalwart](stalwart.md): usa PostgreSQL para correo
 - [Dendrite](dendrite.md): usa PostgreSQL para mensajes Matrix
-- [`cuidados`](../../`cuidados`/modelo_de_`cuidados`.md): principio de menor privilegio y aislamiento
+- [`cuidados`](../cuidados.md): principio de menor privilegio y aislamiento

@@ -1,14 +1,56 @@
+---
+title: La midu
+tipo: índice
+estado: borrador
+tags: [midu]
+relaciones:
+  relacionado:
+    - subjetividades/soberanía_digital.md
+    - subjetividades/replicación.md
+    - subjetividades/dispositivo.md
+    - subjetividades/alfabetización_digital_popular.md
+    - lenguaje_común/visualizaciones/midu-una_red_local_soberana-slideshow.excalidraw.md
+    - midu/arquitectura/computadores.md
+    - midu/arquitectura/nixos.md
+    - midu/arquitectura/flake.md
+    - midu/arquitectura/patrón_dendrítico.md
+    - midu/arquitectura/secretos.md
+    - midu/arquitectura/capas_de_la_memoria.md
+    - midu/arquitectura/almacenamiento_federado.md
+    - midu/arquitectura/tipos_de_midu.md
+    - midu/arquitectura/estimaciones.md
+    - lenguaje_común/visualizaciones/midu-conectarse_en_internet-slideshow.excalidraw.md
+    - midu/arquitectura/conectarse_en_internet.md
+    - midu/replicación/rutas/ruta_A-vps+nixos.md
+    - midu/replicación/rutas/ruta_B-vps+podman.md
+    - midu/replicación/rutas/ruta_C-cloudflare.md
+    - midu/cuidados.md
+    - midu/cuidados/zero-trust.md
+    - midu/cuidados/cifrado.md
+    - midu/cuidados/privacidad.md
+    - midu/servicios.md
+    - midu/replicación/documentación.md
+    - midu/replicación/preparativos.md
+    - midu/replicación/nixos.md
+    - midu/replicación/configuración.md
+    - midu/replicación/secretos.md
+    - midu/replicación/vps.md
+    - subjetividades.md
+    - lenguaje_común/lenguaje_común.md
+    - lenguaje_común/cartografía_de_lo_esencial.md
+---
+
 ﻿# La `midu`
 
 ← [Inicio](../README.md#la-midu)
 
-Una `midu` (Mínima `Interfaz` Digital Viable) es un **conjunto posible de `infraestructuras` físicas, digitales y humanas** que permiten a una persona o comunidad `gobernar` sus `memorias`, individuales y colectivas, con un criterio de [`soberanía digital`](subjetividades/`soberanía`_digital.md).
+Una `midu` (Mínima `Interfaz` Digital Viable) es un **conjunto posible de `infraestructuras` físicas, digitales y humanas** que permiten a una persona o comunidad `gobernar` sus `memorias`, individuales y colectivas, con un criterio de [`soberanía digital`](subjetividades/soberanía_digital.md).
 
-La noción de la *viabilidad* proviene de la biología. Un organismo viable es el que tiene los componentes mínimos para existir de forma autónoma y replicarse en nuevos `contextos`. **Cada `midu` configura su propio conjunto de `infraestructuras`**, las que decide que necesita para su existencia `soberana` y su [`replicación`](subjetividades/`replicación`.md) en otro lugar.
+La noción de la *viabilidad* proviene de la biología. Un organismo viable es el que tiene los componentes mínimos para existir de forma autónoma y replicarse en nuevos `contextos`. **Cada `midu` configura su propio conjunto de `infraestructuras`**, las que decide que necesita para su existencia `soberana` y su [`replicación`](subjetividades/replicación.md) en otro lugar.
 
 ## El `dispositivo`
 
-`alfabeto.digital` es un [`dispositivo`](subjetividades/`dispositivo`.md) con tres dimensiones simultáneas:
+`alfabeto.digital` es un [`dispositivo`](subjetividades/dispositivo.md) con tres dimensiones simultáneas:
 
 - Como `dispositivo tecnológico` es una `midu`: un conjunto de `infraestructuras` configurado con herramientas que permiten la `gobernanza` de las `memorias` con un criterio de `soberanía` digital.
 - Como `dispositivo pedagógico` es una propuesta de [`alfabetización digital popular`](subjetividades/alfabetización_digital_popular.md): documentar el `desarrollo` del `dispositivo` permite compartir el proceso y poder transferirlo a otra persona o comunidad.

@@ -371,3 +371,7 @@ La etimología puede ayudarnos a redefinir colectivamente qué significa estar j
 Aquí habitarán las `midu` que se sumen a la red. Cada una será el hogar de un _Conspiratorio popular de las soberanías_ y hará parte del ejercicio de gobernanza colectiva:
 
 - [alfabeto.digital](https://alfabeto.digital)
+
+## Licencia
+
+Publicamos el código de la `midu` bajo la [Licencia Pública General de GNU, versión 3](LICENSE).

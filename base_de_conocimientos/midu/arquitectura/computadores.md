@@ -1,3 +1,31 @@
+---
+title: El computador local y el computador desechable
+tipo: arquitectura
+estado: borrador
+tags: [infraestructuras]
+relaciones:
+  parte_de: midu/arquitectura.md
+  relacionado:
+    - subjetividades/interfaces.md
+    - midu/arquitectura/tipos_de_midu.md
+    - midu/arquitectura/almacenamiento_federado.md
+    - midu/arquitectura/nixos.md
+    - lenguaje_común/lenguaje_común.md
+    - midu/servicios/caddy.md
+    - midu/servicios/authelia.md
+    - midu/servicios/stalwart.md
+    - midu/servicios/dendrite.md
+    - midu/servicios/vaultwarden.md
+    - midu/servicios/syncthing.md
+    - midu/servicios/ntfy.md
+    - midu/servicios/adguard.md
+    - midu/servicios/postgresql.md
+    - midu/servicios/túnel_cifrado.md
+    - midu/servicios/pangolin.md
+    - midu/arquitectura/conectarse_en_internet.md
+    - midu/arquitectura/secretos.md
+---
+
 # El `computador` local y el `computador` desechable
 
 ## Dos máquinas con roles distintos

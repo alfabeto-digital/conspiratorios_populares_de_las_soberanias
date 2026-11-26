@@ -1,3 +1,18 @@
+---
+title: Cuidados
+tipo: índice
+estado: borrador
+tags: [cuidados, midu]
+relaciones:
+  parte_de: midu.md
+  relacionado:
+    - midu/cuidados/cifrado.md
+    - midu/cuidados/privacidad.md
+    - midu/cuidados/zero-trust.md
+    - midu/arquitectura.md
+    - subjetividades.md
+---
+
 # Cuidados
 
 ← [Inicio](../../README.md#los-cuidados)
@@ -81,4 +96,4 @@ El modelo de confianza que define estas puertas está descrito en [Zero Trust](c
 
 - [Arquitectura](arquitectura.md): cómo está construida la `midu`
 - [La `midu`](../midu.md): las `infraestructuras` detrás de la `interfaz`
-- [Subjetividades](subjetividades.md): las ideas que articulan las decisiones de la `midu`
+- [Subjetividades](../subjetividades.md): las ideas que articulan las decisiones de la `midu`

@@ -53,45 +53,45 @@ Recuperación ante fallos y eventos catastróficos ^JNm2jfbV
 Resiliencia         ^8WCH7yHR
 
 ## Embedded Files
-41d0fa4de539ba296db4b552ff98eceed0ffcf51: [[assets/image/attachments/midu/physical_infrastructures/renewable_energy.png]]
+41d0fa4de539ba296db4b552ff98eceed0ffcf51: [[lenguaje_común/objetos_digitales/midu/physical_infrastructures/renewable_energy.png]]
 
-9e40e6a2bf01e5211bab1a040305065e70d2924e: [[assets/image/attachments/midu/concepts/digital_brain.png]]
+9e40e6a2bf01e5211bab1a040305065e70d2924e: [[lenguaje_común/objetos_digitales/midu/concepts/digital_brain.png]]
 
-f5a69f8cec18ed50bfc121ea9554e34954f332cc: [[assets/image/attachments/midu/physical_infrastructures/external_hard_drive.png]]
+f5a69f8cec18ed50bfc121ea9554e34954f332cc: [[lenguaje_común/objetos_digitales/midu/physical_infrastructures/external_hard_drive.png]]
 
-867cbff9092c4b45525685d16d942cf530115b6b: [[assets/image/attachments/midu/concepts/memory.png]]
+867cbff9092c4b45525685d16d942cf530115b6b: [[lenguaje_común/objetos_digitales/midu/concepts/memory.png]]
 
-695d35629cb0c80016425cdee1d0385c65d9de48: [[assets/image/attachments/midu/physical_infrastructures/computer_local_server_a.png]]
+695d35629cb0c80016425cdee1d0385c65d9de48: [[lenguaje_común/objetos_digitales/midu/physical_infrastructures/computer_local_server_a.png]]
 
-35940f826e7dbff2414f928645fe5b564d376f48: [[assets/image/attachments/midu/physical_infrastructures/smartphone_apps_a.png]]
+35940f826e7dbff2414f928645fe5b564d376f48: [[lenguaje_común/objetos_digitales/midu/physical_infrastructures/smartphone_apps_a.png]]
 
-20c72ce7ffeabc590c34bfcd9a79f17b0203f643: [[assets/image/attachments/midu/physical_infrastructures/computer_laptop.png]]
+20c72ce7ffeabc590c34bfcd9a79f17b0203f643: [[lenguaje_común/objetos_digitales/midu/physical_infrastructures/computer_laptop.png]]
 
-a88dcfc38963249702742caf8330927ace2b4bf7: [[assets/image/attachments/midu/people/infrastructure_3.png]]
+a88dcfc38963249702742caf8330927ace2b4bf7: [[lenguaje_común/objetos_digitales/midu/people/infrastructure_3.png]]
 
-908458c0043017c32c3ff8aafde57e2e6c27953f: [[assets/image/attachments/midu/people/person_za.png]]
+908458c0043017c32c3ff8aafde57e2e6c27953f: [[lenguaje_común/objetos_digitales/midu/people/person_za.png]]
 
-ffd28da43bd9011f116ec55215a3155745388978: [[assets/image/attachments/midu/people/person_h.png]]
+ffd28da43bd9011f116ec55215a3155745388978: [[lenguaje_común/objetos_digitales/midu/people/person_h.png]]
 
-40c1fd491df6b5ce96e0fd8d3d1b814b25a2da54: [[assets/image/attachments/midu/people/person_ñ.png]]
+40c1fd491df6b5ce96e0fd8d3d1b814b25a2da54: [[lenguaje_común/objetos_digitales/midu/people/person_ñ.png]]
 
-1e65201126c858db4340d7cb5295265ad7c13d0a: [[assets/image/attachments/midu/concepts/communications.png]]
+1e65201126c858db4340d7cb5295265ad7c13d0a: [[lenguaje_común/objetos_digitales/midu/concepts/communications.png]]
 
-0c295c6163d29b43bdb3363db725171688f7933e: [[assets/image/attachments/midu/concepts/observability.png]]
+0c295c6163d29b43bdb3363db725171688f7933e: [[lenguaje_común/objetos_digitales/midu/concepts/observability.png]]
 
-e7b35f27c00f980009f5181d0539bd8143ad9a5f: [[assets/image/attachments/midu/concepts/processing.png]]
+e7b35f27c00f980009f5181d0539bd8143ad9a5f: [[lenguaje_común/objetos_digitales/midu/concepts/processing.png]]
 
-5efd97cb7b15876a42a95426e09895df77414bed: [[assets/image/attachments/midu/concepts/descoverability.png]]
+5efd97cb7b15876a42a95426e09895df77414bed: [[lenguaje_común/objetos_digitales/midu/concepts/descoverability.png]]
 
-9267029655d4afe4b0f40ab179dc2d722bb8a685: [[assets/image/attachments/midu/concepts/reproducibility.png]]
+9267029655d4afe4b0f40ab179dc2d722bb8a685: [[lenguaje_común/objetos_digitales/midu/concepts/reproducibility.png]]
 
-56577c99835eab6092865277ebd2fedb23d1922a: [[assets/image/attachments/midu/physical_infrastructures/router.png]]
+56577c99835eab6092865277ebd2fedb23d1922a: [[lenguaje_común/objetos_digitales/midu/physical_infrastructures/router.png]]
 
-4f9abcf42ec03a2d147675f5fc187355ed1ecac0: [[assets/image/attachments/midu/physical_infrastructures/switch.png]]
+4f9abcf42ec03a2d147675f5fc187355ed1ecac0: [[lenguaje_común/objetos_digitales/midu/physical_infrastructures/switch.png]]
 
-eb75fbd376d019b0b306f649de00d22157750a89: [[assets/image/attachments/midu/concepts/navigation.png]]
+eb75fbd376d019b0b306f649de00d22157750a89: [[lenguaje_común/objetos_digitales/midu/concepts/navigation.png]]
 
-486169d00e1cf05572680bba7a1ef8e2a8ce788f: [[assets/image/attachments/midu/concepts/resilience.png]]
+486169d00e1cf05572680bba7a1ef8e2a8ce788f: [[lenguaje_común/objetos_digitales/midu/concepts/resilience.png]]
 
 %%
 ## Drawing

@@ -1,24 +1,44 @@
+---
+title: ntfy
+tipo: servicio
+estado: revisado
+codigo: abierto
+capa_memoria: comunicaciones
+tags: [comunicaciones]
+nix:
+  - midu/nixos/modules/nixos/communications/ntfy.nix
+icono: lenguaje_común/objetos_digitales/midu/digital_infrastructures/ntfy.png
+relaciones:
+  parte_de: midu/servicios.md
+  requiere:
+    - midu/servicios/caddy.md
+  relacionado:
+    - midu/servicios/dendrite.md
+    - midu/servicios/stalwart.md
+    - midu/servicios/authelia.md
+---
+
 ﻿# ntfy
 
 ← [Servicios](../servicios.md)
 
 ## ¿Qué es esto?
 
-ntfy es un servidor de notificaciones push. Una notificación push es un mensaje que el servidor te envía a ti, al teléfono, a la computadora, sin que tengas que estar mirando la aplicación ni hacer ninguna consulta activa. Es la tecnología detrás de las notificaciones de correo nuevo, los avisos de mensajes y las alertas del sistema.
+ntfy es un servidor de notificaciones push. Una notificación push es un mensaje que el servidor nos envía, al teléfono o a la computadora, sin que tengamos que estar mirando la aplicación ni hacer ninguna consulta activa. Es la tecnología detrás de las notificaciones de correo nuevo, los avisos de mensajes y las alertas del sistema.
 
-Sin notificaciones push, tendrías que abrir la aplicación para ver si hay algo nuevo. Con notificaciones push, la aplicación sabe en tiempo real que algo ocurrió y puede avisarte inmediatamente.
+Sin notificaciones push, tendríamos que abrir la aplicación para ver si hay algo nuevo. Con notificaciones push, la aplicación sabe en tiempo real que algo ocurrió y puede avisarnos inmediatamente.
 
 ## ¿Para qué sirve?
 
 - **Alertas del sistema**: cuando algo ocurre en el servidor (un servicio se cae, el disco se llena, hay un error), ntfy puede enviar una notificación al teléfono del administrador.
-- **Notificaciones de otras aplicaciones auto-hospedadas**: herramientas de automatización, scripts, servicios que necesitan avisarte de algo pueden enviar un mensaje a ntfy y ntfy lo muestra como notificación en el `dispositivo`.
+- **Notificaciones de otras aplicaciones auto-hospedadas**: herramientas de automatización, scripts, servicios que necesitan avisarnos de algo pueden enviar un mensaje a ntfy y ntfy lo muestra como notificación en el `dispositivo`.
 - **Alternativa a los servicios de notificación comerciales**: en lugar de usar un servicio externo de terceros, las aplicaciones propias pueden usar ntfy directamente.
 
 ## El problema que ntfy resuelve
 
-Por defecto, las notificaciones push en Android pasan por servidores de Google (Firebase Cloud Messaging) y en iOS por servidores de Apple (APNs). Esto significa que incluso si usas una aplicación de código abierto instalada en tu propio servidor, las notificaciones de esa aplicación pasan por Google o Apple antes de llegar a tu `dispositivo`.
+Por defecto, las notificaciones push en Android pasan por servidores de Google (Firebase Cloud Messaging) y en iOS por servidores de Apple (APNs). Esto significa que incluso si usamos una aplicación de código abierto instalada en nuestro propio servidor, las notificaciones de esa aplicación pasan por Google o Apple antes de llegar a nuestro `dispositivo`.
 
-ntfy permite enviar notificaciones sin ningún intermediario, usando su propio protocolo basado en HTTP. Las aplicaciones pueden publicar mensajes a ntfy, y la app de ntfy en el teléfono los recibe directamente desde tu servidor.
+ntfy permite enviar notificaciones sin ningún intermediario, usando su propio protocolo basado en HTTP. Las aplicaciones pueden publicar mensajes a ntfy, y la app de ntfy en el teléfono los recibe directamente desde nuestro servidor.
 
 ## ¿Por qué ntfy específicamente?
 
@@ -32,7 +52,7 @@ ntfy corre en el `computador` local y usa SQLite como base de `datos` propia, li
 
 Cualquier servicio o script del sistema puede publicar un mensaje a ntfy mediante una petición HTTP. La app de ntfy instalada en el teléfono se suscribe a los topics relevantes y muestra las notificaciones cuando llegan.
 
-**Módulo NixOS:** `nixos/modules/nixos/communications/ntfy.nix`
+**Módulo NixOS:** [`nixos/modules/nixos/communications/ntfy.nix`](../../../midu/nixos/modules/nixos/communications/ntfy.nix)
 
 ## Ver también
 

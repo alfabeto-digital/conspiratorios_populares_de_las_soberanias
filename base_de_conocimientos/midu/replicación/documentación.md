@@ -1,3 +1,16 @@
+---
+title: La documentación como práctica pedagógica
+tipo: replicación
+estado: borrador
+tags: [replicación]
+relaciones:
+  parte_de: midu/replicación.md
+  relacionado:
+    - subjetividades/alfabetización_digital_popular.md
+    - midu/replicación/preparativos.md
+    - subjetividades.md
+---
+
 # La documentación como práctica pedagógica
 
 ← [`replicación`](../replicación.md)

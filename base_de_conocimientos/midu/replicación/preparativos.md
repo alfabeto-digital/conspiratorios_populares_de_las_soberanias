@@ -1,3 +1,19 @@
+---
+title: Preparativos
+tipo: replicación
+estado: borrador
+tags: [replicación]
+relaciones:
+  parte_de: midu/replicación.md
+  relacionado:
+    - lenguaje_común/lenguaje_común.md
+    - midu/arquitectura/conectarse_en_internet.md
+    - midu/arquitectura/computadores.md
+    - midu/replicación/secretos.md
+    - midu/replicación/vps.md
+    - midu/replicación/nixos.md
+---
+
 ﻿# Preparativos
 ← [`replicación`](../replicación.md)
 

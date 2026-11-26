@@ -1,3 +1,27 @@
+---
+title: Conectarse en internet
+tipo: arquitectura
+estado: borrador
+tags: [infraestructuras]
+relaciones:
+  parte_de: midu/arquitectura.md
+  relacionado:
+    - midu/replicación.md
+    - lenguaje_común/visualizaciones/midu-conectarse_en_internet-slideshow.excalidraw.md
+    - subjetividades/soberanía_digital.md
+    - lenguaje_común/lenguaje_común.md
+    - midu/replicación/rutas/ruta_A-vps+nixos.md
+    - midu/replicación/rutas/ruta_B-vps+podman.md
+    - midu/replicación/rutas/ruta_C-cloudflare.md
+    - midu/arquitectura/nixos.md
+    - midu/servicios/túnel_cifrado.md
+    - subjetividades/infraestructuras.md
+    - midu/servicios/virtualización.md
+    - midu/arquitectura/secretos.md
+    - midu/servicios/pangolin.md
+    - midu/cuidados/zero-trust.md
+---
+
 # Conectarse en internet
 
 ← [`replicación`](../replicación.md)

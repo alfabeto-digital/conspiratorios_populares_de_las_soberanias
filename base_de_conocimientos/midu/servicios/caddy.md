@@ -1,3 +1,22 @@
+---
+title: Caddy
+tipo: servicio
+estado: revisado
+codigo: abierto
+capa_memoria: comunicaciones
+tags: [enrutamiento, infraestructuras]
+nix:
+  - midu/nixos/modules/nixos/network/caddy.nix
+icono: lenguaje_común/objetos_digitales/midu/digital_infrastructures/caddy.png
+relaciones:
+  parte_de: midu/servicios.md
+  relacionado:
+    - midu/servicios/authelia.md
+    - midu/servicios/túnel_cifrado.md
+    - midu/servicios/pangolin.md
+    - midu/arquitectura.md
+---
+
 ﻿# Caddy
 
 ← [Servicios](../servicios.md)
@@ -33,11 +52,11 @@ Para cada subdominio configurado, Caddy hace una o dos cosas:
 
 Los certificados TLS se obtienen automáticamente de Let's Encrypt al arrancar el servicio por primera vez, y se renuevan cada 60 días sin intervención.
 
-**Módulo NixOS:** `nixos/modules/nixos/network/caddy.nix`
+**Módulo NixOS:** [`nixos/modules/nixos/network/caddy.nix`](../../../midu/nixos/modules/nixos/network/caddy.nix)
 
 ## Ver también
 
 - [Authelia](authelia.md): el sistema de autenticación al que Caddy consulta
-- [Túnel](túnel.md): cómo llega el tráfico hasta Caddy desde internet
+- [Túnel](túnel_cifrado.md): cómo llega el tráfico hasta Caddy desde internet
 - [Pangolin](pangolin.md): el stack del VPS que reenvía el tráfico a Caddy
-- [Visión general](../arquitectura/visión-general.md): el flujo completo de tráfico
+- [Arquitectura](../arquitectura.md): el flujo completo de tráfico

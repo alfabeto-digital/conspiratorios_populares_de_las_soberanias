@@ -1,3 +1,15 @@
+---
+title: Los servicios
+tipo: índice
+estado: revisado
+tags: [infraestructuras, midu]
+relaciones:
+  parte_de: midu.md
+  relacionado:
+    - midu/arquitectura/capas_de_la_memoria.md
+    - midu/cuidados.md
+---
+
 # Los servicios
 
 ← [la `midu`](../midu.md#servicios)
@@ -70,7 +82,7 @@ Subcapa del procesamiento: donde varias personas trabajan sobre las mismas `memo
 
 | Servicio | Función |
 |---|---|
-| [NextCloud](../../ROADMAP.md) | Plataforma colaborativa: archivos, documentos, calendario y contactos compartidos |
+| [NextCloud](servicios/nextcloud.md) | Plataforma colaborativa: archivos, documentos, calendario y contactos compartidos |
 | [EuroOffice](../../ROADMAP.md) | Suite ofimática: documentos, hojas de cálculo y presentaciones |
 | [FrankMD](../../ROADMAP.md) | Gestión del conocimiento en Markdown con notas enlazadas |
 | [OpenProject](../../ROADMAP.md) | Gestión de proyectos |
@@ -95,6 +107,7 @@ La capa de descubribilidad nos permite encontrar personas y `memorias` en la red
 
 | Servicio | Función |
 |---|---|
+| [página web](../../midu/página_web/página_web.md) | El sitio público de `alfabeto.digital`: la cara con la que la comunidad se presenta en el dominio raíz |
 | [Hugo](servicios/hugo.md) | Convierte los archivos Markdown en un sitio navegable; Pagefind genera el índice de búsqueda en tiempo de ejecución |
 | [SearXNG](../../ROADMAP.md) | Motor de búsqueda federado que agrega resultados sin identificar a quien busca |
 | [Karakeep](../../ROADMAP.md) | Gestión de marcadores y artículos guardados |

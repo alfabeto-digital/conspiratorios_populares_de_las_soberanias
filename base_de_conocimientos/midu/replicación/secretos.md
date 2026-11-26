@@ -1,3 +1,15 @@
+---
+title: Secretos: sops-nix, age y cifrado LUKS
+tipo: replicación
+estado: borrador
+tags: [replicación]
+relaciones:
+  parte_de: midu/replicación.md
+  relacionado:
+    - lenguaje_común/lenguaje_común.md
+    - midu/replicación/nixos.md
+---
+
 ﻿# Secretos: sops-nix, age y cifrado LUKS
 
 Los secretos son contraseñas, tokens y claves que los servicios necesitan para funcionar: la contraseña de la base de `datos`, las claves de las APIs, el token de autenticación del correo, etc. Este paso los gestiona de forma segura usando [age](../../lenguaje_común/lenguaje_común.md#age) para el cifrado y [sops](../../lenguaje_común/lenguaje_común.md#sops) como capa de gestión.
@@ -9,6 +21,8 @@ Los secretos son contraseñas, tokens y claves que los servicios necesitan para 
 Guardar secretos en un repositorio git en texto plano es un error de seguridad clásico: cualquiera con acceso al repositorio puede leer las contraseñas. Pero tampoco es práctico guardar los secretos solo en el servidor sin ningún tipo de control de versiones ni respaldo.
 
 La solución de esta `interfaz`: los secretos se cifran con `age` antes de ir al repositorio. El archivo `secrets.yaml` (cifrado) sí va a git. El archivo `secrets.plain` (en texto plano) nunca va a git. La clave de descifrado existe solo en el servidor.
+
+Los valores concretos nunca van a git; sí van las **plantillas** versionadas, que documentan qué secretos hacen falta y cómo generarlos: [secrets.plain.template](../../../midu/nixos/secrets/secrets.plain.template) y [secrets-vps.plain.template](../../../midu/nixos/secrets/secrets-vps.plain.template) para los secretos, y [.sops.yaml.template](../../../midu/nixos/.sops.yaml.template) para la configuración de `sops`.
 
 ## Cómo funciona age
 

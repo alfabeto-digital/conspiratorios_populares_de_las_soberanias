@@ -1,3 +1,31 @@
+---
+title: La cartografía de lo esencial
+tipo: índice
+estado: borrador
+tags: [infraestructuras, memorias]
+relaciones:
+  parte_de: lenguaje_común/lenguaje_común.md
+  relacionado:
+    - lenguaje_común/visualizaciones/midu-la_internet_del_presente.excalidraw.md
+    - lenguaje_común/visualizaciones/midu-la_internet_del_presente-slideshow.excalidraw.md
+    - lenguaje_común/visualizaciones/midu-una_red_local_soberana.excalidraw.md
+    - lenguaje_común/visualizaciones/midu-una_red_local_soberana-slideshow.excalidraw.md
+    - lenguaje_común/visualizaciones/midu-conectarse_en_internet.excalidraw.md
+    - lenguaje_común/visualizaciones/midu-conectarse_en_internet-slideshow.excalidraw.md
+    - lenguaje_común/visualizaciones/midu-una_red_federada.excalidraw.md
+    - lenguaje_común/visualizaciones/midu-una_red_federada-slideshow.excalidraw.md
+    - lenguaje_común/visualizaciones/midu-una_red_federada_soberana.excalidraw.md
+    - lenguaje_común/visualizaciones/midu-una_red_federada_soberana-slideshow.excalidraw.md
+    - midu/arquitectura/capas_de_la_memoria.md
+    - lenguaje_común/visualizaciones/midu-las_capas_de_las_memorias.excalidraw.md
+    - lenguaje_común/visualizaciones/midu-las_memorias-comunicaciones.excalidraw.md
+    - lenguaje_común/visualizaciones/midu-las_memorias-observabilidad.excalidraw.md
+    - lenguaje_común/visualizaciones/midu-las_memorias-procesamiento.excalidraw.md
+    - lenguaje_común/visualizaciones/midu-las_memorias-descubribilidad.excalidraw.md
+    - lenguaje_común/visualizaciones/midu-las_memorias-reproducibilidad.excalidraw.md
+    - lenguaje_común/visualizaciones/midu-las_memorias-navegación.excalidraw.md
+---
+
 # La cartografía de lo esencial
 
 El [lenguaje común](lenguaje_común.md) también se dibuja. Reunimos tres formas de cartografía visual que acompañan a la `base de conocimientos`, cada una mira el mismo territorio desde una distancia distinta.

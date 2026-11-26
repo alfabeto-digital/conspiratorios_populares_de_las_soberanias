@@ -50,41 +50,41 @@ Portal de servicios; punto de entrada unificado ^dKSCd25o
 Gestión web del computador local ^14owTg9D
 
 ## Embedded Files
-41d0fa4de539ba296db4b552ff98eceed0ffcf51: [[assets/image/attachments/midu/physical_infrastructures/solar_energy.png]]
+41d0fa4de539ba296db4b552ff98eceed0ffcf51: [[lenguaje_común/objetos_digitales/midu/physical_infrastructures/solar_energy.png]]
 
-867cbff9092c4b45525685d16d942cf530115b6b: [[assets/image/attachments/midu/concepts/memory.png]]
+867cbff9092c4b45525685d16d942cf530115b6b: [[lenguaje_común/objetos_digitales/midu/concepts/memory.png]]
 
-9e40e6a2bf01e5211bab1a040305065e70d2924e: [[assets/image/attachments/midu/concepts/digital_brain.png]]
+9e40e6a2bf01e5211bab1a040305065e70d2924e: [[lenguaje_común/objetos_digitales/midu/concepts/digital_brain.png]]
 
-f5a69f8cec18ed50bfc121ea9554e34954f332cc: [[assets/image/attachments/midu/physical_infrastructures/external_hard_drive.png]]
+f5a69f8cec18ed50bfc121ea9554e34954f332cc: [[lenguaje_común/objetos_digitales/midu/physical_infrastructures/external_hard_drive.png]]
 
-695d35629cb0c80016425cdee1d0385c65d9de48: [[assets/image/attachments/midu/physical_infrastructures/computer_local_server.png]]
+695d35629cb0c80016425cdee1d0385c65d9de48: [[lenguaje_común/objetos_digitales/midu/physical_infrastructures/computer_local_server.png]]
 
-35940f826e7dbff2414f928645fe5b564d376f48: [[assets/image/attachments/midu/physical_infrastructures/smartphone_simple.png]]
+35940f826e7dbff2414f928645fe5b564d376f48: [[lenguaje_común/objetos_digitales/midu/physical_infrastructures/smartphone_simple.png]]
 
-20c72ce7ffeabc590c34bfcd9a79f17b0203f643: [[assets/image/attachments/midu/physical_infrastructures/computer_desktop.png]]
+20c72ce7ffeabc590c34bfcd9a79f17b0203f643: [[lenguaje_común/objetos_digitales/midu/physical_infrastructures/computer_desktop.png]]
 
-56577c99835eab6092865277ebd2fedb23d1922a: [[assets/image/attachments/midu/physical_infrastructures/router.png]]
+56577c99835eab6092865277ebd2fedb23d1922a: [[lenguaje_común/objetos_digitales/midu/physical_infrastructures/router.png]]
 
-4f9abcf42ec03a2d147675f5fc187355ed1ecac0: [[assets/image/attachments/midu/physical_infrastructures/switch.png]]
+4f9abcf42ec03a2d147675f5fc187355ed1ecac0: [[lenguaje_común/objetos_digitales/midu/physical_infrastructures/switch.png]]
 
-a88dcfc38963249702742caf8330927ace2b4bf7: [[assets/image/attachments/midu/people/infrastructure_2.png]]
+a88dcfc38963249702742caf8330927ace2b4bf7: [[lenguaje_común/objetos_digitales/midu/people/infrastructure_2.png]]
 
-908458c0043017c32c3ff8aafde57e2e6c27953f: [[assets/image/attachments/midu/people/person_l.png]]
+908458c0043017c32c3ff8aafde57e2e6c27953f: [[lenguaje_común/objetos_digitales/midu/people/person_l.png]]
 
-ffd28da43bd9011f116ec55215a3155745388978: [[assets/image/attachments/midu/people/person_x.png]]
+ffd28da43bd9011f116ec55215a3155745388978: [[lenguaje_común/objetos_digitales/midu/people/person_x.png]]
 
-0c295c6163d29b43bdb3363db725171688f7933e: [[assets/image/attachments/midu/concepts/observability.png]]
+0c295c6163d29b43bdb3363db725171688f7933e: [[lenguaje_común/objetos_digitales/midu/concepts/observability.png]]
 
-456178692bf1d1c9763f081f3537176409c5ab9e: [[assets/image/attachments/midu/digital_infrastructures/prometheus.png]]
+456178692bf1d1c9763f081f3537176409c5ab9e: [[lenguaje_común/objetos_digitales/midu/digital_infrastructures/prometheus.png]]
 
-06d7a4a49f046538b38870b90fc61c5bb64b23fc: [[assets/image/attachments/midu/digital_infrastructures/cockpit.png]]
+06d7a4a49f046538b38870b90fc61c5bb64b23fc: [[lenguaje_común/objetos_digitales/midu/digital_infrastructures/cockpit.png]]
 
-3574e2c4915176a7fae828785db325a8bd94cd82: [[assets/image/attachments/midu/digital_infrastructures/homepage.png]]
+3574e2c4915176a7fae828785db325a8bd94cd82: [[lenguaje_común/objetos_digitales/midu/digital_infrastructures/homepage.png]]
 
-8d44cbe2e91cc2b7ebc0d2a8f23160f2594bfede: [[assets/image/attachments/midu/digital_infrastructures/grafana.png]]
+8d44cbe2e91cc2b7ebc0d2a8f23160f2594bfede: [[lenguaje_común/objetos_digitales/midu/digital_infrastructures/grafana.png]]
 
-67eec53de7f87885397b2c0983f7befe3d5500ee: [[assets/image/attachments/midu/digital_infrastructures/loki.png]]
+67eec53de7f87885397b2c0983f7befe3d5500ee: [[lenguaje_común/objetos_digitales/midu/digital_infrastructures/loki.png]]
 
 %%
 ## Drawing

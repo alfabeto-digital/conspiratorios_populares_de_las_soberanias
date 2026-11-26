@@ -1,3 +1,15 @@
+---
+title: Gestión de secretos
+tipo: arquitectura
+estado: borrador
+tags: [infraestructuras]
+relaciones:
+  parte_de: midu/arquitectura.md
+  relacionado:
+    - midu/arquitectura/computadores.md
+    - midu/arquitectura/nixos.md
+---
+
 ﻿# Gestión de secretos
 
 ## ¿Qué es un secreto?
@@ -126,5 +138,5 @@ Estos templates son documentación ejecutable: muestran exactamente qué hay que
 
 Ver también:
 - [El `computador` local y el VPS](computadores.md)
-- [Descripciones generales](descripciones_generales.md)
+- [La arquitectura](../arquitectura.md): el panorama general del sistema
 - [¿Qué es NixOS?](nixos.md)
