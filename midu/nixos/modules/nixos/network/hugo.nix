@@ -21,6 +21,9 @@
         cp -r --no-preserve=mode ${self}/sites/info/. work/
         # Contenido: la base de conocimientos.
         cp -r --no-preserve=mode ${inputs.knowledgebase}/. work/content/
+        # Página de inicio: la bóveda de Obsidian no tiene _index.md. La inyectamos,
+        # y con cascade type:docs todo el árbol usa el layout de documentación (barra lateral).
+        cp --no-preserve=mode ${self}/sites/info/home.md work/content/_index.md
         # Tema.
         ln -s ${inputs.hextra} work/themes/hextra
 
