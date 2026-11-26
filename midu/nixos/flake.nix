@@ -25,7 +25,7 @@
 
     # Tema Hugo para info.<dominio>. Fijado a una versión; el hash lo bloquea flake.lock.
     hextra = {
-      url   = "github:imfing/hextra/v0.9.8";
+      url   = "github:imfing/hextra/v0.13.0";
       flake = false;
     };
   };
