@@ -22,6 +22,12 @@ ignoreFiles = [
   # TREE.md, archivos de despliegue, etc.) se reescriben contra esta URL.
   repoBrowser = "https://github.com/alfabeto-digital/conspiratorios_populares_de_las_soberanias/blob/main"
 
+  # La búsqueda de Hextra (FlexSearch) descarga su JS desde un CDN en tiempo de
+  # construcción, lo que falla en el sandbox de Nix (sin red). La desactivamos;
+  # se reemplaza por Pagefind (indexa localmente) como paso siguiente.
+  [params.search]
+    enable = false
+
 [markup]
   [markup.goldmark.renderer]
     # Permite el HTML embebido de las notas (p. ej. <br> en tablas).
