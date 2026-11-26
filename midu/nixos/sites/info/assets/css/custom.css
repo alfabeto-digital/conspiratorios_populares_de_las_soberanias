@@ -56,11 +56,31 @@ html[class~="dark"] {
 /* --- Refuerzo directo sobre contenedores conocidos de Hextra --- */
 body { background-color: var(--gbg); color: var(--gfg); }
 .content { color: var(--gfg); }
-.hextra-nav-container   { background-color: var(--gbg); }
+.content h1, .content h2, .content h3, .content h4, .content h5, .content h6 { color: var(--gfg); }
+
+/* Navbar (encabezado principal): el fondo visible vive en la capa blur, que trae
+   hx:bg-white / hx:dark:bg-dark; la .hextra-nav-container de arriba es transparente. */
+.hextra-nav-container-blur {
+  background-color: var(--gbg) !important;
+  box-shadow: 0 1px 0 var(--gborder) !important;
+}
 .hextra-sidebar-container { background-color: var(--gbg); }
 .hextra-footer { background-color: var(--gbg); color: var(--gmuted); }
 .hextra-card   { background-color: var(--gbg1); border-color: var(--gborder); }
 .hextra-toc    { color: var(--gmuted); }
+
+/* Selector de modo (claro/oscuro/sistema): el botón e iconos heredan currentColor;
+   el menú desplegable trae hx:bg-white / hx:dark:bg-neutral-900 y texto gris. */
+.hextra-theme-toggle { color: var(--gfg) !important; }
+.hextra-theme-toggle-options {
+  background-color: var(--gbg1) !important;
+  border-color: var(--gborder) !important;
+}
+.hextra-theme-toggle-options button {
+  color: var(--gfg) !important;
+  background-color: transparent !important;
+}
+.hextra-theme-toggle-options button:hover { background-color: var(--gbg) !important; }
 
 /* Código en línea (naranja gruvbox claro / oscuro) */
 .content code:not(.code-block code) {

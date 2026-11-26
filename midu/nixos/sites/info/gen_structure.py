@@ -153,6 +153,24 @@ def clean_body(body):
         out.pop(0)
     return "\n".join(out)
 
+# Índice de la portada con tarjetas nativas de Hextra (reemplaza el índice manual del
+# README, que ahora lo cubre el TOC automático de la derecha).
+CARDS = """{{< cards cols="2" >}}
+  {{< card link="/midu/" title="la midu" subtitle="Mínima Interfaz Digital Viable" >}}
+  {{< card link="/subjetividades/" title="subjetividades" subtitle="las ideas que articulan la midu" >}}
+  {{< card link="/servicios/" title="servicios" subtitle="los programas del computador local" >}}
+  {{< card link="/cuidados/" title="cuidados" subtitle="cómo protegemos las memorias" >}}
+  {{< card link="/replicación/" title="replicación" subtitle="desplegar una midu paso a paso" >}}
+  {{< card link="/lenguaje_común/" title="lenguaje común" subtitle="el vocabulario técnico" >}}
+  {{< card link="/referencias/" title="referencias" subtitle="las personas y obras" >}}
+  {{< card link="/hoja_de_ruta/" title="hoja de ruta" subtitle="lo que viene" >}}
+  {{< card link="/árbol_del_repositorio/" title="árbol del repositorio" subtitle="la estructura del repositorio" >}}
+{{< /cards >}}"""
+
+def readme_cards(body):
+    """Reemplaza el bloque '## Índice ...' del README por las tarjetas."""
+    return re.sub(r'## Índice\n.*?(?=\n## )', "\n" + CARDS, body, count=1, flags=re.S)
+
 # ---- 3. pesos ----
 def weight_target(section, child):
     base = (section + "/") if section else ""
@@ -207,6 +225,8 @@ for rel in notes:
     if np in weights:
         fm = set_weight(fm, weights[np])
     body = rewrite(clean_body(body), rel, readme)
+    if readme:
+        body = readme_cards(body)
     output[np] = "---\n" + "\n".join(fm) + "\n---\n" + body
 
 # ---- 5. escribir y borrar originales ----
