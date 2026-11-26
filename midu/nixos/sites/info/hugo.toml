@@ -58,6 +58,7 @@ ignoreFiles = [
 #   H1          DepartureMono Nerd Font
 #   H2..H6      DaddyTimeMono Nerd Font
 #
-# Accesibilidad: un botón en el pie (layouts/_partials/custom/footer.html) alterna
-# la clase .opendyslexic en <html> y la persiste; head-end.html la restaura sin
-# parpadeo. En ese modo el texto del cuerpo pasa a OpenDyslexic.
+# Accesibilidad: una opción "lectura accesible" dentro del menú del selector de tema
+# (inyectada por layouts/_partials/custom/footer.html) alterna la clase .opendyslexic en
+# <html> y la persiste; head-end.html la restaura sin parpadeo. En ese modo el cuerpo
+# pasa a OpenDyslexic.

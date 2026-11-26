@@ -177,9 +177,10 @@ body { background-color: var(--gbg); color: var(--gfg); }
    heredan currentColor, pero en la navbar el botón no recibe clase de color,
    así que forzamos también el svg.
    ============================================================ */
-.hextra-theme-toggle { color: var(--gfg) !important; }
+.hextra-theme-toggle { color: var(--gfg) !important; background-color: transparent !important; }
 .hextra-theme-toggle svg { color: var(--gfg) !important; }
-.hextra-theme-toggle:hover { background-color: var(--gbg1) !important; }
+/* Sin pastilla oscura: el hover apenas aclara, no forma un bloque. */
+.hextra-theme-toggle:hover { background-color: color-mix(in srgb, var(--gfg) 10%, transparent) !important; }
 
 /* El menú desplegado trae hx:bg-white / hx:dark:bg-neutral-900 y borde gris. */
 .hextra-theme-toggle-options {
@@ -228,23 +229,11 @@ html.opendyslexic .content blockquote {
   letter-spacing: 0.02em;
 }
 
-/* Botón del modo accesibilidad (inyectado en custom/footer.html). */
-.a11y-font-toggle {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4em;
-  margin: 0.5rem 0;
-  padding: 0.35em 0.7em;
-  font-family: var(--font-ui);
-  font-size: 0.85rem;
-  color: var(--gfg);
-  background-color: var(--gbg1);
-  border: 1px solid var(--gborder);
-  border-radius: 0.375rem;
-  cursor: pointer;
-}
-.a11y-font-toggle:hover { border-color: var(--g-peach); }
-.a11y-font-toggle[aria-pressed="true"] {
+/* Opción "lectura accesible" (OpenDyslexic): se inyecta como un ítem más del menú del
+   selector de tema (custom/footer.html) y reusa el estilo de las demás opciones. La regla
+   de aria-checked de arriba ya la pinta en peach; aquí solo mostramos su check al activarse. */
+.a11y-check { display: none; }
+.hextra-theme-toggle-options .a11y-font-toggle[aria-checked="true"] .a11y-check {
+  display: flex;
   color: var(--g-peach);
-  border-color: var(--g-peach);
 }
