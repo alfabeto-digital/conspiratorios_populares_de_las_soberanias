@@ -11,7 +11,7 @@
       pname = "info-alfabeto-digital";
       version = "1.0.0";
       dontUnpack = true;
-      nativeBuildInputs = [ pkgs.hugo pkgs.perl ];
+      nativeBuildInputs = [ pkgs.hugo pkgs.perl pkgs.python3 ];
 
       buildPhase = ''
         export HOME=$TMPDIR
@@ -45,6 +45,10 @@
         # Embeds de Obsidian ![[x.png|size]] -> imagen markdown ![](/x.png).
         find work/content -name '*.md' -print0 \
           | xargs -0 perl -0777 -pi -e 's{!\[\[\s*([^\[\]#|\\]+?\.png)[^\]]*\]\]}{![](/$1)}g'
+
+        # Estructura para Hextra: _index.md por sección + weight según el orden de
+        # la base de conocimientos (ver render-link.html para la resolución de enlaces).
+        python3 ${self}/sites/info/gen_structure.py work/content
 
         cd work
         hugo --minify --baseURL "https://info.${cfg.domain}/" --destination public

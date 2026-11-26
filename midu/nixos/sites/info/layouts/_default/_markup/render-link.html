@@ -34,7 +34,10 @@
     {{- $png := replaceRE "(-slideshow)?\\.excalidraw\\.md$" ".png" $resolved -}}
     <a href="{{ printf "/%s" $png | relURL }}">{{ $text | safeHTML }}</a>
   {{- else if strings.HasSuffix $path ".md" -}}
-    {{- with .Page.GetPage $resolved -}}
+    {{- $ref := printf "/%s" (strings.TrimSuffix ".md" $resolved) -}}
+    {{- $pg := site.GetPage $ref -}}
+    {{- if not $pg -}}{{- $pg = site.GetPage (path.Dir $ref) -}}{{- end -}}
+    {{- with $pg -}}
       <a href="{{ .RelPermalink }}{{ $frag }}"{{ with $title }} title="{{ . }}"{{ end }}>{{ $text | safeHTML }}</a>
     {{- else -}}
       <a href="{{ printf "%s/base_de_conocimientos/%s" site.Params.repoBrowser $resolved | safeURL }}" rel="noopener">{{ $text | safeHTML }}</a>
