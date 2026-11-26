@@ -21,9 +21,11 @@
         cp -r --no-preserve=mode ${self}/sites/info/. work/
         # Contenido: la base de conocimientos.
         cp -r --no-preserve=mode ${inputs.knowledgebase}/. work/content/
-        # Página de inicio: la bóveda de Obsidian no tiene _index.md. La inyectamos,
-        # y con cascade type:docs todo el árbol usa el layout de documentación (barra lateral).
-        cp --no-preserve=mode ${self}/sites/info/home.md work/content/_index.md
+        # Páginas raíz (viven fuera de la bóveda): README = portada, ROADMAP, TREE.
+        # gen_structure.py les antepone el frontmatter y reescribe sus enlaces.
+        cp --no-preserve=mode ${inputs.readme}  "work/content/_index.md"
+        cp --no-preserve=mode ${inputs.roadmap} "work/content/hoja_de_ruta.md"
+        cp --no-preserve=mode ${inputs.tree}    "work/content/árbol_del_repositorio.md"
         # Tema.
         ln -s ${inputs.hextra} work/themes/hextra
 

@@ -17,8 +17,12 @@
   {{- $path := index $parts 0 -}}
   {{- $frag := "" -}}
   {{- if gt (len $parts) 1 -}}{{- $frag = printf "#%s" (index $parts 1) -}}{{- end -}}
-  {{- $pageDir := path.Dir .Page.File.Path -}}
-  {{- $resolved := path.Join $pageDir $path -}}
+  {{- $resolved := "" -}}
+  {{- if strings.HasPrefix $path "/" -}}
+    {{- $resolved = strings.TrimPrefix "/" $path -}}
+  {{- else -}}
+    {{- $resolved = path.Join (path.Dir .Page.File.Path) $path -}}
+  {{- end -}}
   {{- if strings.HasPrefix $resolved ".." -}}
     {{- $repoPath := strings.TrimPrefix "../" $resolved -}}
     <a href="{{ printf "%s/%s" site.Params.repoBrowser $repoPath | safeURL }}" rel="noopener">{{ $text | safeHTML }}</a>

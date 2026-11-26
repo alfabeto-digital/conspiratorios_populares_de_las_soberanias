@@ -40,6 +40,12 @@
       url   = "file+https://cdn.jsdelivr.net/npm/flexsearch@0.8.143/dist/flexsearch.bundle.min.js";
       flake = false;
     };
+
+    # Páginas raíz del sitio (viven fuera de base_de_conocimientos): el README es la
+    # portada, más la hoja de ruta y el árbol del repositorio.
+    readme  = { url = "path:../../README.md";  flake = false; };
+    roadmap = { url = "path:../../ROADMAP.md"; flake = false; };
+    tree    = { url = "path:../../TREE.md";    flake = false; };
   };
 
   outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } {
