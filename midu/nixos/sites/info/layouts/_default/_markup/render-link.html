@@ -22,6 +22,14 @@
   {{- if strings.HasPrefix $resolved ".." -}}
     {{- $repoPath := strings.TrimPrefix "../" $resolved -}}
     <a href="{{ printf "%s/%s" site.Params.repoBrowser $repoPath | safeURL }}" rel="noopener">{{ $text | safeHTML }}</a>
+  {{- else if strings.HasPrefix $resolved "graphify/" -}}
+    {{- if eq $resolved "graphify/graph.html" -}}
+      {{/* el grafo interactivo se sirve estático */}}
+      <a href="{{ "/graphify/graph.html" | relURL }}">{{ $text | safeHTML }}</a>
+    {{- else -}}
+      {{/* reportes, cache, scripts de graphify -> navegador de código */}}
+      <a href="{{ printf "%s/base_de_conocimientos/%s" site.Params.repoBrowser $resolved | safeURL }}" rel="noopener">{{ $text | safeHTML }}</a>
+    {{- end -}}
   {{- else if strings.HasSuffix $path ".excalidraw.md" -}}
     {{- $png := replaceRE "(-slideshow)?\\.excalidraw\\.md$" ".png" $resolved -}}
     <a href="{{ printf "/%s" $png | relURL }}">{{ $text | safeHTML }}</a>

@@ -30,6 +30,10 @@
         cp -r --no-preserve=mode "${inputs.knowledgebase}/lenguaje_común/objetos_digitales" "work/static/lenguaje_común/"
         cp --no-preserve=mode "${inputs.knowledgebase}/lenguaje_común/visualizaciones/"*.png "work/static/lenguaje_común/visualizaciones/" 2>/dev/null || true
 
+        # Grafo interactivo como estático (los demás artefactos de graphify van al navegador de código).
+        mkdir -p work/static/graphify
+        cp --no-preserve=mode "${inputs.knowledgebase}/graphify/graph.html" "work/static/graphify/" 2>/dev/null || true
+
         # Embeds de Obsidian ![[x.png|size]] -> imagen markdown ![](/x.png).
         find work/content -name '*.md' -print0 \
           | xargs -0 perl -0777 -pi -e 's{!\[\[\s*([^\[\]#|\\]+?\.png)[^\]]*\]\]}{![](/$1)}g'

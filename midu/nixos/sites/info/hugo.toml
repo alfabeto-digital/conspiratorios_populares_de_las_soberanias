@@ -10,8 +10,8 @@ theme        = "hextra"
 # desarrollo. Las imágenes (.png) no se tocan aquí; se sirven como estáticos.
 ignoreFiles = [
   "\\.obsidian",
-  "graphify/cache",
-  "objetos_digitales/excalidraw",   # scripts internos del plugin Excalidraw (Slideshow.md, etc.)
+  "graphify/",                       # artefactos de graphify (graph.html, reportes, cache); no son páginas
+  "objetos_digitales/excalidraw",    # scripts internos del plugin Excalidraw (Slideshow.md, etc.)
   "notas_de_desarrollo\\.md$",
   "-slideshow\\.py$",
   "\\.excalidraw\\.md$",
