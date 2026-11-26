@@ -31,6 +31,7 @@ in {
 
           # Network
           self.nixosModules.caddy
+          self.nixosModules.hugo          # info.<dominio>: base de conocimientos
         ] ++ lib.optional (cfg.tunnel_type == "cloudflare") self.nixosModules.cloudflare
           ++ lib.optional (cfg.tunnel_type == "newt")        self.nixosModules.newt
           ++ [

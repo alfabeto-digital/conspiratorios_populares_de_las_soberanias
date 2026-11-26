@@ -1,0 +1,22 @@
+{{- /*
+  Render-hook de imágenes para info.<dominio>.
+  - http(s)                 -> se deja igual.
+  - ruta absoluta (/...)    -> estático (viene del preprocesado de embeds ![[...]]).
+  - ruta relativa           -> se resuelve a ruta estática absoluta.
+  - ruta que escapa (../)   -> navegador de código.
+*/ -}}
+{{- $dest := .Destination -}}
+{{- $u := urls.Parse $dest -}}
+{{- if $u.IsAbs -}}
+  <img src="{{ $dest | safeURL }}" alt="{{ .Text }}"{{ with .Title }} title="{{ . }}"{{ end }} loading="lazy">
+{{- else if strings.HasPrefix $dest "/" -}}
+  <img src="{{ $dest | relURL }}" alt="{{ .Text }}"{{ with .Title }} title="{{ . }}"{{ end }} loading="lazy">
+{{- else -}}
+  {{- $pageDir := path.Dir .Page.File.Path -}}
+  {{- $resolved := path.Join $pageDir $dest -}}
+  {{- if strings.HasPrefix $resolved ".." -}}
+    <img src="{{ printf "%s/%s" site.Params.repoBrowser (strings.TrimPrefix "../" $resolved) | safeURL }}" alt="{{ .Text }}" loading="lazy">
+  {{- else -}}
+    <img src="{{ printf "/%s" $resolved | relURL }}" alt="{{ .Text }}"{{ with .Title }} title="{{ . }}"{{ end }} loading="lazy">
+  {{- end -}}
+{{- end -}}

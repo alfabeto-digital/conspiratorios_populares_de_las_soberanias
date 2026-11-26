@@ -1,0 +1,34 @@
+# Configuración de info.<dominio>: la base de conocimientos publicada con Hugo + Hextra.
+# baseURL se sobreescribe en tiempo de construcción con el dominio real (--baseURL),
+# porque el dominio vive en config.nix (fuera de git).
+baseURL      = "https://info.alfabeto.digital/"
+languageCode = "es"
+title        = "alfabeto.digital: base de conocimientos"
+theme        = "hextra"
+
+# No publicar como páginas: fuentes de Obsidian/Python, cache de graphify y notas de
+# desarrollo. Las imágenes (.png) no se tocan aquí; se sirven como estáticos.
+ignoreFiles = [
+  "\\.obsidian",
+  "graphify/cache",
+  "objetos_digitales/excalidraw",   # scripts internos del plugin Excalidraw (Slideshow.md, etc.)
+  "notas_de_desarrollo\\.md$",
+  "-slideshow\\.py$",
+  "\\.excalidraw\\.md$",
+]
+
+[params]
+  # Base del navegador de código: los enlaces que escapan de la bóveda (a .nix,
+  # TREE.md, archivos de despliegue, etc.) se reescriben contra esta URL.
+  repoBrowser = "https://github.com/alfabeto-digital/conspiratorios_populares_de_las_soberanias/blob/main"
+
+[markup]
+  [markup.goldmark.renderer]
+    # Permite el HTML embebido de las notas (p. ej. <br> en tablas).
+    unsafe = true
+  [markup.highlight]
+    noClasses = false
+
+# Hextra: diagramas Mermaid (los bloques ```mermaid de replicación.md, etc.).
+[params.navbar]
+  displayTitle = true

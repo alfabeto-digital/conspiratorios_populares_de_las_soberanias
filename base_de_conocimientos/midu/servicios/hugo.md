@@ -6,6 +6,8 @@ codigo: abierto
 capa_memoria: descubribilidad
 tags: [descubribilidad, memorias]
 icono: lenguaje_común/objetos_digitales/midu/digital_infrastructures/hugo.png
+nix:
+  - midu/nixos/modules/nixos/network/hugo.nix
 relaciones:
   parte_de: midu/servicios.md
   requiere:
@@ -21,7 +23,7 @@ relaciones:
 
 ← [Servicios](../servicios.md)
 
-Publicamos la `base_de_conocimientos/` como sitio web para hacerla accesible sin clonar el repositorio, y transferible a quienes no usan git. Documentar es comunicar; publicar hace que esa comunicación llegue más lejos. Para eso usamos Hugo, un generador de sitios estáticos escrito en Go que sirve tanto el sitio principal (`alfabeto.digital`) como la base de conocimientos (`info.alfabeto.digital`) con el mismo generador y sin dependencias de runtime.
+Publicamos la `base_de_conocimientos/` como sitio web para hacerla accesible sin clonar el repositorio, y transferible a quienes no usan git. Documentar es comunicar; publicar hace que esa comunicación llegue más lejos. Para eso usamos Hugo, un generador de sitios estáticos escrito en Go con el que publicamos la base de conocimientos en `info.alfabeto.digital`, sin dependencias de runtime. El mismo generador servirá más adelante al sitio principal (`alfabeto.digital`).
 
 ## El generador
 
@@ -41,63 +43,34 @@ Para `info.alfabeto.digital` usamos el tema Hextra, diseñado para documentació
 
 ## La búsqueda en un sitio estático
 
-La búsqueda no requiere un servidor dinámico. Funciona así:
+La búsqueda no requiere un servidor dinámico. Hextra genera su índice (FlexSearch) durante la construcción; el navegador lo descarga una vez y ejecuta todas las búsquedas localmente. Nada sale del navegador, no hay llamadas a servicios externos.
 
-1. En el paso de construcción, Pagefind lee el HTML generado y construye un índice comprimido en `public/_pagefind/`.
-2. El navegador descarga ese índice una vez y ejecuta todas las búsquedas localmente con WebAssembly.
-3. Nada sale del navegador; no hay llamadas a servicios externos.
+## La construcción automática en NixOS
 
-```bash
-hugo build                      # genera public/
-npx pagefind --site public      # genera public/_pagefind/
-```
+`info.alfabeto.digital` se construye de forma declarativa, sin pasos manuales. El módulo [`nixos/modules/nixos/network/hugo.nix`](../../../midu/nixos/modules/nixos/network/hugo.nix) define una derivación de Nix que:
 
-Pagefind soporta español sin configuración especial y es compatible con Hextra.
+1. Toma la `base_de_conocimientos/` como un input del flake (`knowledgebase`). La bóveda vive fuera del flake, así que se declara como `path:../../base_de_conocimientos`. Cada cambio en una nota cambia el hash del input y reconstruye el sitio en el siguiente `rebuild`.
+2. Toma el tema Hextra como otro input, fijado a una versión y bloqueado en `flake.lock`.
+3. Corre `hugo --minify` con el dominio real, y deja el sitio en una ruta del store de Nix.
 
-## La arquitectura de dos sitios
+[Caddy](caddy.md) sirve esa ruta del store como archivos estáticos en `info.<dominio>`, público y sin autenticación. La construcción es reproducible: el mismo contenido produce el mismo sitio, bit a bit.
 
-El repositorio contiene dos configuraciones Hugo independientes:
+## Los render-hooks: de la bóveda al sitio
 
-| Sitio | Fuente | Destino | Contenido |
-|---|---|---|---|
-| `alfabeto.digital` | `website/` con plantillas Hugo | `/srv/site` | Sitio principal |
-| `info.alfabeto.digital` | `base_de_conocimientos/` | `/srv/info` | Base de conocimientos |
+La bóveda usa convenciones de Obsidian que Hugo no entiende directamente. Dos render-hooks de enlaces e imágenes las traducen durante la construcción:
 
-[Caddy](caddy.md) sirve ambos directorios como archivos estáticos:
+- **Visualizaciones de Excalidraw**: un enlace a `midu-xxx[-slideshow].excalidraw.md` se reescribe a su imagen `midu-xxx.png`.
+- **Enlaces internos**: un enlace a otra nota `.md` apunta a su página en el sitio.
+- **Enlaces que escapan de la bóveda**: las notas enlazan archivos fuera de `base_de_conocimientos/` (los `.nix`, `TREE.md`, los archivos de despliegue de las rutas). Esos se reescriben al navegador de código del repositorio, de modo que siguen llevando al archivo real.
+- **Embeds de íconos**: los `![[...]]` de Obsidian se convierten en imágenes antes de construir; los íconos de `objetos_digitales/` y los PNG de `visualizaciones/` se publican como archivos estáticos.
 
-```
-alfabeto.digital {
-  root * /srv/site
-  file_server
-}
+## Lo que no se publica
 
-info.alfabeto.digital {
-  root * /srv/info
-  file_server
-}
-```
+No todo el contenido de la bóveda es una página. Mediante `ignoreFiles` en `hugo.toml`, el sitio excluye `.obsidian/`, el cache de graphify (`graphify/cache/`), `notas_de_desarrollo.md`, y los archivos fuente de las animaciones (`*.excalidraw.md`, `*-slideshow.py`). Todo eso permanece en la bóveda para Obsidian; solo no se publica como página.
 
-La migración del sitio principal (`website/`) a Hugo puede hacerse en fases: Hugo gestiona el enrutamiento y sirve los archivos HTML artesanales al principio, y vamos migrando a plantillas de forma progresiva. La redirección desde `alfabeto.digital` hacia `info.alfabeto.digital` se define editorialmente.
+## El sitio principal
 
-## `hugo.toml` mínimo para `info.alfabeto.digital`
-
-```toml
-baseURL = "https://info.alfabeto.digital/"
-languageCode = "es"
-title = "alfabeto.digital: base de conocimientos"
-theme = "hextra"
-
-[params]
-  mermaid = true
-```
-
-El directorio `base_de_conocimientos/` se monta como contenido del sitio:
-
-```toml
-[[module.mounts]]
-  source = "../base_de_conocimientos"
-  target = "content"
-```
+La migración del sitio principal (`alfabeto.digital`, la [página web](../../../midu/página_web/página_web.md) actual) a Hugo es una fase aparte. `info.alfabeto.digital` comparte el mismo generador y tema, de modo que ambos sitios convergen en una sola estética y un solo flujo de publicación.
 
 ## Ver también
 
