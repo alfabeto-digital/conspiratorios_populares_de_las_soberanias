@@ -1,6 +1,6 @@
 # alfabeto.digital
 ## Conspiratorios populares de las soberanías
-## Índice
+### Índice
 
 - [I. Memorias colectivas](#i-memorias-colectivas)
   - [La observación](#la-observación)
@@ -31,8 +31,8 @@
   - [Las referencias](#las-referencias)
 - [III. Conspiratorios populares de las soberanías](#iii-conspiratorios-populares-de-las-soberanías)
 
-## I. Memorias colectivas
-### La observación
+### I. Memorias colectivas
+#### La observación
 
 La conservación de las `memorias colectivas` de la humanidad ha dependido siempre de las `infraestructuras` disponibles para su almacenamiento y replicación. Cada transformación tecnológica modificó no solo la capacidad de registro, sino las **relaciones de poder** que determinan **qué se conserva y quién decide**.
 
@@ -51,7 +51,7 @@ La conservación de las `memorias colectivas` de la humanidad ha dependido siemp
 
 Lo mismo ocurre con las lenguas. _Yásnaya Aguilar_, lingüista _ayuujk_, sostiene que **el Estado es el principal responsable de la extinción de las lenguas indígenas** de _México_. En qué lenguas llega a describir la realidad un `dispositivo` también es una decisión de `gobernanza`.
 
-### La conjetura
+#### La conjetura
 
 En los tiempos de las `Inteligencias Artificiales` (IA), una de las descripciones más populares para los **Grandes Modelos de Lenguaje (LLM)** es la de **"loros estocásticos"**: la idea de que, lejos de ser entidades conscientes, se comportan como repetidores de palabras organizadas según su probabilidad de ocurrencia.
 
@@ -66,7 +66,7 @@ La idea de la curaduría nos conecta con la pregunta sobre la `gobernanza`: quie
 > [!TIP] **La conjetura**
 > Podemos entender las `Inteligencias Artificiales` (IA) como `dispositivos`, similares a la imprenta y a los computadores, que **posibilitan navegar en una colección de ideas, memorias y reflexiones preservadas como representaciones físicas y digitales de la experiencia humana**. La relación entre la imprenta, los computadores y las IA (los LLM por ejemplo) surge de su efecto sobre el `lenguaje`: todos transforman la conexión entre la `experiencia` sensible, el `símbolo` y las `memorias colectivas`. Creemos que la pregunta sobre si las IA tienen o no la capacidad de `emular` la `inteligencia` humana es **necesaria**; pero es más **urgente** preguntarnos por **quiénes controlan las infraestructuras que las hacen posibles y con qué propósitos las usan**.
 
-### La pregunta
+#### La pregunta
 
 El colombiano _Arturo Escobar_ retoma una frase del _movimiento Zapatista_ en _México_ para describir la posibilidad de **"un mundo en el que quepan muchos mundos"**, lo que él llama el `pluriverso`. En sus propuestas de **alternativas al `desarrollo`**, Escobar recupera las visiones de _mujeres_, _indígenas_, _campesinos_ y _afrodescendientes_: personas que entienden a cada individuo en relación con los otros, en **una red que conecta humanos y no humanos, cultura y naturaleza**. De ahí surge la pregunta que nos motiva:
 
@@ -79,7 +79,7 @@ Esta inquietud también se ha formulado desde otros lugares de _Abya Yala_ y de 
 
 > La pregunta nos invita a pensar en **propuestas que sean simultáneamente técnicas, políticas y pedagógicas**. Esa triple condición es la que da forma a `alfabeto.digital`.
 
-### El `contexto`
+#### El `contexto`
 
 La **Web 2.0**, o la idea de que podíamos construir colectivamente un repositorio de representaciones digitales, facilitó la compilación del archivo más extenso en la historia humana: fotos y videos que capturan momentos, archivos que simbolizan leyes y contratos, hojas de cálculo que registran transacciones y movimientos, `sistemas de información` que orientan nuestras decisiones cotidianas.
 
@@ -98,8 +98,8 @@ Las `infraestructuras` que sostienen **nuestras memorias son gobernadas por un c
 
 La implicación de Adichie: las `infraestructuras` del presente no determinan el **futuro**. Es necesario `trabajar` en la **imaginación, diseño y construcción** de otros futuros posibles.
 
-## II. Interfaces
-### Las infraestructuras
+### II. Interfaces
+#### Las infraestructuras
 > ¿Qué se necesita para **crear, leer, actualizar y borrar** objetos digitales en nuestras memorias?
 
 Hablaremos de **"las `infraestructuras`" o de "las `infraestructuras` de la memoria"** y podemos distinguir tres según el nivel en el que operan: `infraestructura física`, `infraestructura digital` e `infraestructura humana`.
@@ -113,7 +113,7 @@ Estas `infraestructuras` se han desarrollado replicando los modelos de `gobernan
 > [!bug] **La infraestructura**
 > Podemos introducir ahora el concepto de `interfaz`: una **posible** configuración particular de elementos de `infraestructura` física, digital y humana, con un **propósito** declarado o no, compuesta no solo de las tecnologías y los materiales que utiliza, sino también de **las `subjetividades` que han sido transferidas en su producción**. Como cada interfaz es solo una de las posibles formas de organizar las infraestructuras, existen y usamos múltiples `interfaces` todos los días. Estas `interfaces` nos permiten abstraer la `experiencia humana` en `representaciones digitales`.
 
-### El dispositivo
+#### El dispositivo
 
 _Michel Foucault_ usó la palabra `dispositif` para nombrar **una red heterogénea de elementos, discursos, instituciones, leyes, enunciados científicos, que en conjunto producen efectos sobre las personas que los habitan**. _Gilles Deleuze_ lo describió como **una máquina de hacer ver y de hacer hablar**: **el dispositivo no refleja la realidad, la construye** al determinar qué puede ser dicho, qué puede ser visto, qué puede ser pensado.
 
@@ -125,8 +125,8 @@ En ese sentido, `alfabeto.digital` es un `dispositivo` con tres dimensiones simu
 - Como `dispositivo pedagógico`, es una propuesta de `alfabetización digital popular`: _Paulo Freire_ nos propone la `documentación` como práctica pedagógica, en este caso, **de un experimento de gobernanza participativa y descentralizada** de las `memorias colectivas`, y de una invitación a la `replicación` de la `midu` en diferentes contextos. El proceso de `adaptación` y `transformación` que ocurre durante la `replicación` genera el conocimiento necesario para entender los principios de su funcionamiento, los detalles de su configuración y las posibilidades de `viabilidad`; **documentar el desarrollo del dispositivo permite compartir el proceso y poder transferirlo a otras personas o comunidades**.
 - Como `dispositivo político`, es una **narrativa sobre el presente** que busca `transferir` unas `subjetividades` en las `infraestructuras` sobre las que nos **imaginamos el futuro**. Cada decisión técnica, qué servicios incluir, qué protocolos usar, cómo documentar, para quién, encarna valores sobre la privacidad, la soberanía, la participación. **Esa subjetividad se transfiere a quien usa el dispositivo y, en cada replicación, tiene la oportunidad de ser cuestionada y adaptada**.
 
-### La `midu`
-#### Mínima Interfaz Digital Viable (MIDV)
+#### La `midu`
+##### Mínima Interfaz Digital Viable (MIDV)
 
 Una `midu` es un **conjunto posible de infraestructuras físicas y digitales** que permiten a una persona o comunidad `gobernar` las `memorias`, individuales y colectivas, con un criterio de `soberanía`.
 
@@ -153,7 +153,7 @@ Una `midu` es una posibilidad: una configuración particular de **infraestructur
 
 > [la `midu`](base_de_conocimientos/midu.md)
 
-### Las subjetividades
+#### Las subjetividades
 
 Quince `subjetividades` articulan la **narrativa sobre el presente** que busca incorporar `alfabeto.digital`. Cada una responde a una pregunta específica, se apoya en varios referentes y conecta una posición teórica con una decisión sobre las `infraestructuras`.
 
@@ -205,7 +205,7 @@ Quince `subjetividades` articulan la **narrativa sobre el presente** que busca i
 
 > [subjetividades](base_de_conocimientos/subjetividades.md)
 
-### Las capas de la memoria
+#### Las capas de la memoria
 
 Las `interfaces` son los puntos donde las `experiencias` sensibles se convierten en `representaciones digitales`. Son también los **sistemas de navegación de las memorias colectivas**: la forma en que le damos **significado**, organizamos y transformamos todo con lo que interactuamos, construye lo que llamamos **"la realidad"**.
 
@@ -213,64 +213,64 @@ Cada servicio que compone la `midu`, y cada uno de los que está planeado en la 
 
 ![Las capas de la memoria](base_de_conocimientos/lenguaje_común/visualizaciones/midu-las_capas_de_las_memorias.png)
 
-#### Comunicaciones
+##### Comunicaciones
 
 La capa más inmediata: el `intercambio` de mensajes, documentos y notificaciones entre personas. Segura, porque nadie externo puede leer los contenidos. Privada, porque los datos no pasan por servidores de terceros sin antes ser cifrados.
 
 > Servicios implementados: Stalwart (correo), Dendrite (mensajería Matrix), ntfy (notificaciones push).
 
-##### Enrutamiento
+###### Enrutamiento
 
 Subcapa de las comunicaciones: el único camino hacia los servicios. El tráfico entra por el `computador` desechable y viaja cifrado hasta el `computador` local, que nunca expone su dirección, con autenticación en cada paso.
 
 > Servicios implementados: Pangolin (`computador` desechable), túnel cifrado (Newt con WireGuard o Cloudflare), Caddy (proxy HTTPS), AdGuard Home (DNS local), Authelia (autenticación de dos factores).
 
-#### Observabilidad
+##### Observabilidad
 
 La capacidad de saber qué ocurre en todo momento dentro del sistema; la capacidad de `reflexionar` sobre la información que se obtiene del mundo. Sin observabilidad, la memoria es opaca: existe, pero no puede examinarse.
 
 > En el horizonte: Prometheus (métricas), Loki + Promtail (logs), Grafana (visualización), Alertmanager (alertas), Homepage (portal de servicios), Cockpit (gestión del sistema).
 
-#### Procesamiento
+##### Procesamiento
 
 Todas las `transformaciones` de los objetos de la memoria digital: las herramientas que permiten reorganizar el `contexto`, crear nuevas representaciones a partir de las existentes, extraer significado de lo acumulado.
 
 > En el horizonte: Ollama (modelos de lenguaje locales), Open WebUI (`interfaz` para interactuar con los modelos), Hermes (procesamiento con modelos de IA), Paperclip (coordinación de los agentes de Hermes).
 
-##### Colaboración
+###### Colaboración
 
 Subcapa del procesamiento: donde varias personas trabajan sobre las mismas `memorias`, con producción conjunta de documentos, organización del conocimiento compartido y coordinación del trabajo.
 
 > En el horizonte: NextCloud (plataforma colaborativa), EuroOffice (suite ofimática), FrankMD (gestión del conocimiento), OpenProject (gestión de proyectos).
 
-##### Participación
+###### Participación
 
 Subcapa del procesamiento: la presencia pública federada, cómo una `midu` se relaciona con otras `midu` y con el `Fediverso` sin ceder el control de las `memorias` a una plataforma centralizada.
 
 > En el horizonte: Mastodon (microblogging federado), Pixelfed (fotos federadas), PeerTube (video federado), Lemmy (foro federado), Mobilizon (eventos y grupos), Bookwyrm (lectura social), Castopod (podcasts).
 
-#### Descubribilidad
+##### Descubribilidad
 
 La pregunta de la `visibilidad` recíproca: ¿cómo me descubren y descubro a otros y sus objetos de la memoria en esta red? La descubribilidad nos permite la comunicación entre nodos que no se conocen todavía.
 
 > Servicios implementados: Hugo (base de conocimientos navegable en `info.alfabeto.digital`).
 > En el horizonte: SearXNG (buscador federado), Karakeep (marcadores), y un stack de automatización de medios: Sonarr (series), Radarr (películas), Lidarr (música), Readarr (libros), Prowlarr (indexadores), Bazarr (subtítulos), qBittorrent (torrents) y SABnzbd (Usenet).
 
-#### Reproducibilidad
+##### Reproducibilidad
 
 Las capacidades del sistema para la `adaptación`, `mutación` y `replicación` en nuevos contextos. La condición esencial es que la interfaz pueda ser tomada por otras personas en otras situaciones y convertida en algo propio. La `Infraestructura como código`, `NixOS` y el `patrón dendrítico` son la forma técnica de esta capa.
 
 > Servicios implementados: virtualización (Podman), terminal (git, SSH, nix). En desarrollo: documentación transferible y base de conocimientos.
 > En el horizonte: Forgejo (repositorio git), Woodpecker CI (CI/CD), Restic (backups cifrados), n8n (automatización de flujos de trabajo).
 
-#### Navegación
+##### Navegación
 
 Recorrer las memorias: la capa donde las `memorias` y los `datos` viven físicamente y donde los consultamos, recorremos y servimos.
 
 > Servicios implementados: PostgreSQL (base de `datos`), Syncthing (sincronización de archivos), Vaultwarden (gestión de contraseñas).
 > En el horizonte: Paperless-ngx (gestión documental), Archivebox (archivo web), Pairdrop (transferencia efímera), Firefly III (finanzas personales), y una biblioteca de medios: Immich (fotos y videos), Jellyfin (video), Navidrome (música), Audiobookshelf (audiolibros), Calibre (libros).
 
-#### La resiliencia (transversal)
+##### La resiliencia (transversal)
 
 La `resiliencia` es una propiedad transversal que existe como principio fundamental en todas las capas: el cifrado, los rollbacks de NixOS, los backups (Restic) y el almacenamiento federado como recuperación colectiva. Se diseña de manera preventiva para que la `preservación` de las `memorias` no dependa de un único punto de falla.
 
@@ -279,7 +279,7 @@ La `resiliencia` es una propiedad transversal que existe como principio fundamen
 > [!example] Las capas de la memoria
 > Las seis capas no son una `taxonomía` definitiva. Son una propuesta de organización que puede **revisarse, extenderse y adaptarse** según las necesidades de cada comunidad o persona que replique la interfaz.
 
-### La gobernanza
+#### La gobernanza
 
 _Raquel Gutiérrez Aguilar_, en _Horizontes comunitario-populares_ (2017), propone el concepto de **producción de lo común**: la idea de que las comunidades construyen, conservan y distribuyen bienes comunes, **la tierra, el agua, el conocimiento**, a través de formas de organización que no pasan por el Estado ni por el mercado. Aplicado a las `memorias digitales`, la pregunta sobre `gobernanza` es la pregunta sobre **quién tiene autoridad para decidir qué se guarda, cómo se accede y bajo qué condiciones se comparte**. Los _Principios CARE_, **Beneficio colectivo, Autoridad para controlar, Responsabilidad, Ética**, formulados por _Stephanie Carroll_, _Ibrahim Garba_, _Oscar Luis Figueroa-Rodríguez_ y _Jarita Holbrook_ en _2020_ para la soberanía de `datos` indígenas, son una propuesta desde las comunidades que más han visto sus `memorias` extraídas y reinterpretadas por otros. La red _Te Mana Raraunga_ en _Aotearoa Nueva Zelanda_ los aplica a los datos _māori_: **quien produce los datos tiene derecho a gobernarlos**, y esa autoridad no puede cederse sin consentimiento.
 
@@ -287,7 +287,7 @@ Existen ya ejercicios de `gobernanza` alternativa de las `infraestructuras` de l
 
 La `federación` no es neutral. _Marcia X_, en conversación con _Logic Magazine_, señala que _Mastodon_ y el `Fediverso` replican las dinámicas de exclusión de las plataformas centralizadas: sus normas de moderación, sus idiomas dominantes y sus culturas de diseño reflejan los valores de quienes los administran. _Paz Peña_ y _Joana Varon_ (Coding Rights) hacen una crítica equivalente desde los feminismos del Sur: el `consentimiento` sobre los datos del cuerpo no puede ser un acto individual descontextualizado; requiere condiciones materiales, culturales y políticas para ser real. _Lorena Cabnal_, desde el feminismo comunitario _aymara_, pone el **cuerpo-territorio** como la primera unidad de `gobernanza`. La `gobernanza` de las `memorias colectivas` debe sustentarse tanto en infraestructuras distribuidas como en la deliberación explícita sobre las `subjetividades` que esas infraestructuras encarnan.
 
-### Los cuidados
+#### Los cuidados
 
 Un `modelo` de cuidados `distribuido` en múltiples capas: `LUKS`, `age`, `sops`, `TLS`, `TOTP`, `Zero Trust`, `túnel cifrado`. El fallo en una no compromete el sistema completo. La analogía biológica: una célula tiene membrana plasmática, pared celular, y cada estructura celular tiene sus propios mecanismos de integridad. Todas las capas se cuidan entre si y `reaccionan` dependiendo del `contexto`.
 
@@ -302,7 +302,7 @@ La `midu` es viable a muchas escalas, desde un `computador` reutilizado con un d
 > [`cuidados`](base_de_conocimientos/midu/cuidados.md)
 > [almacenamiento federado](base_de_conocimientos/midu/arquitectura/almacenamiento_federado.md) · [tipos de midu](base_de_conocimientos/midu/arquitectura/tipos_de_midu.md) · [estimaciones](base_de_conocimientos/midu/arquitectura/estimaciones.md)
 
-### La replicación
+#### La replicación
 
 La `replicación` documenta el proceso completo de darle cuerpo a una `midu`: cada paso explica qué hacemos y por qué. Documentar el proceso mientras ocurre es parte de la `replicación` misma; el conocimiento que generamos puede transferirse a quien venga después.
 
@@ -321,13 +321,13 @@ La secuencia cubre ocho pasos:
 
 > [`replicación`](base_de_conocimientos/midu/replicación.md)
 
-### El lenguaje común
+#### El lenguaje común
 
 El mismo símbolo produce significados distintos en contextos distintos, las infraestructuras que queremos estarán construidas desde una posición que produce efectos situados. Sabemos que ninguna tecnología es neutral; siempre tiene inscrita la subjetividad de quienes la construyen y la usan.
 
 Entendemos que el lenguaje es común sólo para quienes lo comparten, este es un recuento conceptual, una [semilla](base_de_conocimientos/lenguaje_común/lenguaje_común.md) disponible en la `base de conocimientos` dentro del `repositorio`.
 
-#### La cartografía de lo esencial
+##### La cartografía de lo esencial
 
 La Inteligencia Artificial nos permite encontrar relaciones semánticas entre las ideas y los textos (los símbolos) que componen la base de conocimientos y el código en si mismo, y producir una [visualización interactiva](https://alfabeto.digital/assets/graph.html) que puede servir para explorar de dos maneras las ideas:
 
@@ -356,13 +356,13 @@ Una segunda serie de diagramas retrata las [capas de la memoria](base_de_conocim
 
 En la [cartografía de lo esencial](base_de_conocimientos/lenguaje_común/cartografía_de_lo_esencial.md) encontraremos la descripción detallada de estas tres formas: el grafo de `graphify`, los diagramas de Excalidraw y sus presentaciones animadas.
 
-### Las referencias
+#### Las referencias
 
 Una lista de las personas que han trabajado en el desarrollo de todas las subjetividades que buscamos introducir en el desarrollo de la `midu`:
 
 - [Referencias](base_de_conocimientos/referencias.md)
 
-## III. Conspiratorios populares de las soberanías
+### III. Conspiratorios populares de las soberanías
 
 `Con-spirare`. En su origen latino, `conspirar` no se asociaba a la traición o al secreto: describía **el acto de respirar con otros**, de compartir el mismo aire, de coexistir. Suponemos que la connotación negativa que acumuló con el tiempo dice algo sobre cómo las estructuras de gobernanza hegemónicas leen la **solidaridad**: **reunirse, ponerse de acuerdo, actuar en conjunto por pura voluntad**.
 

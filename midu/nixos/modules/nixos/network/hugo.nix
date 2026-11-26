@@ -44,6 +44,11 @@
         mkdir -p work/static/graphify
         cp --no-preserve=mode "${inputs.knowledgebase}/graphify/graph.html" "work/static/graphify/" 2>/dev/null || true
 
+        # Fuentes (Nerd Fonts + OpenDyslexic): servidas desde /fonts. custom.css las
+        # referencia con rutas absolutas (/fonts/<familia>/<archivo>).
+        mkdir -p work/static/fonts
+        cp -r --no-preserve=mode work/assets/fonts/. work/static/fonts/
+
         # Embeds de Obsidian ![[x.png|size]] -> imagen markdown ![](/x.png).
         find work/content -name '*.md' -print0 \
           | xargs -0 perl -0777 -pi -e 's{!\[\[\s*([^\[\]#|\\]+?\.png)[^\]]*\]\]}{![](/$1)}g'

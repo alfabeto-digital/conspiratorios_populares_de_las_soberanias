@@ -1,16 +1,91 @@
 /* ============================================================
    Gruvbox para info.alfabeto.digital — tema claro y oscuro.
    Acento peach, igual que la bóveda de Obsidian (AnuPpuccin
-   gruvbox, ctp-accent-peach). Códigos exactos en la skill
-   identidad.visual.alfabeto.digital.
-   Hextra carga automáticamente assets/css/custom.css.
-   Hextra (Tailwind v4) marca el modo oscuro con la clase
-   .dark en <html>: html[class~="dark"].
+   gruvbox, ctp-accent-peach). Códigos exactos y tipografías en
+   la skill identidad.visual.alfabeto.digital.
+   Hextra concatena assets/css/custom.css al final del bundle,
+   así que estas reglas ganan sobre las del tema.
+   Modo oscuro: Hextra marca .dark en <html> → html[class~="dark"].
    ============================================================ */
 
-/* --- Acento primario (HSL, única forma documentada en Hextra) ---
+/* ============================================================
+   1. Tipografías (Nerd Fonts, servidas desde /fonts)
+   ============================================================ */
+@font-face {
+  font-family: "ShureTechMono Nerd Font";
+  src: url("/fonts/ShareTechMono/ShureTechMonoNerdFont-Regular.ttf") format("truetype");
+  font-weight: normal; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "ProFont IIx Nerd Font";
+  src: url("/fonts/ProFont/ProFontIIxNerdFontMono-Regular.ttf") format("truetype");
+  font-weight: normal; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "GohuFont 14 Nerd Font";
+  src: url("/fonts/Gohu/GohuFont14NerdFont-Regular.ttf") format("truetype");
+  font-weight: normal; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "DepartureMono Nerd Font";
+  src: url("/fonts/DepartureMono/DepartureMonoNerdFont-Regular.otf") format("opentype");
+  font-weight: normal; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "DaddyTimeMono Nerd Font";
+  src: url("/fonts/DaddyTimeMono/DaddyTimeMonoNerdFont-Regular.ttf") format("truetype");
+  font-weight: normal; font-style: normal; font-display: swap;
+}
+/* OpenDyslexic: modo accesibilidad (reemplaza el texto del cuerpo). */
+@font-face {
+  font-family: "OpenDyslexic";
+  src: url("/fonts/OpenDyslexic/OpenDyslexicNerdFont-Regular.otf") format("opentype");
+  font-weight: normal; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "OpenDyslexic";
+  src: url("/fonts/OpenDyslexic/OpenDyslexicNerdFont-Bold.otf") format("opentype");
+  font-weight: bold; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "OpenDyslexic";
+  src: url("/fonts/OpenDyslexic/OpenDyslexicNerdFont-Italic.otf") format("opentype");
+  font-weight: normal; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: "OpenDyslexic";
+  src: url("/fonts/OpenDyslexic/OpenDyslexicNerdFont-BoldItalic.otf") format("opentype");
+  font-weight: bold; font-style: italic; font-display: swap;
+}
+
+:root {
+  --font-body: "ShureTechMono Nerd Font", ui-monospace, monospace;
+  --font-mono: "ProFont IIx Nerd Font", ui-monospace, monospace;
+  --font-ui:   "GohuFont 14 Nerd Font", ui-monospace, monospace;
+  --font-h1:   "DepartureMono Nerd Font", "ShureTechMono Nerd Font", ui-monospace, monospace;
+  --font-h:    "DaddyTimeMono Nerd Font", "ShureTechMono Nerd Font", ui-monospace, monospace;
+  /* Tokens de fuente de Tailwind v4 (por si alguna utilidad los usa). */
+  --font-sans: var(--font-body);
+  --default-font-family: var(--font-body);
+}
+
+html, body { font-family: var(--font-body); }
+code, pre, kbd, samp, tt,
+.hextra-code-block, .highlight, pre code { font-family: var(--font-mono); }
+
+/* Interfaz: navbar, barra lateral, TOC, pie, migas, selector de tema. */
+.hextra-nav-container, .hextra-sidebar-container, .hextra-toc,
+.hextra-footer, .hextra-breadcrumb, .hextra-theme-toggle,
+.hextra-theme-toggle-options, nav { font-family: var(--font-ui); }
+
+/* Títulos: H1 DepartureMono, H2..H6 DaddyTimeMono. */
+.content h1 { font-family: var(--font-h1); }
+.content h2, .content h3, .content h4, .content h5, .content h6 { font-family: var(--font-h); }
+
+/* ============================================================
+   2. Acento primario (HSL, única forma documentada en Hextra)
    claro: peach gruvbox #d65d0e · oscuro: naranja brillante #fe8019
-   (par faded/bright de gruvbox, para legibilidad sobre fondo oscuro). */
+   ============================================================ */
 :root {
   --primary-hue: 24deg;
   --primary-saturation: 88%;
@@ -22,7 +97,9 @@ html[class~="dark"] {
   --primary-lightness: 55%;
 }
 
-/* --- Superficies y texto gruvbox (valores exactos de la bóveda) --- */
+/* ============================================================
+   3. Superficies y texto gruvbox (valores exactos de la bóveda)
+   ============================================================ */
 :root {
   --gbg:     #f9f5d7;  /* base */
   --gbg1:    #f2e5bc;  /* surface0: tarjetas, código en línea, menús */
@@ -38,17 +115,16 @@ html[class~="dark"] {
   --gmuted:  #bdae93;
 }
 
-/* --- Acentos gruvbox para los títulos (idénticos en claro y oscuro) --- */
+/* Acentos gruvbox para títulos y énfasis (idénticos en claro y oscuro). */
 :root {
   --g-peach:  #d65d0e;  /* H1, acento primario */
-  --g-yellow: #d79921;  /* H2, resaltado */
-  --g-teal:   #66981a;  /* H3 */
+  --g-yellow: #d79921;  /* H3, resaltado */
+  --g-teal:   #66981a;  /* H2, negrita */
   --g-blue:   #458588;  /* H4 */
+  --g-maroon: #cc311d;  /* cursiva */
 }
 
-/* --- Remapeo de la escala gris de Tailwind v4 a tonos gruvbox ---
-   Hextra usa esta escala para fondos y textos; un solo remapeo sirve para
-   claro y oscuro (el modo oscuro usa los tonos más oscuros de la misma escala). */
+/* Remapeo de la escala gris de Tailwind v4 a tonos gruvbox. */
 @layer theme {
   :root {
     --color-gray-50:  #f9f5d7;  --color-neutral-50:  #f9f5d7;
@@ -65,20 +141,27 @@ html[class~="dark"] {
   }
 }
 
-/* --- Refuerzo directo sobre contenedores conocidos de Hextra --- */
+/* ============================================================
+   4. Contenedores y contenido
+   ============================================================ */
 body { background-color: var(--gbg); color: var(--gfg); }
 .content { color: var(--gfg); }
 
-/* Títulos con los colores de la bóveda: H1 peach, H2 yellow, H3 teal, H4 blue;
+/* Títulos con los colores de la bóveda: H1 peach, H2 teal, H3 yellow, H4 blue;
    H5 y H6 sin color propio (texto base). */
 .content h1 { color: var(--g-peach); }
-.content h2 { color: var(--g-yellow); }
-.content h3 { color: var(--g-teal); }
+.content h2 { color: var(--g-teal); }
+.content h3 { color: var(--g-yellow); }
 .content h4 { color: var(--g-blue); }
 .content h5, .content h6 { color: var(--gfg); }
 
-/* Navbar (encabezado principal): el fondo visible vive en la capa blur, que trae
-   hx:bg-white / hx:dark:bg-dark; la .hextra-nav-container de arriba es transparente. */
+/* Énfasis: negrita teal, cursiva maroon, resaltado yellow. */
+.content strong, .content b { color: var(--g-teal); }
+.content em, .content i { color: var(--g-maroon); }
+.content mark { background-color: var(--g-yellow); color: #282828; }
+
+/* Navbar: el fondo visible vive en la capa blur (hx:bg-white / hx:dark:bg-dark);
+   la .hextra-nav-container de arriba es transparente. */
 .hextra-nav-container-blur {
   background-color: var(--gbg) !important;
   box-shadow: 0 1px 0 var(--gborder) !important;
@@ -88,10 +171,12 @@ body { background-color: var(--gbg); color: var(--gfg); }
 .hextra-card   { background-color: var(--gbg1); border-color: var(--gborder); }
 .hextra-toc    { color: var(--gmuted); }
 
-/* Selector de modo (claro/oscuro/sistema).
-   El botón que DESPLIEGA el menú es .hextra-theme-toggle; sus iconos son SVG que
-   heredan currentColor, pero en la navbar el botón no recibe clase de color de
-   Tailwind, así que forzamos también el svg. */
+/* ============================================================
+   5. Selector de modo (claro/oscuro/sistema)
+   El botón que DESPLIEGA el menú es .hextra-theme-toggle; sus iconos SVG
+   heredan currentColor, pero en la navbar el botón no recibe clase de color,
+   así que forzamos también el svg.
+   ============================================================ */
 .hextra-theme-toggle { color: var(--gfg) !important; }
 .hextra-theme-toggle svg { color: var(--gfg) !important; }
 .hextra-theme-toggle:hover { background-color: var(--gbg1) !important; }
@@ -108,11 +193,16 @@ body { background-color: var(--gbg); color: var(--gfg); }
 .hextra-theme-toggle-options button:hover { background-color: var(--gbg) !important; }
 
 /* La opción activa no tiene clase: se marca con aria-checked="true" (role
-   menuitemradio) y su checkmark es un svg. La resaltamos con el acento peach. */
-.hextra-theme-toggle-options button[aria-checked="true"] { color: var(--g-peach) !important; }
+   menuitemradio) y su checkmark es un svg. La resaltamos con peach y un fondo. */
+.hextra-theme-toggle-options button[aria-checked="true"] {
+  color: var(--g-peach) !important;
+  background-color: color-mix(in srgb, var(--g-peach) 14%, transparent) !important;
+}
 .hextra-theme-toggle-options button[aria-checked="true"] svg { color: var(--g-peach) !important; }
 
-/* Código en línea (naranja gruvbox claro / oscuro) */
+/* ============================================================
+   6. Código en línea (naranja gruvbox claro / oscuro)
+   ============================================================ */
 .content code:not(.code-block code) {
   color: #af3a03;
   background-color: var(--gbg1);
@@ -120,3 +210,41 @@ body { background-color: var(--gbg); color: var(--gfg); }
   padding: 0.1em 0.3em;
 }
 html[class~="dark"] .content code:not(.code-block code) { color: #fe8019; }
+
+/* ============================================================
+   7. Modo accesibilidad: OpenDyslexic
+   Un botón en el pie alterna la clase .opendyslexic en <html> (persistida en
+   localStorage). Reemplaza la fuente del cuerpo (ShureTechMono) por OpenDyslexic;
+   los títulos conservan su fuente de display.
+   ============================================================ */
+html.opendyslexic,
+html.opendyslexic body,
+html.opendyslexic .content,
+html.opendyslexic .content p,
+html.opendyslexic .content li,
+html.opendyslexic .content td,
+html.opendyslexic .content blockquote {
+  font-family: "OpenDyslexic", var(--font-body) !important;
+  letter-spacing: 0.02em;
+}
+
+/* Botón del modo accesibilidad (inyectado en custom/footer.html). */
+.a11y-font-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  margin: 0.5rem 0;
+  padding: 0.35em 0.7em;
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  color: var(--gfg);
+  background-color: var(--gbg1);
+  border: 1px solid var(--gborder);
+  border-radius: 0.375rem;
+  cursor: pointer;
+}
+.a11y-font-toggle:hover { border-color: var(--g-peach); }
+.a11y-font-toggle[aria-pressed="true"] {
+  color: var(--g-peach);
+  border-color: var(--g-peach);
+}

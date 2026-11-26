@@ -1,0 +1,24 @@
+{{- /* Botón del modo accesibilidad OpenDyslexic. Alterna la clase .opendyslexic en
+       <html> y la persiste en localStorage; head-end.html la restaura sin parpadeo.
+       El estilo del botón vive en assets/css/custom.css (.a11y-font-toggle). */ -}}
+<button type="button" class="a11y-font-toggle" aria-pressed="false"
+        title="Tipografía para lectura con dislexia (OpenDyslexic)">
+  <span aria-hidden="true">Aa</span>
+  <span>lectura accesible</span>
+</button>
+<script>
+(function () {
+  var btn = document.querySelector(".a11y-font-toggle");
+  if (!btn) return;
+  var root = document.documentElement;
+  function sync() {
+    btn.setAttribute("aria-pressed", root.classList.contains("opendyslexic") ? "true" : "false");
+  }
+  sync();
+  btn.addEventListener("click", function () {
+    var on = root.classList.toggle("opendyslexic");
+    try { localStorage.setItem("a11y-opendyslexic", on ? "1" : "0"); } catch (e) {}
+    sync();
+  });
+})();
+</script>

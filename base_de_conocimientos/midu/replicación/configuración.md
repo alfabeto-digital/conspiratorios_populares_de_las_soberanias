@@ -10,7 +10,7 @@ relaciones:
     - midu/replicación/secretos.md
 ---
 
-﻿# Configuración de config.nix
+# Configuración de config.nix
 
 `config.nix` es el archivo central de configuración del servidor. Contiene todos los valores específicos de tu instalación: nombre del servidor, usuario administrador, UUIDs de los discos, dominio, etc. Este paso consiste en copiar la plantilla y completar cada campo con los valores correctos.
 

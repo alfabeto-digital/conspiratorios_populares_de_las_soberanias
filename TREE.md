@@ -191,9 +191,26 @@ Las fuentes y las familias de archivos de cada visualización se colapsan para h
 │   │   │       ├── README.md
 │   │   │       ├── theme/replicate/   (ShureTechMono .pf2, background.png, theme.txt)
 │   │   │       └── ventoy.json
-│   │   └── secrets/
-│   │       ├── secrets-vps.plain.template
-│   │       └── secrets.plain.template
+│   │   ├── secrets/
+│   │   │   ├── secrets-vps.plain.template
+│   │   │   └── secrets.plain.template
+│   │   └── sites/
+│   │       └── info/   (sitio Hugo + Hextra: info.<dominio>)
+│   │           ├── assets/
+│   │           │   ├── css/
+│   │           │   │   └── custom.css
+│   │           │   └── fonts/   (DaddyTimeMono, DepartureMono, Gohu, OpenDyslexic, ProFont, ShareTechMono; cada familia: Nerd Font .ttf/.otf)
+│   │           ├── gen_structure.py
+│   │           ├── hugo.toml
+│   │           └── layouts/
+│   │               ├── _default/
+│   │               │   └── _markup/
+│   │               │       ├── render-image.html
+│   │               │       └── render-link.html
+│   │               └── _partials/
+│   │                   └── custom/
+│   │                       ├── footer.html
+│   │                       └── head-end.html
 │   └── página_web/
 │       ├── assets/
 │       │   ├── css/

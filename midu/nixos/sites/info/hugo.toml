@@ -48,3 +48,16 @@ ignoreFiles = [
 [params.theme]
   default       = "system"
   displayToggle = true
+
+# Tipografía (Nerd Fonts). Hextra no expone variables de fuente, así que las
+# definimos en assets/css/custom.css (@font-face) y las servimos desde /fonts
+# (ver modules/nixos/network/hugo.nix, que copia assets/fonts a static/fonts):
+#   cuerpo      ShureTechMono Nerd Font
+#   monoespacio ProFont IIx Nerd Font
+#   interfaz    GohuFont 14 Nerd Font
+#   H1          DepartureMono Nerd Font
+#   H2..H6      DaddyTimeMono Nerd Font
+#
+# Accesibilidad: un botón en el pie (layouts/_partials/custom/footer.html) alterna
+# la clase .opendyslexic en <html> y la persiste; head-end.html la restaura sin
+# parpadeo. En ese modo el texto del cuerpo pasa a OpenDyslexic.

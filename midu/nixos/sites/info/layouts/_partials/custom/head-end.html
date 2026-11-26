@@ -1,0 +1,11 @@
+{{- /* Modo accesibilidad OpenDyslexic: aplica la clase antes del primer pintado
+       para evitar el parpadeo. El botón que la alterna vive en custom/footer.html. */ -}}
+<script>
+(function () {
+  try {
+    if (localStorage.getItem("a11y-opendyslexic") === "1") {
+      document.documentElement.classList.add("opendyslexic");
+    }
+  } catch (e) {}
+})();
+</script>
