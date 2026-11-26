@@ -101,18 +101,20 @@ html[class~="dark"] {
    3. Superficies y texto gruvbox (valores exactos de la bóveda)
    ============================================================ */
 :root {
-  --gbg:     #f9f5d7;  /* base */
-  --gbg1:    #f2e5bc;  /* surface0: tarjetas, código en línea, menús */
-  --gborder: #d6c4a1;  /* surface2 */
-  --gfg:     #282828;  /* text */
-  --gmuted:  #665c54;  /* subtext0 */
+  --gbg:       #f9f5d7;  /* base */
+  --gbg1:      #f2e5bc;  /* surface0: tarjetas, código en línea, menús */
+  --gcontrast: #ece1c4;  /* mantle: fondo de la barra lateral (contraste) */
+  --gborder:   #d6c4a1;  /* surface2 */
+  --gfg:       #282828;  /* text */
+  --gmuted:    #665c54;  /* subtext0 */
 }
 html[class~="dark"] {
-  --gbg:     #282828;
-  --gbg1:    #32302f;
-  --gborder: #504945;
-  --gfg:     #fbf1c7;
-  --gmuted:  #bdae93;
+  --gbg:       #282828;
+  --gbg1:      #32302f;
+  --gcontrast: #1d2021;  /* mantle / bg0_h: contraste característico de gruvbox */
+  --gborder:   #504945;
+  --gfg:       #fbf1c7;
+  --gmuted:    #bdae93;
 }
 
 /* Acentos gruvbox para títulos y énfasis (idénticos en claro y oscuro). */
@@ -166,7 +168,7 @@ body { background-color: var(--gbg); color: var(--gfg); }
   background-color: var(--gbg) !important;
   box-shadow: 0 1px 0 var(--gborder) !important;
 }
-.hextra-sidebar-container { background-color: var(--gbg); }
+.hextra-sidebar-container { background-color: var(--gcontrast); }
 .hextra-footer { background-color: var(--gbg); color: var(--gmuted); }
 .hextra-card   { background-color: var(--gbg1); border-color: var(--gborder); }
 .hextra-toc    { color: var(--gmuted); }
@@ -232,9 +234,15 @@ html.opendyslexic .content blockquote {
 /* Pie fijo de la barra lateral (hx:sticky hx:bottom-0): su fondo venía de hx:dark:bg-dark
    (var(--hx-color-dark) = #111) y hx:bg-white; lo pasamos a gruvbox. Además lo apilamos en
    columna para que "lectura accesible" quede DEBAJO del selector de tema, no al lado. */
+/* Dos filas en el pie (selector + "lectura accesible"): subimos --menu-height. Stock es
+   3.75rem (una fila); esta variable gobierna a la vez el tope del pie (max-h-(--menu-height))
+   y el espacio que la lista reserva abajo (calc(100vh - navbar - --menu-height)), así que una
+   sola subida hace que ambas filas se vean siempre, sin quedar tras el final de la página. */
+:root { --menu-height: 6.5rem; }
+
 .hx\:sticky.hx\:bottom-0 {
-  background-color: var(--gbg) !important;
-  box-shadow: 0 -12px 16px var(--gbg) !important;
+  background-color: var(--gcontrast) !important;
+  box-shadow: 0 -12px 16px var(--gcontrast) !important;
   border-color: var(--gborder) !important;
   flex-direction: column !important;
   align-items: stretch !important;
