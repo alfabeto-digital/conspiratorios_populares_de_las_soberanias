@@ -1,42 +1,45 @@
-{{- /* Inyecta "lectura accesible" (OpenDyslexic) como una opción más del menú del
-       selector de tema, junto a Claro/Oscuro/Sistema. Alterna la clase .opendyslexic
-       en <html> y la persiste; head-end.html la restaura sin parpadeo. Hay un menú por
-       cada selector (navbar y barra lateral), así que se inyecta en todos. */ -}}
+{{- /* "lectura accesible" (OpenDyslexic) como botón hermano del selector de tema, dentro
+       del pie fijo de la barra lateral (el contenedor hx:sticky que envuelve al selector).
+       Alterna la clase .opendyslexic en <html> y la persiste; head-end.html la restaura sin
+       parpadeo. No va dentro del desplegable: es un botón aparte, junto a "◐ Sistema". */ -}}
 <script>
 (function () {
-  var OPTION_CLASS = "hx:text-gray-700 hx:dark:text-gray-300 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:hover:bg-neutral-800 hx:dark:hover:text-gray-100 hx:relative hx:cursor-pointer hx:whitespace-nowrap hx:rounded-sm hx:py-1.5 hx:transition-colors hx:ltr:pl-3 hx:ltr:pr-9 hx:rtl:pr-3 hx:rtl:pl-9 hx:text-left hx:w-full hx:bg-transparent hx:border-0";
   var root = document.documentElement;
 
-  function syncAll() {
-    var on = root.classList.contains("opendyslexic");
-    document.querySelectorAll(".a11y-font-toggle").forEach(function (b) {
-      b.setAttribute("aria-checked", on ? "true" : "false");
-    });
+  function sync(btn) {
+    btn.setAttribute("aria-pressed", root.classList.contains("opendyslexic") ? "true" : "false");
   }
 
-  function build(list) {
-    if (list.querySelector(".a11y-menu-item")) return;
-    var li = document.createElement("li");
-    li.className = "hx:flex hx:flex-col a11y-menu-item";
-    var btn = document.createElement("button");
-    btn.type = "button";
-    btn.className = OPTION_CLASS + " a11y-font-toggle";
-    btn.setAttribute("role", "menuitemcheckbox");
-    btn.innerHTML =
-      '<span>Aa lectura accesible</span>' +
-      '<span class="a11y-check hx:absolute hx:inset-y-0 hx:flex hx:items-center hx:ltr:right-3 hx:rtl:left-3" aria-hidden="true">✓</span>';
-    li.appendChild(btn);
-    list.appendChild(li);
-    btn.addEventListener("click", function () {
+  function makeButton() {
+    var b = document.createElement("button");
+    b.type = "button";
+    b.className = "a11y-font-toggle";
+    b.setAttribute("aria-pressed", "false");
+    b.title = "Lectura accesible (OpenDyslexic)";
+    b.innerHTML = '<span aria-hidden="true">Aa</span><span class="a11y-label">lectura accesible</span>';
+    b.addEventListener("click", function () {
       var on = root.classList.toggle("opendyslexic");
       try { localStorage.setItem("a11y-opendyslexic", on ? "1" : "0"); } catch (e) {}
-      syncAll();
+      document.querySelectorAll(".a11y-font-toggle").forEach(sync);
     });
+    sync(b);
+    return b;
+  }
+
+  // Sube desde el selector hasta el recuadro fijo (hx:sticky) que lo contiene.
+  function stickyBox(el) {
+    for (var n = el; n; n = n.parentElement) {
+      if (typeof n.className === "string" && n.className.indexOf("hx:sticky") !== -1) return n;
+    }
+    return null;
   }
 
   function init() {
-    document.querySelectorAll(".hextra-theme-toggle-options").forEach(build);
-    syncAll();
+    document.querySelectorAll(".hextra-theme-toggle").forEach(function (toggle) {
+      var box = stickyBox(toggle);
+      if (!box || box.querySelector(".a11y-font-toggle")) return;
+      box.appendChild(makeButton());
+    });
   }
 
   if (document.readyState === "loading") {
