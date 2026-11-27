@@ -260,6 +260,9 @@ html.opendyslexic .content blockquote {
   align-items: stretch !important;
   justify-content: flex-start !important;
   gap: 0.25rem !important;
+  /* La lista reserva --menu-height abajo; el pie debe rellenar ese alto para llegar al
+     final de la ventana (si solo mide su contenido, queda un hueco bajo la barra lateral). */
+  min-height: var(--menu-height) !important;
 }
 .hx\:sticky.hx\:bottom-0 > div { flex-grow: 0 !important; }
 

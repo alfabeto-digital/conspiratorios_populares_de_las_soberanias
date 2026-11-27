@@ -16,7 +16,7 @@
     b.className = "a11y-font-toggle";
     b.setAttribute("aria-pressed", "false");
     b.title = "Lectura accesible (OpenDyslexic)";
-    b.innerHTML = '<span aria-hidden="true">Aa</span><span class="a11y-label">lectura accesible</span>';
+    b.innerHTML = '<span aria-hidden="true">Aa</span><span class="a11y-label">Lectura accesible</span>';
     b.addEventListener("click", function () {
       var on = root.classList.toggle("opendyslexic");
       try { localStorage.setItem("a11y-opendyslexic", on ? "1" : "0"); } catch (e) {}

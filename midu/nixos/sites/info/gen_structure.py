@@ -15,8 +15,8 @@ REPO = "https://github.com/alfabeto-digital/conspiratorios_populares_de_las_sobe
 # Páginas raíz copiadas del repo (aún sin frontmatter). readme=True usa base de repo.
 ROOT_PAGES = {
     "_index.md":                {"title": "alfabeto.digital",       "readme": True},
-    "hoja_de_ruta.md":          {"title": "hoja de ruta",           "readme": False},
-    "árbol_del_repositorio.md": {"title": "árbol del repositorio",  "readme": False},
+    "hoja_de_ruta.md":          {"title": "Hoja de ruta",           "readme": False},
+    "árbol_del_repositorio.md": {"title": "Árbol del repositorio",  "readme": False},
 }
 
 def is_note(rel):

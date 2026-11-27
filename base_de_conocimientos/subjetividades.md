@@ -1,5 +1,5 @@
 ---
-title: Subjetividades iniciales
+title: Subjetividades
 tipo: índice
 estado: revisado
 tags: [soberanía, gobernanza, memorias]
