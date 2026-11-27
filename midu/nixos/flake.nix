@@ -33,7 +33,10 @@
     # FlexSearch). Las vendorizamos como inputs para construir sin red; se fijan
     # en flake.lock. Hextra las carga localmente si apuntamos params.*.js a ellas.
     mermaidjs = {
-      url   = "file+https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js";
+      # Fijado a una versión exacta (antes "@11", que el lock congelaba en una 11.x vieja).
+      # 11.17.2 es la última de la línea 11, la que espera Hextra v0.13. Para la última
+      # estable (12.4.0) cambiar a mermaid@12.4.0; mismo archivo dist/mermaid.min.js.
+      url   = "file+https://cdn.jsdelivr.net/npm/mermaid@11.17.2/dist/mermaid.min.js";
       flake = false;
     };
     flexsearchjs = {

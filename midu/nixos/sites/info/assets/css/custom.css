@@ -256,6 +256,19 @@ body { background-color: var(--gbg); color: var(--gfg); }
 }
 html[class~="dark"] .content code:not(.code-block code) { color: #fe8019; }
 
+/* Botón de copiar de los bloques de código (.hextra-code-copy-btn): gruvbox y legible
+   en ambos modos (Hextra lo deja en text-gray-600, poco visible sobre el código). */
+.hextra-code-copy-btn {
+  background-color: var(--gbg1) !important;
+  border-color: var(--gborder) !important;
+  color: var(--gfg) !important;
+}
+.hextra-code-copy-btn:hover { color: var(--g-peach) !important; border-color: var(--g-peach) !important; }
+
+/* Diagramas Mermaid centrados (el <pre class="mermaid"> queda a la izquierda por defecto). */
+pre.mermaid { display: flex; justify-content: center; }
+pre.mermaid svg { display: block; margin-inline: auto; }
+
 /* ============================================================
    7. Modo accesibilidad: OpenDyslexic
    Un botón en el pie alterna la clase .opendyslexic en <html> (persistida en
