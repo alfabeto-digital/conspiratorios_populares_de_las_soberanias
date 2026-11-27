@@ -3,7 +3,7 @@
 # porque el dominio vive en config.nix (fuera de git).
 baseURL      = "https://info.alfabeto.digital/"
 languageCode = "es"
-title        = "alfabeto.digital: base de conocimientos"
+title        = "Base de conocimientos"
 theme        = "hextra"
 
 # No publicar como páginas: fuentes de Obsidian/Python, cache de graphify y notas de
@@ -75,7 +75,7 @@ ignoreFiles = [
 # barra lateral, así que aquí no lo repetimos.
 [[menu.main]]
   name   = "alfabeto.digital"
-  url    = "https://alfabeto.digital"
+  url    = "/"
   weight = 1
 [[menu.main]]
   weight = 2
