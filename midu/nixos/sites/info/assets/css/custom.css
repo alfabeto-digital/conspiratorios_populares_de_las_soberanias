@@ -199,6 +199,15 @@ body { background-color: var(--gbg); color: var(--gfg); }
   box-shadow: 0 1px 0 var(--gborder) !important;
 }
 .hextra-sidebar-container { background-color: var(--gcontrast); }
+
+/* Mostrar los encabezados # de la página activa en la barra lateral también en DESKTOP (no
+   solo en móvil). Hextra renderiza dos listas de navegación: la "móvil" (hx:md:hidden, que SÍ
+   incluye el TOC de la página activa) y la de "desktop" (hx:max-md:hidden, sin TOC). En
+   desktop (≥48rem) mostramos la que trae el TOC y ocultamos la otra; en móvil ya se ve. */
+@media (min-width: 48rem) {
+  .hextra-sidebar-container ul.hx\:md\:hidden     { display: flex !important; }
+  .hextra-sidebar-container ul.hx\:max-md\:hidden { display: none !important; }
+}
 .hextra-footer { background-color: var(--gbg); color: var(--gmuted); }
 .hextra-toc    { color: var(--gmuted); }
 

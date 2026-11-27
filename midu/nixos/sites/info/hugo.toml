@@ -68,3 +68,16 @@ ignoreFiles = [
 # de la barra lateral (inyectado por layouts/_partials/custom/footer.html), alterna la clase
 # .opendyslexic en <html> y la persiste; head-end.html la restaura sin parpadeo. En ese
 # modo el cuerpo pasa a OpenDyslexic.
+
+# Menú principal (navbar). Hextra no trae menú por defecto: cada elemento (incluida la
+# búsqueda) es una entrada [[menu.main]]. Sin la entrada type="search" no aparece el botón
+# de búsqueda aunque params.search.enable sea true. El selector de tema vive en el pie de la
+# barra lateral, así que aquí no lo repetimos.
+[[menu.main]]
+  name   = "alfabeto.digital"
+  url    = "https://alfabeto.digital"
+  weight = 1
+[[menu.main]]
+  weight = 2
+  [menu.main.params]
+    type = "search"
