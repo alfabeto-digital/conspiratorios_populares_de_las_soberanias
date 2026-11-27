@@ -161,6 +161,10 @@ body { background-color: var(--gbg); color: var(--gfg); }
 .content h4 { color: var(--g-blue); }
 .content h5, .content h6 { color: var(--gfg); }
 
+/* Breadcrumb (la miga de pan "Sección > Nota" arriba del título) alineado a la derecha.
+   Es el único hijo directo de #content con hx:mt-1.5 (va antes de .content). */
+#content > div.hx\:mt-1\.5 { justify-content: flex-end; }
+
 /* Énfasis: negrita teal, cursiva maroon, resaltado yellow. */
 .content strong, .content b { color: var(--g-teal); }
 .content em, .content i { color: var(--g-maroon); }
