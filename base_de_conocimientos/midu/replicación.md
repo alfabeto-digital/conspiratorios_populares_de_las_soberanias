@@ -1,5 +1,5 @@
 ---
-title: replicación
+title: La replicación
 tipo: índice
 estado: borrador
 tags: [replicación, midu]
@@ -104,7 +104,7 @@ Los pasos están diseñados para seguirse en esta secuencia. Hay dependencias en
 
 ```mermaid
 %%{init: {'theme': 'base', 'gitGraph': {'mainBranchName': 'replicacion'}, 'themeVariables': {'background': '#fbf1c7', 'primaryColor': '#f2e5bc', 'primaryBorderColor': '#3c3836', 'primaryTextColor': '#3c3836', 'lineColor': '#a89984', 'git0': '#458588', 'git1': '#8f3f71', 'git2': '#427b58', 'git3': '#b57614', 'git4': '#cc241d', 'git5': '#b57614', 'git6': '#d65d0e', 'git7': '#cc241d', 'gitBranchLabel0': '#fbf1c7', 'gitBranchLabel1': '#fbf1c7', 'gitBranchLabel2': '#fbf1c7', 'gitBranchLabel3': '#fbf1c7', 'gitBranchLabel4': '#fbf1c7', 'gitBranchLabel5': '#fbf1c7', 'gitBranchLabel6': '#fbf1c7', 'gitBranchLabel7': '#fbf1c7', 'gitInv0': '#fbf1c7', 'gitInv1': '#fbf1c7', 'gitInv2': '#fbf1c7', 'gitInv3': '#fbf1c7', 'gitInv4': '#fbf1c7', 'gitInv5': '#fbf1c7', 'gitInv6': '#fbf1c7', 'gitInv7': '#fbf1c7', 'commitLabelBackground': '#f2e5bc', 'commitLabelColor': '#3c3836'}}}%%
-gitGraph
+gitGraph TB:
   commit id: "documentación"
   branch documentacion
   checkout replicacion

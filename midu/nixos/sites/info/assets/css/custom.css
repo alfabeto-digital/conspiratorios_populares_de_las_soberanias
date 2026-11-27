@@ -117,13 +117,17 @@ html[class~="dark"] {
   --gmuted:    #bdae93;
 }
 
-/* Acentos gruvbox para títulos y énfasis (idénticos en claro y oscuro). */
+/* Acentos gruvbox para títulos, énfasis y callouts (idénticos en claro y oscuro). */
 :root {
-  --g-peach:  #d65d0e;  /* H1, acento primario */
-  --g-yellow: #d79921;  /* H3, resaltado */
-  --g-teal:   #66981a;  /* H2, negrita */
-  --g-blue:   #458588;  /* H4 */
-  --g-maroon: #cc311d;  /* cursiva */
+  --g-peach:    #d65d0e;  /* H1, acento primario */
+  --g-yellow:   #d79921;  /* H3, resaltado */
+  --g-teal:     #66981a;  /* H2, negrita */
+  --g-blue:     #458588;  /* H4 */
+  --g-maroon:   #cc311d;  /* cursiva */
+  --g-red:      #cc241d;
+  --g-mauve:    #b16286;
+  --g-sapphire: #1a8598;
+  --g-orange:   #af3a03;
 }
 
 /* Remapeo de la escala gris de Tailwind v4 a tonos gruvbox. */
@@ -161,6 +165,32 @@ body { background-color: var(--gbg); color: var(--gfg); }
 .content strong, .content b { color: var(--g-teal); }
 .content em, .content i { color: var(--g-maroon); }
 .content mark { background-color: var(--g-yellow); color: #282828; }
+
+/* Callouts (alerts de Hextra: > [!tipo] -> .hextra-alert[data-alert="tipo"]).
+   Hextra pinta de verde la base y 'tip', y los tipos de Obsidian que no reconoce
+   (info/question/abstract/example/bug) caen a ese verde, que choca con la negrita teal.
+   Los mapeamos a los acentos de gruvbox (evitando el verde), con fondo tenue tipo Obsidian,
+   el cuerpo legible (--gfg) y el título + ícono en el acento. Cada tipo fija --ca. */
+.hextra-alert                          { --ca: var(--g-blue); }      /* base / tipos no reconocidos */
+.hextra-alert[data-alert="tip"]        { --ca: var(--g-peach); }
+.hextra-alert[data-alert="info"]       { --ca: var(--g-blue); }
+.hextra-alert[data-alert="note"]       { --ca: var(--g-sapphire); }
+.hextra-alert[data-alert="question"]   { --ca: var(--g-yellow); }
+.hextra-alert[data-alert="abstract"]   { --ca: var(--g-mauve); }
+.hextra-alert[data-alert="example"]    { --ca: var(--g-sapphire); }
+.hextra-alert[data-alert="bug"]        { --ca: var(--g-red); }
+.hextra-alert[data-alert="important"]  { --ca: var(--g-mauve); }
+.hextra-alert[data-alert="warning"]    { --ca: var(--g-orange); }
+.hextra-alert[data-alert="caution"]    { --ca: var(--g-red); }
+
+.hextra-alert {
+  border-color: var(--ca) !important;
+  background-color: color-mix(in srgb, var(--ca) 12%, var(--gbg)) !important;
+  color: var(--gfg) !important;
+}
+.hextra-alert .hextra-alert-title,
+.hextra-alert .hextra-alert-title-text,
+.hextra-alert .hextra-alert-icon { color: var(--ca) !important; }
 
 /* Navbar: el fondo visible vive en la capa blur (hx:bg-white / hx:dark:bg-dark);
    la .hextra-nav-container de arriba es transparente. */

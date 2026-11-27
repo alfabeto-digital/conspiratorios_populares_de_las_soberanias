@@ -1,5 +1,5 @@
 ---
-title: Referencias
+title: Las referencias
 tipo: referencia
 estado: borrador
 tags: [memorias]

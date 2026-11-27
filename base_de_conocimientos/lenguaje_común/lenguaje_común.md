@@ -1,5 +1,5 @@
 ---
-title: Lenguaje común
+title: El lenguaje común
 tipo: índice
 estado: revisado
 tags: [infraestructuras]

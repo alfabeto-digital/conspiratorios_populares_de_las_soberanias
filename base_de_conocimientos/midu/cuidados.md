@@ -1,5 +1,5 @@
 ---
-title: Cuidados
+title: Los cuidados
 tipo: índice
 estado: borrador
 tags: [cuidados, midu]

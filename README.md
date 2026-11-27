@@ -207,7 +207,7 @@ Quince `subjetividades` articulan la **narrativa sobre el presente** que busca i
 
 <!-- cards -->
 
-- [subjetividades](base_de_conocimientos/subjetividades.md): las quince ideas que articulan el proyecto
+- [subjetividades](base_de_conocimientos/subjetividades.md): las quince ideas que articulan alfabeto.digital
 
 #### Las capas de la memoria
 
@@ -372,7 +372,7 @@ Una lista de las personas que han trabajado en el desarrollo de todas las subjet
 
 <!-- cards -->
 
-- [referencias](base_de_conocimientos/referencias.md): las personas y obras que articulan el proyecto
+- [referencias](base_de_conocimientos/referencias.md): las personas y obras que articulan alfabeto.digital
 
 ### III. Conspiratorios populares de las soberanías
 

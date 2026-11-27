@@ -1,5 +1,5 @@
 ---
-title: Subjetividades
+title: Las subjetividades
 tipo: índice
 estado: revisado
 tags: [soberanía, gobernanza, memorias]
