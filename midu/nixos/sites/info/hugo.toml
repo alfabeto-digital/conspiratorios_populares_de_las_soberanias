@@ -50,10 +50,10 @@ ignoreFiles = [
   displayToggle = true
 
 # Botón de copiar en los bloques de código (Hextra lo trae activado por defecto; lo dejamos
-# explícito). display "hover" lo muestra al pasar el cursor; "always" lo deja siempre visible.
+# explícito). "always" lo deja siempre visible (no solo al pasar el cursor).
 [params.highlight.copy]
   enable  = true
-  display = "hover"
+  display = "always"
 
 # Tipografía (Nerd Fonts). Hextra no expone variables de fuente, así que las
 # definimos en assets/css/custom.css (@font-face) y las servimos desde /fonts

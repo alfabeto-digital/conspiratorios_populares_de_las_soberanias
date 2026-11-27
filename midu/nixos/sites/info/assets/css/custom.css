@@ -264,10 +264,13 @@ html[class~="dark"] .content code:not(.code-block code) { color: #fe8019; }
   color: var(--gfg) !important;
 }
 .hextra-code-copy-btn:hover { color: var(--g-peach) !important; border-color: var(--g-peach) !important; }
+/* Confirmación de copiado: Hextra añade .copied y muestra el ícono de check; lo ponemos
+   en verde para que se note que copió. */
+.hextra-code-copy-btn.copied { color: #689d6a !important; border-color: #689d6a !important; }
 
 /* Diagramas Mermaid centrados (el <pre class="mermaid"> queda a la izquierda por defecto). */
 pre.mermaid { display: flex; justify-content: center; }
-pre.mermaid svg { display: block; margin-inline: auto; }
+pre.mermaid > svg { max-width: 100%; height: auto; margin-inline: auto; }
 
 /* ============================================================
    7. Modo accesibilidad: OpenDyslexic
