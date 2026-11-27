@@ -153,23 +153,72 @@ def clean_body(body):
         out.pop(0)
     return "\n".join(out)
 
-# Índice de la portada con tarjetas nativas de Hextra (reemplaza el índice manual del
-# README, que ahora lo cubre el TOC automático de la derecha).
-CARDS = """{{< cards cols="2" >}}
-  {{< card link="/midu/" title="la midu" subtitle="Mínima Interfaz Digital Viable" >}}
-  {{< card link="/subjetividades/" title="subjetividades" subtitle="las ideas que articulan la midu" >}}
-  {{< card link="/servicios/" title="servicios" subtitle="los programas del computador local" >}}
-  {{< card link="/cuidados/" title="cuidados" subtitle="cómo protegemos las memorias" >}}
-  {{< card link="/replicación/" title="replicación" subtitle="desplegar una midu paso a paso" >}}
-  {{< card link="/lenguaje_común/" title="lenguaje común" subtitle="el vocabulario técnico" >}}
-  {{< card link="/referencias/" title="referencias" subtitle="las personas y obras" >}}
-  {{< card link="/hoja_de_ruta/" title="hoja de ruta" subtitle="lo que viene" >}}
-  {{< card link="/árbol_del_repositorio/" title="árbol del repositorio" subtitle="la estructura del repositorio" >}}
-{{< /cards >}}"""
+# ---- tarjetas ----
+# Tres formas de marcar una lista de enlaces como tarjetas (todas producen el shortcode
+# nativo {{< cards >}} de Hextra, con las URLs ya resueltas):
+#   1. callout de Obsidian  > [!cards]  (opcional > [!cards|3] para columnas)
+#   2. marcador HTML         <!-- cards -->  (invisible en GitHub; para el README)
+#   3. sección               ## Ver también  (la lista que le sigue, automática)
+# El texto del enlace es el título; lo que va tras ": " es el subtítulo.
+def to_url(cp):
+    """Ruta de contenido (/x.md, /x/_index.md) -> URL final de Hugo (/x/)."""
+    path_part, sep, fr = cp.partition("#")
+    p = path_part[:-3] if path_part.endswith(".md") else path_part
+    segs = [s for s in p.strip("/").split("/") if s]
+    if segs and segs[-1] == "_index":
+        segs = segs[:-1]
+    url = "/" + "/".join(segs)
+    if not url.endswith("/"):
+        url += "/"
+    return url + (sep + fr if sep else "")
 
-def readme_cards(body):
-    """Reemplaza el bloque '## Índice ...' del README por las tarjetas."""
-    return re.sub(r'## Índice\n.*?(?=\n## )', "\n" + CARDS, body, count=1, flags=re.S)
+def card_url(dest, orig, readme):
+    if dest.startswith(("http://", "https://", "mailto:")):
+        return dest
+    r = resolve_readme(dest) if readme else resolve_normal(orig, dest)
+    return to_url(r) if r.startswith("/") else r
+
+def clean_inline(s):
+    s = re.sub(r'`([^`]*)`', r'\1', s)
+    s = re.sub(r'\*\*([^*]+)\*\*', r'\1', s)
+    return s.replace('"', "'").strip()
+
+ITEM = re.compile(r'^\s*[-*]\s*\[([^\]]*)\]\(([^)\s]+)\)\s*(?::\s*(.*))?$')
+
+def parse_items(list_text, orig, readme, quoted=False):
+    items = []
+    for ln in list_text.split("\n"):
+        if quoted:
+            ln = re.sub(r'^\s*>\s?', '', ln)
+        m = ITEM.match(ln)
+        if m:
+            items.append((card_url(m.group(2), orig, readme),
+                          clean_inline(m.group(1)),
+                          clean_inline(m.group(3) or "")))
+    return items
+
+def emit_cards(items, cols):
+    out = ['{{< cards cols="%s" >}}' % (cols or 2)]
+    for link, title, subtitle in items:
+        s = '  {{< card link="%s" title="%s"' % (link, title)
+        if subtitle:
+            s += ' subtitle="%s"' % subtitle
+        out.append(s + ' >}}')
+    out.append('{{< /cards >}}')
+    return "\n".join(out)
+
+CALLOUT = re.compile(r'^> \[!cards(?:\|(\d+))?\][^\n]*\n((?:[ \t]*>[^\n]*\n?)*)', re.M)
+MARKER  = re.compile(r'^<!--\s*cards(?:\s+cols=(\d+))?\s*-->[^\n]*\n(?:[ \t]*\n)*((?:[ \t]*[-*][ \t].*\n?)+)', re.M)
+VERSEE  = re.compile(r'^(##\s+Ver también[^\n]*\n\s*\n)((?:[ \t]*[-*][ \t].*\n?)+)', re.M)
+
+def convert_cards(body, orig, readme):
+    def block(cols, list_text, quoted, prefix=""):
+        items = parse_items(list_text, orig, readme, quoted)
+        return (prefix + emit_cards(items, cols) + "\n") if items else None
+    body = CALLOUT.sub(lambda m: block(m.group(1), m.group(2), True)  or m.group(0), body)
+    body = MARKER.sub( lambda m: block(m.group(1), m.group(2), False) or m.group(0), body)
+    body = VERSEE.sub( lambda m: block(2, m.group(2), False, m.group(1)) or m.group(0), body)
+    return body
 
 # ---- 3. pesos ----
 def weight_target(section, child):
@@ -205,6 +254,12 @@ def frontmatter_for(rel):
         lines += ["cascade:", "  type: docs"]
     return lines
 
+def transform(body, rel, readme):
+    """Limpieza (H1 + migas de pan) -> tarjetas -> reescritura de enlaces."""
+    body = clean_body(body)
+    body = convert_cards(body, rel, readme)
+    return rewrite(body, rel, readme)
+
 output = {}  # ruta_nueva -> texto final
 for rel in notes:
     text = (CONTENT / rel).read_text(encoding="utf-8")
@@ -214,7 +269,7 @@ for rel in notes:
         body = text
     else:
         if not text.startswith("---"):
-            output[newpath[rel]] = rewrite(clean_body(text), rel, readme); continue
+            output[newpath[rel]] = transform(text, rel, readme); continue
         end = text.find("\n---", 3)
         fm = text[3:end].split("\n")
         # quitar líneas vacías de borde del bloque fm
@@ -224,9 +279,7 @@ for rel in notes:
     np = newpath[rel]
     if np in weights:
         fm = set_weight(fm, weights[np])
-    body = rewrite(clean_body(body), rel, readme)
-    if readme:
-        body = readme_cards(body)
+    body = transform(body, rel, readme)
     output[np] = "---\n" + "\n".join(fm) + "\n---\n" + body
 
 # ---- 5. escribir y borrar originales ----

@@ -170,8 +170,20 @@ body { background-color: var(--gbg); color: var(--gfg); }
 }
 .hextra-sidebar-container { background-color: var(--gcontrast); }
 .hextra-footer { background-color: var(--gbg); color: var(--gmuted); }
-.hextra-card   { background-color: var(--gbg1); border-color: var(--gborder); }
 .hextra-toc    { color: var(--gmuted); }
+
+/* "Con tecnología de Hextra" centrado también en desktop (Hextra lo alinea a la izquierda
+   con hx:md:justify-start en la fila y hx:sm:items-start en la columna). Se apunta por la
+   clase compartida de la fila (no por :last-child, que puede ser el custom-footer vacío). */
+.hextra-footer .hextra-max-footer-width { justify-content: center; }
+.hextra-footer .hextra-max-footer-width > div { align-items: center; }
+
+/* Tarjetas ({{< cards >}}): superficie gruvbox, título en texto, subtítulo atenuado,
+   borde peach al pasar el cursor. */
+.hextra-card { background-color: var(--gbg1) !important; border-color: var(--gborder) !important; }
+.hextra-card:hover { border-color: var(--g-peach) !important; }
+.hextra-card-icon { color: var(--gfg) !important; }
+.hextra-card-subtitle { color: var(--gmuted) !important; }
 
 /* ============================================================
    5. Selector de modo (claro/oscuro/sistema)

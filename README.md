@@ -2,34 +2,17 @@
 ## Conspiratorios populares de las soberanías
 ### Índice
 
-- [I. Memorias colectivas](#i-memorias-colectivas)
-  - [La observación](#la-observación)
-  - [La conjetura](#la-conjetura)
-  - [La pregunta](#la-pregunta)
-  - [El contexto](#el-contexto)
-- [II. Interfaces](#ii-interfaces)
-  - [Las infraestructuras](#las-infraestructuras)
-  - [El dispositivo](#el-dispositivo)
-  - [La `midu`](#la-midu)
-    - [Mínima Interfaz Digital Viable (MIDV)](#mínima-interfaz-digital-viable-midv)
-  - [Las subjetividades](#las-subjetividades)
-  - [Las capas de la memoria](#las-capas-de-la-memoria)
-    - [Comunicaciones](#comunicaciones)
-      - [Enrutamiento](#enrutamiento)
-    - [Observabilidad](#observabilidad)
-    - [Procesamiento](#procesamiento)
-      - [Colaboración](#colaboración)
-      - [Participación](#participación)
-    - [Descubribilidad](#descubribilidad)
-    - [Reproducibilidad](#reproducibilidad)
-    - [Navegación](#navegación)
-  - [La gobernanza](#la-gobernanza)
-  - [Los cuidados](#los-cuidados)
-  - [La replicación](#la-replicación)
-  - [El lenguaje común](#el-lenguaje-común)
-    - [La cartografía de lo esencial](#la-cartografía-de-lo-esencial)
-  - [Las referencias](#las-referencias)
-- [III. Conspiratorios populares de las soberanías](#iii-conspiratorios-populares-de-las-soberanías)
+<!-- cards -->
+
+- [la midu](base_de_conocimientos/midu.md): Mínima Interfaz Digital Viable
+- [subjetividades](base_de_conocimientos/subjetividades.md): las ideas que articulan la midu
+- [servicios](base_de_conocimientos/midu/servicios.md): los programas del computador local
+- [cuidados](base_de_conocimientos/midu/cuidados.md): cómo protegemos las memorias
+- [replicación](base_de_conocimientos/midu/replicación.md): desplegar una midu paso a paso
+- [lenguaje común](base_de_conocimientos/lenguaje_común/lenguaje_común.md): el vocabulario técnico
+- [referencias](base_de_conocimientos/referencias.md): las personas y obras
+- [hoja de ruta](ROADMAP.md): lo que viene
+- [árbol del repositorio](TREE.md): la estructura del repositorio
 
 ### I. Memorias colectivas
 #### La observación
@@ -151,7 +134,9 @@ La `midu`, además, incorpora unos **valores** concretos:
 
 Una `midu` es una posibilidad: una configuración particular de **infraestructuras físicas, digitales y humanas, orientadas a gobernar las memorias individuales y colectivas con un criterio de `soberanía`**.
 
-> [la `midu`](base_de_conocimientos/midu.md)
+<!-- cards -->
+
+- [la midu](base_de_conocimientos/midu.md): el conjunto mínimo de infraestructuras soberanas
 
 #### Las subjetividades
 
@@ -203,7 +188,9 @@ Quince `subjetividades` articulan la **narrativa sobre el presente** que busca i
 > 	- Referentes: etimología (con-spirare).
 > 	- Conexión con la infraestructura: nodos de la red con imaginación moral compartida.
 
-> [subjetividades](base_de_conocimientos/subjetividades.md)
+<!-- cards -->
+
+- [subjetividades](base_de_conocimientos/subjetividades.md): las quince ideas que articulan el proyecto
 
 #### Las capas de la memoria
 
@@ -299,8 +286,12 @@ El principio fundamental es que **el almacenamiento tiene capas de `resiliencia`
 
 La `midu` es viable a muchas escalas, desde un `computador` reutilizado con un disco externo hasta un rack con varias GPU; los costos, el consumo de energía y las horas de trabajo de cada configuración están estimados en la documentación.
 
-> [`cuidados`](base_de_conocimientos/midu/cuidados.md)
-> [almacenamiento federado](base_de_conocimientos/midu/arquitectura/almacenamiento_federado.md) · [tipos de midu](base_de_conocimientos/midu/arquitectura/tipos_de_midu.md) · [estimaciones](base_de_conocimientos/midu/arquitectura/estimaciones.md)
+<!-- cards -->
+
+- [cuidados](base_de_conocimientos/midu/cuidados.md): el modelo de cuidados en capas
+- [almacenamiento federado](base_de_conocimientos/midu/arquitectura/almacenamiento_federado.md): la red de recuperación distribuida
+- [tipos de midu](base_de_conocimientos/midu/arquitectura/tipos_de_midu.md): escalas y configuraciones posibles
+- [estimaciones](base_de_conocimientos/midu/arquitectura/estimaciones.md): costos, consumo de energía y horas de trabajo
 
 #### La replicación
 
@@ -319,7 +310,9 @@ La secuencia cubre ocho pasos:
     - Ruta B: VPS propio con Podman; `soberanía` completa sobre el tráfico, sin NixOS en el `computador` desechable.
     - Ruta C: túnel de Cloudflare; sin VPS propio, solución gratuita de un tercero.
 
-> [`replicación`](base_de_conocimientos/midu/replicación.md)
+<!-- cards -->
+
+- [replicación](base_de_conocimientos/midu/replicación.md): desplegar una midu paso a paso
 
 #### El lenguaje común
 
@@ -360,7 +353,9 @@ En la [cartografía de lo esencial](base_de_conocimientos/lenguaje_común/cartog
 
 Una lista de las personas que han trabajado en el desarrollo de todas las subjetividades que buscamos introducir en el desarrollo de la `midu`:
 
-- [Referencias](base_de_conocimientos/referencias.md)
+<!-- cards -->
+
+- [referencias](base_de_conocimientos/referencias.md): las personas y obras que articulan el proyecto
 
 ### III. Conspiratorios populares de las soberanías
 
