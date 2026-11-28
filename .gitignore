@@ -40,9 +40,6 @@ base_de_conocimientos/graphify/*
 !base_de_conocimientos/graphify/graph.html
 !base_de_conocimientos/graphify/graph.json
 
-# Knowledge base - content in development
-base_de_conocimientos/subjetividades/
-
 # Notas de desarrollo — tareas pendientes locales
 base_de_conocimientos/notas_de_desarrollo.md
 

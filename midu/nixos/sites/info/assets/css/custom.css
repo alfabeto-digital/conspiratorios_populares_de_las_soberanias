@@ -58,12 +58,22 @@
   font-weight: bold; font-style: italic; font-display: swap;
 }
 
+/* El glifo ¿ (U+00BF) viene dibujado en ESPEJO en DaddyTimeMono, DepartureMono y ShureTechMono,
+   y falta en GohuFont. ProFont IIx lo dibuja bien, así que enrutamos ¿ y ¡ a ProFont solo para
+   ese rango (unicode-range); el resto del texto conserva su fuente. */
+@font-face {
+  font-family: "MarcasEs";
+  src: url("/fonts/ProFont/ProFontIIxNerdFontMono-Regular.ttf") format("truetype");
+  unicode-range: U+00A1, U+00BF;
+  font-weight: normal; font-style: normal; font-display: swap;
+}
+
 :root {
-  --font-body: "ShureTechMono Nerd Font", ui-monospace, monospace;
+  --font-body: "MarcasEs", "ShureTechMono Nerd Font", ui-monospace, monospace;
   --font-mono: "ProFont IIx Nerd Font", ui-monospace, monospace;
-  --font-ui:   "GohuFont 14 Nerd Font", ui-monospace, monospace;
-  --font-h1:   "DepartureMono Nerd Font", "ShureTechMono Nerd Font", ui-monospace, monospace;
-  --font-h:    "DaddyTimeMono Nerd Font", "ShureTechMono Nerd Font", ui-monospace, monospace;
+  --font-ui:   "MarcasEs", "GohuFont 14 Nerd Font", ui-monospace, monospace;
+  --font-h1:   "MarcasEs", "DepartureMono Nerd Font", "ShureTechMono Nerd Font", ui-monospace, monospace;
+  --font-h:    "MarcasEs", "DaddyTimeMono Nerd Font", "ShureTechMono Nerd Font", ui-monospace, monospace;
   /* Tokens de fuente de Tailwind v4 (por si alguna utilidad los usa). */
   --font-sans: var(--font-body);
   --default-font-family: var(--font-body);
