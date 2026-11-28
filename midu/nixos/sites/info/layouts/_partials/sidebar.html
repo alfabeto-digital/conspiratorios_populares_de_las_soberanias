@@ -259,31 +259,36 @@
   {{ $page := .page }}
   {{ $headingData := partial "utils/headings.html" $page }}
   {{ $headings := index $headingData "headings" }}
+  {{- /* Nivel máximo de encabezado que aparece en el índice. En la portada (README) se
+         excluyen H5 y H6 (tope H4); en el resto de notas se listan hasta H6. */ -}}
+  {{ $max := cond $page.IsHome 4 6 }}
   {{ with $headings }}
     <ul
       class='hx:flex hx:flex-col hx:gap-1 hx:relative hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:dark:before:bg-neutral-800 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:pr-3 hx:rtl:before:right-0 hx:ltr:ml-3 hx:rtl:mr-3'
     >
-      {{- /* Recorre el árbol completo de encabezados (H2 a H6), no solo dos niveles,
-             para que la portada y las notas listen todas sus secciones. Cada encabezado
-             con subsecciones se vuelve plegable (botón de colapso de Hextra), así se
-             pueden recoger todas las secciones bajo el primer encabezado. */ -}}
-      {{- template "sidebar-toc-items" . -}}
+      {{- /* Recorre el árbol de encabezados (H2 hasta $max), no solo dos niveles, para que la
+             portada y las notas listen sus secciones. Cada encabezado con subsecciones se
+             vuelve plegable (botón de colapso de Hextra), así se recogen todas las secciones. */ -}}
+      {{- template "sidebar-toc-items" (dict "items" . "max" $max) -}}
     </ul>
   {{ end }}
 {{- end -}}
 
 {{- define "sidebar-toc-items" -}}
+  {{- $max := .max -}}
   {{- /* Clase base del enlace del TOC (gris, con marcador '#'). */ -}}
   {{- $linkClass := "hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50" -}}
-  {{- range . -}}
+  {{- range .items -}}
     {{- if lt .Level 2 -}}
       {{- /* H1 (título de la página): no se lista, pero sí sus secciones. */ -}}
-      {{- with .Headings -}}{{- template "sidebar-toc-items" . -}}{{- end -}}
+      {{- with .Headings -}}{{- template "sidebar-toc-items" (dict "items" . "max" $max) -}}{{- end -}}
+    {{- else if gt .Level $max -}}
+      {{- /* Nivel por encima del máximo (p. ej. H5/H6 en la portada): se omite. */ -}}
     {{- else if and .ID .Title -}}
-      {{- if .Headings -}}
-        {{- /* Encabezado con subsecciones: plegable con el mecanismo nativo de Hextra
-               (li.open + .hextra-sidebar-children + botón de colapso). Arranca PLEGADO
-               (sin .open); el botón despliega sus secciones. */ -}}
+      {{- if and .Headings (lt .Level $max) -}}
+        {{- /* Encabezado con subsecciones visibles: plegable con el mecanismo nativo de Hextra
+               (li.open + .hextra-sidebar-children + botón de colapso). Arranca PLEGADO (sin
+               .open); el botón despliega sus secciones. */ -}}
         <li class="hx:flex hx:flex-col">
           <div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center">
             <a
@@ -298,7 +303,7 @@
           </div>
           <div class="hextra-sidebar-children hx:ltr:pr-0 hx:rtl:pl-0 hx:overflow-hidden">
             <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'>
-              {{- template "sidebar-toc-items" .Headings -}}
+              {{- template "sidebar-toc-items" (dict "items" .Headings "max" $max) -}}
             </ul>
           </div>
         </li>
