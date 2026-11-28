@@ -223,6 +223,16 @@ body { background-color: var(--gbg); color: var(--gfg); }
   .hextra-sidebar-container ul.hx\:md\:hidden     { display: flex !important; }
   .hextra-sidebar-container ul.hx\:max-md\:hidden { display: none !important; }
 }
+
+/* Ancho del sidebar ajustado al contenido. Hextra lo fija en 16rem (hx:md:w-64), lo que obliga
+   a los títulos largos del TOC a partirse en varias líneas. Lo dimensionamos al título + la
+   flecha de recoger más largos (max-content), con un mínimo igual al ancho original y un máximo
+   para no comerse el contenido. Los enlaces no se parten (nowrap) para que el ancho refleje una
+   sola línea por título. */
+@media (min-width: 48rem) {
+  .hextra-sidebar-container { width: max-content; min-width: 16rem; max-width: 28rem; }
+  .hextra-sidebar-container a { white-space: nowrap; }
+}
 .hextra-footer { background-color: var(--gbg); color: var(--gmuted); }
 .hextra-toc    { color: var(--gmuted); }
 

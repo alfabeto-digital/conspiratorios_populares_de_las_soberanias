@@ -1,35 +1,16 @@
 # alfabeto.digital
 ## Conspiratorios populares de las soberanías
-### Índice
+<!-- cards cols=3 -->
 
-- [I. Memorias colectivas](#i-memorias-colectivas)
-  - [La observación](#la-observación)
-  - [La conjetura](#la-conjetura)
-  - [La pregunta](#la-pregunta)
-  - [El contexto](#el-contexto)
-- [II. Interfaces](#ii-interfaces)
-  - [Las infraestructuras](#las-infraestructuras)
-  - [El dispositivo](#el-dispositivo)
-  - [La `midu`](#la-midu)
-    - [Mínima Interfaz Digital Viable (MIDV)](#mínima-interfaz-digital-viable-midv)
-  - [Las subjetividades](#las-subjetividades)
-  - [Las capas de la memoria](#las-capas-de-la-memoria)
-    - [Comunicaciones](#comunicaciones)
-      - [Enrutamiento](#enrutamiento)
-    - [Observabilidad](#observabilidad)
-    - [Procesamiento](#procesamiento)
-      - [Colaboración](#colaboración)
-      - [Participación](#participación)
-    - [Descubribilidad](#descubribilidad)
-    - [Reproducibilidad](#reproducibilidad)
-    - [Navegación](#navegación)
-  - [La gobernanza](#la-gobernanza)
-  - [Los cuidados](#los-cuidados)
-  - [La replicación](#la-replicación)
-  - [El lenguaje común](#el-lenguaje-común)
-    - [La cartografía de lo esencial](#la-cartografía-de-lo-esencial)
-  - [Las referencias](#las-referencias)
-- [III. Conspiratorios populares de las soberanías](#iii-conspiratorios-populares-de-las-soberanías)
+- [La midu](base_de_conocimientos/midu.md): el conjunto mínimo de infraestructuras soberanas
+- [Las subjetividades](base_de_conocimientos/subjetividades.md): las quince ideas que articulan alfabeto.digital
+- [Los servicios](base_de_conocimientos/midu/servicios.md): el conjunto mínimo viable de servicios
+- [Los cuidados](base_de_conocimientos/midu/cuidados.md): el modelo de cuidados en capas
+- [La replicación](base_de_conocimientos/midu/replicación.md): desplegar una midu paso a paso
+- [El lenguaje común](base_de_conocimientos/lenguaje_común/lenguaje_común.md): el vocabulario de la documentación
+- [Las referencias](base_de_conocimientos/referencias.md): las personas y obras que articulan alfabeto.digital
+- [La hoja de ruta](ROADMAP.md): el estado del desarrollo y los próximos pasos
+- [El árbol del repositorio](TREE.md): la estructura de archivos y carpetas
 
 ### I. Memorias colectivas
 #### La observación
