@@ -224,11 +224,11 @@ body { background-color: var(--gbg); color: var(--gfg); }
   .hextra-sidebar-container ul.hx\:max-md\:hidden { display: none !important; }
 }
 
-/* Ancho del sidebar ajustado al contenido, con un tope contenido (~40% menos que antes: de
-   28rem a 17rem). Con las secciones del TOC plegadas por defecto, el contenido visible es corto;
-   los pocos títulos largos se envuelven dentro de este ancho en vez de ensanchar la barra. */
+/* Ancho del sidebar ajustado al contenido, con un tope contenido (17rem + 15% ≈ 19.5rem). Con
+   las secciones del TOC plegadas por defecto, el contenido visible es corto; los pocos títulos
+   largos se envuelven dentro de este ancho en vez de ensanchar la barra. */
 @media (min-width: 48rem) {
-  .hextra-sidebar-container { width: max-content; min-width: 14rem; max-width: 17rem; }
+  .hextra-sidebar-container { width: max-content; min-width: 16rem; max-width: 19.5rem; }
 }
 .hextra-footer { background-color: var(--gbg); color: var(--gmuted); }
 .hextra-toc    { color: var(--gmuted); }
