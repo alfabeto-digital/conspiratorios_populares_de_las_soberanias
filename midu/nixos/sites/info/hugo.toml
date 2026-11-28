@@ -38,6 +38,11 @@ ignoreFiles = [
     unsafe = true
   [markup.highlight]
     noClasses = false
+  # TOC con todos los niveles de encabezado (H2 a H6), para que la portada y las notas
+  # listen todas sus secciones en el menú lateral y en el TOC de la derecha.
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel   = 6
 
 # Hextra: diagramas Mermaid (los bloques ```mermaid de replicación.md, etc.).
 [params.navbar]

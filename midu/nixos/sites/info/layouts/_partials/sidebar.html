@@ -24,11 +24,6 @@
   <div class="hextra-scrollbar hx:overflow-y-auto hx:overflow-x-hidden hx:p-4 hx:grow hx:md:h-[calc(100vh-var(--hextra-navbar-height)-var(--menu-height))]">
     <ul class="hx:flex hx:flex-col hx:gap-1 hx:md:hidden">
       <!-- Nav -->
-      {{- /* En la portada (que no es un ítem del árbol) mostramos sus secciones # como en
-             cualquier nota activa. */ -}}
-      {{- if $context.IsHome -}}
-        <li>{{ template "sidebar-toc" (dict "page" $context) }}</li>
-      {{- end -}}
       {{ template "sidebar-main" (dict "context" site.Home "pageURL" $pageURL "page" $context "toc" true) -}}
       {{ template "sidebar-footer" }}
     </ul>
@@ -211,6 +206,11 @@
             <li>{{ template "sidebar-item-link" dict "active" $active "open" false "title" (index $entry "title") "link" $link }}</li>
           {{- end -}}
         {{- end -}}
+      {{- end -}}
+      {{- /* Portada: su TOC va aquí, tras el enlace del menú (alfabeto.digital) y antes de
+             las secciones (La midu...). */ -}}
+      {{- if and (eq $level 0) $toc $page.IsHome -}}
+        <li>{{ template "sidebar-toc" dict "page" $page }}</li>
       {{- end -}}
       {{- /* Fall back to the page tree when no menu entry is page-backed,
         so mobile navigation isn't limited to external menu links (#1024). */ -}}
