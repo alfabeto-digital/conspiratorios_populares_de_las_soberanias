@@ -282,9 +282,9 @@
     {{- else if and .ID .Title -}}
       {{- if .Headings -}}
         {{- /* Encabezado con subsecciones: plegable con el mecanismo nativo de Hextra
-               (li.open + .hextra-sidebar-children + botón de colapso). Abierto por
-               defecto; el botón recoge todas sus secciones. */ -}}
-        <li class="open hx:flex hx:flex-col">
+               (li.open + .hextra-sidebar-children + botón de colapso). Arranca PLEGADO
+               (sin .open); el botón despliega sus secciones. */ -}}
+        <li class="hx:flex hx:flex-col">
           <div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center">
             <a
               href="#{{ anchorize .ID }}"
@@ -292,7 +292,7 @@
             >
               <span class="hx:min-w-0 [word-break:break-word]">{{- .Title | safeHTML | plainify | htmlUnescape -}}</span>
             </a>
-            <button type="button" class="hextra-sidebar-collapsible-button hx:absolute hx:top-1/2 hx:-translate-y-1/2 hx:ltr:right-2 hx:rtl:left-2 hx:shrink-0 hx:cursor-pointer hx:p-0 hx:text-gray-500 hx:dark:text-neutral-400 hx:group-hover:text-gray-900 hx:dark:group-hover:text-gray-50 hx:hextra-focus-visible-inset" aria-label="{{ (T "toggleSection") | default "Plegar o desplegar sección" }}" aria-expanded="true">
+            <button type="button" class="hextra-sidebar-collapsible-button hx:absolute hx:top-1/2 hx:-translate-y-1/2 hx:ltr:right-2 hx:rtl:left-2 hx:shrink-0 hx:cursor-pointer hx:p-0 hx:text-gray-500 hx:dark:text-neutral-400 hx:group-hover:text-gray-900 hx:dark:group-hover:text-gray-50 hx:hextra-focus-visible-inset" aria-label="{{ (T "toggleSection") | default "Plegar o desplegar sección" }}" aria-expanded="false">
               {{- template "sidebar-collapsible-button" -}}
             </button>
           </div>
