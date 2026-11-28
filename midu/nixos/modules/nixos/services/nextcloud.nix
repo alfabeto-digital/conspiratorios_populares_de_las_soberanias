@@ -128,6 +128,13 @@
     # ------------------------------------------------------------------ #
     # Servidor de edición de documentos en loopback; Caddy termina TLS y lo
     # expone en collabora.<dominio> (el vhost está en caddy.nix).
+    #
+    # Collabora (coolwsd) arrastra LibreOffice, que el nixpkgs actual marca inseguro
+    # (EOL + CVEs). Lo permitimos explícitamente para poder construir el editor. El
+    # nombre con versión cambia en cada bump de nixpkgs; actualízalo con:
+    #   nix eval --raw nixpkgs#libreoffice.name
+    nixpkgs.config.permittedInsecurePackages = [ "libreoffice-25.04.9-4" ];
+
     services.collabora-online = {
       enable = true;
       port   = cfg.collabora_port;   # 9980, solo loopback
