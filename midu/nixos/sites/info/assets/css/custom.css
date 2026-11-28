@@ -59,12 +59,13 @@
 }
 
 /* El glifo ¿ (U+00BF) viene dibujado en ESPEJO en DaddyTimeMono, DepartureMono y ShureTechMono,
-   y falta en GohuFont. ProFont IIx lo dibuja bien, así que enrutamos ¿ y ¡ a ProFont solo para
-   ese rango (unicode-range); el resto del texto conserva su fuente. */
+   y falta en GohuFont. ProFont IIx dibuja bien los cuatro signos, así que enrutamos ¿ ? ¡ ! a
+   ProFont para esos rangos (unicode-range), para que apertura y cierre siempre coincidan y sean
+   correctos; el resto del texto conserva su fuente. */
 @font-face {
   font-family: "MarcasEs";
   src: url("/fonts/ProFont/ProFontIIxNerdFontMono-Regular.ttf") format("truetype");
-  unicode-range: U+00A1, U+00BF;
+  unicode-range: U+0021, U+003F, U+00A1, U+00BF;
   font-weight: normal; font-style: normal; font-display: swap;
 }
 
